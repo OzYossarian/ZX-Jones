@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (0, 0) {$\eqdef$};
+		\node [style=hadamard] (1) at (-1.25, 0) {$H^\dagger$};
+		\node [style=none] (3) at (-1.25, 1) {};
+		\node [style=none] (4) at (-1.25, -1) {};
+		\node [style=none] (5) at (1, 1) {};
+		\node [style=none] (6) at (1, -1) {};
+		\node [style=qutrit hadamard adjoint] (7) at (1, 0) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (3.center) to (1);
+		\draw (1) to (4.center);
+		\draw (5.center) to (7);
+		\draw (7) to (6.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
