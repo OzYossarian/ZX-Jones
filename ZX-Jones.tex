@@ -18,11 +18,6 @@
 
 % Commands
 
-\newcommand{\bra}[1]{\ensuremath{\left\langle #1 \right|}}
-\newcommand{\ket}[1]{\ensuremath{\left|  #1 \right\rangle}}
-\newcommand{\braket}[2]{\ensuremath{\langle#1|#2\rangle}}
-\newcommand{\ketbra}[2]{\ensuremath{\ket{#1}\!\bra{#2}}}
-
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}[theorem]{Corollary}
@@ -52,12 +47,12 @@
 
 For the case $q=3$ we use the qutrit ZX calculus:
 \begin{equation}
-\includegraphics[scale=0.3]{Images/Qutrit Potts matrices.png}
+\includegraphics[scale=0.3]{figures/sketches/Qutrit Potts matrices.png}
 \end{equation}
 
 For the case $q=4$ we are back again in the usual qubit ZX calculus:
 \begin{equation}
-\includegraphics[scale=0.3]{Images/Qu(4)it Potts matrices.png}
+\includegraphics[scale=0.3]{figures/sketches/Qu(4)it Potts matrices.png}
 \end{equation}
 
 In each case, the resulting map is in the stabilizer fragment of the ZX calculus. 
@@ -116,7 +111,15 @@ We will shortly show that every qutrit ZX diagram is equivalent to a graph-like 
 	\end{proof}
 \end{lemma}
 
-As we will formalise later, the lemma above says we can think of Hadamard edges as single edges and their adjoints as double edges, then work modulo $3$, since every triple of parallel edges disappears.
+As we will formalise later, the lemma above says we can think of Hadamard edges as $1$-weighted edges and their adjoints as $2$-weighted edges, then work modulo $3$, since every triple of parallel edges disappears. This motivates defining 'parametrised' Hadamard gates, which will come in use later:
+
+\begin{equation}
+	\tikzfig{parametrised_hadamard_1}
+	\hspace{75pt}
+	\tikzfig{parametrised_hadamard_2}
+\end{equation}
+
+Where the previous lemma relates single $H$- and $H$-boxes across multiple edges, the next relates multiple $H$- and $H^\dagger$- boxes on single edges.
 
 \begin{lemma}\label{lem:H_boxes_qutrit} 
 	The following three equations hold in the qutrit ZX calculus. Moreover, they hold with the roles of $H$ and $H^\dagger$ interchanged:
@@ -156,7 +159,7 @@ A graph state is described fully by its underlying multigraph, or equivalently b
 % In this setting, a neighbour of a node is one connected to it by an edge of weight $1$ or $2$. Informally, the local complementation by $a \in \mathbb{Z_3}$ at node $k$ adds $a$ to the weight of every (perhaps zero-weighted) edge $ij$ for all neighbours $i$ and $j$ of $k$. That is, it unions with the original graph $a$ copies of the complete graph on $k$'s neighbours. Stated formally:
 
 \begin{definition}\label{def:local_complementation_qutrit}
-	Given $a \in \mathbb{Z}_3$ and a graph state $\ket{G}$ with adjacency matrix $W = (w_{i,j})$, the \textit{($a$)-local complentation} at node $k$ is the new graph state $\ket{G *_a i}$, whose adjacency matrix $W' = (w'_{i,j})$ given by:
+	Given $a \in \mathbb{Z}_3$ and a graph state $G$ with adjacency matrix $W = (w_{i,j})$, the \textit{($a$)-local complentation} at node $k$ is the new graph state $G *_a i$, whose adjacency matrix $W' = (w'_{i,j})$ given by:
 	\begin{equation}
 		w'_{i,j} = w_{i,j} + aw_{i,k}w_{j,k}
 	\end{equation}
@@ -170,7 +173,7 @@ So only those edges between neighbours of node $k$ are affected, but rather than
 	\tikzfig{purple_dashed_line_definition}
 \end{equation} 
 
-So now for two nodes $i$ and $j$ both connected to $k$ by the same colour edge, $a$-local complementation at $k$ increases weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $k$ by edges of different colour, $a$-local complementation at $k$ decreases $w_{i,j}$ by $a$:
+So now for two nodes $i$ and $j$ both connected to $k$ by the same colour edge, $a$-local complementation at $k$ increases weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $k$ by edges of different colour, $a$-local complementation at $k$ decreases $w_{i,j}$ by $a$. We show a fragment of a ZX-diagram below under the effect of this operation:
 
 \begin{equation}
 	\tikzfig{a_local_comp_same}
@@ -178,11 +181,60 @@ So now for two nodes $i$ and $j$ both connected to $k$ by the same colour edge, 
 	\tikzfig{a_local_comp_different}
 \end{equation}
 
-Just as in the qubit case, composing local complementations gives a local pivot operation:
+But the fragment above doesn't give the full picture. As in the qubit case, local complementation gives an equality up to introducing some single qubit phase gates on the outputs.
+
+\begin{theorem}\label{thm:local_comp_equality}
+	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing a node $k$, let $N(k)$ denote the neighbours of $k$ - that is, nodes $i$ with weight $w_{i,k} \in \{1, 2\}$. Then the following equality holds:
+	\ctikzfig{local_comp_on_graph_state}
+	\begin{proof}
+		This is Theorem 4.4 and Corollary 4.5 in [Harny's completeness paper]
+	\end{proof}
+\end{theorem}
+
+Composing local complementations gives a local pivot operation.
 
 \begin{definition}\label{def:local_pivot_qutrit}
-	Given $a,b,c \in \mathbb{Z}_3$ and a graph state $\ket{G}$, the \textit{$(a,b,c)$-local pivot} at nodes $i$ and $j$ is the new graph state $\ket{G \wedge_{(a,b,c)} ij} \defeq \ket{((G *_a i) *_b j) *_c i}$ 
+	Given $a,b,c \in \mathbb{Z}_3$ and a graph state $G$ containing nodes $i$ and $j$, the \textit{$(a,b,c)$-local pivot} along $ij$ is the new graph state $G \wedge_{(a,b,c)} ij \defeq ((G *_a i) *_b j) *_c i$. 
 \end{definition}
+
+This again results in an equality, up to introducing some extra gates on outputs. Here we shall only consider an $(a,-a,a)$-local pivot along an edge $ij$ of non-zero weight, for $a \in \{1, 2\}$. We will call this a \textit{proper $a$-local pivot} along $ij$, and denote it $G \wedge_a ij$.
+
+\begin{theorem}\label{thm:local_pivot_equality}
+	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing connected nodes $i$ and $j$, define the following:
+	\begin{itemize}
+		\item $N_{=}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} = w_{k,j} \right\}$
+		\item $N_{\neq}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} \neq w_{k,j} \right\}$
+	\end{itemize} 
+	Then the following equation relates $G$ and its proper $a$-local pivot along $ij$:
+	\ctikzfig{proper_local_pivot_on_graph_state}
+\end{theorem}
+
+These two operations are again the drivers behind the simplification procedure. 
+
+\section{Appendix}
+
+Here we give a proof of the local pivot equality from Theorem~\ref{thm:local_pivot_equality}.
+
+\begin{theorem}\label{thm:local_pivot_equality}
+	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing connected nodes $i$ and $j$, define the following:
+	\begin{itemize}
+		\item $N_{=}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} = w_{k,j} \right\}$
+		\item $N_{\neq}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} \neq w_{k,j} \right\}$
+	\end{itemize} 
+	Then the following equation relates $G$ and its proper $a$-local pivot along $ij$:
+	\ctikzfig{proper_local_pivot_on_graph_state}
+	\begin{proof}
+		Annoyingly, proving this in full generality in one go - i.e. for a proper $a$-local pivot along an edge $ij$ of weight $b$ - becomes a bit tricky diagramatically, because it becomes hard to keep track of all the variable edge weights. Fortunately the four cases ($a, b \in \{1,2\}$) split into two pairs of symmetric cases: $a = b$ and $a \neq b$.\newline
+
+		Now, it suffices to only draw a fragment of a graph state. Certainly we consider nodes $i$ and $j$ and the edge $ij$ between them. Then define $N_x^y$ to be the set $\left\{k \mid w_{k,i} = x, w_{k,j} = y \right\}$, for $x, y, \in \mathbb{Z}_3$. We will consider a representative node $k_x^y$ from each $N_x^y \neq N_0^0$ its edges $ik_x^y$ and $jk_x^y$. All other nodes and edges are irrelevant; this is because we are only interested in nodes and edges that \textit{affect} the three local complementation operations on $i$ and $j$ - we aren't concerned with those that are only \textit{affected by} the operations.\newline
+
+		So for the case $a=b$, we show the $1$-local pivot along $ij$ of weight $1$:\newline
+
+		\ctikzfig{proper_1_local_pivot_weight_1} 
+
+
+	\end{proof}
+\end{theorem}
 
 
 \end{document} 
