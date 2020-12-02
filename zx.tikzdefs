@@ -10,24 +10,10 @@
 \newcommand{\defeq}{\vcentcolon=}
 \newcommand{\eqdef}{=\vcentcolon}
 
-\newcommand*{\Bowie}[1][]{%
-  \tikz[
-    x=.55 * height("H"),  % symbol width
-    y=height("H"),  % symbol height
-    baseline=(current bounding box.south),
-    line width=.02 * height("H"),
-    line join=bevel,
-  ]
-  \filldraw[{#1}]
-  	(-.7, -.2) -- (-.3, -.1) -- (-.7, -.75) -- (.7, .2) -- (.2, .15) -- (.8, .75) -- (-.2, .75) -- cycle
-    % (-.5, -.5) -- (.4, -.03) -- (-.1, .06) --
-    % (.5, .5) -- (-.4, .03) -- (.1, -.06) --
-    % cycle
-    % side bearings
-    %(-.5 - .08, 0)
-    %(.5 + .08, 0)
-  ;%
-}
+\newcommand{\bra}[1]{\ensuremath{\left\langle #1 \right|}}
+\newcommand{\ket}[1]{\ensuremath{\left|  #1 \right\rangle}}
+\newcommand{\braket}[2]{\ensuremath{\langle#1|#2\rangle}}
+\newcommand{\ketbra}[2]{\ensuremath{\ket{#1}\!\bra{#2}}}
 
 \newcommand{\zxcalculus}{ZX-calculus\xspace}
 \newcommand{\zxdiagram}{ZX-diagram\xspace}
