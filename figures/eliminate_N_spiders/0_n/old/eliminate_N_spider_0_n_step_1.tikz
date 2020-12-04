@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (6) at (1.75, 1.25) {};
+		\node [style=Z phase dot] (9) at (1.75, 0.75) {};
+		\node [style=qutrit Z phase] (12) at (-1.75, 0.75) {$a_1$ \nodepart{lower} $b_1$};
+		\node [style=none] (13) at (-1.75, 1.75) {...};
+		\node [style=none] (14) at (-2.5, 2) {};
+		\node [style=none] (15) at (-1, 2) {};
+		\node [style=qutrit Z phase] (16) at (1.75, 0.75) {$a_2$ \nodepart{lower} $b_2$};
+		\node [style=none] (17) at (1.75, 1.75) {...};
+		\node [style=none] (18) at (1, 2) {};
+		\node [style=none] (19) at (2.5, 2) {};
+		\node [style=qutrit Z phase] (21) at (0, -1) {$0$ \nodepart{lower} $n$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (9) to (6.center);
+		\draw [bend right=15, looseness=0.75] (14.center) to (12);
+		\draw [bend right=15, looseness=0.75] (12) to (15.center);
+		\draw [bend right=15, looseness=0.75] (18.center) to (16);
+		\draw [bend right=15, looseness=0.75] (16) to (19.center);
+		\draw [style=hadamard adjoint adge] (21) to (9);
+		\draw [style=hadamard edge] (12) to (21);
+	\end{pgfonlayer}
+\end{tikzpicture}

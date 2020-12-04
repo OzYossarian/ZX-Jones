@@ -7,9 +7,6 @@
 \usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{decorations.markings}
 
-\newcommand{\defeq}{\vcentcolon=}
-\newcommand{\eqdef}{=\vcentcolon}
-
 \newcommand{\bra}[1]{\ensuremath{\left\langle #1 \right|}}
 \newcommand{\ket}[1]{\ensuremath{\left|  #1 \right\rangle}}
 \newcommand{\braket}[2]{\ensuremath{\langle#1|#2\rangle}}

@@ -1,0 +1,57 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (4.375, 2.5) {};
+		\node [style=none] (1) at (5.625, 2.5) {};
+		\node [style=qutrit Z phase] (2) at (-1.875, 1.75) {$-1$ \nodepart{lower} $-1$};
+		\node [style=qutrit Z phase] (3) at (1.875, 1.75) {$-1$ \nodepart{lower} $-1$};
+		\node [style=none] (4) at (3.125, 2.5) {};
+		\node [style=none] (5) at (-4.375, 2.5) {};
+		\node [style=none] (6) at (-5.625, 2.5) {};
+		\node [style=none] (7) at (-0.625, 2.5) {};
+		\node [style=none] (8) at (-1.875, 2.5) {};
+		\node [style=none] (9) at (-3.125, 2.5) {};
+		\node [style=none] (10) at (1.875, 2.5) {};
+		\node [style=none] (11) at (0.625, 2.5) {};
+		\node [style=qutrit Z phase] (12) at (-0.625, 1.75) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit Z phase] (13) at (0.625, 1.75) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit hadamard adjoint] (14) at (3.125, 1.75) {};
+		\node [style=qutrit hadamard] (15) at (-3.125, 1.75) {};
+		\node [style=Z dot] (16) at (3.125, -2) {};
+		\node [style=Z dot] (17) at (-5.625, 0.75) {};
+		\node [style=Z dot] (18) at (-4.375, 0.75) {};
+		\node [style=Z dot] (19) at (-1.875, 0.75) {};
+		\node [style=Z dot] (20) at (-0.625, 0.75) {};
+		\node [style=Z dot] (21) at (-3.125, -2) {};
+		\node [style=Z dot] (22) at (5.625, 0.75) {};
+		\node [style=Z dot] (23) at (4.375, 0.75) {};
+		\node [style=Z dot] (24) at (0.625, 0.75) {};
+		\node [style=Z dot] (25) at (1.875, 0.75) {};
+		\node [style=none] (26) at (3.875, -2) {$i$};
+		\node [style=none] (27) at (-3.875, -2) {$j$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=hadamard edge] (16) to (19);
+		\draw [style=hadamard adjoint adge] (16) to (25);
+		\draw [style=hadamard adjoint adge] (16) to (21);
+		\draw [style=hadamard adjoint adge] (17) to (21);
+		\draw [style=hadamard edge] (18) to (21);
+		\draw [style=hadamard adjoint adge] (16) to (22);
+		\draw [style=hadamard edge] (16) to (23);
+		\draw [style=hadamard edge] (16) to (24);
+		\draw [style=hadamard adjoint adge] (16) to (20);
+		\draw [style=hadamard edge] (25) to (21);
+		\draw [style=hadamard edge] (24) to (21);
+		\draw [style=hadamard adjoint adge] (20) to (21);
+		\draw [style=hadamard adjoint adge] (19) to (21);
+		\draw (1.center) to (22);
+		\draw (0.center) to (23);
+		\draw (17) to (6.center);
+		\draw (18) to (5.center);
+		\draw (19) to (8.center);
+		\draw (7.center) to (20);
+		\draw (11.center) to (24);
+		\draw (10.center) to (25);
+		\draw (16) to (4.center);
+		\draw (9.center) to (21);
+	\end{pgfonlayer}
+\end{tikzpicture}

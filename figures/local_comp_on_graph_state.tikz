@@ -1,0 +1,66 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (0, 0) {=};
+		\node [style=none] (1) at (1.25, 0.25) {};
+		\node [style=none] (2) at (8.25, 0.25) {};
+		\node [style=none] (3) at (4.5, -1.75) {};
+		\node [style=none] (4) at (1.25, -0.25) {};
+		\node [style=none] (5) at (1.5, 0.25) {};
+		\node [style=none] (6) at (2.75, 0.25) {};
+		\node [style=none] (8) at (6.5, 0.25) {};
+		\node [style=none] (9) at (8, 0.25) {};
+		\node [style=none] (10) at (4.5, -0.5) {$G *_a k$};
+		\node [style=none] (11) at (1.5, 1.75) {};
+		\node [style=none] (12) at (2.75, 1.75) {};
+		\node [style=none] (14) at (6.5, 1.75) {};
+		\node [style=none] (15) at (8, 1.75) {};
+		\node [style=qutrit X phase] (31) at (1.5, 1) {$a$ \nodepart{lower} $a$};
+		\node [style=qutrit Z phase] (32) at (2.75, 1) {$-a$ \nodepart{lower} $-a$};
+		\node [style=none] (33) at (5.25, 0.25) {};
+		\node [style=none] (34) at (5.25, 1.75) {};
+		\node [style=qutrit Z phase] (35) at (5.25, 1) {$-a$ \nodepart{lower} $-a$};
+		\node [style=none] (36) at (4, 1) {...};
+		\node [style=none] (37) at (7.25, 1) {...};
+		\node [style={scale=0.7}] (38) at (4, 2.25) {$\overbrace{\hspace{60pt}}^{N(k)}$};
+		\node [style={scale=0.7}] (39) at (1.5, 2.25) {$\overbrace{\quad}^{k}$};
+		\node [style=none] (40) at (-8, 0.25) {};
+		\node [style=none] (41) at (-1, 0.25) {};
+		\node [style=none] (42) at (-4.75, -1.75) {};
+		\node [style=none] (43) at (-8, -0.25) {};
+		\node [style=none] (44) at (-7.75, 0.25) {};
+		\node [style=none] (45) at (-6.5, 0.25) {};
+		\node [style=none] (46) at (-2.75, 0.25) {};
+		\node [style=none] (47) at (-1.25, 0.25) {};
+		\node [style=none] (48) at (-4.75, -0.5) {$G$};
+		\node [style=none] (49) at (-7.75, 0.75) {};
+		\node [style=none] (50) at (-6.5, 0.75) {};
+		\node [style=none] (51) at (-2.75, 0.75) {};
+		\node [style=none] (52) at (-1.25, 0.75) {};
+		\node [style=none] (55) at (-4, 0.25) {};
+		\node [style=none] (56) at (-4, 0.75) {};
+		\node [style=none] (58) at (-5.25, 0.5) {...};
+		\node [style=none] (59) at (-2, 0.5) {...};
+		\node [style={scale=0.7}] (60) at (-5.25, 1.25) {$\overbrace{\hspace{60pt}}^{N(k)}$};
+		\node [style={scale=0.7}] (61) at (-7.75, 1.25) {$\overbrace{\quad}^{k}$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (1.center) to (4.center);
+		\draw (4.center) to (3.center);
+		\draw (3.center) to (2.center);
+		\draw (1.center) to (2.center);
+		\draw (5.center) to (11.center);
+		\draw (6.center) to (12.center);
+		\draw (8.center) to (14.center);
+		\draw (9.center) to (15.center);
+		\draw (33.center) to (34.center);
+		\draw (40.center) to (43.center);
+		\draw (43.center) to (42.center);
+		\draw (42.center) to (41.center);
+		\draw (40.center) to (41.center);
+		\draw (44.center) to (49.center);
+		\draw (45.center) to (50.center);
+		\draw (46.center) to (51.center);
+		\draw (47.center) to (52.center);
+		\draw (55.center) to (56.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

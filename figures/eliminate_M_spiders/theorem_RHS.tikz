@@ -1,0 +1,59 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (3.875, -1.25) {...};
+		\node [style=none] (1) at (2.875, -1) {};
+		\node [style=none] (2) at (4.875, -1) {};
+		\node [style=none] (3) at (8.625, -1.25) {...};
+		\node [style=none] (4) at (7.625, -1) {};
+		\node [style=none] (5) at (9.625, -1) {};
+		\node [style=none] (6) at (8.75, 1.5) {...};
+		\node [style=none] (7) at (7.75, 1.75) {};
+		\node [style=none] (8) at (9.75, 1.75) {};
+		\node [style=none] (9) at (11.25, 1.5) {...};
+		\node [style=none] (10) at (10.25, 1.75) {};
+		\node [style=none] (11) at (12.25, 1.75) {};
+		\node [style=none] (12) at (-0.875, -1.25) {...};
+		\node [style=none] (13) at (0.125, -1) {};
+		\node [style=none] (14) at (-1.875, -1) {};
+		\node [style=none] (15) at (-5.625, -1.25) {...};
+		\node [style=none] (16) at (-4.625, -1) {};
+		\node [style=none] (17) at (-6.625, -1) {};
+		\node [style=none] (18) at (-5.75, 1.5) {...};
+		\node [style=none] (19) at (-4.75, 1.75) {};
+		\node [style=none] (20) at (-6.75, 1.75) {};
+		\node [style=qutrit X phase] (22) at (-10.75, -2.25) {$-m_j$ \nodepart{lower} $m_j$};
+		\node [style=qutrit X phase] (23) at (-10.75, 0.75) {$m_i$ \nodepart{lower} $-m_i$};
+		\node [style=qutrit Z phase rectangle] (24) at (-5.625, -2.5) {$a_1^1 \mp w + m_j + m_i$ \nodepart{second} $b_1^1 \mp w - m_j - m_i$};
+		\node [style=qutrit Z phase rectangle] (25) at (-0.875, -2.5) {$a_1^2 \pm w + m_j - m_i$ \nodepart{second} $b_1^2 \pm w - m_j + m_i$};
+		\node [style=qutrit Z phase rectangle] (26) at (3.875, -2.5) {$a_2^1  \pm w - m_j + m_i$ \nodepart{second} $b_2^1 \pm w + m_j - m_i$};
+		\node [style=qutrit Z phase rectangle] (27) at (8.625, -2.5) {$a_2^2 \mp w - m_j - m_i$ \nodepart{second} $b_2^2 \mp w + m_j + m_i$};
+		\node [style=qutrit Z phase rectangle] (28) at (8.75, 0.25) {$a_0^1 + m_i$ \nodepart{second} $b_0^1 - m_i$};
+		\node [style=qutrit Z phase rectangle] (29) at (11.25, 0.25) {$a_0^2 - m_i$ \nodepart{second} $b_0^2 + m_i$};
+		\node [style=qutrit Z phase rectangle] (30) at (-8.25, 0.25) {$a_1^0 + m_j$ \nodepart{second} $b_1^0 - m_j$};
+		\node [style=qutrit Z phase rectangle] (31) at (-5.75, 0.25) {$a_2^0 - m_j$ \nodepart{second} $b_2^0 + m_j$};
+		\node [style=none] (32) at (-8.25, 1.5) {...};
+		\node [style=none] (33) at (-7.25, 1.75) {};
+		\node [style=none] (34) at (-9.25, 1.75) {};
+		\node [style=qutrit hadamard unknown] (35) at (-10.75, -0.75) {$w$};
+		\node [style=none] (36) at (-12.75, -0.75) {=};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (22) to (23);
+		\draw [bend right=15, looseness=0.75] (34.center) to (30);
+		\draw [bend right=15, looseness=0.75] (30) to (33.center);
+		\draw [bend right=15, looseness=0.75] (20.center) to (31);
+		\draw [bend right=15, looseness=0.75] (31) to (19.center);
+		\draw [bend right=15, looseness=0.75] (17.center) to (24);
+		\draw [bend right=15, looseness=0.75] (24) to (16.center);
+		\draw [bend right=15, looseness=0.75] (14.center) to (25);
+		\draw [bend right=15, looseness=0.75] (25) to (13.center);
+		\draw [bend left=15, looseness=0.75] (11.center) to (29);
+		\draw [bend left=15, looseness=0.75] (29) to (10.center);
+		\draw [bend left=15, looseness=0.75] (8.center) to (28);
+		\draw [bend left=15, looseness=0.75] (28) to (7.center);
+		\draw [bend left=15, looseness=0.75] (5.center) to (27);
+		\draw [bend left=15, looseness=0.75] (27) to (4.center);
+		\draw [bend left=15, looseness=0.75] (2.center) to (26);
+		\draw [bend left=15, looseness=0.75] (26) to (1.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

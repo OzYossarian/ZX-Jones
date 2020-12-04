@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z dot] (9) at (-1.75, 0) {};
+		\node [style=Z dot] (10) at (0, -1.75) {};
+		\node [style=Z dot] (11) at (1.75, 0) {};
+		\node [style=qutrit X phase] (12) at (0, -3) {$2$ \nodepart{lower} $1$};
+		\node [style=qutrit Z phase] (37) at (-1.75, 1.75) {$a_1 + n$ \nodepart{lower} $b_1 + n$};
+		\node [style=none] (38) at (-1.75, 3) {...};
+		\node [style=none] (39) at (-2.75, 3.25) {};
+		\node [style=none] (40) at (-0.75, 3.25) {};
+		\node [style=qutrit Z phase] (41) at (1.75, 1.75) {$a_2 + n$ \nodepart{lower} $b_2 + n$};
+		\node [style=none] (42) at (1.75, 3) {...};
+		\node [style=none] (43) at (0.75, 3.25) {};
+		\node [style=none] (44) at (2.75, 3.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=hadamard adjoint adge] (10) to (11);
+		\draw [style=hadamard edge] (9) to (10);
+		\draw (10) to (12);
+		\draw [bend right=15, looseness=0.75] (39.center) to (37);
+		\draw [bend right=15, looseness=0.75] (37) to (40.center);
+		\draw [bend right=15, looseness=0.75] (43.center) to (41);
+		\draw [bend right=15, looseness=0.75] (41) to (44.center);
+		\draw [bend right=15, looseness=0.75] (39.center) to (37);
+		\draw [bend right=15, looseness=0.75] (37) to (40.center);
+		\draw [bend right=15, looseness=0.75] (43.center) to (41);
+		\draw [bend right=15, looseness=0.75] (41) to (44.center);
+		\draw (41) to (11);
+		\draw (37) to (9);
+	\end{pgfonlayer}
+\end{tikzpicture}

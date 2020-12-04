@@ -1,0 +1,57 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z dot] (244) at (-3.125, -2) {};
+		\node [style=Z dot] (245) at (-5.625, 0.75) {};
+		\node [style=Z dot] (246) at (-4.375, 0.75) {};
+		\node [style=Z dot] (247) at (-1.875, 0.75) {};
+		\node [style=Z dot] (248) at (-0.625, 0.75) {};
+		\node [style=none] (249) at (4.375, 2.5) {};
+		\node [style=none] (250) at (5.625, 2.5) {};
+		\node [style=Z dot] (251) at (3.125, -2) {};
+		\node [style=Z dot] (252) at (5.625, 0.75) {};
+		\node [style=Z dot] (253) at (4.375, 0.75) {};
+		\node [style=Z dot] (254) at (0.625, 0.75) {};
+		\node [style=Z dot] (255) at (1.875, 0.75) {};
+		\node [style=qutrit Z phase] (256) at (-1.875, 1.75) {$-1$ \nodepart{lower} $-1$};
+		\node [style=qutrit Z phase] (257) at (1.875, 1.75) {$-1$ \nodepart{lower} $-1$};
+		\node [style=none] (258) at (-3.125, 2.5) {};
+		\node [style=none] (259) at (-4.375, 2.5) {};
+		\node [style=none] (260) at (-5.625, 2.5) {};
+		\node [style=none] (261) at (-0.625, 2.5) {};
+		\node [style=none] (262) at (-1.875, 2.5) {};
+		\node [style=none] (263) at (3.125, 2.5) {};
+		\node [style=none] (264) at (1.875, 2.5) {};
+		\node [style=none] (265) at (0.625, 2.5) {};
+		\node [style=qutrit Z phase] (266) at (-0.625, 1.75) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit Z phase] (267) at (0.625, 1.75) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit hadamard adjoint] (268) at (-3.125, 1.75) {};
+		\node [style=qutrit hadamard] (269) at (3.125, 1.75) {};
+		\node [style=none] (282) at (-3.875, -2) {$i$};
+		\node [style=none] (283) at (3.875, -2) {$j$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (250.center) to (252);
+		\draw (249.center) to (253);
+		\draw [style=hadamard edge] (244) to (248);
+		\draw [style=hadamard adjoint adge] (244) to (254);
+		\draw [style=hadamard edge] (244) to (251);
+		\draw [style=hadamard edge] (245) to (251);
+		\draw [style=hadamard adjoint adge] (246) to (251);
+		\draw (245) to (260.center);
+		\draw (246) to (259.center);
+		\draw (258.center) to (244);
+		\draw (247) to (262.center);
+		\draw (261.center) to (248);
+		\draw (265.center) to (254);
+		\draw (264.center) to (255);
+		\draw (263.center) to (251);
+		\draw [style=hadamard edge] (244) to (252);
+		\draw [style=hadamard adjoint adge] (244) to (253);
+		\draw [style=hadamard edge] (244) to (255);
+		\draw [style=hadamard adjoint adge] (244) to (247);
+		\draw [style=hadamard adjoint adge] (251) to (255);
+		\draw [style=hadamard adjoint adge] (254) to (251);
+		\draw [style=hadamard edge] (248) to (251);
+		\draw [style=hadamard edge] (247) to (251);
+	\end{pgfonlayer}
+\end{tikzpicture}

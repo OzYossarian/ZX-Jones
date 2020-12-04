@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  2 DEC 2020 15:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  4 DEC 2020 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,6 +23,9 @@ File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
 )
+(./ZX-Jones_preamble.sty
+Package: ZX-Jones_preamble 
+
 (/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -220,6 +223,33 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count194
 \c@continuedfloat=\count195
 )
+(/usr/local/texlive/2020/texmf-dist/tex/latex/stackengine/stackengine.sty
+Package: stackengine 2017/02/13 v4.01\ Stacking text and objects in convenient 
+ways
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count196
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/listofitems/listofitems.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/listofitems/listofitems.tex
+\loi_cnt_foreach_nest=\count197
+\loi_nestcnt=\count198
+)
+Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
+sep char (CT)
+)
+\c@@stackindex=\count199
+\@boxshift=\skip59
+\stack@tmplength=\skip60
+\temp@stkl=\skip61
+\@stackedboxwidth=\skip62
+\@addedbox=\box48
+\@anchorbox=\box49
+\stackedbox=\box50
+\@centerbox=\box51
+\c@ROWcellindex@=\count266
+)
 (./tikzit.sty
 (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
@@ -233,7 +263,7 @@ x
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box48
+\pgfutil@abb=\box52
 (/usr/local/texlive/2020/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -267,14 +297,14 @@ ode.tex
 \pgf@yd=\dimen182
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count196
-\c@pgf@countb=\count197
-\c@pgf@countc=\count198
-\c@pgf@countd=\count199
+\c@pgf@counta=\count267
+\c@pgf@countb=\count268
+\c@pgf@countc=\count269
+\c@pgf@countd=\count270
 \t@pgf@toka=\toks32
 \t@pgf@tokb=\toks33
 \t@pgf@tokc=\toks34
-\pgf@sys@id@count=\count266
+\pgf@sys@id@count=\count271
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
@@ -292,8 +322,8 @@ File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count267
-\pgfsyssoftpath@bigbuffer@items=\count268
+\pgfsyssoftpath@smallbuffer@items=\count272
+\pgfsyssoftpath@bigbuffer@items=\count273
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -306,8 +336,8 @@ Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen183
-\pgfmath@count=\count269
-\pgfmath@box=\box49
+\pgfmath@count=\count274
+\pgfmath@box=\box53
 \pgfmath@toks=\toks35
 \pgfmath@stack@operand=\toks36
 \pgfmath@stack@operation=\toks37
@@ -331,7 +361,7 @@ code.tex)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count270
+\c@pgfmathroundto@lastzeros=\count275
 )) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
@@ -366,10 +396,10 @@ File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfpic=\box50
-\pgf@hbox=\box51
-\pgf@layerbox@main=\box52
-\pgf@picture@serial@count=\count271
+\pgfpic=\box54
+\pgf@hbox=\box55
+\pgf@layerbox@main=\box56
+\pgf@picture@serial@count=\count276
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
@@ -404,8 +434,8 @@ File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 e.tex
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@max=\dimen263
-\pgf@sys@shading@range@num=\count272
-\pgf@shadingcount=\count273
+\pgf@sys@shading@range@num=\count277
+\pgf@shadingcount=\count278
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -414,7 +444,7 @@ File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfexternal@startupbox=\box53
+\pgfexternal@startupbox=\box57
 ))
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
@@ -435,7 +465,7 @@ File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodeparttextbox=\box54
+\pgfnodeparttextbox=\box58
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
@@ -472,7 +502,7 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count274
+\pgf@plot@mark@count=\count279
 \pgfplotmarksize=\dimen268
 )
 \tikz@lastx=\dimen269
@@ -483,23 +513,23 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@lastmovetoy=\dimen274
 \tikzleveldistance=\dimen275
 \tikzsiblingdistance=\dimen276
-\tikz@figbox=\box55
-\tikz@figbox@bg=\box56
-\tikz@tempbox=\box57
-\tikz@tempbox@bg=\box58
-\tikztreelevel=\count275
-\tikznumberofchildren=\count276
-\tikznumberofcurrentchild=\count277
-\tikz@fig@count=\count278
+\tikz@figbox=\box59
+\tikz@figbox@bg=\box60
+\tikz@tempbox=\box61
+\tikz@tempbox@bg=\box62
+\tikztreelevel=\count280
+\tikznumberofchildren=\count281
+\tikznumberofcurrentchild=\count282
+\tikz@fig@count=\count283
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count279
-\pgfmatrixcurrentcolumn=\count280
-\pgf@matrix@numberofcolumns=\count281
+\pgfmatrixcurrentrow=\count284
+\pgfmatrixcurrentcolumn=\count285
+\pgf@matrix@numberofcolumns=\count286
 )
-\tikz@expandcount=\count282
+\tikz@expandcount=\count287
 
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -508,8 +538,8 @@ File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@layerbox@background=\box59
-\pgf@layerboxsaved@background=\box60
+\pgf@layerbox@background=\box63
+\pgf@layerboxsaved@background=\box64
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryarrows.code.tex
@@ -567,26 +597,26 @@ File: tikzlibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
 shapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodepartlowerbox=\box61
-\pgfnodeparttwobox=\box62
-\pgfnodepartthreebox=\box63
-\pgfnodepartfourbox=\box64
-\pgfnodeparttwentybox=\box65
-\pgfnodepartnineteenbox=\box66
-\pgfnodeparteighteenbox=\box67
-\pgfnodepartseventeenbox=\box68
-\pgfnodepartsixteenbox=\box69
-\pgfnodepartfifteenbox=\box70
-\pgfnodepartfourteenbox=\box71
-\pgfnodepartthirteenbox=\box72
-\pgfnodeparttwelvebox=\box73
-\pgfnodepartelevenbox=\box74
-\pgfnodeparttenbox=\box75
-\pgfnodepartninebox=\box76
-\pgfnodeparteightbox=\box77
-\pgfnodepartsevenbox=\box78
-\pgfnodepartsixbox=\box79
-\pgfnodepartfivebox=\box80
+\pgfnodepartlowerbox=\box65
+\pgfnodeparttwobox=\box66
+\pgfnodepartthreebox=\box67
+\pgfnodepartfourbox=\box68
+\pgfnodeparttwentybox=\box69
+\pgfnodepartnineteenbox=\box70
+\pgfnodeparteighteenbox=\box71
+\pgfnodepartseventeenbox=\box72
+\pgfnodepartsixteenbox=\box73
+\pgfnodepartfifteenbox=\box74
+\pgfnodepartfourteenbox=\box75
+\pgfnodepartthirteenbox=\box76
+\pgfnodeparttwelvebox=\box77
+\pgfnodepartelevenbox=\box78
+\pgfnodeparttenbox=\box79
+\pgfnodepartninebox=\box80
+\pgfnodeparteightbox=\box81
+\pgfnodepartsevenbox=\box82
+\pgfnodepartsixbox=\box83
+\pgfnodepartfivebox=\box84
 )))
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.pathmorphing.code.tex
@@ -599,11 +629,11 @@ s.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen280
 \pgfdecoratedinputsegmentremainingdistance=\dimen281
 \pgf@decorate@distancetomove=\dimen282
-\pgf@decorate@repeatstate=\count283
+\pgf@decorate@repeatstate=\count288
 \pgfdecorationsegmentamplitude=\dimen283
 \pgfdecorationsegmentlength=\dimen284
 )
-\tikz@lib@dec@box=\box81
+\tikz@lib@dec@box=\box85
 )
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.pathmorphing.code.tex))
@@ -615,10 +645,10 @@ brarydecorations.pathreplacing.code.tex))
 s/tikzlibrarydecorations.markings.code.tex
 (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.markings.code.tex))
-\pgf@layerbox@edgelayer=\box82
-\pgf@layerboxsaved@edgelayer=\box83
-\pgf@layerbox@nodelayer=\box84
-\pgf@layerboxsaved@nodelayer=\box85
+\pgf@layerbox@edgelayer=\box86
+\pgf@layerboxsaved@edgelayer=\box87
+\pgf@layerbox@nodelayer=\box88
+\pgf@layerboxsaved@nodelayer=\box89
 ) (./zx.tikzdefs
 (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -639,6 +669,13 @@ File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 .code.tex
 File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) (./zx.tikzstyles)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip63
+\bibsep=\skip64
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count289
+)
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
 
@@ -678,8 +715,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen285
-\Hy@linkcounter=\count284
-\Hy@pagecounter=\count285
+\Hy@linkcounter=\count290
+\Hy@pagecounter=\count291
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
@@ -692,7 +729,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 (/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count286
+\Hy@SavedSpaceFactor=\count292
 Package hyperref Info: Hyper figures OFF on input line 4547.
 Package hyperref Info: Link nesting OFF on input line 4552.
 Package hyperref Info: Hyper index ON on input line 4555.
@@ -700,7 +737,7 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count287
+\c@Hy@tempcnt=\count293
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -716,7 +753,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count288
+\Fld@menulength=\count294
 \Field@Width=\dimen287
 \Fld@charsize=\dimen288
 Package hyperref Info: Hyper figures OFF on input line 6430.
@@ -732,9 +769,9 @@ LaTeX Info: Redefining \pageref on input line 6504.
 (/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count289
-\c@Item=\count290
-\c@Hfootnote=\count291
+\Hy@abspage=\count295
+\c@Item=\count296
+\c@Hfootnote=\count297
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -743,10 +780,9 @@ File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count292
-\c@bookmark@seq@number=\count293
+\Fld@listcount=\count298
+\c@bookmark@seq@number=\count299
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -757,38 +793,36 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip59
+\Hy@SectionHShift=\skip65
 )
-\c@theorem=\count294
-
+\c@theorem=\count300
+) (./ZX-Jones_definitions.sty
+Package: ZX-Jones_definitions 
+)
 (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count295
-\l__pdf_internal_box=\box86
+\l__kernel_color_stack_int=\count301
+\l__pdf_internal_box=\box90
 )
-(./ZX-Jones.aux
-
-LaTeX Warning: Label `thm:local_pivot_equality' multiply defined.
-
-)
+(./ZX-Jones.aux)
 \openout1 = `ZX-Jones.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -826,16 +860,16 @@ LaTeX Font Info:    ... okay on input line 41.
 
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count296
+\scratchcounter=\count302
 \scratchdimen=\dimen289
-\scratchbox=\box87
-\nofMPsegments=\count297
-\nofMParguments=\count298
+\scratchbox=\box91
+\nofMPsegments=\count303
+\nofMParguments=\count304
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count299
+\MPscratchCnt=\count305
 \MPscratchDim=\dimen290
-\MPnumerator=\count300
-\makeMPintoPDFobject=\count301
+\MPnumerator=\count306
+\makeMPintoPDFobject=\count307
 \everyMPtoPDFconversion=\toks41
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -851,8 +885,8 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box88
-Package hyperref Info: Link coloring OFF on input line 41.
+\AtBeginShipoutBox=\box92
+Package hyperref Info: Link coloring OFF on input line 13.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -864,28 +898,28 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count302
+\c@section@level=\count308
 )
-LaTeX Info: Redefining \ref on input line 41.
-LaTeX Info: Redefining \pageref on input line 41.
-LaTeX Info: Redefining \nameref on input line 41.
+LaTeX Info: Redefining \ref on input line 13.
+LaTeX Info: Redefining \pageref on input line 13.
+LaTeX Info: Redefining \nameref on input line 13.
  (./ZX-Jones.out) (./ZX-Jones.out)
 \@outlinefile=\write4
 \openout4 = `ZX-Jones.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
@@ -893,16 +927,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 File: figures/sketches/Qutrit Potts matrices.png Graphic file (type png)
 <use figures/sketches/Qutrit Potts matrices.png>
 Package pdftex.def Info: figures/sketches/Qutrit Potts matrices.png  used on in
-put line 50.
+put line 22.
 (pdftex.def)             Requested size: 236.68607pt x 116.23514pt.
 <figures/sketches/Qu(4)it Potts matrices.png, id=53, 707.64375pt x 433.62pt>
 File: figures/sketches/Qu(4)it Potts matrices.png Graphic file (type png)
 <use figures/sketches/Qu(4)it Potts matrices.png>
 Package pdftex.def Info: figures/sketches/Qu(4)it Potts matrices.png  used on i
-nput line 55.
+nput line 27.
 (pdftex.def)             Requested size: 212.29475pt x 130.087pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
@@ -911,22 +945,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figur
 es/sketches/Qutrit Potts matrices.png> <./figures/sketches/Qu(4)it Potts matric
 es.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
@@ -940,68 +974,141 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 (./figures/input_connected_to_hadamard_is_graph-like.tikz)
 (./figures/multiple_inputs_connected_to_one_spider_is_graph-like.tikz)
 (./figures/blue_dashed_line_definition.tikz)
-(./figures/purple_dashed_line_definition.tikz)
+(./figures/purple_dashed_line_definition.tikz) [4]
 (./figures/a_local_comp_same.tikz) (./figures/a_local_comp_different.tikz)
-[4] (./figures/local_comp_on_graph_state.tikz)
+(./figures/local_comp_on_graph_state.tikz)
 (./figures/proper_local_pivot_on_graph_state.tikz) [5]
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
+(./figures/eliminate_M_spiders/theorem_LHS.tikz)
+(./figures/eliminate_M_spiders/theorem_RHS.tikz)
+(./figures/eliminate_N_spiders/0_n/step_1.tikz)
+(./figures/eliminate_N_spiders/0_n/step_9.tikz) [6]
+(./figures/eliminate_N_spiders/n_0/step_1.tikz)
+(./figures/eliminate_N_spiders/n_0/step_9.tikz)
+(./figures/eliminate_P_spiders/step_1.tikz)
+(./figures/eliminate_P_spiders/step_9.tikz) [7] (./ZX-Jones.bbl)
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
 (./figures/proper_local_pivot_on_graph_state.tikz)
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
-
- []
-
-(./figures/proper_1_local_pivot_weight_1.tikz) [6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
+(./figures/proper_1_local_pivot/weight_1/step_1.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_2.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_3.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_4.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_5.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_6.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_1.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_2.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_3.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_4.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_5.tikz)
+(./figures/proper_1_local_pivot/weight_1/step_6.tikz) [8]
+(./figures/proper_1_local_pivot/weight_2/step_1.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_2.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_3.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_4.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_5.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_6.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_1.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_2.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_3.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_4.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_5.tikz)
+(./figures/proper_1_local_pivot/weight_2/step_6.tikz) [9]
+(./figures/eliminate_M_spiders/theorem_LHS.tikz)
+(./figures/eliminate_M_spiders/theorem_RHS.tikz) [10]
+(./figures/eliminate_M_spiders/step_1.tikz)
+(./figures/eliminate_M_spiders/step_2.tikz)
+(./figures/eliminate_M_spiders/step_3.tikz)
+(./figures/eliminate_M_spiders/step_4.tikz)
+(./figures/eliminate_M_spiders/step_5.tikz)
+(./figures/eliminate_M_spiders/step_6.tikz)
+(./figures/eliminate_M_spiders/step_7.tikz)
+(./figures/eliminate_M_spiders/step_8.tikz)
+(./figures/eliminate_M_spiders/step_9.tikz)
+(./figures/eliminate_M_spiders/step_1.tikz)
+(./figures/eliminate_M_spiders/step_2.tikz)
+(./figures/eliminate_M_spiders/step_3.tikz)
+(./figures/eliminate_M_spiders/step_4.tikz)
+(./figures/eliminate_M_spiders/step_5.tikz)
+(./figures/eliminate_M_spiders/step_6.tikz)
+(./figures/eliminate_M_spiders/step_7.tikz)
+(./figures/eliminate_M_spiders/step_8.tikz)
+(./figures/eliminate_M_spiders/step_9.tikz) [11] [12]
+(./figures/eliminate_N_spiders/0_n/step_1.tikz)
+(./figures/eliminate_N_spiders/0_n/step_9.tikz)
+(./figures/eliminate_N_spiders/n_0/step_1.tikz)
+(./figures/eliminate_N_spiders/n_0/step_9.tikz)
+(./figures/eliminate_N_spiders/0_n/step_1.tikz)
+(./figures/eliminate_N_spiders/0_n/step_2.tikz)
+(./figures/eliminate_N_spiders/0_n/step_3.tikz)
+(./figures/eliminate_N_spiders/0_n/step_4.tikz)
+(./figures/eliminate_N_spiders/0_n/step_5.tikz)
+(./figures/eliminate_N_spiders/0_n/step_6.tikz)
+(./figures/eliminate_N_spiders/0_n/step_7.tikz)
+(./figures/eliminate_N_spiders/0_n/step_8.tikz)
+(./figures/eliminate_N_spiders/0_n/step_9.tikz)
+(./figures/eliminate_N_spiders/0_n/step_1.tikz)
+(./figures/eliminate_N_spiders/0_n/step_2.tikz)
+(./figures/eliminate_N_spiders/0_n/step_3.tikz)
+(./figures/eliminate_N_spiders/0_n/step_4.tikz)
+(./figures/eliminate_N_spiders/0_n/step_5.tikz)
+(./figures/eliminate_N_spiders/0_n/step_6.tikz)
+(./figures/eliminate_N_spiders/0_n/step_7.tikz)
+(./figures/eliminate_N_spiders/0_n/step_8.tikz)
+(./figures/eliminate_N_spiders/0_n/step_9.tikz) [13] [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 365.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
  (./ZX-Jones.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 240.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 240.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
 Package rerunfilecheck Info: File `ZX-Jones.out' has not changed.
 (rerunfilecheck)             Checksum: 1B708525C2688F3DD2163BDE171A7128;297.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 240.
  ) 
 Here is how much of TeX's memory you used:
- 24225 strings out of 480608
- 482154 string characters out of 5903629
- 876340 words of memory out of 5000000
- 39559 multiletter control sequences out of 15000+600000
- 545680 words of font info for 72 fonts, out of 8000000 for 9000
+ 25250 strings out of 480608
+ 505100 string characters out of 5903629
+ 1038048 words of memory out of 5000000
+ 40371 multiletter control sequences out of 15000+600000
+ 545979 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,71p,861b,927s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,15n,75p,882b,1008s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
 usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on ZX-Jones.pdf (7 pages, 302016 bytes).
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on ZX-Jones.pdf (14 pages, 412405 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 256 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
+ 55 named destinations out of 1000 (max. 500000)
  159 words of extra memory for PDF output out of 10000 (max. 10000000)
 

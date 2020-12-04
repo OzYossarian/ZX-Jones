@@ -1,0 +1,72 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (6.125, 2) {...};
+		\node [style=none] (1) at (5.375, 2.25) {};
+		\node [style=none] (2) at (6.875, 2.25) {};
+		\node [style=none] (3) at (7.875, 2) {...};
+		\node [style=none] (4) at (7.125, 2.25) {};
+		\node [style=none] (5) at (8.625, 2.25) {};
+		\node [style=none] (6) at (0.875, 2) {...};
+		\node [style=none] (7) at (0.125, 2.25) {};
+		\node [style=none] (8) at (1.625, 2.25) {};
+		\node [style=none] (9) at (2.625, 2) {...};
+		\node [style=none] (10) at (1.875, 2.25) {};
+		\node [style=none] (11) at (3.375, 2.25) {};
+		\node [style=none] (12) at (-2.625, 2) {...};
+		\node [style=none] (13) at (-3.375, 2.25) {};
+		\node [style=none] (14) at (-1.875, 2.25) {};
+		\node [style=none] (15) at (-0.875, 2) {...};
+		\node [style=none] (16) at (-1.625, 2.25) {};
+		\node [style=none] (17) at (-0.125, 2.25) {};
+		\node [style=none] (32) at (-5.625, -1.75) {$i$};
+		\node [style=none] (33) at (5.625, -1.75) {$j$};
+		\node [style=qutrit Z phase] (34) at (-7.875, 1) {$a_1^0$ \nodepart{lower} $b_1^0$};
+		\node [style=qutrit Z phase] (35) at (-6.125, 1) {$a_2^0$ \nodepart{lower} $b_2^0$};
+		\node [style=qutrit Z phase] (36) at (-4.375, -1.75) {$m_i$ \nodepart{lower} $-m_i$};
+		\node [style=qutrit Z phase] (37) at (-2.625, 1) {$a_1^1$ \nodepart{lower} $b_1^1$};
+		\node [style=qutrit Z phase] (38) at (-0.875, 1) {$a_1^2$ \nodepart{lower} $b_1^2$};
+		\node [style=qutrit Z phase] (39) at (0.875, 1) {$a_2^1$ \nodepart{lower} $b_2^1$};
+		\node [style=qutrit Z phase] (40) at (2.625, 1) {$a_2^2$ \nodepart{lower} $b_2^2$};
+		\node [style=qutrit Z phase] (41) at (4.375, -1.75) {$m_j$ \nodepart{lower} $-m_j$};
+		\node [style=qutrit Z phase] (42) at (6.125, 1) {$a_0^1$ \nodepart{lower} $b_0^1$};
+		\node [style=qutrit Z phase] (43) at (7.875, 1) {$a_0^2$ \nodepart{lower} $b_0^2$};
+		\node [style=none] (44) at (-7.875, 2) {...};
+		\node [style=none] (45) at (-8.625, 2.25) {};
+		\node [style=none] (46) at (-7.125, 2.25) {};
+		\node [style=none] (47) at (-6.125, 2) {...};
+		\node [style=none] (48) at (-6.875, 2.25) {};
+		\node [style=none] (49) at (-5.375, 2.25) {};
+		\node [style=qutrit hadamard unknown] (50) at (0, -1.75) {$w$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=hadamard edge] (36) to (34);
+		\draw [style=hadamard adjoint adge] (36) to (35);
+		\draw [style=hadamard edge] (41) to (42);
+		\draw [style=hadamard adjoint adge] (41) to (43);
+		\draw [style=hadamard edge] (36) to (37);
+		\draw [style=hadamard edge] (36) to (38);
+		\draw [style=hadamard adjoint adge] (36) to (39);
+		\draw [style=hadamard adjoint adge] (36) to (40);
+		\draw [style=hadamard adjoint adge] (40) to (41);
+		\draw [style=hadamard edge] (39) to (41);
+		\draw [style=hadamard edge] (37) to (41);
+		\draw [style=hadamard adjoint adge] (38) to (41);
+		\draw [bend right=15, looseness=0.75] (45.center) to (34);
+		\draw [bend right=15, looseness=0.75] (34) to (46.center);
+		\draw [bend right=15, looseness=0.75] (48.center) to (35);
+		\draw [bend right=15, looseness=0.75] (35) to (49.center);
+		\draw [bend right=15, looseness=0.75] (13.center) to (37);
+		\draw [bend right=15, looseness=0.75] (37) to (14.center);
+		\draw [bend right=15, looseness=0.75] (16.center) to (38);
+		\draw [bend right=15, looseness=0.75] (38) to (17.center);
+		\draw [bend right=15, looseness=0.75] (7.center) to (39);
+		\draw [bend right=15, looseness=0.75] (39) to (8.center);
+		\draw [bend right=15, looseness=0.75] (10.center) to (40);
+		\draw [bend right=15, looseness=0.75] (40) to (11.center);
+		\draw [bend right=15, looseness=0.75] (1.center) to (42);
+		\draw [bend right=15, looseness=0.75] (42) to (2.center);
+		\draw [bend right=15, looseness=0.75] (4.center) to (43);
+		\draw [bend right=15, looseness=0.75] (43) to (5.center);
+		\draw (36) to (41);
+	\end{pgfonlayer}
+\end{tikzpicture}

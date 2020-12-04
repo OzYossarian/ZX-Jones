@@ -1,0 +1,52 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (46) at (-3.125, 1.5) {};
+		\node [style=none] (49) at (-4.375, 1.5) {};
+		\node [style=none] (50) at (-5.625, 1.5) {};
+		\node [style=Z dot] (53) at (-3.125, -2) {};
+		\node [style=Z dot] (54) at (-5.625, 0.75) {};
+		\node [style=Z dot] (59) at (-4.375, 0.75) {};
+		\node [style=none] (60) at (-0.625, 1.5) {};
+		\node [style=none] (61) at (-1.875, 1.5) {};
+		\node [style=Z dot] (62) at (-1.875, 0.75) {};
+		\node [style=Z dot] (63) at (-0.625, 0.75) {};
+		\node [style=none] (64) at (3.125, 1.5) {};
+		\node [style=none] (65) at (4.375, 1.5) {};
+		\node [style=none] (66) at (5.625, 1.5) {};
+		\node [style=Z dot] (67) at (3.125, -2) {};
+		\node [style=Z dot] (68) at (5.625, 0.75) {};
+		\node [style=Z dot] (69) at (4.375, 0.75) {};
+		\node [style=none] (70) at (1.875, 1.5) {};
+		\node [style=none] (71) at (0.625, 1.5) {};
+		\node [style=Z dot] (72) at (0.625, 0.75) {};
+		\node [style=Z dot] (73) at (1.875, 0.75) {};
+		\node [style=red font] (327) at (-2.975, -2.625) {$*_1$};
+		\node [style=none] (328) at (-3.875, -2) {$i$};
+		\node [style=none] (329) at (3.875, -2) {$j$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=hadamard edge] (53) to (54);
+		\draw [style=hadamard adjoint adge] (53) to (59);
+		\draw (53) to (46.center);
+		\draw (50.center) to (54);
+		\draw (49.center) to (59);
+		\draw (61.center) to (62);
+		\draw (60.center) to (63);
+		\draw (67) to (64.center);
+		\draw (66.center) to (68);
+		\draw (65.center) to (69);
+		\draw (71.center) to (72);
+		\draw (70.center) to (73);
+		\draw [style=hadamard edge] (67) to (69);
+		\draw [style=hadamard adjoint adge] (67) to (68);
+		\draw [style=hadamard edge] (53) to (62);
+		\draw [style=hadamard edge] (53) to (63);
+		\draw [style=hadamard adjoint adge] (53) to (72);
+		\draw [style=hadamard adjoint adge] (53) to (73);
+		\draw [style=hadamard adjoint adge] (73) to (67);
+		\draw [style=hadamard edge] (72) to (67);
+		\draw [style=hadamard edge] (62) to (67);
+		\draw [style=hadamard adjoint adge] (63) to (67);
+		\draw [style=hadamard adjoint adge] (53) to (67);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,68 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z dot] (115) at (-3.125, -2.75) {};
+		\node [style=Z dot] (116) at (-5.625, 0) {};
+		\node [style=Z dot] (117) at (-4.375, 0) {};
+		\node [style=Z dot] (118) at (-1.875, 0) {};
+		\node [style=Z dot] (119) at (-0.625, 0) {};
+		\node [style=none] (120) at (4.375, 3) {};
+		\node [style=none] (121) at (5.625, 3) {};
+		\node [style=Z dot] (122) at (3.125, -2.75) {};
+		\node [style=Z dot] (123) at (5.625, 0) {};
+		\node [style=Z dot] (124) at (4.375, 0) {};
+		\node [style=Z dot] (125) at (0.625, 0) {};
+		\node [style=Z dot] (126) at (1.875, 0) {};
+		\node [style=qutrit X phase] (128) at (-3.125, 1) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit Z phase] (129) at (-5.625, 1) {$-1$ \nodepart{lower} $-1$};
+		\node [style=qutrit Z phase] (130) at (-4.375, 1) {$-1$ \nodepart{lower} $-1$};
+		\node [style=qutrit Z phase] (131) at (-1.875, 1) {$-1$ \nodepart{lower} $-1$};
+		\node [style=qutrit Z phase] (132) at (-0.625, 1) {$-1$ \nodepart{lower} $-1$};
+		\node [style=qutrit Z phase] (133) at (0.625, 1) {$-1$ \nodepart{lower} $-1$};
+		\node [style=qutrit Z phase] (134) at (1.875, 1) {$-1$ \nodepart{lower} $-1$};
+		\node [style=qutrit Z phase] (135) at (3.125, 1) {$-1$ \nodepart{lower} $-1$};
+		\node [style=none] (136) at (-3.125, 3) {};
+		\node [style=none] (137) at (-4.375, 3) {};
+		\node [style=none] (138) at (-5.625, 3) {};
+		\node [style=none] (139) at (-0.625, 3) {};
+		\node [style=none] (140) at (-1.875, 3) {};
+		\node [style=none] (141) at (3.125, 3) {};
+		\node [style=none] (142) at (1.875, 3) {};
+		\node [style=none] (143) at (0.625, 3) {};
+		\node [style=qutrit X phase] (145) at (3.125, 2.25) {$-1$ \nodepart{lower} $-1$};
+		\node [style=qutrit Z phase] (146) at (5.625, 2.25) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit Z phase] (147) at (4.375, 2.25) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit Z phase] (148) at (-4.375, 2.25) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit Z phase] (149) at (-5.625, 2.25) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit Z phase] (150) at (-1.875, 2.25) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit Z phase] (151) at (-3.125, 2.25) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit Z phase] (152) at (1.875, 2.25) {$1$ \nodepart{lower} $1$};
+		\node [style=red font] (277) at (-2.975, -3.375) {$*_1$};
+		\node [style=none] (278) at (-3.875, -2.75) {$i$};
+		\node [style=none] (279) at (3.875, -2.75) {$j$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (121.center) to (123);
+		\draw (120.center) to (124);
+		\draw [style=hadamard edge] (122) to (124);
+		\draw [style=hadamard adjoint adge] (122) to (123);
+		\draw [style=hadamard edge] (115) to (119);
+		\draw [style=hadamard adjoint adge] (115) to (125);
+		\draw [style=hadamard edge] (115) to (122);
+		\draw [style=hadamard edge] (116) to (122);
+		\draw [style=hadamard adjoint adge] (117) to (122);
+		\draw [style=hadamard adjoint adge] (118) to (122);
+		\draw [style=hadamard edge] (126) to (122);
+		\draw (116) to (138.center);
+		\draw (117) to (137.center);
+		\draw (136.center) to (115);
+		\draw (118) to (140.center);
+		\draw (139.center) to (119);
+		\draw (143.center) to (125);
+		\draw (142.center) to (126);
+		\draw (141.center) to (122);
+		\draw [style=hadamard edge] (115) to (123);
+		\draw [style=hadamard adjoint adge] (115) to (124);
+		\draw [style=hadamard edge] (115) to (126);
+		\draw [style=hadamard adjoint adge] (115) to (118);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (0, 0) {=};
+		\node [style=qutrit Z phase] (1) at (-1, -0.75) {$a$ \nodepart{lower} $a$};
+		\node [style=qutrit X phase] (2) at (-1, 0.5) {$a$ \nodepart{lower} $a$};
+		\node [style=none] (4) at (-1, 1.25) {};
+		\node [style=none] (5) at (1, 0.5) {};
+		\node [style=X dot] (6) at (1, -0.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (1) to (2);
+		\draw (2) to (4.center);
+		\draw (6) to (5.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
