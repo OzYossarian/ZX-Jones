@@ -18,16 +18,16 @@
 		\node [style=none] (15) at (-0.875, 2) {...};
 		\node [style=none] (16) at (-1.625, 2.25) {};
 		\node [style=none] (17) at (-0.125, 2.25) {};
-		\node [style=none] (32) at (-5.625, -1.75) {$i$};
-		\node [style=none] (33) at (5.625, -1.75) {$j$};
+		\node [style=none] (32) at (-5.625, -2.75) {$i$};
+		\node [style=none] (33) at (5.625, -2.75) {$j$};
 		\node [style=qutrit Z phase] (34) at (-7.875, 1) {$a_1^0$ \nodepart{lower} $b_1^0$};
 		\node [style=qutrit Z phase] (35) at (-6.125, 1) {$a_2^0$ \nodepart{lower} $b_2^0$};
-		\node [style=qutrit Z phase] (36) at (-4.375, -1.75) {$m_i$ \nodepart{lower} $-m_i$};
+		\node [style=qutrit Z phase] (36) at (-4.375, -2.75) {$m_i$ \nodepart{lower} $-m_i$};
 		\node [style=qutrit Z phase] (37) at (-2.625, 1) {$a_1^1$ \nodepart{lower} $b_1^1$};
 		\node [style=qutrit Z phase] (38) at (-0.875, 1) {$a_1^2$ \nodepart{lower} $b_1^2$};
 		\node [style=qutrit Z phase] (39) at (0.875, 1) {$a_2^1$ \nodepart{lower} $b_2^1$};
 		\node [style=qutrit Z phase] (40) at (2.625, 1) {$a_2^2$ \nodepart{lower} $b_2^2$};
-		\node [style=qutrit Z phase] (41) at (4.375, -1.75) {$m_j$ \nodepart{lower} $-m_j$};
+		\node [style=qutrit Z phase] (41) at (4.375, -2.75) {$m_j$ \nodepart{lower} $-m_j$};
 		\node [style=qutrit Z phase] (42) at (6.125, 1) {$a_0^1$ \nodepart{lower} $b_0^1$};
 		\node [style=qutrit Z phase] (43) at (7.875, 1) {$a_0^2$ \nodepart{lower} $b_0^2$};
 		\node [style=none] (44) at (-7.875, 2) {...};
@@ -36,7 +36,7 @@
 		\node [style=none] (47) at (-6.125, 2) {...};
 		\node [style=none] (48) at (-6.875, 2.25) {};
 		\node [style=none] (49) at (-5.375, 2.25) {};
-		\node [style=qutrit hadamard unknown] (50) at (0, -1.75) {$w$};
+		\node [style=qutrit hadamard unknown] (50) at (0, -2.75) {$w$};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw [style=hadamard edge] (36) to (34);

@@ -1,9 +1,27 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Coecke and Kissinger(2017)]{PQP}
+B.~Coecke and A.~Kissinger.
+\newblock \emph{Picturing Quantum Processes}.
+\newblock 2017.
+
+\bibitem[Duncan et~al.(2020)Duncan, Kissinger, Perdrix, and van~de
+  Wetering]{graph_theoretic_simplification}
+R.~Duncan, A.~Kissinger, S.~Perdrix, and J.~van~de Wetering.
+\newblock Graph-theoretic simplification of quantum circuits with the
+  zx-calculus.
+\newblock 2020.
+
+\bibitem[Gong and Wang(2017)]{qutrit_euler}
+X.~Gong and Q.~Wang.
+\newblock Equivalence of local complementation and euler decomposition in the
+  qutrit zx-calculus.
+\newblock 2017.
 
 \bibitem[Wang(2018)]{harny_completeness}
 Q.~Wang.

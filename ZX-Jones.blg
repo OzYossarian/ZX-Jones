@@ -3,46 +3,49 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: ZX-Jones.aux
 The style file: abbrvnat.bst
 Database file #1: ZX-Jones.bib
+Warning--empty publisher in PQP
+Warning--empty journal in graph_theoretic_simplification
+Warning--empty journal in qutrit_euler
 Warning--empty journal in harny_completeness
-You've used 1 entry,
+You've used 4 entries,
             2773 wiz_defined-function locations,
-            595 strings with 4642 characters,
-and the built_in function-call counts, 330 in all, are:
-= -- 25
-> -- 10
-< -- 1
-+ -- 4
-- -- 3
-* -- 17
-:= -- 58
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 4
-chr.to.int$ -- 1
-cite$ -- 3
-duplicate$ -- 19
-empty$ -- 31
-format.name$ -- 4
-if$ -- 62
+            607 strings with 5016 characters,
+and the built_in function-call counts, 1512 in all, are:
+= -- 119
+> -- 91
+< -- 3
++ -- 31
+- -- 27
+* -- 105
+:= -- 246
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 20
+chr.to.int$ -- 4
+cite$ -- 12
+duplicate$ -- 78
+empty$ -- 124
+format.name$ -- 35
+if$ -- 303
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 11
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 16
+pop$ -- 53
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 17
 quote$ -- 0
-skip$ -- 14
+skip$ -- 61
 stack$ -- 0
-substring$ -- 2
-swap$ -- 0
+substring$ -- 8
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 11
-warning$ -- 1
-while$ -- 3
+type$ -- 39
+warning$ -- 4
+while$ -- 12
 width$ -- 0
-write$ -- 18
-(There was 1 warning)
+write$ -- 51
+(There were 4 warnings)
