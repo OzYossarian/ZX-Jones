@@ -6,46 +6,47 @@ Database file #1: ZX-Jones.bib
 Warning--empty publisher in PQP
 Warning--empty journal in graph_theoretic_simplification
 Warning--empty journal in qutrit_euler
+Warning--empty journal in jones_tensors
 Warning--empty journal in harny_completeness
-You've used 4 entries,
+You've used 5 entries,
             2773 wiz_defined-function locations,
-            607 strings with 5016 characters,
-and the built_in function-call counts, 1512 in all, are:
-= -- 119
-> -- 91
-< -- 3
-+ -- 31
-- -- 27
-* -- 105
-:= -- 246
-add.period$ -- 12
-call.type$ -- 4
-change.case$ -- 20
-chr.to.int$ -- 4
-cite$ -- 12
-duplicate$ -- 78
-empty$ -- 124
-format.name$ -- 35
-if$ -- 303
+            610 strings with 5129 characters,
+and the built_in function-call counts, 1874 in all, are:
+= -- 150
+> -- 112
+< -- 4
++ -- 38
+- -- 33
+* -- 128
+:= -- 303
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 25
+chr.to.int$ -- 5
+cite$ -- 15
+duplicate$ -- 97
+empty$ -- 154
+format.name$ -- 44
+if$ -- 378
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 5
-newline$ -- 28
-num.names$ -- 16
-pop$ -- 53
+missing$ -- 6
+newline$ -- 33
+num.names$ -- 20
+pop$ -- 65
 preamble$ -- 1
-purify$ -- 17
+purify$ -- 21
 quote$ -- 0
-skip$ -- 61
+skip$ -- 77
 stack$ -- 0
-substring$ -- 8
+substring$ -- 10
 swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 39
-warning$ -- 4
-while$ -- 12
+type$ -- 50
+warning$ -- 5
+while$ -- 15
 width$ -- 0
-write$ -- 51
-(There were 4 warnings)
+write$ -- 62
+(There were 5 warnings)

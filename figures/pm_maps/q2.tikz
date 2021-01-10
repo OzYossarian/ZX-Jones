@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (0, -1) {};
+		\node [style=none] (1) at (0, 1) {};
+		\node [style=X phase dot] (6) at (0, 0) {$\pm\frac{\pi}{2}$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (0.center) to (1.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

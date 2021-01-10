@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -22,6 +22,11 @@ X.~Gong and Q.~Wang.
 \newblock Equivalence of local complementation and euler decomposition in the
   qutrit zx-calculus.
 \newblock 2017.
+
+\bibitem[Meichanetzidis and Kourtis(2018)]{jones_tensors}
+K.~Meichanetzidis and S.~Kourtis.
+\newblock Evaluating the jones polynomial with tensor networks.
+\newblock 2018.
 
 \bibitem[Wang(2018)]{harny_completeness}
 Q.~Wang.

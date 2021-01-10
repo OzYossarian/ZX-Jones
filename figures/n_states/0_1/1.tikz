@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=qutrit Z phase] (0) at (0, -0.5) {$0$ \nodepart{lower} $1$};
+		\node [style=none] (1) at (0, 1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (0) to (1.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z phase dot] (0) at (0, 0) {$k\pi$};
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,233 @@
+\subsection{The Qutrit ZX-Calculus}
+
+[ToDo: make it more bitesize - theorems, definitions, etc?]
+
+As before, this calculus is based around spiders and wires, but there are key differences, some subtler than others. To get a feel for the qutrit calculus, we outline these differences briefly here before giving a formal definition. First of all, the qubit $Z$-basis consisted of two vectors $\ket{0} = \smallcolvec{1\\0}$ and $\ket{1} = \smallcolvec{0\\1}$, whereas the qutrit $Z$-basis consists of three vectors:
+
+\begin{equation}
+	\ket{0} = \smallcolvec{1\\0\\0}, \hspace{20pt}
+	\ket{1} = \smallcolvec{0\\1\\0}, \hspace{20pt}
+	\ket{2} = \smallcolvec{0\\0\\1}. 
+\end{equation}
+ 
+Similarly, letting $\omega = e^{\frac{2}{3}\pi i}$, the qutrit $X$-basis consists of the three vectors: 
+
+\begin{align}
+	\ket{+} &= \frac{1}{\sqrt{3}} \left(\ket{0} + \ket{1} + \ket{2}\right)\\
+	\ket{\omega} &= \frac{1}{\sqrt{3}} \left(\ket{0} + \omega\ket{1} + \bar{\omega}\ket{2}\right)\\
+	\ket{\bar{\omega}} &= \frac{1}{\sqrt{3}} \left(\ket{0} + \bar{\omega}\ket{1} + \omega\ket{2}\right)
+\end{align}
+
+Spiders thus carry \textit{two} phases $\alpha$ and $\beta$, and have the following standard interpretation as linear maps:
+
+\begingroup
+	\allowdisplaybreaks
+	\setlength{\jot}{10pt}
+		\begin{align}
+			&\left\llbracket \quad \tikzfig{qutrit_generators/spiders/Z_a_b_labelled} \quad \right\rrbracket = 
+			\ket{0}^{m}\bra{0}^{n} + 
+			e^{i\alpha}\ket{1}^{m}\bra{1}^{n} + 
+			e^{i\beta}\ket{2}^{m}\bra{2}^{n} \\
+			&\left\llbracket \quad \tikzfig{qutrit_generators/spiders/X_a_b_labelled} \quad \right\rrbracket = 
+			\ket{+}^{m}\bra{+}^{n} + 
+			e^{i\alpha}\ket{\omega}^{m}\bra{\omega}^{n} + 
+			e^{i\beta}\ket{\bar{\omega}}^{m}\bra{\bar{\omega}}^{n}
+			% &\left\llbracket \quad \tikzfig{qutrit_generators/spiders/Z_a_b_labelled} \quad \right\rrbracket = 
+			% \ket{0}^{\otimes m}\bra{0}^{\otimes n} + 
+			% e^{i\alpha}\ket{1}^{\otimes m}\bra{1}^{\otimes n} + 
+			% e^{i\beta}\ket{2}^{\otimes m}\bra{2}^{\otimes n} \\
+			% &\left\llbracket \quad \tikzfig{qutrit_generators/spiders/X_a_b_labelled} \quad \right\rrbracket = 
+			% \ket{+}^{\otimes m}\bra{+}^{\otimes n} + 
+			% e^{i\alpha}\ket{\omega}^{\otimes m}\bra{\omega}^{\otimes n} + 
+			% e^{i\beta}\ket{\bar{\omega}}^{\otimes m}\bra{\bar{\omega}}^{\otimes n}
+		\end{align}
+\endgroup
+
+When $\alpha = \beta = 0$ we will again omit the angles entirely, and just draw a small green or red dot. 
+
+\begin{warning}
+	Throughout, we slightly abuse notation by letting $1$ and $2$ denote the commonly used angles $\frac{2\pi}{3}$ and $\frac{4\pi}{3}$ respectively. This shouldn't ever cause confusion.
+\end{warning}
+
+Hadamard boxes change too: they are now neither self-conjugate nor self-adjoint, though they remain self-transpose. Therefore in keeping with the diagrammatic paradigm we ought to stop representing them as boxes, and instead pick something that has neither vertical nor horizontal symmetry, but is invariant under rotation by $\pi$. A parallelogram fits the bill.
+
+\begin{definition}
+	In the qutrit ZX-calculus, the \textit{Hadamard edge} (\textit{$H$-edge}) and its adjoint (\textit{$H^\dagger$-edge}) are respectively the two diagrams below: 
+	\begin{equation}
+		\tikzfig{qutrit_rules/hadamard/euler/h} \ = \ 
+		\tikzfig{qutrit_rules/hadamard/euler/decomposition}
+	\end{equation}
+\end{definition}
+
+Now comes the most important difference: in the qutrit ZX-calculus there is no `plain' cap or cup. That is, we have the following two results:
+
+\begin{equation}
+	\tikzfig{z_cup} \ \neq \ \tikzfig{x_cup} \ , \hspace{40pt}
+	\tikzfig{z_cap} \ \neq \ \tikzfig{x_cap}
+\end{equation}
+
+This has several consequences. Firstly, the maxim that `only topology matters' no longer applies. That is, it is now important to make clear the distinction between a spider's inputs and outputs, unlike in the qubit case where we could freely interchange the two. Diagram components can still be isotoped around the plane but only so long as this input/output distinction is respected. This gives the qutrit calculus a slightly more rigid flavour than its qubit counterpart. That said, this rigidity is loosened by the following two results: firstly, this distinction is irrelevant for $H$- and $H^\dagger$-edges. 
+
+\begin{lemma}
+	In the qutrit ZX-calculus, the following results hold:
+	\begin{equation}
+		ToDo
+	\end{equation}
+	\begin{proof}
+		These are Lemmas 3.2 and 3.3 in \citep{qutrit_euler}.
+	\end{proof}
+\end{lemma}
+
+Secondly, the `snake equations' continue to hold in some form; given a cap and cup of different colours, we can still straighten out the wire between them as before, only now it comes at the cost of adding two Hadamard boxes to the wire. For a cup and cap of the same colour, we can straighten out the wire as usual.
+
+\begin{lemma}
+	In the qutrit ZX-calculus, the following results hold. Moreover, they hold with the roles of green and red interchanged. 
+	\begin{equation}
+		\tikzfig{qutrit_snake/same_bent} \quad = \quad \tikzfig{qutrit_snake/same_straight} \quad ,
+		\hspace{40pt}
+		\tikzfig{qutrit_snake/different_bent} \quad = \quad \tikzfig{qutrit_snake/different_straight} \quad .
+	\end{equation}
+	\begin{proof}
+		As we will soon see, these are just rules $\qutritRuleFusion$ and $\qutritRuleSnake$.
+	\end{proof}
+\end{lemma}
+
+We now give a full set of rules defining the qutrit ZX-calculus. Our presentation aims for clarity and accessibility; for a more rigourous description, see \citep{harny_completeness}.
+
+\begin{figure}
+	\begin{tcolorbox}[colback=white]
+		\begin{equation*}
+			% \tikzfig{qutrit_rules/fusion/lhs} \quad = \quad 
+			% \tikzfig{qutrit_rules/fusion/middle} \quad = \quad 
+			% \tikzfig{qutrit_rules/fusion/rhs} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
+			\tikzfig{qutrit_rules/fusion/all} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/identity/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/identity/rhs} \quad \hypertarget{qutrit_rule_id}{\mathbf{(id)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/twisted_cup/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/twisted_cup/rhs} \quad \hypertarget{qutrit_rule_twisted_cup}{\mathbf{(t)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/0_copy/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/0_copy/rhs} \quad \hypertarget{qutrit_rule_0_copy}{\mathbf{(cp_0)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/bialgebra/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/bialgebra/rhs} \quad \hypertarget{qutrit_rule_bialgebra}{\mathbf{(b)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/m_copy/1_2_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/m_copy/1_2_rhs} \quad \hypertarget{qutrit_rule_m_copy}{\mathbf{(cp_{\mathcal{M}})}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/m_copy/2_1_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/m_copy/2_1_rhs} \quad \mathbf{(cp_{\mathcal{M}})}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/commute/1_2_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/commute/1_2_rhs} \quad \hypertarget{qutrit_rule_commute}{\mathbf{(cm)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/commute/2_1_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/commute/2_1_rhs} \quad {\mathbf{(cm)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/hadamard/h_hdagger} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/identity} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/hdagger_h} \quad \hypertarget{qutrit_rule_hadamard}{\mathbf{(H)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/hadamard/euler/h} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/euler/decomposition} \quad \hypertarget{qutrit_rule_euler}{\mathbf{(E)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/colour_change/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/colour_change/rhs} \quad \hypertarget{qutrit_rule_colour_change}{\mathbf{(cc)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/colour_change/flip_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/colour_change/flip_rhs} \quad \mathbf{(cc)}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/snake/snake} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hopf_ish} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hadamards} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hadamard_adjoints} \quad \hypertarget{qutrit_rule_snake}{\mathbf{(s)}}
+		\end{equation*}
+	\end{tcolorbox}
+	\vspace{5pt}
+	\caption{Rewrite rules for the qutrit ZX-calculus.}
+	\label{fig:qutrit_ZX_rules}
+\end{figure}
+
+\begin{definition}\label{def:qutrit_ZX_rules}
+	The \textit{qutrit ZX-calculus} is a graphical calculus generated by the following diagrams, where $\alpha, \beta \in [0, 2 \pi]$:
+
+	\begin{equation}
+		\tikzfig{qutrit_generators/spiders/Z_a_b} \quad , \qquad 
+		\tikzfig{qutrit_generators/spiders/X_a_b} \quad , \qquad
+		\tikzfig{qutrit_generators/hadamard} \quad , \qquad
+		\tikzfig{qutrit_generators/swap} \quad , \qquad
+		\tikzfig{qutrit_generators/identity}
+	\end{equation}
+
+	and their adjoints $(-)^\dagger$. The non-spider generators' adjoints are their vertical reflections, whereas spiders' adjoints are found by swapping inputs and outputs and negating angles: 
+
+	\begin{equation}
+		\left(\ \tikzfig{qutrit_generators/spiders/Z_a_b_labelled}\ \right)^\dagger = \tikzfig{qutrit_generators/spiders/Z_a_b_adjoint_labelled} \quad , \qquad 
+		\left(\ \tikzfig{qutrit_generators/spiders/X_a_b_labelled}\ \right)^\dagger = \tikzfig{qutrit_generators/spiders/X_a_b_adjoint_labelled}
+	\end{equation}
+
+	These generators can be composed in parallel ($\otimes$) and sequentially ($\circ$), and the resulting diagrams are governed by the rewrite rules in Figure \ref{fig:qutrit_ZX_rules}, wherein addition is modulo $2\pi$. The fusion rule $\qutritRuleFusion$ applies to spiders of the same colour connected by at least one wire. Importantly, all the rules hold under taking adjoints, where for diagrams $D$ and $E$ we have:
+
+	\begin{equation}
+		(D \otimes E)^\dagger = D^\dagger \otimes E^\dagger
+	\end{equation}
+	\begin{equation}
+		(D \circ E)^\dagger = D^\dagger \circ E^\dagger
+	\end{equation}
+
+	Furthermore, all but the commutation equations $\qutritRuleCommute$ and the colour change equations $\qutritRuleColourChange$ continue to hold when the roles of green and red (i.e. $Z$ and $X$) are interchanged. For these four exceptions, however, analogous equations can be derived from the existing ones; for example, the corresponding colour change equations will be relevant for us later.
+\end{definition}
+	
+\begin{proposition}
+	The following equations are derivable in the qutrit ZX-calculus:
+	\begin{equation}\label{eq:derived_colour_change}
+		\tikzfig{qutrit_rules/exceptions/colour_change/rhs} \quad = \quad \tikzfig{qutrit_rules/exceptions/colour_change/lhs}
+		\quad , \qquad
+		\tikzfig{qutrit_rules/exceptions/colour_change/flip_rhs} \quad = \quad \tikzfig{qutrit_rules/exceptions/colour_change/flip_lhs}
+	\end{equation}
+	\begin{proof}
+		Add $H$- and $H^\dagger$-boxes to both sides of the original colour change equations in such a way that we can then cancel Hadamards on the legs of the red spiders via $\qutritRuleHadamard$.
+	\end{proof}
+\end{proposition}
+
+Having now defined the qutrit ZX-calculus we turn our attention back to our tensor network for the Jones polynomial of a knot (ToDo: ref). We are seeking a diagram in the qutrit ZX-calculus that equals (up to a scalar) the matrix $T_{\pm}^{(q)}$ from \eqref{eq:pm_tensor}.
+
+% where we have used $t = \frac{1}{2}(3 - 2 + \sqrt{3(3-4)}) = e^{i\frac{\pi}{3}}$ as in (ToDo: ref). 
+
+\begin{proposition}\label{prop:pm_map_q3}
+	Under the standard interpretation as a linear map, the following diagram gives (up to a scalar) the required matrix:
+	\begin{equation}
+		\left\llbracket \quad \tikzfig{pm_maps/q3} \quad \right\rrbracket \simeq
+		% 2\sqrt{3}e^{\mp i\frac{5\pi}{6}} \ 
+		\left\llbracket \quad \tikzfig{pm_maps/pm} \quad \right\rrbracket_{q=3} = 
+		\begin{pmatrix}
+			e^{\mp i\frac{\pi}{3}} & 1 & 1 \\
+			1 & e^{\mp i\frac{\pi}{3}} & 1 \\
+			1 & 1 & e^{\mp i\frac{\pi}{3}} \\
+		\end{pmatrix}
+	\end{equation}
+
+	\begin{proof}
+		See Appendix \ref{prop:pm_maps_zx_appendix}.
+	\end{proof}
+\end{proposition}
+
+Crucially, the ZX-diagram in Proposition \ref{prop:pm_map_q3} above is a \textit{stabilizer diagram} in the qutrit ZX-calculus - that is, all angles are integer multiples of $\frac{2\pi}{3}$. Therefore if we can find an algorithm analogous to \cite[][Theorem 5.4]{graph_theoretic_simplification} that efficiently reduces any stabilizer diagram to a trivial one, then we will have shown that the Jones polynomial of any knot at the lattice roots of unity $\pm e^{i\frac{\pi}{3}}$ is efficiently computable. [ToDo: justify the $\pm$]. In the next subsection, we will do exactly that.
+
+% Again - just like in Remark~\ref{rem:qubit_scalar_exactness} - these rules are complete for qutrit stabilizer quantum mechanics when equality is considered only up to a scalar factor; we give the scalar-exact versions (detailed in \citep{qutrit_exact}) so that we can actually compute Jones polynomials later. 

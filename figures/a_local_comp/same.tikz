@@ -1,0 +1,34 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z dot] (18) at (-2.75, -0.75) {};
+		\node [style=Z dot] (19) at (-4.5, 1) {};
+		\node [style=Z dot] (20) at (-1, 1) {};
+		\node [style={text=red}] (21) at (-2.55, -1.325) {$*_a$};
+		\node [style=none] (22) at (-2.75, -0.25) {};
+		\node [style=none] (23) at (-4.5, 1.5) {};
+		\node [style=none] (24) at (-1, 1.5) {};
+		\node [style=Z dot] (25) at (2.75, -0.75) {};
+		\node [style=Z dot] (26) at (1, 1) {};
+		\node [style=Z dot] (27) at (4.5, 1) {};
+		\node [style=none] (28) at (2.75, -0.25) {};
+		\node [style=none] (29) at (1, 1.5) {};
+		\node [style=none] (30) at (4.5, 1.5) {};
+		\node [style=none] (31) at (0, 0) {$\mapsto$};
+		\node [style=qutrit hadamard unknown] (32) at (-2.75, 1) {$w$};
+		\node [style=qutrit hadamard unknown] (33) at (2.75, 1) {$w+a$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=hadamard edge] (19) to (18);
+		\draw (19) to (20);
+		\draw (18) to (22.center);
+		\draw (19) to (23.center);
+		\draw (20) to (24.center);
+		\draw [style=hadamard edge] (26) to (25);
+		\draw (26) to (27);
+		\draw (25) to (28.center);
+		\draw (26) to (29.center);
+		\draw (27) to (30.center);
+		\draw [style=hadamard edge] (18) to (20);
+		\draw [style=hadamard edge] (25) to (27);
+	\end{pgfonlayer}
+\end{tikzpicture}

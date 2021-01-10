@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (4) at (0, 1) {};
+		\node [style=none] (5) at (0, -1) {};
+		\node [style=qutrit hadamard] (6) at (0, 0.5) {};
+		\node [style=qutrit hadamard] (7) at (0, -0.5) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (5.center) to (4.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -23,7 +23,7 @@
 		\node [style=none] (65) at (5.75, 3.25) {};
 		\node [style=none] (66) at (-3.25, 1.75) {...};
 		\node [style=none] (67) at (3.25, 1.75) {...};
-		\node [style=qutrit X phase] (68) at (0, -3) {$2$ \nodepart{lower} $1$};
+		\node [style=qutrit X phase] (68) at (0, -3) {$1$ \nodepart{lower} $2$};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw [style=hadamard edge] (49) to (46);

@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=qutrit X phase] (0) at (-1, -1) {$m$ \nodepart{lower} $-m$};
+		\node [style=qutrit X phase] (1) at (1, -1) {$m$ \nodepart{lower} $-m$};
+		\node [style=none] (3) at (-1, 1.25) {};
+		\node [style=none] (4) at (1, 1.25) {};
+		\node [style=none] (5) at (0, 0.5) {...};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (0) to (3.center);
+		\draw (1) to (4.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -44,14 +44,6 @@
 		\draw [bend right=15, looseness=0.75] (31) to (34.center);
 		\draw [bend right=15, looseness=0.75] (38.center) to (36);
 		\draw [bend right=15, looseness=0.75] (36) to (39.center);
-		\draw [bend right=15, looseness=0.75] (25.center) to (23);
-		\draw [bend right=15, looseness=0.75] (23) to (26.center);
-		\draw [bend right=15, looseness=0.75] (29.center) to (27);
-		\draw [bend right=15, looseness=0.75] (27) to (30.center);
-		\draw [bend right=15, looseness=0.75] (33.center) to (31);
-		\draw [bend right=15, looseness=0.75] (31) to (34.center);
-		\draw [bend right=15, looseness=0.75] (38.center) to (36);
-		\draw [bend right=15, looseness=0.75] (36) to (39.center);
 		\draw (17) to (31);
 		\draw (18) to (23);
 		\draw (19) to (27);

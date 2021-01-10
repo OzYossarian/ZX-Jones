@@ -20,7 +20,7 @@
 \tikzstyle{diamond non-zero}=[draw=black, fill={rgb,255: red,250; green,255; blue,190}, draw=black, shape=diamond, minimum size=2.5mm, inner sep=0.2mm, tikzit draw=blue]
 \tikzstyle{red font}=[text=red, tikzit draw=red]
 \tikzstyle{vertex}=[inner sep=0mm, minimum size=1mm, shape=circle, draw=black, fill=black]
-\tikzstyle{vertex set}=[inner sep=0mm, minimum size=1mm, shape=circle, draw=black, fill=white, font={\footnotesize\boldmath}]
+\tikzstyle{vertex set}=[inner sep=0mm, minimum size=1.5mm, shape=circle, draw=black, fill=white, font={\footnotesize\boldmath}]
 
 % Edge styles
 \tikzstyle{hadamard edge}=[-, dashed, dash pattern=on 2pt off 0.5pt, thick, draw={rgb,255: red,68; green,136; blue,255}]

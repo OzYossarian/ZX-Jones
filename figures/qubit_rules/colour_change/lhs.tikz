@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (44) at (0, 1.25) {...};
+		\node [style=none] (45) at (-0.75, 1.75) {};
+		\node [style=none] (47) at (0.75, 1.75) {};
+		\node [style=hadamard] (49) at (-0.75, 1.25) {};
+		\node [style=hadamard] (50) at (0.75, 1.25) {};
+		\node [style=Z phase dot] (51) at (0, 0) {$\alpha$};
+		\node [style=none] (52) at (0, -1.25) {...};
+		\node [style=none] (53) at (-0.75, -1.75) {};
+		\node [style=none] (54) at (0.75, -1.75) {};
+		\node [style=hadamard] (55) at (-0.75, -1.25) {};
+		\node [style=hadamard] (56) at (0.75, -1.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (49) to (45.center);
+		\draw (50) to (47.center);
+		\draw (55) to (53.center);
+		\draw (56) to (54.center);
+		\draw [bend left, looseness=0.75] (51) to (56);
+		\draw [bend right, looseness=0.75] (51) to (55);
+		\draw [bend right, looseness=0.75] (51) to (50);
+		\draw [bend left, looseness=0.75] (51) to (49);
+	\end{pgfonlayer}
+\end{tikzpicture}

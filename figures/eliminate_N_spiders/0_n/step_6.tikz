@@ -22,10 +22,10 @@
 		\node [style=none] (33) at (5.5, 3) {};
 		\node [style=none] (34) at (-3, 1.5) {...};
 		\node [style=none] (35) at (3, 1.5) {...};
-		\node [style=qutrit X phase] (36) at (-4.5, -2) {$2$ \nodepart{lower} $1$};
-		\node [style=qutrit X phase] (37) at (-1.5, -2) {$2$ \nodepart{lower} $1$};
-		\node [style=qutrit X phase] (38) at (1.5, -2) {$2$ \nodepart{lower} $1$};
-		\node [style=qutrit X phase] (39) at (4.5, -2) {$2$ \nodepart{lower} $1$};
+		\node [style=qutrit X phase] (36) at (-4.5, -2) {$1$ \nodepart{lower} $2$};
+		\node [style=qutrit X phase] (37) at (-1.5, -2) {$1$ \nodepart{lower} $2$};
+		\node [style=qutrit X phase] (38) at (1.5, -2) {$1$ \nodepart{lower} $2$};
+		\node [style=qutrit X phase] (39) at (4.5, -2) {$1$ \nodepart{lower} $2$};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw [bend right=15, looseness=0.75] (20.center) to (18);

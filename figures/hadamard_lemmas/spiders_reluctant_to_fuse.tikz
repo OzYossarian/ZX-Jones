@@ -1,0 +1,58 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (12) at (-2, 0) {=};
+		\node [style=qutrit hadamard] (22) at (-3.225, 0) {};
+		\node [style=qutrit hadamard] (41) at (0.7, 0) {};
+		\node [style=qutrit hadamard] (50) at (-0.675, 0.25) {};
+		\node [style=qutrit hadamard adjoint] (51) at (-0.675, -0.25) {};
+		\node [style=qutrit hadamard] (52) at (4.725, 0) {};
+		\node [style=qutrit hadamard] (61) at (3.4, 0.7) {};
+		\node [style=qutrit hadamard adjoint] (62) at (3.4, -0.7) {};
+		\node [style=none] (63) at (2, 0) {=};
+		\node [style=Z dot] (64) at (3.3, 0) {};
+		\node [style=none] (91) at (-4.75, 2.75) {};
+		\node [style=none] (92) at (-3.25, 2.75) {};
+		\node [style=none] (93) at (-4, 2.5) {...};
+		\node [style=qutrit Z phase] (94) at (-4, 1.5) {$\alpha$ \nodepart{lower} $\beta$};
+		\node [style=none] (95) at (-0.75, 2.75) {};
+		\node [style=none] (96) at (0.75, 2.75) {};
+		\node [style=none] (97) at (0, 2.5) {...};
+		\node [style=qutrit Z phase] (98) at (0, 1.5) {$\alpha$ \nodepart{lower} $\beta$};
+		\node [style=none] (99) at (3.25, 2.75) {};
+		\node [style=none] (100) at (4.75, 2.75) {};
+		\node [style=none] (101) at (4, 2.5) {...};
+		\node [style=qutrit Z phase] (102) at (4, 1.5) {$\alpha$ \nodepart{lower} $\beta$};
+		\node [style=none] (103) at (3.25, -2.75) {};
+		\node [style=none] (104) at (4.75, -2.75) {};
+		\node [style=none] (105) at (4, -2.5) {...};
+		\node [style=qutrit Z phase] (106) at (4, -1.5) {$\gamma$ \nodepart{lower} $\delta$};
+		\node [style=none] (107) at (-0.75, -2.75) {};
+		\node [style=none] (108) at (0.75, -2.75) {};
+		\node [style=none] (109) at (0, -2.5) {...};
+		\node [style=qutrit Z phase] (110) at (0, -1.5) {$\gamma$ \nodepart{lower} $\delta$};
+		\node [style=none] (111) at (-4.75, -2.75) {};
+		\node [style=none] (112) at (-3.25, -2.75) {};
+		\node [style=none] (113) at (-4, -2.5) {...};
+		\node [style=qutrit Z phase] (114) at (-4, -1.5) {$\gamma$ \nodepart{lower} $\delta$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right=15] (91.center) to (94);
+		\draw [bend right=15] (94) to (92.center);
+		\draw [bend right=15] (95.center) to (98);
+		\draw [bend right=15] (98) to (96.center);
+		\draw [bend right=15] (99.center) to (102);
+		\draw [bend right=15] (102) to (100.center);
+		\draw [bend left=15] (103.center) to (106);
+		\draw [bend left=15] (106) to (104.center);
+		\draw [bend left=45, looseness=0.75] (102) to (106);
+		\draw [bend right=45, looseness=0.75] (102) to (106);
+		\draw [bend left=15] (107.center) to (110);
+		\draw [bend left=15] (110) to (108.center);
+		\draw [bend left=45, looseness=0.75] (98) to (110);
+		\draw [bend right=45, looseness=0.75] (98) to (110);
+		\draw [bend left=15] (111.center) to (114);
+		\draw [bend left=15] (114) to (112.center);
+		\draw [bend left=45, looseness=0.75] (94) to (114);
+		\draw [bend right=45, looseness=0.75] (94) to (114);
+	\end{pgfonlayer}
+\end{tikzpicture}
