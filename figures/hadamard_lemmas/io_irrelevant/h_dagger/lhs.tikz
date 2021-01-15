@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-1.75, 1.75) {...};
+		\node [style=none] (1) at (-2.5, 2) {};
+		\node [style=none] (2) at (-1, 2) {};
+		\node [style=none] (3) at (-1.75, -1.75) {...};
+		\node [style=none] (4) at (-2.5, -2) {};
+		\node [style=qutrit Z phase] (5) at (-1.75, -0.75) {$\alpha$ \nodepart{lower} $\beta$};
+		\node [style=none] (6) at (-1, -2) {};
+		\node [style=none] (7) at (1.75, 1.75) {...};
+		\node [style=none] (8) at (1, 2) {};
+		\node [style=none] (9) at (2.5, 2) {};
+		\node [style=none] (10) at (1.75, -1.75) {...};
+		\node [style=none] (11) at (1, -2) {};
+		\node [style=qutrit Z phase] (12) at (1.75, 0.75) {$\gamma$ \nodepart{lower} $\delta$};
+		\node [style=none] (13) at (2.5, -2) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend left=15] (5) to (6.center);
+		\draw [bend right=15] (5) to (4.center);
+		\draw [bend right=15] (5) to (2.center);
+		\draw [bend left=15] (5) to (1.center);
+		\draw [bend left=15] (12) to (13.center);
+		\draw [bend right=15] (12) to (11.center);
+		\draw [bend right=15] (12) to (9.center);
+		\draw [bend left=15] (12) to (8.center);
+		\draw [style=hadamard adjoint adge] (5) to (12);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -18,7 +18,7 @@ We first define a graph-like diagram in the qutrit ZX calculus.
 	\end{enumerate}
 \end{definition}
 
-For our specific needs, the last two items above will not be relevant, since ZX-diagrams arising from knots will be closed, but we include them to keep the definition consistent with the qubit case. However, note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. The following equation, which holds with the roles of $H$ and $H^\dagger$ reversed, helps us get around this:
+Thanks to Lemma \ref{lem:h_edges_input_output} we can ignore which of a spider's $H$- and $H^\dagger$-legs are inputs and outputs. For our specific needs, the last two items above will not be relevant, since ZX-diagrams arising from knots will be closed, but we include them to keep the definition consistent with the qubit case. However, note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. The following equation, which holds with the roles of $H$ and $H^\dagger$ reversed, helps us get around this:
 
 \begin{equation}\label{eq:spiders_reluctant_to_fuse}
 	\tikzfig{hadamard_lemmas/spiders_reluctant_to_fuse/1} \ \xeq{\qutritRuleHadamard} \
@@ -116,15 +116,7 @@ A graph state is described fully by its underlying multigraph, or equivalently b
 	\end{equation}
 \end{definition}
 
-So only those edges between neighbours of node $k$ are affected, but rather than just having their weight increased by $1$ (modulo $2$) as in the qubit case, the increase in weight also depends on the weights of the edges from $i$ and $j$ to $k$. As always, this is best seen graphically. We reintroduce the blue dashed line notation for Hadamard edges, and now also use purple dashed lines for $H^\dagger$-edges:
-
-\begin{equation}\label{eq:qutrit_dashed_lines}
-	\tikzfig{hadamard_lemmas/blue_dashed_line}
-	\hspace{75pt}
-	\tikzfig{hadamard_lemmas/purple_dashed_line}
-\end{equation} 
-
-For two nodes $i$ and $j$ both connected to $k$ by the same colour edge, $a$-local complementation at $k$ increases weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $k$ by edges of different colour, $a$-local complementation at $k$ decreases $w_{i,j}$ by $a$. We show a fragment of a ZX-diagram below under the effect of this operation:
+So only those edges between neighbours of node $k$ are affected, but rather than just having their weight increased by $1$ (modulo $2$) as in the qubit case, the increase in weight also depends on the weights of the edges from $i$ and $j$ to $k$. As always, this is best seen graphically. For two nodes $i$ and $j$ both connected to $k$ by the same colour edge, $a$-local complementation at $k$ increases weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $k$ by edges of different colour, $a$-local complementation at $k$ decreases $w_{i,j}$ by $a$. We show a fragment of a ZX-diagram below under the effect of this operation:
 
 \begin{equation}
 	\tikzfig{a_local_comp/same}
@@ -179,8 +171,8 @@ These two operations are again the drivers behind the simplification procedure. 
 \begin{theorem}\label{thm:eliminate_M_spiders}
 	Given any graph-like ZX-diagram containing two interior \Mspiders\ $i$ and $j$ connected by edge $ij$ of weight $w_{i,j} \eqdef w \in \{1,2\}$, suppose we perform a proper $\pm w$-local pivot along $ij$. Then the new ZX-diagram is related to the old one by the equality:
 	
-	\ctikzfig{eliminate_M_spiders/theorem_LHS}
-	\ctikzfig{eliminate_M_spiders/theorem_RHS}
+	\ctikzfig{eliminate/M_spiders/theorem_LHS}
+	\ctikzfig{eliminate/M_spiders/theorem_RHS}
 	
 	where all changes to weights of edges where neither endpoint is $i$ or $j$ are omitted. Furthermore, in order to save space, each node with phase \qutritZphase{a_x^y}{b_x^y} is representative of \textit{all} nodes connected to $i$ by an $x$-weighted edge and to $j$ by a $y$-weighted edge.
 
@@ -193,7 +185,7 @@ These two operations are again the drivers behind the simplification procedure. 
 	Given any graph-like ZX-diagram containing an interior \Nspider\ $k$ with phase \qutritZphase{0}{n} for $n \in \{1,2\}$, suppose we perform a $(-n)$-local complementation at $k$. Then the new ZX-diagram is related to the old one by the equality:
 
 	\begin{equation*}
-		\tikzfig{eliminate_N_spiders/0_n/step_1} \quad = \quad \tikzfig{eliminate_N_spiders/0_n/step_9}
+		\tikzfig{eliminate/N_spiders/0_n/step_1} \quad = \quad \tikzfig{eliminate/N_spiders/0_n/step_9}
 	\end{equation*}
 
 	where all changes to weights of edges where neither endpoint is $k$ are omitted. If instead $k$ has phase \qutritZphase{n}{0} for $n \in \{1,2\}$, suppose we perform the same $(-n)$-local complementation at $k$. Then the equality relating the new and old diagrams becomes:
@@ -201,7 +193,7 @@ These two operations are again the drivers behind the simplification procedure. 
 	% Spiders with phases \qutritZphase{a_1}{b_1} ... \qutritZphase{a_r}{b_r} are all the neighbours of $k$ connected by a $1$-weighted (blue) edge, while spider with phases \qutritZphase{c_1}{d_1} ... \qutritZphase{c_s}{d_s} are all the neighbours of $k$ connected by a $2$-weighted (purple) edge.\newline
 
 	\begin{equation*}
-		\tikzfig{eliminate_N_spiders/n_0/step_1} \quad = \quad \tikzfig{eliminate_N_spiders/n_0/step_9}
+		\tikzfig{eliminate/N_spiders/n_0/step_1} \quad = \quad \tikzfig{eliminate/N_spiders/n_0/step_9}
 	\end{equation*}
 
 	\begin{proof}
@@ -213,7 +205,7 @@ These two operations are again the drivers behind the simplification procedure. 
 	Given any graph-like ZX-diagram containing an interior \Pspider\ $k$ with phase \qutritZphase{p}{p} for $p \in \{1,2\}$, suppose we perform a $p$-local complementation at $k$. Then the new ZX-diagram is related to the old one by the equality:
 
 	\begin{equation*}
-		\tikzfig{eliminate_P_spiders/step_1} \quad = \quad \tikzfig{eliminate_P_spiders/step_9}
+		\tikzfig{eliminate/P_spiders/step_1} \quad = \quad \tikzfig{eliminate/P_spiders/step_9}
 	\end{equation*}
 
 	where all changes to weights of edges where neither endpoint is $k$ are omitted.

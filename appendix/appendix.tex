@@ -3,10 +3,11 @@
 We begin with proofs of the translations of the matrix $T_{\pm}^{(q)}$ into the ZX-calculus. 
 
 \begin{proposition}\label{prop:pm_maps_zx_appendix} \textbf{/\ Propositions~\ref{prop:pm_map_q2_q4}, \ref{prop:pm_map_q3}.}
+	The following equalities hold up to a scalar under the standard interpretation:
 	\begin{equation*}
-		\left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket = \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=2} \ , \qquad
-		\left\llbracket \ \tikzfig{pm_maps/q3} \ \right\rrbracket = \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=3} \ , \quad
-		\left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket = \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=4}
+		\left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket \simeq \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=2} \ , \qquad
+		\left\llbracket \ \tikzfig{pm_maps/q3} \ \right\rrbracket \simeq \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=3} \ , \quad
+		\left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket \simeq \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=4}
 	\end{equation*}
 
 	\begin{proof}
@@ -124,13 +125,13 @@ We begin with proofs of the translations of the matrix $T_{\pm}^{(q)}$ into the 
 	\end{proof}
 \end{proposition}
 
-Next we prove the local pivot equality from Theorem~\ref{thm:local_pivot_equality}. For this, recall that all the qutrit rewrite rules hold under taking adjoints, and with the roles of green and red swapped, so in particular rule $\qutritRuleEuler$ also gives:
+Next we prove the local pivot equality from Theorem~\ref{thm:local_pivot_equality}. For this, recall that all but the $\qutritRuleCommute$ and $\qutritRuleColourChange$ qutrit rewrite rules hold under taking adjoints, and with the roles of green and red swapped, so in particular rule $\qutritRuleEuler$ also gives:
 
 \begin{equation}\label{eq:qutrit_hadamard_decompositions}
 	\tikzfig{qutrit_rules/hadamard/euler/h} = \tikzfig{qutrit_rules/hadamard/euler/decomposition} \ , \hspace{50pt} 
 	\tikzfig{qutrit_rules/hadamard/euler/h} = \tikzfig{hadamard_lemmas/decompositions/h} \ , \hspace{50pt} 
-	\tikzfig{hadamard_lemmas/decompositions/h_dagger} = \tikzfig{hadamard_lemmas/decompositions/h_dagger_1} \ , \hspace{50pt}
-	\tikzfig{hadamard_lemmas/decompositions/h_dagger} = \tikzfig{hadamard_lemmas/decompositions/h_dagger_2} \
+	\tikzfig{hadamard_lemmas/decompositions/h_dagger} = \tikzfig{hadamard_lemmas/decompositions/h_dagger_xzx} \ , \hspace{50pt}
+	\tikzfig{hadamard_lemmas/decompositions/h_dagger} = \tikzfig{hadamard_lemmas/decompositions/h_dagger_zxz} \
 \end{equation}
 
 \begin{theorem}\label{thm:local_pivot_equality_appendix} \textbf{/\ Theorem~\ref{thm:local_pivot_equality}.} 
@@ -247,8 +248,8 @@ We are now in a position to prove the \Mspider\ elimination theorem.
 \begin{theorem}\label{thm:eliminate_M_spiders_appendix} \textbf{/\ Theorem~\ref{thm:eliminate_M_spiders}.}
 	Given any graph-like ZX-diagram containing two interior \Mspiders\ $i$ and $j$ connected by edge $ij$ of weight $w_{i,j} \eqdef w \in \{1,2\}$, suppose we perform a proper $\pm w$-local pivot along $ij$. Then the new ZX-diagram is related to the old one by the equality:
 	
-	\ctikzfig{eliminate_M_spiders/theorem_LHS}
-	\ctikzfig{eliminate_M_spiders/theorem_RHS}
+	\ctikzfig{eliminate/M_spiders/theorem_LHS}
+	\ctikzfig{eliminate/M_spiders/theorem_RHS}
 	
 	where all changes to weights of edges where neither endpoint is $i$ or $j$ are omitted. Furthermore, in order to save space, each node with phase \qutritZphase{a_x^y}{b_x^y} is representative of \textit{all} nodes connected to $i$ by an $x$-weighted edge and to $j$ by a $y$-weighted edge.
 
@@ -258,23 +259,23 @@ We are now in a position to prove the \Mspider\ elimination theorem.
 			\allowdisplaybreaks
 			\setlength{\jot}{30pt}
 			\begin{align*}
-				&\ &&\tikzfig{eliminate_M_spiders/step_1} \\
+				&\ &&\tikzfig{eliminate/M_spiders/step_1} \\
 				&\xeq{\qutritRuleFusion} 
-				&&\tikzfig{eliminate_M_spiders/step_2} \\
+				&&\tikzfig{eliminate/M_spiders/step_2} \\
 				&\xeq{\ref{thm:local_pivot_equality_appendix}} 
-				&&\tikzfig{eliminate_M_spiders/step_3} \\
+				&&\tikzfig{eliminate/M_spiders/step_3} \\
 				&\xeq{\qutritRuleColourChange}
-				&&\tikzfig{eliminate_M_spiders/step_4} \\
+				&&\tikzfig{eliminate/M_spiders/step_4} \\
 				&\xeq{\ref{lem:leg_flip}}
-				&&\tikzfig{eliminate_M_spiders/step_5} \\
+				&&\tikzfig{eliminate/M_spiders/step_5} \\
 				&\xeq{\ref{lem:substantial_m_copy}}
-				&&\tikzfig{eliminate_M_spiders/step_6} \\
+				&&\tikzfig{eliminate/M_spiders/step_6} \\
 				&= 
-				&&\tikzfig{eliminate_M_spiders/step_7} \\
+				&&\tikzfig{eliminate/M_spiders/step_7} \\
 				&\xeq{\qutritRuleColourChange}
-				&&\tikzfig{eliminate_M_spiders/step_8} \\
+				&&\tikzfig{eliminate/M_spiders/step_8} \\
 				&\xeq{\qutritRuleFusion}
-				&&\tikzfig{eliminate_M_spiders/step_9} \\
+				&&\tikzfig{eliminate/M_spiders/step_9} \\
 			\end{align*}
 		\endgroup
 	\end{proof}
@@ -334,7 +335,7 @@ Proving the corresponding \Nspider\ elimination theorem requires a further lemma
 	Given any graph-like ZX-diagram containing an interior \Nspider\ $k$ with phase \qutritZphase{0}{n} for $n \in \{1,2\}$, suppose we perform a $(-n)$-local complementation at $k$. Then the new ZX-diagram is related to the old one by the equality:
 
 	\begin{equation*}
-		\tikzfig{eliminate_N_spiders/0_n/step_1} \quad = \quad \tikzfig{eliminate_N_spiders/0_n/step_9}
+		\tikzfig{eliminate/N_spiders/0_n/step_1} \quad = \quad \tikzfig{eliminate/N_spiders/0_n/step_9}
 	\end{equation*}
 
 	where all changes to weights of edges where neither endpoint is $k$ are omitted. If instead $k$ has phase \qutritZphase{n}{0} for $n \in \{1,2\}$, suppose we perform the same $(-n)$-local complementation at $k$. Then the equality relating the new and old diagrams becomes:
@@ -342,7 +343,7 @@ Proving the corresponding \Nspider\ elimination theorem requires a further lemma
 	% Spiders with phases \qutritZphase{a_1}{b_1} ... \qutritZphase{a_r}{b_r} are all the neighbours of $k$ connected by a $1$-weighted (blue) edge, while spider with phases \qutritZphase{c_1}{d_1} ... \qutritZphase{c_s}{d_s} are all the neighbours of $k$ connected by a $2$-weighted (purple) edge.\newline
 
 	\begin{equation*}
-		\tikzfig{eliminate_N_spiders/n_0/step_1} \quad = \quad \tikzfig{eliminate_N_spiders/n_0/step_9}
+		\tikzfig{eliminate/N_spiders/n_0/step_1} \quad = \quad \tikzfig{eliminate/N_spiders/n_0/step_9}
 	\end{equation*}
 
 	\begin{proof}
@@ -351,23 +352,23 @@ Proving the corresponding \Nspider\ elimination theorem requires a further lemma
 			\allowdisplaybreaks
 			\setlength{\jot}{20pt}
 				\begin{align*}
-					&\ &&\tikzfig{eliminate_N_spiders/0_n/step_1} 
+					&\ &&\tikzfig{eliminate/N_spiders/0_n/step_1} 
 					&&&\xeq{\qutritRuleFusion} 
-					&&&&\tikzfig{eliminate_N_spiders/0_n/step_2} \\
+					&&&&\tikzfig{eliminate/N_spiders/0_n/step_2} \\
 					&\xeq{\ref{thm:local_comp_equality}} 
-					&&\tikzfig{eliminate_N_spiders/0_n/step_3} 
+					&&\tikzfig{eliminate/N_spiders/0_n/step_3} 
 					&&&\xeqq{\ref{cor:N_effect}}{\qutritRuleFusion} 
-					&&&&\tikzfig{eliminate_N_spiders/0_n/step_4} \\
+					&&&&\tikzfig{eliminate/N_spiders/0_n/step_4} \\
 					&\xeq{\ref{lem:leg_flip}} 
-					&&\tikzfig{eliminate_N_spiders/0_n/step_5} 
+					&&\tikzfig{eliminate/N_spiders/0_n/step_5} 
 					&&&\xeq{\ref{lem:substantial_m_copy}} 
-					&&&&\tikzfig{eliminate_N_spiders/0_n/step_6} \\
+					&&&&\tikzfig{eliminate/N_spiders/0_n/step_6} \\
 					&\xeq{\eqref{eq:qutrit_dashed_lines}}
-					&&\tikzfig{eliminate_N_spiders/0_n/step_7} 
+					&&\tikzfig{eliminate/N_spiders/0_n/step_7} 
 					&&&\xeq{\qutritRuleColourChange} 
-					&&&&\tikzfig{eliminate_N_spiders/0_n/step_8} \\
+					&&&&\tikzfig{eliminate/N_spiders/0_n/step_8} \\
 					&\xeq{\qutritRuleFusion} 
-					&&\tikzfig{eliminate_N_spiders/0_n/step_9} \\
+					&&\tikzfig{eliminate/N_spiders/0_n/step_9} \\
 				\end{align*}
 		\endgroup
 	\end{proof}
@@ -397,7 +398,7 @@ Similarly the corresponding \Pspider\ elimination theorem requires a lemma allow
 	Given any graph-like ZX-diagram containing an interior \Pspider\ $k$ with phase \qutritZphase{p}{p} for $p \in \{1,2\}$, suppose we perform a $p$-local complementation at $k$. Then the new ZX-diagram is related to the old one by the equality:
 
 	\begin{equation*}
-		\tikzfig{eliminate_P_spiders/step_1} \quad = \quad \tikzfig{eliminate_P_spiders/step_9}
+		\tikzfig{eliminate/P_spiders/step_1} \quad = \quad \tikzfig{eliminate/P_spiders/step_9}
 	\end{equation*}
 
 	where all changes to weights of edges where neither endpoint is $k$ are omitted. 
@@ -407,23 +408,23 @@ Similarly the corresponding \Pspider\ elimination theorem requires a lemma allow
 			\allowdisplaybreaks
 			\setlength{\jot}{20pt}
 				\begin{align*}
-					&\ &&\tikzfig{eliminate_P_spiders/step_1} 
+					&\ &&\tikzfig{eliminate/P_spiders/step_1} 
 					&&&\xeq{\qutritRuleFusion} 
-					&&&&\tikzfig{eliminate_P_spiders/step_2} \\
+					&&&&\tikzfig{eliminate/P_spiders/step_2} \\
 					&\xeq{\ref{thm:local_comp_equality}} 
-					&&\tikzfig{eliminate_P_spiders/step_3} 
+					&&\tikzfig{eliminate/P_spiders/step_3} 
 					&&&\xeqq{\ref{lem:P_state_colour_change}}{\qutritRuleFusion} 
-					&&&&\tikzfig{eliminate_P_spiders/step_4} \\
+					&&&&\tikzfig{eliminate/P_spiders/step_4} \\
 					&\xeq{\ref{lem:leg_flip}} 
-					&&\tikzfig{eliminate_P_spiders/step_5} 
+					&&\tikzfig{eliminate/P_spiders/step_5} 
 					&&&\xeq{\ref{lem:substantial_m_copy}} 
-					&&&&\tikzfig{eliminate_P_spiders/step_6} \\
+					&&&&\tikzfig{eliminate/P_spiders/step_6} \\
 					&\xeq{\eqref{eq:qutrit_dashed_lines}}
-					&&\tikzfig{eliminate_P_spiders/step_7} 
+					&&\tikzfig{eliminate/P_spiders/step_7} 
 					&&&\xeq{\qutritRuleColourChange} 
-					&&&&\tikzfig{eliminate_P_spiders/step_8} \\
+					&&&&\tikzfig{eliminate/P_spiders/step_8} \\
 					&\xeq{\qutritRuleFusion} 
-					&&\tikzfig{eliminate_P_spiders/step_9} \\
+					&&\tikzfig{eliminate/P_spiders/step_9} \\
 				\end{align*}
 		\endgroup
 	\end{proof}

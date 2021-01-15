@@ -18,24 +18,24 @@
 	% We provide a graphical proof that evaluating the Jones polynomial of arbitrary links at the lattice roots of unity is in P. For these cases, the problem reduces to the evaluation of the partition function of a planar q-state Potts model. The partition is represented as a closed tensor network. We employ the ZX-calculus, which is a sound and complete graphical language for tensor networks and allows reasoning via graphical rewrites. We show that there exist polynomially long rewrite sequences that fully simplify the tensor network and return Z(q) for q ∈ {1, 2, 3, 4}, which correspond to evaluating the Jones polynomial at the lattice roots of unity.
 \end{abstract}
 
-\input{intro}
+\input{intro/intro}
 
-% \input{passage_to_ZX} 
-\input{shorter_passage_to_ZX} 
+% \input{passage/longer} 
+\input{passage/shorter} 
 
-\input{qubit}
+\input{qubit/qubit}
 
 \section{Simplifying Qutrit ZX-Diagrams}
 
 For the remaining case $q=3$, we will show that we can generalise all the ideas of the previous section to the qutrit ZX-calculus, which we must first define.
 
-\input{qutrit_rules}
+\input{qutrit/qutrit_rules}
 
-\input{qutrit_graphs}
+\input{qutrit/qutrit_graphs}
 
 \bibliography{ZX-Jones}
 
 \appendix
-\input{appendix}
+\input{appendix/appendix}
 
 \end{document} 

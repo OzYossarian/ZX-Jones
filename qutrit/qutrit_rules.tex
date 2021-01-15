@@ -52,27 +52,36 @@ When $\alpha = \beta = 0$ we will again omit the angles entirely, and just draw 
 Hadamard boxes change too: they are now neither self-conjugate nor self-adjoint, though they remain self-transpose. Therefore in keeping with the diagrammatic paradigm we ought to stop representing them as boxes, and instead pick something that has neither vertical nor horizontal symmetry, but is invariant under rotation by $\pi$. A parallelogram fits the bill.
 
 \begin{definition}
-	In the qutrit ZX-calculus, the \textit{Hadamard edge} (\textit{$H$-edge}) and its adjoint (\textit{$H^\dagger$-edge}) are respectively the two diagrams below: 
+	In the qutrit ZX-calculus, the \textit{Hadamard edge} (\textit{$H$-edge}) and its adjoint (\textit{$H^\dagger$-edge}) are respectively the two diagrams below. We resurrect the dashed blue line notation from the qubit case, and additionally use a purple dashed line for $H^\dagger$-edges:
 	\begin{equation}
 		\tikzfig{qutrit_rules/hadamard/euler/h} \ = \ 
-		\tikzfig{qutrit_rules/hadamard/euler/decomposition}
+		\tikzfig{hadamard_lemmas/dashed/blue} \ = \ 
+		\tikzfig{qutrit_rules/hadamard/euler/decomposition} \ , 
+		\hspace{75pt}
+		\tikzfig{hadamard_lemmas/decompositions/h_dagger} \ = \ 
+		\tikzfig{hadamard_lemmas/dashed/purple} \ = \ 
+		\tikzfig{hadamard_lemmas/decompositions/h_dagger_zxz}
 	\end{equation}
 \end{definition}
 
 Now comes the most important difference: in the qutrit ZX-calculus there is no `plain' cap or cup. That is, we have the following two results:
 
 \begin{equation}
-	\tikzfig{z_cup} \ \neq \ \tikzfig{x_cup} \ , \hspace{40pt}
-	\tikzfig{z_cap} \ \neq \ \tikzfig{x_cap}
+	\tikzfig{cups_caps/z_cup} \quad \neq \quad \tikzfig{cups_caps/x_cup} \quad , \hspace{75pt}
+	\tikzfig{cups_caps/z_cap} \quad \neq \quad \tikzfig{cups_caps/x_cap}
 \end{equation}
 
 This has several consequences. Firstly, the maxim that `only topology matters' no longer applies. That is, it is now important to make clear the distinction between a spider's inputs and outputs, unlike in the qubit case where we could freely interchange the two. Diagram components can still be isotoped around the plane but only so long as this input/output distinction is respected. This gives the qutrit calculus a slightly more rigid flavour than its qubit counterpart. That said, this rigidity is loosened by the following two results: firstly, this distinction is irrelevant for $H$- and $H^\dagger$-edges. 
 
-\begin{lemma}
+\begin{lemma}\label{lem:h_edges_input_output}
 	In the qutrit ZX-calculus, the following results hold:
-	\begin{equation}
-		ToDo
-	\end{equation}
+	\begin{equation*}
+		\tikzfig{hadamard_lemmas/io_irrelevant/h/lhs} \ = \ 
+		\tikzfig{hadamard_lemmas/io_irrelevant/h/rhs} \ ,
+		\hspace{50pt}
+		\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/lhs} \ = \ 
+		\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/rhs}
+	\end{equation*}
 	\begin{proof}
 		These are Lemmas 3.2 and 3.3 in \citep{qutrit_euler}.
 	\end{proof}
@@ -84,7 +93,7 @@ Secondly, the `snake equations' continue to hold in some form; given a cap and c
 	In the qutrit ZX-calculus, the following results hold. Moreover, they hold with the roles of green and red interchanged. 
 	\begin{equation}
 		\tikzfig{qutrit_snake/same_bent} \quad = \quad \tikzfig{qutrit_snake/same_straight} \quad ,
-		\hspace{40pt}
+		\hspace{50pt}
 		\tikzfig{qutrit_snake/different_bent} \quad = \quad \tikzfig{qutrit_snake/different_straight} \quad .
 	\end{equation}
 	\begin{proof}
