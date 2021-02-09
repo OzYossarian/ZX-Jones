@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=qutrit X phase] (0) at (-1.75, -1) {$m$ \nodepart{lower} $-m$};
+		\node [style=qutrit X phase] (1) at (0.25, -1) {$m$ \nodepart{lower} $-m$};
+		\node [style=qutrit X phase] (2) at (1.75, -1) {$m$ \nodepart{lower} $-m$};
+		\node [style=none] (3) at (-1.75, 1.25) {};
+		\node [style=none] (4) at (0.25, 1.25) {};
+		\node [style=none] (5) at (-0.75, 0.5) {...};
+		\node [style=none] (6) at (1.75, 0.75) {};
+		\node [style=qutrit Z phase] (7) at (1.75, 0.75) {$\alpha$ \nodepart{lower} $\beta$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (0) to (3.center);
+		\draw (1) to (4.center);
+		\draw (2) to (7);
+	\end{pgfonlayer}
+\end{tikzpicture}

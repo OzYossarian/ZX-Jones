@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (1) at (0, 1) {...};
+		\node [style=none] (5) at (-1, 1.5) {};
+		\node [style=none] (7) at (1, 1.5) {};
+		\node [style=none] (8) at (0, -1) {...};
+		\node [style=none] (9) at (-1, -1.5) {};
+		\node [style=Z dot] (10) at (0, 0) {};
+		\node [style=none] (11) at (1, -1.5) {};
+		\node [style=none] (13) at (0, 2.25) {$\overbrace{\hspace{30pt}}^{\tiny{m}}$};
+		\node [style=none] (14) at (0, -2.25) {$\underbrace{\hspace{30pt}}_{\tiny{n}}$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend left, looseness=0.75] (10) to (11.center);
+		\draw [bend right, looseness=0.75] (10) to (9.center);
+		\draw [bend right, looseness=0.75] (10) to (7.center);
+		\draw [bend left, looseness=0.75] (10) to (5.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

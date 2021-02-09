@@ -1,0 +1,48 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z dot] (13) at (-4.5, -0.25) {};
+		\node [style=Z dot] (14) at (-1.5, -0.25) {};
+		\node [style=Z dot] (15) at (1.5, -0.25) {};
+		\node [style=Z dot] (16) at (4.5, -0.25) {};
+		\node [style=X dot] (58) at (-4.5, -1.75) {};
+		\node [style=X dot] (59) at (-1.5, -1.75) {};
+		\node [style=X dot] (60) at (1.5, -1.75) {};
+		\node [style=X dot] (61) at (4.5, -1.75) {};
+		\node [style=qutrit Z phase] (62) at (-1.5, 1.5) {$a_r - p$ \nodepart{lower} $b_r - p$};
+		\node [style=qutrit Z phase] (63) at (1.5, 1.5) {$c_1 - p$ \nodepart{lower} $d_1 - p$};
+		\node [style=qutrit Z phase] (64) at (-4.5, 1.5) {$a_1 - p$ \nodepart{lower} $b_1 - p$};
+		\node [style=qutrit Z phase] (65) at (4.5, 1.5) {$c_s - p$ \nodepart{lower} $d_s - p$};
+		\node [style=none] (66) at (-3, 1.5) {...};
+		\node [style=none] (67) at (3, 1.5) {...};
+		\node [style=none] (74) at (-4.5, 2.75) {...};
+		\node [style=none] (75) at (-5.5, 3) {};
+		\node [style=none] (76) at (-3.5, 3) {};
+		\node [style=none] (77) at (-1.5, 2.75) {...};
+		\node [style=none] (78) at (-2.5, 3) {};
+		\node [style=none] (79) at (-0.5, 3) {};
+		\node [style=none] (80) at (1.5, 2.75) {...};
+		\node [style=none] (81) at (0.5, 3) {};
+		\node [style=none] (82) at (2.5, 3) {};
+		\node [style=none] (83) at (4.5, 2.75) {...};
+		\node [style=none] (84) at (3.5, 3) {};
+		\node [style=none] (85) at (5.5, 3) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=hadamard edge] (58) to (13);
+		\draw [style=hadamard edge] (59) to (14);
+		\draw [style=hadamard adjoint adge] (60) to (15);
+		\draw [style=hadamard adjoint adge] (61) to (16);
+		\draw [bend left=15, looseness=0.75] (76.center) to (64);
+		\draw [bend right=15, looseness=0.75] (75.center) to (64);
+		\draw [bend left=15, looseness=0.75] (79.center) to (62);
+		\draw [bend right=15, looseness=0.75] (78.center) to (62);
+		\draw [bend left=15, looseness=0.75] (82.center) to (63);
+		\draw [bend right=15, looseness=0.75] (81.center) to (63);
+		\draw [bend left=15, looseness=0.75] (85.center) to (65);
+		\draw [bend right=15, looseness=0.75] (84.center) to (65);
+		\draw (13) to (64);
+		\draw (14) to (62);
+		\draw (15) to (63);
+		\draw (16) to (65);
+	\end{pgfonlayer}
+\end{tikzpicture}

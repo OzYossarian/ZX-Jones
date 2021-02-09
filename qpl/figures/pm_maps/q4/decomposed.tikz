@@ -1,0 +1,52 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=X phase dot] (0) at (-0.75, -1.25) {$\pi$};
+		\node [style=none] (1) at (-1.75, 2) {};
+		\node [style=none] (2) at (0.75, 2) {};
+		\node [style=none] (3) at (-0.75, -2) {};
+		\node [style=none] (5) at (1.75, -2) {};
+		\node [style=X phase dot] (6) at (0.75, 1.25) {$\pi$};
+		\node [style=hadamard] (7) at (0, 0) {};
+		\node [style=none] (8) at (-2.25, -0.5) {};
+		\node [style=none] (9) at (-2.25, -2) {};
+		\node [style=none] (10) at (2.25, -2) {};
+		\node [style=none] (11) at (2.25, -0.5) {};
+		\node [style=none] (12) at (-2.25, 2) {};
+		\node [style=none] (13) at (-2.25, 0.5) {};
+		\node [style=none] (14) at (2.25, 0.5) {};
+		\node [style=none] (15) at (2.25, 2) {};
+		\node [style=none] (16) at (-0.75, -0.5) {};
+		\node [style=none] (17) at (-0.75, 0.5) {};
+		\node [style=none] (18) at (0.75, 0.5) {};
+		\node [style=none] (19) at (0.75, -0.5) {};
+		\node [style=none] (20) at (-0.75, 2) {};
+		\node [style=none] (21) at (0.75, -2) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (3.center) to (0);
+		\draw [in=-90, out=165, looseness=0.75] (0) to (1.center);
+		\draw [in=90, out=-15, looseness=0.75] (6) to (5.center);
+		\draw [in=-165, out=15] (0) to (6);
+		\draw (2.center) to (6);
+		\draw [style=empty] (19.center) to (21.center);
+		\draw [style=empty] (21.center) to (10.center);
+		\draw [style=empty] (10.center) to (11.center);
+		\draw [style=empty] (19.center) to (11.center);
+		\draw [style=empty] (11.center) to (14.center);
+		\draw [style=empty] (19.center) to (18.center);
+		\draw [style=empty] (18.center) to (14.center);
+		\draw [style=empty] (14.center) to (15.center);
+		\draw [style=empty] (15.center) to (20.center);
+		\draw [style=empty] (20.center) to (17.center);
+		\draw [style=empty] (17.center) to (18.center);
+		\draw [style=empty] (17.center) to (16.center);
+		\draw [style=empty] (16.center) to (19.center);
+		\draw [style=empty] (16.center) to (8.center);
+		\draw [style=empty] (8.center) to (9.center);
+		\draw [style=empty] (9.center) to (21.center);
+		\draw [style=empty] (8.center) to (13.center);
+		\draw [style=empty] (13.center) to (17.center);
+		\draw [style=empty] (13.center) to (12.center);
+		\draw [style=empty] (12.center) to (20.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

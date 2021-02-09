@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (4) at (-0.75, -1.5) {};
+		\node [style=Z dot] (5) at (0, -0.5) {};
+		\node [style=none] (6) at (0.75, -1.5) {};
+		\node [style=none] (11) at (-0.75, 1.5) {};
+		\node [style=X dot] (12) at (0, 0.5) {};
+		\node [style=none] (13) at (0.75, 1.5) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend left, looseness=0.75] (5) to (6.center);
+		\draw [bend right, looseness=0.75] (5) to (4.center);
+		\draw [bend right, looseness=0.75] (12) to (13.center);
+		\draw [bend left, looseness=0.75] (12) to (11.center);
+		\draw (12) to (5);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (19) at (0, 1.75) {...};
+		\node [style=none] (20) at (-1, 2) {};
+		\node [style=none] (21) at (1, 2) {};
+		\node [style=none] (22) at (0, -1.75) {...};
+		\node [style=none] (23) at (-1, -2) {};
+		\node [style=Z phase dot] (24) at (0, 0) {$\alpha + \beta$};
+		\node [style=none] (25) at (1, -2) {};
+		\node [style=none] (26) at (0, 2.75) {$\overbrace{\hspace{30pt}}^{\tiny{m + p}}$};
+		\node [style=none] (27) at (0, -2.75) {$\underbrace{\hspace{30pt}}_{\tiny{n + q}}$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend left=15] (24) to (25.center);
+		\draw [bend right=15] (24) to (23.center);
+		\draw [bend right=15] (24) to (21.center);
+		\draw [bend left=15] (24) to (20.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

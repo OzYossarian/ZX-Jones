@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: ZX-qutritpivot-complexity.aux
+The style file: eptcs.bst
+Database file #1: refs-teague.bib
+Database file #2: refs.bib
+Warning--missing publisher in PQP
+Warning--empty journal in graph_theoretic_simplification
+You've used 11 entries,
+            2701 wiz_defined-function locations,
+            642 strings with 6681 characters,
+and the built_in function-call counts, 4718 in all, are:
+= -- 317
+> -- 157
+< -- 2
++ -- 66
+- -- 54
+* -- 563
+:= -- 579
+add.period$ -- 17
+call.type$ -- 11
+change.case$ -- 49
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 370
+empty$ -- 402
+format.name$ -- 63
+if$ -- 911
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 78
+newline$ -- 62
+num.names$ -- 22
+pop$ -- 121
+preamble$ -- 1
+purify$ -- 49
+quote$ -- 0
+skip$ -- 126
+stack$ -- 0
+substring$ -- 106
+swap$ -- 347
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 53
+warning$ -- 2
+while$ -- 26
+width$ -- 13
+write$ -- 114
+(There were 2 warnings)

@@ -1,0 +1,39 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z phase dot] (9) at (1.75, 0.75) {};
+		\node [style=qutrit Z phase] (12) at (-1.75, 0.75) {$a_r$ \nodepart{lower} $b_r$};
+		\node [style=none] (13) at (-1.75, 1.75) {...};
+		\node [style=none] (14) at (-2.5, 2) {};
+		\node [style=none] (15) at (-1, 2) {};
+		\node [style=qutrit Z phase] (16) at (1.75, 0.75) {$c_1$ \nodepart{lower} $d_1$};
+		\node [style=none] (17) at (1.75, 1.75) {...};
+		\node [style=none] (18) at (1, 2) {};
+		\node [style=none] (19) at (2.5, 2) {};
+		\node [style=qutrit Z phase] (21) at (0, -1) {$0$ \nodepart{lower} $n$};
+		\node [style=qutrit Z phase] (22) at (-4.25, 0.75) {$a_1$ \nodepart{lower} $b_1$};
+		\node [style=none] (23) at (-4.25, 1.75) {...};
+		\node [style=none] (24) at (-5, 2) {};
+		\node [style=none] (25) at (-3.5, 2) {};
+		\node [style=Z phase dot] (27) at (4.25, 0.75) {};
+		\node [style=qutrit Z phase] (28) at (4.25, 0.75) {$c_s$ \nodepart{lower} $d_s$};
+		\node [style=none] (29) at (4.25, 1.75) {...};
+		\node [style=none] (30) at (3.5, 2) {};
+		\node [style=none] (31) at (5, 2) {};
+		\node [style=none] (32) at (-3, 0.75) {...};
+		\node [style=none] (33) at (3, 0.75) {...};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right=15, looseness=0.75] (14.center) to (12);
+		\draw [bend right=15, looseness=0.75] (12) to (15.center);
+		\draw [bend right=15, looseness=0.75] (18.center) to (16);
+		\draw [bend right=15, looseness=0.75] (16) to (19.center);
+		\draw [style=hadamard adjoint adge] (21) to (9);
+		\draw [style=hadamard edge] (12) to (21);
+		\draw [bend right=15, looseness=0.75] (24.center) to (22);
+		\draw [bend right=15, looseness=0.75] (22) to (25.center);
+		\draw [style=hadamard edge] (21) to (22);
+		\draw [bend right=15, looseness=0.75] (30.center) to (28);
+		\draw [bend right=15, looseness=0.75] (28) to (31.center);
+		\draw [style=hadamard adjoint adge] (21) to (28);
+	\end{pgfonlayer}
+\end{tikzpicture}

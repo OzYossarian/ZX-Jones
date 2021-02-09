@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (44) at (0, 1) {...};
+		\node [style=none] (49) at (-0.75, 1.25) {};
+		\node [style=none] (50) at (0.75, 1.25) {};
+		\node [style=X phase dot] (51) at (0, 0) {$\alpha$};
+		\node [style=none] (52) at (0, -1) {...};
+		\node [style=none] (55) at (-0.75, -1.25) {};
+		\node [style=none] (56) at (0.75, -1.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend left, looseness=0.75] (51) to (56.center);
+		\draw [bend right, looseness=0.75] (51) to (55.center);
+		\draw [bend right, looseness=0.75] (51) to (50.center);
+		\draw [bend left, looseness=0.75] (51) to (49.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

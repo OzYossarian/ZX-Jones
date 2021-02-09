@@ -1,0 +1,47 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z dot] (35) at (-4.75, -0.25) {};
+		\node [style=Z dot] (36) at (-1.75, -0.25) {};
+		\node [style=Z dot] (37) at (1.75, -0.25) {};
+		\node [style=Z dot] (38) at (4.75, -0.25) {};
+		\node [style=Z dot] (39) at (0, -2) {};
+		\node [style=X dot] (60) at (0, 1.5) {};
+		\node [style=none] (61) at (-4.75, 2.75) {...};
+		\node [style=none] (62) at (-5.75, 3) {};
+		\node [style=none] (63) at (-3.75, 3) {};
+		\node [style=none] (64) at (-1.75, 2.75) {...};
+		\node [style=none] (65) at (-2.75, 3) {};
+		\node [style=none] (66) at (-0.75, 3) {};
+		\node [style=none] (67) at (1.75, 2.75) {...};
+		\node [style=none] (68) at (0.75, 3) {};
+		\node [style=none] (69) at (2.75, 3) {};
+		\node [style=none] (70) at (4.75, 2.75) {...};
+		\node [style=none] (71) at (3.75, 3) {};
+		\node [style=none] (72) at (5.75, 3) {};
+		\node [style=qutrit Z phase] (79) at (-1.75, 1.5) {$a_r - p$ \nodepart{lower} $b_r - p$};
+		\node [style=qutrit Z phase] (80) at (1.75, 1.5) {$c_1 - p$ \nodepart{lower} $d_1 - p$};
+		\node [style=qutrit Z phase] (81) at (-4.75, 1.5) {$a_1 - p$ \nodepart{lower} $b_1 - p$};
+		\node [style=qutrit Z phase] (82) at (4.75, 1.5) {$c_s - p$ \nodepart{lower} $d_s - p$};
+		\node [style=none] (83) at (-3.25, 1.5) {...};
+		\node [style=none] (84) at (3.25, 1.5) {...};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=hadamard edge] (39) to (36);
+		\draw [style=hadamard edge] (39) to (35);
+		\draw [style=hadamard adjoint adge] (39) to (37);
+		\draw [style=hadamard adjoint adge] (39) to (38);
+		\draw (60) to (39);
+		\draw [bend left=15, looseness=0.75] (63.center) to (81);
+		\draw [bend right=15, looseness=0.75] (62.center) to (81);
+		\draw [bend left=15, looseness=0.75] (66.center) to (79);
+		\draw [bend right=15, looseness=0.75] (65.center) to (79);
+		\draw [bend left=15, looseness=0.75] (69.center) to (80);
+		\draw [bend right=15, looseness=0.75] (68.center) to (80);
+		\draw [bend left=15, looseness=0.75] (72.center) to (82);
+		\draw [bend right=15, looseness=0.75] (71.center) to (82);
+		\draw (35) to (81);
+		\draw (36) to (79);
+		\draw (37) to (80);
+		\draw (38) to (82);
+	\end{pgfonlayer}
+\end{tikzpicture}

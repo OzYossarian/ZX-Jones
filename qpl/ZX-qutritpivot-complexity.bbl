@@ -1,0 +1,104 @@
+\begin{thebibliography}{10}
+\providecommand{\bibitemdeclare}[2]{}
+\providecommand{\surnamestart}{}
+\providecommand{\surnameend}{}
+\providecommand{\urlprefix}{Available at }
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{\texttt{#2}}
+\providecommand{\urlalt}[2]{\href{#1}{#2}}
+\providecommand{\doi}[1]{doi:\urlalt{http://dx.doi.org/#1}{#1}}
+\providecommand{\bibinfo}[2]{#2}
+
+\bibitemdeclare{article}{Aaronson2004}
+\bibitem{Aaronson2004}
+\bibinfo{author}{Scott \surnamestart Aaronson\surnameend} \&
+  \bibinfo{author}{Daniel \surnamestart Gottesman\surnameend}
+  (\bibinfo{year}{2004}): \emph{\bibinfo{title}{Improved simulation of
+  stabilizer circuits}}.
+\newblock {\sl \bibinfo{journal}{Physical Review A}}
+  \bibinfo{volume}{70}(\bibinfo{number}{5}), \doi{10.1103/physreva.70.052328}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevA.70.052328}.
+
+\bibitemdeclare{misc}{backens2018zh}
+\bibitem{backens2018zh}
+\bibinfo{author}{Miriam \surnamestart Backens\surnameend} \&
+  \bibinfo{author}{Aleks \surnamestart Kissinger\surnameend}
+  (\bibinfo{year}{2018}): \emph{\bibinfo{title}{ZH: A Complete Graphical
+  Calculus for Quantum Computations Involving Classical Non-linearity}}.
+
+\bibitemdeclare{misc}{backens2020again}
+\bibitem{backens2020again}
+\bibinfo{author}{Miriam \surnamestart Backens\surnameend},
+  \bibinfo{author}{Hector \surnamestart Miller-Bakewell\surnameend},
+  \bibinfo{author}{Giovanni \surnamestart de~Felice\surnameend},
+  \bibinfo{author}{Leo \surnamestart Lobski\surnameend} \&
+  \bibinfo{author}{John \surnamestart van~de Wetering\surnameend}
+  (\bibinfo{year}{2020}): \emph{\bibinfo{title}{There and back again: A circuit
+  extraction tale}}.
+
+\bibitemdeclare{misc}{debeaudrap2020tensor}
+\bibitem{debeaudrap2020tensor}
+\bibinfo{author}{Niel \surnamestart de~Beaudrap\surnameend},
+  \bibinfo{author}{Aleks \surnamestart Kissinger\surnameend} \&
+  \bibinfo{author}{Konstantinos \surnamestart Meichanetzidis\surnameend}
+  (\bibinfo{year}{2020}): \emph{\bibinfo{title}{Tensor Network Rewriting
+  Strategies for Satisfiability and Counting}}.
+
+\bibitemdeclare{article}{Coecke2011}
+\bibitem{Coecke2011}
+\bibinfo{author}{Bob \surnamestart Coecke\surnameend} \& \bibinfo{author}{Ross
+  \surnamestart Duncan\surnameend} (\bibinfo{year}{2011}):
+  \emph{\bibinfo{title}{Interacting quantum observables: categorical algebra
+  and diagrammatics}}.
+\newblock {\sl \bibinfo{journal}{New Journal of Physics}}
+  \bibinfo{volume}{13}(\bibinfo{number}{4}), p. \bibinfo{pages}{043016},
+  \doi{10.1088/1367-2630/13/4/043016}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1088/1367-2630/13/4/043016}.
+
+\bibitemdeclare{book}{PQP}
+\bibitem{PQP}
+\bibinfo{author}{Bob \surnamestart Coecke\surnameend} \& \bibinfo{author}{Aleks
+  \surnamestart Kissinger\surnameend} (\bibinfo{year}{2017}):
+  \emph{\bibinfo{title}{Picturing Quantum Processes}}.
+
+\bibitemdeclare{article}{Damm2002}
+\bibitem{Damm2002}
+\bibinfo{author}{Carsten \surnamestart Damm\surnameend},
+  \bibinfo{author}{Markus \surnamestart Holzer\surnameend} \&
+  \bibinfo{author}{Pierre \surnamestart McKenzie\surnameend}
+  (\bibinfo{year}{2002}): \emph{\bibinfo{title}{The complexity of tensor
+  calculus}}.
+\newblock {\sl \bibinfo{journal}{computational complexity}}
+  \bibinfo{volume}{11}(\bibinfo{number}{1}), pp. \bibinfo{pages}{54--89},
+  \doi{10.1007/s00037-000-0170-4}.
+\newblock \urlprefix\url{https://doi.org/10.1007/s00037-000-0170-4}.
+
+\bibitemdeclare{article}{graph_theoretic_simplification}
+\bibitem{graph_theoretic_simplification}
+\bibinfo{author}{Ross \surnamestart Duncan\surnameend}, \bibinfo{author}{Aleks
+  \surnamestart Kissinger\surnameend}, \bibinfo{author}{Simon \surnamestart
+  Perdrix\surnameend} \& \bibinfo{author}{John \surnamestart van~de
+  Wetering\surnameend} (\bibinfo{year}{2020}):
+  \emph{\bibinfo{title}{Graph-theoretic Simplification of Quantum Circuits with
+  the ZX-calculus}}.
+
+\bibitemdeclare{misc}{gray2020hyperoptimized}
+\bibitem{gray2020hyperoptimized}
+\bibinfo{author}{Johnnie \surnamestart Gray\surnameend} \&
+  \bibinfo{author}{Stefanos \surnamestart Kourtis\surnameend}
+  (\bibinfo{year}{2020}): \emph{\bibinfo{title}{Hyper-optimized tensor network
+  contraction}}.
+
+\bibitemdeclare{misc}{wang2020completeness}
+\bibitem{wang2020completeness}
+\bibinfo{author}{Quanlong \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2020}): \emph{\bibinfo{title}{Completeness of algebraic
+  ZX-calculus over arbitrary commutative rings and semirings}}.
+
+\bibitemdeclare{misc}{vandewetering2020zxcalculus}
+\bibitem{vandewetering2020zxcalculus}
+\bibinfo{author}{John \surnamestart van~de Wetering\surnameend}
+  (\bibinfo{year}{2020}): \emph{\bibinfo{title}{ZX-calculus for the working
+  quantum computer scientist}}.
+
+\end{thebibliography}

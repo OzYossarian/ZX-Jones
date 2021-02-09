@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=X dot] (5) at (0, -0.5) {};
+		\node [style=none] (7) at (0, -1.75) {};
+		\node [style=qutrit Z phase] (8) at (-0.75, 1) {$1$ \nodepart{lower} $2$};
+		\node [style=qutrit Z phase] (10) at (0.75, 1) {$1$ \nodepart{lower} $2$};
+		\node [style=none] (11) at (-0.75, 2) {};
+		\node [style=none] (12) at (0.75, 2) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend left] (5) to (8);
+		\draw [bend left] (10) to (5);
+		\draw (7.center) to (5);
+		\draw (11.center) to (8);
+		\draw (12.center) to (10);
+	\end{pgfonlayer}
+\end{tikzpicture}

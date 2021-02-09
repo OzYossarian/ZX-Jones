@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (0, 0) {=};
+		\node [style=qutrit hadamard unknown] (1) at (-1, 0) {2};
+		\node [style=none] (2) at (-1, 1) {};
+		\node [style=none] (3) at (-1, -1) {};
+		\node [style=none] (5) at (1, 1) {};
+		\node [style=none] (6) at (1, -1) {};
+		\node [style=qutrit hadamard adjoint] (7) at (1, 0) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (2.center) to (3.center);
+		\draw (5.center) to (6.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

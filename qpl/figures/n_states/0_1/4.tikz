@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=qutrit X phase] (0) at (0, -1.25) {$1$ \nodepart{lower} $2$};
+		\node [style=none] (6) at (0, 2) {};
+		\node [style=qutrit Z phase] (8) at (0, 0) {$1$ \nodepart{lower} $1$};
+		\node [style=qutrit X phase] (9) at (0, 1.25) {$1$ \nodepart{lower} $1$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (0) to (6.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

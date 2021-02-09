@@ -1,0 +1,40 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (18) at (-1.5, 0.75) {...};
+		\node [style=none] (19) at (-2.25, 1) {};
+		\node [style=none] (20) at (-0.75, 1) {};
+		\node [style=none] (22) at (1.5, 0.75) {...};
+		\node [style=none] (23) at (0.75, 1) {};
+		\node [style=none] (24) at (2.25, 1) {};
+		\node [style=none] (26) at (-5, 0.75) {...};
+		\node [style=none] (27) at (-5.75, 1) {};
+		\node [style=none] (28) at (-4.25, 1) {};
+		\node [style=none] (30) at (5, 0.75) {...};
+		\node [style=none] (31) at (4.25, 1) {};
+		\node [style=none] (32) at (5.75, 1) {};
+		\node [style=none] (33) at (-3.25, -0.25) {...};
+		\node [style=none] (34) at (3.25, -0.25) {...};
+		\node [style=qutrit Z phase rectangle] (35) at (-5, -0.25) {$a_1 + n  + 2$ \nodepart{second} $b_1 + n + 1$};
+		\node [style=qutrit Z phase rectangle] (36) at (-1.5, -0.25) {$a_r + n + 2$ \nodepart{second} $b_r + n + 1$};
+		\node [style=qutrit Z phase rectangle] (37) at (1.5, -0.25) {$c_1 + n + 1$ \nodepart{second} $d_1 + n + 2$};
+		\node [style=qutrit Z phase rectangle] (38) at (5, -0.25) {$c_s + n + 1$ \nodepart{second} $d_s + n + 2$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right=15, looseness=0.75] (19.center) to (36);
+		\draw [bend right=15, looseness=0.75] (36) to (20.center);
+		\draw [bend right=15, looseness=0.75] (23.center) to (37);
+		\draw [bend right=15, looseness=0.75] (37) to (24.center);
+		\draw [bend right=15, looseness=0.75] (27.center) to (35);
+		\draw [bend right=15, looseness=0.75] (35) to (28.center);
+		\draw [bend right=15, looseness=0.75] (31.center) to (38);
+		\draw [bend right=15, looseness=0.75] (38) to (32.center);
+		\draw [bend right=15, looseness=0.75] (19.center) to (36);
+		\draw [bend right=15, looseness=0.75] (36) to (20.center);
+		\draw [bend right=15, looseness=0.75] (23.center) to (37);
+		\draw [bend right=15, looseness=0.75] (37) to (24.center);
+		\draw [bend right=15, looseness=0.75] (27.center) to (35);
+		\draw [in=255, out=45, looseness=0.75] (35) to (28.center);
+		\draw [bend right=15, looseness=0.75] (31.center) to (38);
+		\draw [bend right=15, looseness=0.75] (38) to (32.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
