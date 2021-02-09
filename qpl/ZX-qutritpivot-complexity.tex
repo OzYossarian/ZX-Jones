@@ -9,12 +9,12 @@
 
 \title{Classifying Complexity with the ZX Calculus}
 
-\author{  Alex Townsend-Teague$^1$ and Konstantinos Meichanetzidis$^{1,2}$
-\institute{$^1$ University of Oxford}
+\author{  Alex Townsend-Teague$^{0,1}$ and Konstantinos Meichanetzidis$^{1,2}$
+\institute{$^0$ Mathematical Institute, University of Oxford}
+\institute{$^1$ Department of Computer Science, University of Oxford}
 \institute{$^2$ Cambridge Quantum Computing Ltd.} }
 
-\def\titlerunning{Tensor-Network Rewriting as a\\
-Unifying Diagnostic of Complexity}
+\def\titlerunning{Classifying Complexity with the ZX Calculus}
 \def\authorrunning{Alex Townsend-Teague, Konstantinos Meichanetzidis}
 
 
@@ -118,12 +118,18 @@ simplification of stabiliser diagrams.
 
 \subsection{The Qubit ZX-Calculus}
 
-Here we give a quick introduction to the qubit ZX-calculus. For a more detailed treatment, see Chapter 9.4 in \cite{PQP}. The qubit ZX-calculus is a diagrammatic language for quantum mechanics consisting of \textit{spiders} connected together by \textit{wires}, living within a rectangular plane. Diagrams are read bottom-to-top. Wires that don't end at a spider are \textit{inputs} (if their non-spider end starts at the bottom of the plane) and/or \textit{outputs} (if their non-spider end lies at the top of the plane).\newline
+Here we give a quick introduction to the qubit ZX-calculus.
+The qubit ZX-calculus is a diagrammatic language for quantum mechanics.
+The generators are tensors called \textit{spiders}.
+The spider legs, or \emph{wires}, can be connected to form networks which are again valid ZX diagrams.
+ZX diagrams are part of a formal language. Diagrams are read bottom-to-top; bottom open wires (not connected to anything) are \emph{input wires} and top ones are \emph{output}.
+Diagrams with only outputs are called \emph{states} and with only inputs are called \emph{effects}.
+A \emph{closed} diagram is one with no input nor output wires
+and it represents a scalar.
 
-Only the topology matters; spiders can move freely around the plane and wires can be deformed and pass over each other, provided the connections between components remain unchanged. The single exception is the endpoints of input and output wires; these are fixed on the boundary of the plane. Spiders come in two species: green $Z$-spiders and red $X$-spiders, decorated by a \textit{phase} angle $\alpha$. When this phase is zero, we will omit it. The diagrammatic formalism exists in the abstract, but we say that it has a \textit{standard linear algebraic interpretation}. 
+Spiders come in two species: green $Z$-spiders and red $X$-spiders, decorated by a \textit{phase} angle $\alpha$. When this phase is zero, we will omit it.
+The concrete representation of the spider generators as tensors over $\mathbb{C}$ is:
 
-\begin{definition}\label{def:qubit_standard_spiders}
-	Given the usual vectors $\{\ket{0}$, $\ket{1}\}$ (the \textit{$Z$-basis}) and $\{\ket{+}$, $\ket{-}\}$ (the \textit{$X$-basis}) in $\mathbb{C}^2$, the \textit{standard interpretations} of $Z$- and $X$- spiders respectively are:
 	\begin{equation*}
 		\left\llbracket \ \tikzfig{qubit_spiders/Z_a_labelled} \ \right\rrbracket = 
 		\ket{0}^{m}\bra{0}^{n} + 
@@ -133,38 +139,12 @@ Only the topology matters; spiders can move freely around the plane and wires ca
 		\ket{+}^{m}\bra{+}^{n} + 
 		e^{i\alpha}\ket{-}^{m}\bra{-}^{n}
 	\end{equation*}
-\end{definition}
 
-% \begingroup
-% 	\allowdisplaybreaks
-% 	\setlength{\jot}{10pt}
-% 		\begin{align}
-% 			&\left\llbracket \ \tikzfig{qubit_spiders/Z_a_labelled} \ \right\rrbracket = 
-% 			\ket{0}^{\otimes m}\bra{0}^{\otimes n} + 
-% 			e^{i\alpha}\ket{1}^{\otimes m}\bra{1}^{\otimes n} \\
-% 			&\left\llbracket \ \tikzfig{qubit_spiders/X_a_labelled} \ \right\rrbracket = 
-% 			\ket{+}^{\otimes m}\bra{+}^{\otimes n} + 
-% 			e^{i\alpha}\ket{-}^{\otimes m}\bra{-}^{\otimes n}
-% 		\end{align}
-% \endgroup
+where $\{\ket{0}$, $\ket{1}\}$ is the \textit{$Z$-basis} and $\{\ket{+}$, $\ket{-}\}$ the \textit{$X$-basis} in $\mathbb{C}^2$.
 
-Using this standard interpretation, and writing $\simeq$ to mean `equal up to a scalar factor', we can represent common quantum computing concepts as ZX-diagrams. Spiders with one output and no inputs are called \textit{states}, while those with one input and no outputs are called \textit{effects}.
 
-\begin{example}
-	The standard interpretations of the diagrams below are as follows:
-	\begin{equation}
-		\left\llbracket \ \tikzfig{qubit_common/+} \ \right\rrbracket \simeq \ket{+} , \quad
-		\left\llbracket \ \tikzfig{qubit_common/1} \ \right\rrbracket \simeq \ket{1} , \quad
-		\left\llbracket \ \tikzfig{qubit_common/X_a} \ \right\rrbracket = X_{\alpha} , \quad
-		\left\llbracket \ \tikzfig{qubit_common/cnot} \ \right\rrbracket \simeq \text{CNOT}
-	\end{equation}
-\end{example}
-
-\begin{remark}
-	In the ZX-calculus, equality of diagrams translates to equality only up to some scalar factor in the standard linear algebraic interpretation. This has often proved to be more convenient in quantum computing, but for calculating Jones polynomials of knots at lattice roots of unity - which are ultimately just complex numbers - this is manifestly insufficient. However, to simply prove that the calculation of such polynomials is efficient, this suffices - provided we also show that keeping track of the `missing' scalars can be done efficiently. See the end of this section for a discussion of this last point.
-\end{remark}
-
-We introduce a small yellow box to denote the Hadamard gate $H$. We will also often omit the yellow box entirely and instead draw a dashed blue line - we call these equivalent diagrams a \textit{Hadamard edge}:
+The Hadamard gate $H$ is denoted as a yellow box.
+Often we will instead draw a dashed blue line to represent a \textit{Hadamard edge}:
 
 \begin{equation}
 	\tikzfig{qubit_hadamard/yellow_box} \quad = \quad
@@ -172,7 +152,7 @@ We introduce a small yellow box to denote the Hadamard gate $H$. We will also of
 	\tikzfig{qubit_hadamard/decomposed}
 \end{equation}
 
-The diagrams that can be formed from such spiders and wires are then subject to the rewrite rules in Figure \ref{fig:qubit_ZX_rules}. These rules constitute the definition of the ZX-calculus. Note that due to $\qubitRuleColourChange$ and $\qubitRuleHadamard$ all rules hold with the roles of red and green (i.e. $Z$ and $X$) interchanged.\newline
+The rewrite rules of the ZX calculus, shown in \ref{fig:qubit_ZX_rules}, allow one to manipulated diagrams with local tensor-rewrites, while preserving the semantics, i.e. the concrete tensor representation over $\mathbb{C}$ up to a scalar.
 
 \begin{figure}
 	\begin{tcolorbox}[colback=white]
@@ -206,7 +186,7 @@ The diagrams that can be formed from such spiders and wires are then subject to 
 		\vspace{3pt}
 	\end{tcolorbox}
 	\vspace{5pt}
-	\caption{Rewrite rules for the qubit ZX-calculus. The fusion rule $\mathbf{(f)}$ applies to spiders connected by at least one wire.}
+	\caption{Rewrite rules for the qubit ZX-calculus where spiders are interpreted as tensors over $\mathbb{C}$.}
 	\label{fig:qubit_ZX_rules}
 	\vspace{-1pt}
 \end{figure}

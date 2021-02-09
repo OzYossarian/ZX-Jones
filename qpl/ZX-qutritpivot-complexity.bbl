@@ -55,12 +55,6 @@
   \doi{10.1088/1367-2630/13/4/043016}.
 \newblock \urlprefix\url{http://dx.doi.org/10.1088/1367-2630/13/4/043016}.
 
-\bibitemdeclare{book}{PQP}
-\bibitem{PQP}
-\bibinfo{author}{Bob \surnamestart Coecke\surnameend} \& \bibinfo{author}{Aleks
-  \surnamestart Kissinger\surnameend} (\bibinfo{year}{2017}):
-  \emph{\bibinfo{title}{Picturing Quantum Processes}}.
-
 \bibitemdeclare{article}{Damm2002}
 \bibitem{Damm2002}
 \bibinfo{author}{Carsten \surnamestart Damm\surnameend},

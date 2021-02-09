@@ -4,47 +4,46 @@ The top-level auxiliary file: ZX-qutritpivot-complexity.aux
 The style file: eptcs.bst
 Database file #1: refs-teague.bib
 Database file #2: refs.bib
-Warning--missing publisher in PQP
 Warning--empty journal in graph_theoretic_simplification
-You've used 11 entries,
+You've used 10 entries,
             2701 wiz_defined-function locations,
-            642 strings with 6681 characters,
-and the built_in function-call counts, 4718 in all, are:
-= -- 317
-> -- 157
+            637 strings with 6614 characters,
+and the built_in function-call counts, 4358 in all, are:
+= -- 296
+> -- 145
 < -- 2
-+ -- 66
-- -- 54
-* -- 563
-:= -- 579
-add.period$ -- 17
-call.type$ -- 11
-change.case$ -- 49
++ -- 61
+- -- 50
+* -- 522
+:= -- 532
+add.period$ -- 16
+call.type$ -- 10
+change.case$ -- 45
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 370
-empty$ -- 402
-format.name$ -- 63
-if$ -- 911
+cite$ -- 21
+duplicate$ -- 340
+empty$ -- 371
+format.name$ -- 58
+if$ -- 843
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 78
-newline$ -- 62
-num.names$ -- 22
-pop$ -- 121
+int.to.str$ -- 10
+missing$ -- 68
+newline$ -- 58
+num.names$ -- 20
+pop$ -- 108
 preamble$ -- 1
-purify$ -- 49
+purify$ -- 45
 quote$ -- 0
-skip$ -- 126
+skip$ -- 117
 stack$ -- 0
-substring$ -- 106
-swap$ -- 347
+substring$ -- 101
+swap$ -- 323
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 53
-warning$ -- 2
-while$ -- 26
-width$ -- 13
-write$ -- 114
-(There were 2 warnings)
+type$ -- 50
+warning$ -- 1
+while$ -- 24
+width$ -- 12
+write$ -- 106
+(There was 1 warning)
