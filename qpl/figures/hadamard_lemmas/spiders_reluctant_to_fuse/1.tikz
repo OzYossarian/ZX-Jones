@@ -1,6 +1,6 @@
 \begin{tikzpicture}
 	\begin{pgfonlayer}{nodelayer}
-		\node [style=qutrit hadamard] (0) at (0.775, 0) {};
+		\node [style=qutrit hadamard unknown] (0) at (0.725, 0) {$h$};
 		\node [style=none] (1) at (-0.75, 2.75) {};
 		\node [style=none] (2) at (0.75, 2.75) {};
 		\node [style=none] (3) at (0, 2.5) {...};

@@ -1,15 +1,15 @@
 \begin{tikzpicture}
 	\begin{pgfonlayer}{nodelayer}
 		\node [style=none] (0) at (0, 0) {=};
-		\node [style=none] (1) at (1, 2) {};
-		\node [style=none] (2) at (1, -2) {};
-		\node [style=none] (3) at (-1, 1) {};
-		\node [style=none] (4) at (-1, -1) {};
-		\node [style=Z dot] (5) at (1, 0) {};
-		\node [style=qutrit hadamard] (6) at (1, 0.75) {};
-		\node [style=qutrit hadamard adjoint] (7) at (1, -0.75) {};
-		\node [style=Z dot] (8) at (1, 1.5) {};
-		\node [style=Z dot] (9) at (1, -1.5) {};
+		\node [style=none] (1) at (1.5, 2) {};
+		\node [style=none] (2) at (1.5, -2) {};
+		\node [style=none] (3) at (-1.5, 1) {};
+		\node [style=none] (4) at (-1.5, -1) {};
+		\node [style=Z dot] (5) at (1.5, 0) {};
+		\node [style=qutrit hadamard unknown] (6) at (1.5, 0.75) {$h$};
+		\node [style=qutrit hadamard unknown] (7) at (1.5, -0.75) {$-h$};
+		\node [style=Z dot] (8) at (1.5, 1.5) {};
+		\node [style=Z dot] (9) at (1.5, -1.5) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw (3.center) to (4.center);

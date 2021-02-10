@@ -269,27 +269,25 @@ and have the following concrete representation as linear maps:
 			% e^{i\beta}\ket{\bar{\omega}}^{\otimes m}\bra{\bar{\omega}}^{\otimes n}
 		\end{align}
 \endgroup
-When $\alpha = \beta = 0$ we will again omit the angles entirely, and just draw a small green or red dot. 
-It is also useful to consider spiders whose phases are $a,b = \omega^\kappa$, $\kappa\in\mathbb{Z}$. 
-Note that throughout our work we will use
-`$1$' and `$2$' as spider decorations to denote the cases $\kappa=1,2$. Indeed, since spider phases hold mod $2\pi$, these integer decorations `$1$' and `$2$' are used mod $3$.
+When $\alpha = \beta = 0$ we will again omit the angles entirely, and just draw a small green or red dot. Frequently we will consider spiders whose phases are integer multiples of $\frac{2\pi}{3}$. Indeed, throughout our work, whenever we use an integer $n$ as a spider decoration, this is a shorthand for $\frac{2\pi}{3}n$. Since spider phases hold mod $2\pi$, these integer decorations hold mod $3$. Unless otherwise stated, we will use Greek letters to denote general angles, and Roman letters for these integer shorthands.
 % This shouldn't ever cause confusion.
 
-Hadamard boxes are now neither self-conjugate nor self-adjoint, so we change our notation: we let a yellow parallelogram decorated with a `$1$' denote a Hadamard gate, while decorating with a `$2$' denotes its adjoint. We will shortly explain this choice. We also use a dashed blue line for the \textit{Hadamard edge} (\textit{$H$-edge}) and a purple dashed line for its adjoint (\textit{$H^\dagger$-edge}):
+Hadamard boxes are now neither self-conjugate nor self-adjoint, so we change our notation: we let a yellow parallelogram decorated with a $1$ (mod $3$) denote a Hadamard gate, while decorating with a $2$ (mod $3$) denotes its adjoint. We will shortly explain this choice. We also use a dashed blue line for the \textit{Hadamard edge} (\textit{$H$-edge}) and a purple dashed line for its adjoint (\textit{$H^\dagger$-edge}):
 \begin{equation}
 		\tikzfig{hadamard_lemmas/parametrised/1} \ = \ 
 		\tikzfig{hadamard_lemmas/dashed/blue} \ = \ 
-		\tikzfig{qutrit_rules/hadamard/euler/decomposition} \ , 
+		\tikzfig{qutrit_rules/hadamard/euler/decomposition} ~~ , 
 		\hspace{50pt}
 		\tikzfig{hadamard_lemmas/parametrised/2} \ = \ 
 		\tikzfig{hadamard_lemmas/dashed/purple} \ = \ 
-		\tikzfig{hadamard_lemmas/decompositions/h_dagger_zxz} \ , 
-		\hspace{50pt}
-		\tikzfig{hadamard_lemmas/parametrised/0} \ = \ 
-		\tikzfig{hadamard_lemmas/parametrised/empty}
+		\tikzfig{hadamard_lemmas/decompositions/h_dagger_zxz} 
+		% \hspace{50pt}
+		% \tikzfig{hadamard_lemmas/parametrised/0} \ = \ 
+		% \tikzfig{hadamard_lemmas/parametrised/empty}
 \end{equation}
 
-The last equation above just says that a `$0$-Hadamard edge' is in fact the empty diagram, and not an edge at all. A very important difference from the qubit case is that in qutrit ZX-calculus there is no `plain' cap or cup:
+% The last equation above just says that a `$0$-Hadamard edge' is in fact the empty diagram, and not an edge at all. 
+A very important difference from the qubit case is that in qutrit ZX-calculus there is no `plain' cap or cup:
 %. That is, we have the following two results:
 \begin{equation}
 	\tikzfig{cups_caps/z_cup} \quad \neq \quad \tikzfig{cups_caps/x_cup} \quad , \hspace{50pt}
@@ -305,11 +303,11 @@ Firstly, this distinction is irrelevant for $H$- and $H^\dagger$-edges \cite{qut
 		\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/rhs}
 	\end{equation}
 Secondly, the `snake equations' hold for \emph{same-colour} cups and caps.
-Snakes with differently coloured cups and caps, can still be yanked into a straight wire at the cost of adding two Hadamard boxes:
+Snakes with differently coloured cups and caps can still be yanked into a straight wire at the cost of adding two Hadamard boxes, shown below for $h \in \{1, 2\}$:
 \begin{equation}
 		\tikzfig{qutrit_snake/same_bent} \quad = \quad \tikzfig{qutrit_snake/same_straight} \quad ,
 		\hspace{50pt}
-		\tikzfig{qutrit_snake/different_bent} \quad = \quad \tikzfig{qutrit_snake/different_straight} \quad .
+		\tikzfig{qutrit_snake/different_bent} \quad = \quad \tikzfig{qutrit_snake/different_straight}
 \end{equation}
 The above equations hold also if we flip the colours, green $\leftrightarrow$ red.
 
@@ -330,7 +328,7 @@ A graph-like qutrit ZX diagram is a \textit{graph state} when every spider has z
 
 % Thanks to Lemma \ref{lem:h_edges_input_output} we can ignore which of a spider's $H$- and $H^\dagger$-legs are inputs and outputs. For our specific needs, the last two items above will not be relevant, since ZX-diagrams arising from knots will be closed, but we include them to keep the definition consistent with the qubit case.
 
-Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. The following equation, which holds with the roles of $H$ and $H^\dagger$ reversed, helps us get around this:
+Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. The following equation, for $h \in \{1,2\}$, helps us get around this:
 
 \begin{equation}\label{eq:spiders_reluctant_to_fuse}
 	\tikzfig{hadamard_lemmas/spiders_reluctant_to_fuse/1} \ \xeq{\qutritRuleHadamard} \
@@ -341,61 +339,56 @@ Note the difference compared to the qubit case: we need not worry about self-loo
 We will shortly show that every qutrit ZX-diagram is equivalent to a graph-like one, making use of the following lemmas:
 
 \begin{lemma}\label{lem:three_H_edges_vanish}
-	The following equation holds in the qutrit ZX-calculus. Moreover, it holds with the roles of $H$ and $H^\dagger$ interchanged:
+	The following equation holds in the qutrit ZX-calculus:
 	\begin{equation}
-		\tikzfig{hadamard_lemmas/3_h_edges_vanish/lhs} \quad = \quad \tikzfig{hadamard_lemmas/3_h_edges_vanish/rhs}
+		\tikzfig{hadamard_lemmas/3_h_edges_vanish/blue} \quad = \quad 
+		\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected} \quad = \quad 
+		\tikzfig{hadamard_lemmas/3_h_edges_vanish/purple}
 	\end{equation}
 	\begin{proof}
 		It is shown in Lemma 2.8 \cite{qutrit_euler} that the qutrit ZX-calculus satisfies the following `Hopf law':
 		\begin{equation}\label{eq:qutrit_hopf}
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf_law}
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf/lhs} \quad = \quad 
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf/rhs}
 		\end{equation}
-		Therefore we can argue as follows:
+		Therefore we can argue as follows, for $h \in \{1, 2\}$:
 		\begin{equation}
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/lhs} \quad \xeq{\qutritRuleHadamard} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/step_1} \quad \xeq{\qutritRuleColourChange} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/step_2} \quad \xeq{\eqref{eq:qutrit_hopf}} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/step_3} \quad \xeq{\eqref{eq:derived_colour_change}} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/rhs}
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/1} \quad \xeq{\qutritRuleHadamard} \quad
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/2} \quad \xeq{\qutritRuleColourChange} \quad
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/3} \quad \xeq{\eqref{eq:qutrit_hopf}} \quad
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/4} \quad \xeq{\eqref{eq:derived_colour_change}} \quad
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected}
 		\end{equation}
 	\end{proof}
 \end{lemma}
 
 \begin{lemma}\label{lem:H_edges_qutrit} 
-	The following two equations hold in the qutrit ZX-calculus. Moreover, they hold with the roles of $H$ and $H^\dagger$ interchanged:
+	The following two equations hold in the qutrit ZX-calculus:
 	\begin{equation}
-		\tikzfig{hadamard_lemmas/2_h_edges_flip}
-		\hspace{75pt}
-		\tikzfig{hadamard_lemmas/h_edge_and_adjoint_permute}
+		\tikzfig{hadamard_lemmas/2_h_edges_flip/2_blue} \quad = \quad 
+		\tikzfig{hadamard_lemmas/2_h_edges_flip/1_purple} \quad ,
+		\hspace{50pt}
+		\tikzfig{hadamard_lemmas/2_h_edges_flip/2_purple} \quad = \quad 
+		\tikzfig{hadamard_lemmas/2_h_edges_flip/1_blue}
 	\end{equation}
 	\begin{proof}
 		This is Lemma 3.4 in\ \cite{qutrit_euler}.
 	\end{proof}
 \end{lemma}
 
-As we will formalise later, the lemmas above say that we can think of Hadamard edges as $1$-weighted edges and their adjoints as $2$-weighted edges, then work modulo $3$, since every triple of parallel edges disappears. This motivates defining `parametrised' Hadamard gates, which will come in use later:
-
-\begin{equation}
-	\tikzfig{hadamard_lemmas/parametrised/0}
-	\hspace{75pt}
-	\tikzfig{hadamard_lemmas/parametrised/1}
-	\hspace{75pt}
-	\tikzfig{hadamard_lemmas/parametrised/2}
-\end{equation}
-
-The first equation above just says that a `$0$-Hadamard edge' is in fact the empty diagram, and not an edge at all. Where the previous lemmas relate single $H$- and $H^\dagger$-boxes across multiple edges, the next relates multiple $H$- and $H^\dagger$- boxes on single edges.
+As we will formalise later, the lemmas above justify our notation for Hadamard gates: we can think of Hadamard edges as $1$-weighted edges and their adjoints as $2$-weighted edges, then work modulo $3$, since every triple of parallel edges disappears. Where the previous lemmas relate single $H$- and $H^\dagger$-boxes across multiple edges, the next relates multiple $H$- and $H^\dagger$- boxes on single edges.
 
 \begin{lemma}\label{lem:H_boxes_qutrit} 
-	The following three equations hold in the qutrit ZX calculus. Moreover, they hold with the roles of $H$ and $H^\dagger$ interchanged:
+	The following three equations hold in the qutrit ZX calculus, for $h \in \{1, 2\}$:
 	\begin{equation}
-		\tikzfig{hadamard_lemmas/4_h_boxes_vanish}
-		\hspace{75pt}
-		\tikzfig{hadamard_lemmas/3_h_boxes_flip}
-		\hspace{75pt}
-		\tikzfig{hadamard_lemmas/2_h_boxes_separate}
+		\tikzfig{hadamard_lemmas/boxes/4_vanish} \quad ,
+		\hspace{50pt}
+		\tikzfig{hadamard_lemmas/boxes/3_flip} \quad ,
+		\hspace{50pt}
+		\tikzfig{hadamard_lemmas/boxes/2_separate}
 	\end{equation}
 	\begin{proof}
-		For the first equation, turn the top two $H$-boxes into $H^\dagger$-boxes via $\qutritRuleSnake$, then cancel twice via $\qutritRuleHadamard$. Similarly, for the second equation turn the top two $H$-boxes into $H^\dagger$-boxes via $\qutritRuleSnake$, then cancel once via $\qutritRuleHadamard$, leaving a single $H^\dagger$-box. The third equation is just a simple application of $\qutritRuleId$. Analogous reasoning applies when the roles of $H$ and $H^\dagger$ are swapped.
+		For the first equation, negate the top two boxes via $\qutritRuleSnake$, then cancel twice via $\qutritRuleHadamard$. Similarly, for the second equation, negate the top two boxes via $\qutritRuleSnake$, then cancel once via $\qutritRuleHadamard$. The third equation is just a simple application of $\qutritRuleId$.
 	\end{proof}
 \end{lemma}
 
@@ -406,10 +399,10 @@ Again, intuitively we can think of Hadamard boxes of having value $1$ and their 
 	\begin{proof}
 		First use the colour change rule to turn all X-spiders into Z-spiders. Then use Lemma \ref{lem:H_boxes_qutrit} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply Lemmas \ref{lem:three_H_edges_vanish} and \ref{lem:H_edges_qutrit} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-boxes as needed: 
 		\begin{equation}
-			\tikzfig{is_graph_like/plain_input_output_wire}
-			\hspace{75pt}
-			\tikzfig{is_graph_like/input_connected_to_hadamard}
-			\hspace{75pt}
+			\tikzfig{is_graph_like/plain_input_output_wire} \quad ,
+			\hspace{50pt}
+			\tikzfig{is_graph_like/input_connected_to_hadamard} \quad ,
+			\hspace{50pt}
 			\tikzfig{is_graph_like/multiple_inputs_connected_to_one_spider}
 		\end{equation}
 	\end{proof}
@@ -743,6 +736,6 @@ KM acknowledges financial support from the Royal Commission for the Exhibition o
 \bibliographystyle{eptcs}
 \bibliography{refs-teague,refs}
 
-\input{appendix/appendix}
+% \input{appendix/appendix}
 
 \end{document} 

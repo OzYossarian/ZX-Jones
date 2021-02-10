@@ -3,23 +3,23 @@
 		\node [style=none] (1) at (-2.75, -1.25) {};
 		\node [style=none] (2) at (-1.25, -1.25) {};
 		\node [style=none] (4) at (-2, -1) {...};
-		\node [style=none] (6) at (1, -2.125) {};
-		\node [style=none] (7) at (3, -2.125) {};
-		\node [style=none] (9) at (2, -0.875) {...};
-		\node [style=qutrit hadamard] (10) at (1.35, -0.125) {};
-		\node [style=qutrit hadamard adjoint] (11) at (1, -1.625) {};
-		\node [style=qutrit hadamard] (12) at (2.65, -0.125) {};
-		\node [style=qutrit hadamard adjoint] (13) at (3, -1.625) {};
-		\node [style=Z dot] (14) at (1.125, -0.875) {};
-		\node [style=Z dot] (15) at (2.85, -0.875) {};
+		\node [style=none] (6) at (1.25, -2.125) {};
+		\node [style=none] (7) at (3.25, -2.125) {};
+		\node [style=none] (9) at (2.25, -0.875) {...};
+		\node [style=qutrit hadamard unknown] (10) at (1.65, -0.125) {$h$};
+		\node [style=qutrit hadamard unknown] (11) at (1.25, -1.625) {$-h$};
+		\node [style=qutrit hadamard unknown] (12) at (2.85, -0.125) {$h$};
+		\node [style=qutrit hadamard unknown] (13) at (3.25, -1.625) {$-h$};
+		\node [style=Z dot] (14) at (1.375, -0.875) {};
+		\node [style=Z dot] (15) at (3.1, -0.875) {};
 		\node [style=qutrit Z phase] (16) at (-2, 0) {$\alpha$ \nodepart{lower} $\beta$};
 		\node [style=none] (17) at (-2.75, 1.25) {};
 		\node [style=none] (18) at (-1.25, 1.25) {};
 		\node [style=none] (19) at (-2, 1) {...};
-		\node [style=qutrit Z phase] (20) at (2, 0.875) {$\alpha$ \nodepart{lower} $\beta$};
-		\node [style=none] (21) at (1.25, 2.125) {};
-		\node [style=none] (22) at (2.75, 2.125) {};
-		\node [style=none] (23) at (2, 1.875) {...};
+		\node [style=qutrit Z phase] (20) at (2.25, 0.875) {$\alpha$ \nodepart{lower} $\beta$};
+		\node [style=none] (21) at (1.5, 2.125) {};
+		\node [style=none] (22) at (3, 2.125) {};
+		\node [style=none] (23) at (2.25, 1.875) {...};
 		\node [style=none] (24) at (0, 0) {=};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
