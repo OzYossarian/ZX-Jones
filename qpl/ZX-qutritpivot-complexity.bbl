@@ -82,12 +82,25 @@
   \emph{\bibinfo{title}{Graph-theoretic Simplification of Quantum Circuits with
   the ZX-calculus}}.
 
+\bibitemdeclare{article}{qutrit_euler}
+\bibitem{qutrit_euler}
+\bibinfo{author}{Xiaoyan \surnamestart Gong\surnameend} \&
+  \bibinfo{author}{Quanlong \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2017}): \emph{\bibinfo{title}{Equivalence of Local
+  Complementation and Euler Decomposition in the Qutrit ZX-calculus}}.
+
 \bibitemdeclare{misc}{gray2020hyperoptimized}
 \bibitem{gray2020hyperoptimized}
 \bibinfo{author}{Johnnie \surnamestart Gray\surnameend} \&
   \bibinfo{author}{Stefanos \surnamestart Kourtis\surnameend}
   (\bibinfo{year}{2020}): \emph{\bibinfo{title}{Hyper-optimized tensor network
   contraction}}.
+
+\bibitemdeclare{article}{harny_completeness}
+\bibitem{harny_completeness}
+\bibinfo{author}{Quanlong \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2018}): \emph{\bibinfo{title}{Qutrit ZX-calculus is Complete
+  for Stabilizer Quantum Mechanics}}.
 
 \bibitemdeclare{misc}{wang2020completeness}
 \bibitem{wang2020completeness}

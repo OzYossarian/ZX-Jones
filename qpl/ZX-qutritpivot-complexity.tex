@@ -113,7 +113,7 @@ since we are only concerned about making statements about complexity.
 
 In this section we briefly review the ZX calculus
 and recalling the definitions of a graph-like diagrams and stabiliser diagrams.
-We also recall the simplifying rewrites that enable the efficient
+Crucially, we also recall the simplifying rewrites that enable the efficient
 simplification of stabiliser diagrams.
 
 \subsection{The Qubit ZX-Calculus}
@@ -121,11 +121,27 @@ simplification of stabiliser diagrams.
 Here we give a quick introduction to the qubit ZX-calculus.
 The qubit ZX-calculus is a diagrammatic language for quantum mechanics.
 The generators are tensors called \textit{spiders}.
-The spider legs, or \emph{wires}, representing vector spaces of dimension $d=2$, can be connected to form networks which are again valid ZX diagrams.
-ZX diagrams are part of a formal language. Diagrams are read bottom-to-top; bottom open wires (not connected to anything) are \emph{input wires} and top ones are \emph{output}.
+The spider legs, or \emph{wires}, represent vector spaces of dimension $d=2$.
+Diagrams are read bottom-to-top; bottom open wires (not connected to anything) are \emph{input wires} and top ones are \emph{output}.
 Diagrams with only outputs are called \emph{states} and with only inputs are called \emph{effects}.
 A \emph{closed} diagram is one with no input nor output wires
 and it represents a scalar.
+
+Spiders can be \emph{composed};
+output wires can be connected to input wires
+to form spider networks which are again valid ZX diagrams.
+Placing diagrams side by side represents parallel composition ($\otimes$),
+with concrete interpretation as the tensor product.
+Vertically stacking diagrams corresponds to sequential composition (($\circ$) and concretely it means matrix multiplication.
+Specifically, it means tensor contraction of two spider tensors along the wire connecting them, i.e. the common tensor index represented by this wire is summed over.
+The concrete representation of these operations of course depends on the (semi)ring over which the spiders are interpreted as tensors.
+For spiders $S$ and $S'$, we denote these as
+\begin{equation}
+\left\llbracket S \otimes S' \right\rrbracket = \left\llbracket S \right\rrbracket \otimes \left\llbracket S' \right\rrbracket ~~,\quad
+	\left\llbracket S \circ S' \right\rrbracket = \left\llbracket S \right\rrbracket \cdot \left\llbracket S' \right\rrbracket 
+\end{equation} 
+
+%, so ZX diagrams should be viewed as belonging to a formal language.
 
 Spiders come in two species: green $Z$-spiders and red $X$-spiders, decorated by a \textit{phase} $\alpha\in[0,2\pi)$. When $\alpha=0$, we will omit it.
 The concrete representation of the spider generators as tensors over $\mathbb{C}$ is:
@@ -137,15 +153,12 @@ The concrete representation of the spider generators as tensors over $\mathbb{C}
 		\quad
 		\left\llbracket \ \tikzfig{qubit_spiders/X_a_labelled} \ \right\rrbracket = 
 		\ket{+}^{m}\bra{+}^{n} + 
-		e^{i\alpha}\ket{-}^{m}\bra{-}^{n}
+		e^{i\alpha}\ket{-}^{m}\bra{-}^{n}~~~,
 	\end{equation*}
-
-where $\{\ket{0}$, $\ket{1}\}$ is the \textit{$Z$-basis} and $\{\ket{+}$, $\ket{-}\}$ the \textit{$X$-basis} in $\mathbb{C}^2$.
-
-
-The Hadamard gate $H$ is denoted as a yellow box.
+where $\{\ket{0}$, $\ket{1}\}$ is the \textit{$Z$-basis} and
+$\ket{\pm}=\ket{0}\pm\ket{1}$ the \textit{$X$-basis} in $\mathbb{C}^2$, in Dirac notation.
+The Hadamard gate $H$, whose function is to switch between the $Z$ and $X$ bases, is denoted as a yellow box.
 Often we will instead draw a dashed blue line to represent a \textit{Hadamard edge}:
-
 \begin{equation}
 	\tikzfig{qubit_hadamard/yellow_box} \quad = \quad
 	\tikzfig{qubit_hadamard/dashed} \quad = \quad
@@ -153,44 +166,14 @@ Often we will instead draw a dashed blue line to represent a \textit{Hadamard ed
 	\quad \left\llbracket \tikzfig{qubit_hadamard/yellow_box} \right\rrbracket \simeq \ket{0}\bra{0}+\ket{0}\bra{1}+\ket{1}\bra{0}-\ket{1}\bra{1}
 \end{equation}
 
-The rewrite rules of the ZX calculus, shown in Fig.\ref{fig:qubit_ZX_rules}, allow manipulation of the diagrams by local tensor-rewrites. Importantly, the rewrites preserve the semantics, i.e. the concrete tensor representation over $\mathbb{C}$, up to a scalar.
+The rewrite rules of the ZX calculus (see Fig.\ref{fig:qubit_ZX_rules} in \ref{app:pmboxes}) allow manipulation of the diagrams by local tensor-rewrites. Importantly, the rewrites preserve the semantics, i.e. the concrete tensor representation over $\mathbb{C}$, up to a scalar.
+What is important about qubit ZX diagrams
+is that \emph{only topology matters};
+the concrete tensor semantics of the diagram is invariant under
+deformations of the network as long as the inter-spider connectivity is respected.
 
-\begin{figure}[t]
-	\begin{tcolorbox}[colback=white]
-		\begin{equation*}
-		\vspace{-5pt}
-			\tikzfig{qubit_rules/fusion/lhs} \ = \ 
-			\tikzfig{qubit_rules/fusion/rhs} \quad \hypertarget{qubit_rule_fusion}{\mathbf{(f)}}
-			\hspace{50pt}
-			\tikzfig{qubit_rules/bialgebra/lhs} \ = \
-			\tikzfig{qubit_rules/bialgebra/rhs} \quad \hypertarget{qubit_rule_bialgebra}{\mathbf{(b)}}
-		\end{equation*}
-		\vspace{5pt}
-		\begin{equation*}
-			\tikzfig{qubit_rules/identity/lhs} \ = \
-			\tikzfig{qubit_rules/identity/rhs} \quad \hypertarget{qubit_rule_id}{\mathbf{(id)}}
-			\hspace{50pt}
-			\tikzfig{qubit_rules/hadamard/lhs} \ = \
-			\tikzfig{qubit_rules/hadamard/rhs} \quad \hypertarget{qubit_rule_hadamard}{\mathbf{(H)}}
-			\hspace{50pt}
-			\tikzfig{qubit_rules/colour_change/lhs} \ = \
-			\tikzfig{qubit_rules/colour_change/rhs} \quad \hypertarget{qubit_rule_colour_change}{\mathbf{(cc)}}
-		\end{equation*}
-		\vspace{5pt}
-		\begin{equation*}
-			\tikzfig{qubit_rules/copy/lhs} \ = \ \
-			\tikzfig{qubit_rules/copy/rhs} \quad \hypertarget{qubit_rule_copy}{\mathbf{(cp)}}
-			\hspace{50pt}
-			\tikzfig{qubit_rules/pi/lhs} \ = \
-			\tikzfig{qubit_rules/pi/rhs} \quad \hypertarget{qubit_rule_pi}{(\bm{\pi})}
-		\end{equation*}
-		\vspace{3pt}
-	\end{tcolorbox}
-	\vspace{5pt}
-	\caption{Rewrite rules for the qubit ZX-calculus where spiders are interpreted as tensors over $\mathbb{C}$.}
-	\label{fig:qubit_ZX_rules}
-	\vspace{-1pt}
-\end{figure}
+
+\subsection{Stabilizer Qubit ZX Diagrams}
 
 The \textit{stabiliser fragment} of the calculus consists of all diagrams in which all phases are $a=\kappa \frac{\pi}{2}$, $\kappa\in\mathbb{Z}$.
 %We note that both diagrams above fall into this stabilizer fragment. 
@@ -205,15 +188,15 @@ every input and output wire is connected to a spider
 and every spider has at most one input or output wire.
 Then the following two rewrite rules, derived via
 \textit{local complementation} and \textit{pivoting},
-can be used to eliminate spiders.
-For more details,
-see Section 4 \cite{graph_theoretic_simplification}.
+can be used to eliminate spiders:
 	\begin{equation}\label{eq:eliminate_clifford}
 		\tikzfig{eliminate/clifford}
 	\end{equation}
 	\begin{equation}\label{eq:eliminate_pauli}
 		\tikzfig{eliminate/pauli}
 	\end{equation}
+For more details,
+see Section 4 \cite{graph_theoretic_simplification}.
 Eq.\ref{eq:eliminate_clifford} says that we can remove any spider with phase $\pm\frac{\pi}{2}$ at the cost of performing a local complementation at said spider.
 Furthermore,
 Eq.\ref{eq:eliminate_pauli} says we can remove any pair of spiders with phases in $\{0, \pi\}$ connected by a Hadamard edge at the cost of performing a local pivot along said edge.
@@ -226,16 +209,473 @@ After each application of \eqref{eq:eliminate_clifford} or \eqref{eq:eliminate_p
 In particular, and importantly to this work, given a closed stabilizer diagram
 the algorithm \emph{efficiently simplifies} it until it contains at most one spider. If it exists, this spider is green, legless and has phase in $\{0, \pi\}$.
 %We briefly outline the process here, referring the reader to \cite{graph_theoretic_simplification} for a full discussion.
-The point relevant to this work is that spiders can be eliminated efficiently, i.e. with a polynomial number of rewrites in the initial number of spiders. Note that every spider elimination introduces a polynomial number of edges in the diagram, which prevents an overwhelming memory cost of the simplification procedure.
+The point relevant to this work is that spiders can be \emph{eliminated efficiently}, i.e. with a polynomial number of rewrites in the initial number of spiders. Note that every spider elimination introduces a polynomial number of edges in the diagram, which prevents an overwhelming memory cost of the simplification procedure.
 
 
 \section{Simplifying Qutrit ZX-Diagrams}
 
-For the remaining case $q=3$, we will show that we can generalise all the ideas of the previous section to the qutrit ZX-calculus, which we must first define.
+We now turn to the qutrit ZX-calculus and examine the analogous story to that of the previous subsection
+but now for the case where the dimension of the vector space carried by the wires is $d=3$.
 
-% \input{qutrit/qutrit_rules}
 
-% \input{qutrit/qutrit_graphs}
+\subsection{The Qutrit ZX-Calculus}
+
+
+As in the qubit case, the qutrit ZX calculus is about spiders connected by wires, but there are key differences, some subtler than others.
+Again, spiders come in two species, Z (green) and X (red),
+with the three-dimensional Z basis denoted as $\{\ket{0},\ket{1},\ket{2}\}$ .
+% To get a feel for the qutrit calculus, we outline these differences briefly here before giving a formal definition. First of all, the qubit $Z$-basis consisted of two vectors $\ket{0} = \smallcolvec{1\\0}$ and $\ket{1} = \smallcolvec{0\\1}$, whereas the qutrit $Z$-basis consists of three vectors:
+% \begin{equation}
+% 	\ket{0} = \smallcolvec{1\\0\\0}, \hspace{20pt}
+% 	\ket{1} = \smallcolvec{0\\1\\0}, \hspace{20pt}
+% 	\ket{2} = \smallcolvec{0\\0\\1}. 
+% \end{equation}
+Let $\omega = e^{i \frac{2\pi}{3}}$ denote the third root of unity
+with $\bar\omega$ its complex conjugate.
+The qutrit $X$-basis consists of the three vectors: 
+\begin{equation}
+	\ket{+} = \frac{1}{\sqrt{3}} \left(\ket{0} + \ket{1} + \ket{2}\right)~,~~
+	\ket{\omega} = \frac{1}{\sqrt{3}} \left(\ket{0} + \omega\ket{1} + \bar{\omega}\ket{2}\right)~,~~
+	\ket{\bar{\omega}} = \frac{1}{\sqrt{3}} \left(\ket{0} + \bar{\omega}\ket{1} + \omega\ket{2}\right)
+\end{equation}
+In qutrit ZX,
+spiders thus carry \textit{two} phases $\alpha$ and $\beta$,
+and have the following concrete representation as linear maps:
+\begingroup
+	\allowdisplaybreaks
+	\setlength{\jot}{10pt}
+		\begin{align}
+			&\left\llbracket \quad \tikzfig{qutrit_generators/spiders/Z_a_b_labelled} \quad \right\rrbracket = 
+			\ket{0}^{m}\bra{0}^{n} + 
+			e^{i\alpha}\ket{1}^{m}\bra{1}^{n} + 
+			e^{i\beta}\ket{2}^{m}\bra{2}^{n} \\
+			&\left\llbracket \quad \tikzfig{qutrit_generators/spiders/X_a_b_labelled} \quad \right\rrbracket = 
+			\ket{+}^{m}\bra{+}^{n} + 
+			e^{i\alpha}\ket{\omega}^{m}\bra{\omega}^{n} + 
+			e^{i\beta}\ket{\bar{\omega}}^{m}\bra{\bar{\omega}}^{n}
+			% &\left\llbracket \quad \tikzfig{qutrit_generators/spiders/Z_a_b_labelled} \quad \right\rrbracket = 
+			% \ket{0}^{\otimes m}\bra{0}^{\otimes n} + 
+			% e^{i\alpha}\ket{1}^{\otimes m}\bra{1}^{\otimes n} + 
+			% e^{i\beta}\ket{2}^{\otimes m}\bra{2}^{\otimes n} \\
+			% &\left\llbracket \quad \tikzfig{qutrit_generators/spiders/X_a_b_labelled} \quad \right\rrbracket = 
+			% \ket{+}^{\otimes m}\bra{+}^{\otimes n} + 
+			% e^{i\alpha}\ket{\omega}^{\otimes m}\bra{\omega}^{\otimes n} + 
+			% e^{i\beta}\ket{\bar{\omega}}^{\otimes m}\bra{\bar{\omega}}^{\otimes n}
+		\end{align}
+\endgroup
+When $\alpha = \beta = 0$ we will again omit the angles entirely, and just draw a small green or red dot. 
+It is also useful to consider spiders whose phases are $a,b = \kappa \omega$, $\kappa\in\mathbb{Z}$. 
+Note that throughout our work we will use
+`$1$' and `$2$' as spider decorations to denote the cases $\kappa=1,2$.
+% This shouldn't ever cause confusion.
+
+Hadamard boxes are now neither self-conjugate nor self-adjoint, though they remain self-transpose.
+Therefore, in keeping with the diagrammatic paradigm,
+the 3-dimensional Hadamard gate is denoted by a yellow parallelogram,
+as it has neither vertical nor horizontal symmetry, but is invariant under rotation by $\pi$.
+We also use a dashed blue line for the \textit{Hadamard edge} (\textit{$H$-edge}) and a purple dashed line for its adjoint (\textit{$H^\dagger$-edge}):
+\begin{equation}
+		\tikzfig{qutrit_rules/hadamard/euler/h} \ = \ 
+		\tikzfig{hadamard_lemmas/dashed/blue} \ = \ 
+		\tikzfig{qutrit_rules/hadamard/euler/decomposition} \ , 
+		\hspace{75pt}
+		\tikzfig{hadamard_lemmas/decompositions/h_dagger} \ = \ 
+		\tikzfig{hadamard_lemmas/dashed/purple} \ = \ 
+		\tikzfig{hadamard_lemmas/decompositions/h_dagger_zxz}
+\end{equation}
+
+A very important difference from the qubit case is that in qutrit ZX-calculus there is no `plain' cap or cup:
+%. That is, we have the following two results:
+\begin{equation}
+	\tikzfig{cups_caps/z_cup} \quad \neq \quad \tikzfig{cups_caps/x_cup} \quad , \hspace{75pt}
+	\tikzfig{cups_caps/z_cap} \quad \neq \quad \tikzfig{cups_caps/x_cap}
+\end{equation}
+This has several consequences. Firstly, the maxim that `only topology matters' no longer applies. That is, it is now important to make clear the distinction between a spider's inputs and outputs, unlike in the qubit case where we could freely interchange the two. Diagram components can still be isotoped around the plane but only so long as this input/output distinction is respected. This gives the qutrit calculus a slightly more rigid flavour than its qubit counterpart. That said, this rigidity is loosened by the following two results: firstly, this distinction is irrelevant for $H$- and $H^\dagger$-edges. 
+
+\begin{lemma}\label{lem:h_edges_input_output}
+	In the qutrit ZX-calculus, the following results hold:
+	\begin{equation*}
+		\tikzfig{hadamard_lemmas/io_irrelevant/h/lhs} \ = \ 
+		\tikzfig{hadamard_lemmas/io_irrelevant/h/rhs} \ ,
+		\hspace{50pt}
+		\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/lhs} \ = \ 
+		\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/rhs}
+	\end{equation*}
+	\begin{proof}
+		These are Lemmas 3.2 and 3.3 in \cite{qutrit_euler}.
+	\end{proof}
+\end{lemma}
+
+Secondly, the `snake equations' continue to hold in some form; given a cap and cup of different colours, we can still straighten out the wire between them as before, only now it comes at the cost of adding two Hadamard boxes to the wire. For a cup and cap of the same colour, we can straighten out the wire as usual.
+
+\begin{lemma}
+	In the qutrit ZX-calculus, the following results hold. Moreover, they hold with the roles of green and red interchanged. 
+	\begin{equation}
+		\tikzfig{qutrit_snake/same_bent} \quad = \quad \tikzfig{qutrit_snake/same_straight} \quad ,
+		\hspace{50pt}
+		\tikzfig{qutrit_snake/different_bent} \quad = \quad \tikzfig{qutrit_snake/different_straight} \quad .
+	\end{equation}
+	\begin{proof}
+		As we will soon see, these are just rules $\qutritRuleFusion$ and $\qutritRuleSnake$.
+	\end{proof}
+\end{lemma}
+
+We now give a full set of rules defining the qutrit ZX-calculus. Our presentation aims for clarity and accessibility; for a more rigourous description, see \cite{harny_completeness}.
+
+\begin{figure}
+	\begin{tcolorbox}[colback=white]
+		\begin{equation*}
+			% \tikzfig{qutrit_rules/fusion/lhs} \quad = \quad 
+			% \tikzfig{qutrit_rules/fusion/middle} \quad = \quad 
+			% \tikzfig{qutrit_rules/fusion/rhs} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
+			\tikzfig{qutrit_rules/fusion/all} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/identity/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/identity/rhs} \quad \hypertarget{qutrit_rule_id}{\mathbf{(id)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/twisted_cup/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/twisted_cup/rhs} \quad \hypertarget{qutrit_rule_twisted_cup}{\mathbf{(t)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/0_copy/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/0_copy/rhs} \quad \hypertarget{qutrit_rule_0_copy}{\mathbf{(cp_0)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/bialgebra/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/bialgebra/rhs} \quad \hypertarget{qutrit_rule_bialgebra}{\mathbf{(b)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/m_copy/1_2_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/m_copy/1_2_rhs} \quad \hypertarget{qutrit_rule_m_copy}{\mathbf{(cp_{\mathcal{M}})}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/m_copy/2_1_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/m_copy/2_1_rhs} \quad \mathbf{(cp_{\mathcal{M}})}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/commute/1_2_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/commute/1_2_rhs} \quad \hypertarget{qutrit_rule_commute}{\mathbf{(cm)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/commute/2_1_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/commute/2_1_rhs} \quad {\mathbf{(cm)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/hadamard/h_hdagger} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/identity} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/hdagger_h} \quad \hypertarget{qutrit_rule_hadamard}{\mathbf{(H)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/hadamard/euler/h} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/euler/decomposition} \quad \hypertarget{qutrit_rule_euler}{\mathbf{(E)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/colour_change/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/colour_change/rhs} \quad \hypertarget{qutrit_rule_colour_change}{\mathbf{(cc)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/colour_change/flip_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/colour_change/flip_rhs} \quad \mathbf{(cc)}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/snake/snake} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hopf_ish} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hadamards} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hadamard_adjoints} \quad \hypertarget{qutrit_rule_snake}{\mathbf{(s)}}
+		\end{equation*}
+	\end{tcolorbox}
+	\vspace{5pt}
+	\caption{Rewrite rules for the qutrit ZX-calculus.}
+	\label{fig:qutrit_ZX_rules}
+\end{figure}
+
+\begin{definition}\label{def:qutrit_ZX_rules}
+	The \textit{qutrit ZX-calculus} is a graphical calculus generated by the following diagrams, where $\alpha, \beta \in [0, 2 \pi]$:
+
+	\begin{equation}
+		\tikzfig{qutrit_generators/spiders/Z_a_b} \quad , \qquad 
+		\tikzfig{qutrit_generators/spiders/X_a_b} \quad , \qquad
+		\tikzfig{qutrit_generators/hadamard} \quad , \qquad
+		\tikzfig{qutrit_generators/swap} \quad , \qquad
+		\tikzfig{qutrit_generators/identity}
+	\end{equation}
+
+	and their adjoints $(-)^\dagger$. The non-spider generators' adjoints are their vertical reflections, whereas spiders' adjoints are found by swapping inputs and outputs and negating angles: 
+
+	\begin{equation}
+		\left(\ \tikzfig{qutrit_generators/spiders/Z_a_b_labelled}\ \right)^\dagger = \tikzfig{qutrit_generators/spiders/Z_a_b_adjoint_labelled} \quad , \qquad 
+		\left(\ \tikzfig{qutrit_generators/spiders/X_a_b_labelled}\ \right)^\dagger = \tikzfig{qutrit_generators/spiders/X_a_b_adjoint_labelled}
+	\end{equation}
+
+	These generators can be composed in parallel ($\otimes$) and sequentially ($\circ$), and the resulting diagrams are governed by the rewrite rules in Figure \ref{fig:qutrit_ZX_rules}, wherein addition is modulo $2\pi$. The fusion rule $\qutritRuleFusion$ applies to spiders of the same colour connected by at least one wire. Importantly, all the rules hold under taking adjoints, where for diagrams $D$ and $E$ we have:
+
+	\begin{equation}
+		(D \otimes E)^\dagger = D^\dagger \otimes E^\dagger
+	\end{equation}
+	\begin{equation}
+		(D \circ E)^\dagger = D^\dagger \circ E^\dagger
+	\end{equation}
+
+	Furthermore, all but the commutation equations $\qutritRuleCommute$ and the colour change equations $\qutritRuleColourChange$ continue to hold when the roles of green and red (i.e. $Z$ and $X$) are interchanged. For these four exceptions, however, analogous equations can be derived from the existing ones; for example, the corresponding colour change equations will be relevant for us later.
+\end{definition}
+	
+\begin{proposition}
+	The following equations are derivable in the qutrit ZX-calculus:
+	\begin{equation}\label{eq:derived_colour_change}
+		\tikzfig{qutrit_rules/exceptions/colour_change/rhs} \quad = \quad \tikzfig{qutrit_rules/exceptions/colour_change/lhs}
+		\quad , \qquad
+		\tikzfig{qutrit_rules/exceptions/colour_change/flip_rhs} \quad = \quad \tikzfig{qutrit_rules/exceptions/colour_change/flip_lhs}
+	\end{equation}
+	\begin{proof}
+		Add $H$- and $H^\dagger$-boxes to both sides of the original colour change equations in such a way that we can then cancel Hadamards on the legs of the red spiders via $\qutritRuleHadamard$.
+	\end{proof}
+\end{proposition}
+
+
+\subsection{Graph-Like Qutrit ZX Diagrams}
+
+% \numbered{Definition}{A \textit{Hadamard edge} (or \textit{H-edge}) is a Hadamard map connecting two spiders. A \textit{Hadamard adjoint edge} (or \textit{$H^\dagger$-edge) }}
+
+[Make all of the following scalar-exact (?)]\newline
+
+We first define a graph-like diagram in the qutrit ZX calculus.
+
+% \numbered{Definition}{A qutrit ZX diagram is \textit{graph-like} when:}
+\begin{definition}\label{def:graph_like_qutrit}
+	A qutrit ZX-diagram is \textit{graph-like} when: 
+	\begin{enumerate}
+		\item Every spider is a Z-spider.
+		\item Spiders are only connected by Hadamard edges ($H$-edges) or their adjoints ($H^\dagger$-edges).
+		\item Every pair of spiders is connected by at most one $H$-edge or $H^\dagger$-edge.
+		\item Every input and output is connected to a spider.
+		\item Every spider is connected to at most one input or output.
+	\end{enumerate}
+\end{definition}
+
+Thanks to Lemma \ref{lem:h_edges_input_output} we can ignore which of a spider's $H$- and $H^\dagger$-legs are inputs and outputs. For our specific needs, the last two items above will not be relevant, since ZX-diagrams arising from knots will be closed, but we include them to keep the definition consistent with the qubit case. However, note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. The following equation, which holds with the roles of $H$ and $H^\dagger$ reversed, helps us get around this:
+
+\begin{equation}\label{eq:spiders_reluctant_to_fuse}
+	\tikzfig{hadamard_lemmas/spiders_reluctant_to_fuse/1} \ \xeq{\qutritRuleHadamard} \
+	\tikzfig{hadamard_lemmas/spiders_reluctant_to_fuse/2} \ \xeq{\qutritRuleId} \
+	\tikzfig{hadamard_lemmas/spiders_reluctant_to_fuse/3}
+\end{equation}
+
+We will shortly show that every qutrit ZX-diagram is equivalent to a graph-like one, making use of the following lemmas:
+
+\begin{lemma}\label{lem:three_H_edges_vanish}
+	The following equation holds in the qutrit ZX-calculus. Moreover, it holds with the roles of $H$ and $H^\dagger$ interchanged:
+	\begin{equation}
+		\tikzfig{hadamard_lemmas/3_h_edges_vanish/lhs} \quad = \quad \tikzfig{hadamard_lemmas/3_h_edges_vanish/rhs}
+	\end{equation}
+	\begin{proof}
+		It is shown in Lemma 2.8 \cite{qutrit_euler} that the qutrit ZX-calculus satisfies the following `Hopf law':
+		\begin{equation}\label{eq:qutrit_hopf}
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf_law}
+		\end{equation}
+		Therefore we can argue as follows:
+		\begin{equation}
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/lhs} \quad \xeq{\qutritRuleHadamard} \quad
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/step_1} \quad \xeq{\qutritRuleColourChange} \quad
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/step_2} \quad \xeq{\eqref{eq:qutrit_hopf}} \quad
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/step_3} \quad \xeq{\eqref{eq:derived_colour_change}} \quad
+			\tikzfig{hadamard_lemmas/3_h_edges_vanish/rhs}
+		\end{equation}
+	\end{proof}
+\end{lemma}
+
+\begin{lemma}\label{lem:H_edges_qutrit} 
+	The following two equations hold in the qutrit ZX-calculus. Moreover, they hold with the roles of $H$ and $H^\dagger$ interchanged:
+	\begin{equation}
+		\tikzfig{hadamard_lemmas/2_h_edges_flip}
+		\hspace{75pt}
+		\tikzfig{hadamard_lemmas/h_edge_and_adjoint_permute}
+	\end{equation}
+	\begin{proof}
+		This is Lemma 3.4 in\ \cite{qutrit_euler}.
+	\end{proof}
+\end{lemma}
+
+As we will formalise later, the lemmas above say that we can think of Hadamard edges as $1$-weighted edges and their adjoints as $2$-weighted edges, then work modulo $3$, since every triple of parallel edges disappears. This motivates defining `parametrised' Hadamard gates, which will come in use later:
+
+\begin{equation}
+	\tikzfig{hadamard_lemmas/parametrised/0}
+	\hspace{75pt}
+	\tikzfig{hadamard_lemmas/parametrised/1}
+	\hspace{75pt}
+	\tikzfig{hadamard_lemmas/parametrised/2}
+\end{equation}
+
+The first equation above just says that a `$0$-Hadamard edge' is in fact the empty diagram, and not an edge at all. Where the previous lemmas relate single $H$- and $H^\dagger$-boxes across multiple edges, the next relates multiple $H$- and $H^\dagger$- boxes on single edges.
+
+\begin{lemma}\label{lem:H_boxes_qutrit} 
+	The following three equations hold in the qutrit ZX calculus. Moreover, they hold with the roles of $H$ and $H^\dagger$ interchanged:
+	\begin{equation}
+		\tikzfig{hadamard_lemmas/4_h_boxes_vanish}
+		\hspace{75pt}
+		\tikzfig{hadamard_lemmas/3_h_boxes_flip}
+		\hspace{75pt}
+		\tikzfig{hadamard_lemmas/2_h_boxes_separate}
+	\end{equation}
+	\begin{proof}
+		For the first equation, turn the top two $H$-boxes into $H^\dagger$-boxes via $\qutritRuleSnake$, then cancel twice via $\qutritRuleHadamard$. Similarly, for the second equation turn the top two $H$-boxes into $H^\dagger$-boxes via $\qutritRuleSnake$, then cancel once via $\qutritRuleHadamard$, leaving a single $H^\dagger$-box. The third equation is just a simple application of $\qutritRuleId$. Analogous reasoning applies when the roles of $H$ and $H^\dagger$ are swapped.
+	\end{proof}
+\end{lemma}
+
+Again, intuitively we can think of Hadamard boxes of having value $1$ and their adjoints $-1$ and then work modulo $4$.
+
+\begin{corollary}\label{prop:every_diagram_is_graph_like_qutrit}
+	Every qutrit ZX diagram is equivalent to one that is graph-like.
+	\begin{proof}
+		First use the colour change rule to turn all X-spiders into Z-spiders. Then use Lemma \ref{lem:H_boxes_qutrit} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply Lemmas \ref{lem:three_H_edges_vanish} and \ref{lem:H_edges_qutrit} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-boxes as needed: 
+		\begin{equation}
+			\tikzfig{is_graph_like/plain_input_output_wire}
+			\hspace{75pt}
+			\tikzfig{is_graph_like/input_connected_to_hadamard}
+			\hspace{75pt}
+			\tikzfig{is_graph_like/multiple_inputs_connected_to_one_spider}
+		\end{equation}
+	\end{proof}
+\end{corollary}
+
+\begin{definition}\label{def:graph_state_qutrit}
+	A graph-like qutrit ZX diagram is a \textit{graph state} when every spider has zero phase (top and bottom) and is connected to an output. 
+\end{definition}
+
+A graph state is described fully by its underlying multigraph, or equivalently by an adjacency matrix, where edges take weights in $\mathbb{Z}_3$\ [Lemma 4.2 \cite{harny_completeness}. Nodes correspond to phaseless green spiders, edges of weight $1$ correspond to Hadamard edges, and edges of weight $2$ correspond to $H^\dagger$ edges. As in the qubit case, graph states admit a local complementation operation\ Definition 2.6 \cite{harny_completeness}, though the effect is now slightly more complicated. We'll give the intuition after the formal definition:
+
+\begin{definition}\label{def:local_complementation_qutrit}
+	Given $a \in \mathbb{Z}_3$ and a graph state $G$ with adjacency matrix $W = (w_{i,j})$, the \textit{$a$-local complentation} at node $k$ is the new graph state $G *_a i$, whose adjacency matrix $W' = (w'_{i,j})$ given by:
+	\begin{equation}
+		w'_{i,j} = w_{i,j} + aw_{i,k}w_{j,k}
+	\end{equation}
+\end{definition}
+
+So only those edges between neighbours of node $k$ are affected, but rather than just having their weight increased by $1$ (modulo $2$) as in the qubit case, the increase in weight also depends on the weights of the edges from $i$ and $j$ to $k$. As always, this is best seen graphically. For two nodes $i$ and $j$ both connected to $k$ by the same colour edge, $a$-local complementation at $k$ increases weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $k$ by edges of different colour, $a$-local complementation at $k$ decreases $w_{i,j}$ by $a$. We show a fragment of a ZX-diagram below under the effect of this operation:
+
+\begin{equation}
+	\tikzfig{a_local_comp/same}
+	\hspace{75pt}
+	\tikzfig{a_local_comp/different}
+\end{equation}
+
+But the fragment above doesn't give the full picture. As in the qubit case, local complementation gives an equality up to introducing some single qubit phase gates on the outputs.
+
+\begin{theorem}\label{thm:local_comp_equality}
+	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing a node $k$, let $N(k)$ denote the neighbours of $k$ - that is, nodes $i$ with weight $w_{i,k} \in \{1, 2\}$. Then the following equality holds:
+	\ctikzfig{graph_state/local_comp}
+	\begin{proof}
+		This is Theorem 4.4 and Corollary 4.5 in\ \cite{harny_completeness}.
+	\end{proof}
+\end{theorem}
+
+Composing local complementations gives a local pivot operation.
+
+\begin{definition}\label{def:local_pivot_qutrit}
+	Given $a,b,c \in \mathbb{Z}_3$ and a graph state $G$ containing nodes $i$ and $j$, the \textit{$(a,b,c)$-local pivot} along $ij$ is the new graph state $G \wedge_{(a,b,c)} ij \defeq ((G *_a i) *_b j) *_c i$. 
+\end{definition}
+
+This again results in an equality, up to introducing some extra gates on outputs. Here we shall only consider an $(a,-a,a)$-local pivot along an edge $ij$ of non-zero weight, for $a \in \{1, 2\}$. We will call this a \textit{proper $a$-local pivot} along $ij$, and denote it $G \wedge_a ij$.
+
+\begin{theorem}\label{thm:local_pivot_equality}
+	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing connected nodes $i$ and $j$, define the following:
+	\begin{itemize}
+		\item $N_{=}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} = w_{k,j} \right\}$
+		\item $N_{\neq}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} \neq w_{k,j} \right\}$
+	\end{itemize} 
+	Then the following equation relates $G$ and its proper $a$-local pivot along $ij$:
+	\ctikzfig{graph_state/proper_local_pivot}
+
+	\begin{proof}
+		See Appendix \ref{thm:local_pivot_equality_appendix}.
+	\end{proof}
+\end{theorem}
+
+These two operations are again the drivers behind the simplification procedure. We classify spiders into three families:
+
+\begin{equation*}
+	\mathcal{M} = \left\{\qutritZspider{0}{0}, \qutritZspider{1}{2}, \qutritZspider{2}{1}\right\},
+	\hspace{10pt}
+	\mathcal{N} = \left\{\qutritZspider{0}{1}, \qutritZspider{1}{0}, \qutritZspider{0}{2}, \qutritZspider{2}{0}\right\},
+	\hspace{10pt}
+	\mathcal{P} = \left\{\qutritZspider{1}{1}, \qutritZspider{2}{2}\right\}.
+\end{equation*}
+
+ exactly as in Theorem 3.1 \cite{harny_completeness}. We call a spider in a graph-like ZX-diagram \textit{interior} if it isn't connected to an input or output (so for our use case all spiders are interior). Given any graph-like ZX-diagram, we will show that we can eliminate pairs of connected interior \Mspiders\ by local pivoting, and standalone interior $\mathcal{N}$- and \Pspiders\ by local complementation.
+
+\begin{theorem}\label{thm:eliminate_M_spiders}
+	Given any graph-like ZX-diagram containing two interior \Mspiders\ $i$ and $j$ connected by edge $ij$ of weight $w_{i,j} \eqdef w \in \{1,2\}$, suppose we perform a proper $\pm w$-local pivot along $ij$. Then the new ZX-diagram is related to the old one by the equality:
+	
+	\ctikzfig{eliminate/M_spiders/theorem_LHS}
+	\ctikzfig{eliminate/M_spiders/theorem_RHS}
+	
+	where all changes to weights of edges where neither endpoint is $i$ or $j$ are omitted. Furthermore, in order to save space, each node with phase \qutritZphase{a_x^y}{b_x^y} is representative of \textit{all} nodes connected to $i$ by an $x$-weighted edge and to $j$ by a $y$-weighted edge.
+
+	\begin{proof}
+		See \ref{thm:eliminate_M_spiders_appendix} in the Appendix.
+	\end{proof}
+\end{theorem}
+
+\begin{theorem}\label{thm:eliminate_N_spiders}
+	Given any graph-like ZX-diagram containing an interior \Nspider\ $k$ with phase \qutritZphase{0}{n} for $n \in \{1,2\}$, suppose we perform a $(-n)$-local complementation at $k$. Then the new ZX-diagram is related to the old one by the equality:
+
+	\begin{equation*}
+		\tikzfig{eliminate/N_spiders/0_n/step_1} \quad = \quad \tikzfig{eliminate/N_spiders/0_n/step_9}
+	\end{equation*}
+
+	where all changes to weights of edges where neither endpoint is $k$ are omitted. If instead $k$ has phase \qutritZphase{n}{0} for $n \in \{1,2\}$, suppose we perform the same $(-n)$-local complementation at $k$. Then the equality relating the new and old diagrams becomes:
+
+	% Spiders with phases \qutritZphase{a_1}{b_1} ... \qutritZphase{a_r}{b_r} are all the neighbours of $k$ connected by a $1$-weighted (blue) edge, while spider with phases \qutritZphase{c_1}{d_1} ... \qutritZphase{c_s}{d_s} are all the neighbours of $k$ connected by a $2$-weighted (purple) edge.\newline
+
+	\begin{equation*}
+		\tikzfig{eliminate/N_spiders/n_0/step_1} \quad = \quad \tikzfig{eliminate/N_spiders/n_0/step_9}
+	\end{equation*}
+
+	\begin{proof}
+		See Appendix \ref{thm:eliminate_N_spiders_appendix}.
+	\end{proof}
+\end{theorem}
+
+\begin{theorem}\label{thm:eliminate_P_spiders}
+	Given any graph-like ZX-diagram containing an interior \Pspider\ $k$ with phase \qutritZphase{p}{p} for $p \in \{1,2\}$, suppose we perform a $p$-local complementation at $k$. Then the new ZX-diagram is related to the old one by the equality:
+
+	\begin{equation*}
+		\tikzfig{eliminate/P_spiders/step_1} \quad = \quad \tikzfig{eliminate/P_spiders/step_9}
+	\end{equation*}
+
+	where all changes to weights of edges where neither endpoint is $k$ are omitted.
+
+	\begin{proof}
+		See Appendix \ref{thm:eliminate_P_spiders_appendix}.
+	\end{proof} 
+
+	% Spiders with phases \qutritZphase{a_1}{b_1} ... \qutritZphase{a_r}{b_r} are all the neighbours of $k$ connected by a $1$-weighted (blue) edge, while spider with phases \qutritZphase{c_1}{d_1} ... \qutritZphase{c_s}{d_s} are all the neighbours of $k$ connected by a $2$-weighted (purple) edge.\newline
+\end{theorem}
+
+We can now combine these three elimination theorems into an algorithm for efficiently simplifying a closed graph-like ZX-diagram. First note that after applying any one of the three elimination theorems to such a diagram we may end up with a state that is no longer graph-like. Fortunately the only way in which this can happen is if two spiders end up being connected by multiple $H$- or $H^\dagger$-edges, and we have shown via Lemmas \ref{lem:three_H_edges_vanish} and \ref{lem:H_edges_qutrit} that these can always be reduced to just one edge.
+
+\begin{theorem}\label{thm:simplification_algorithm_works}
+	Given any closed graph-like ZX-diagram, the following algorithm will always terminate after a finite number of steps, returning an equivalent graph-like ZX-diagram with no \Nspiders, \Pspiders, or adjacent pairs of \Mspiders. Repeat the steps below until no rule matches. After each step, apply Lemmas \ref{lem:three_H_edges_vanish} and \ref{lem:H_edges_qutrit} as needed until the resulting diagram is graph-like:
+	\begin{enumerate}
+		\item Eliminate an \Nspider\ via Theorem~\ref{thm:eliminate_N_spiders}.
+		\item Eliminate a \Pspider\ via Theorem~\ref{thm:eliminate_P_spiders}.
+		\item Eliminate two adjacent \Mspiders\ via Theorem~\ref{thm:eliminate_M_spiders}.
+	\end{enumerate}
+	\begin{proof}
+		At every step the total number of spiders decreases by at least one, so since we start with a finite diagram the algorithm terminates after a finite number of steps. By construction, when it does so we are left with an equivalent graph-like ZX-diagram with no \Nspiders, \Pspiders, or adjacent pairs of \Mspiders.
+	\end{proof}
+\end{theorem}
+
+\begin{corollary}\label{cor:stabilizer_simplification_algorithm_works}
+	In particular, if we start with a stabilizer diagram, we can eliminate all but perhaps one \Mspider, depending on whether the initial number of \Mspiders\ was odd or even. 
+	\begin{proof}
+		No step introduces any non-stabilizer phases.
+	\end{proof}
+\end{corollary}
+
+The algorithm above could be extended to graph-like diagrams with inputs or outputs as in Theorem 5.4 \cite{graph_theoretic_simplification}, but since for our purposes we don't need to do so, we have not gone to the trouble.
 
 
 \section{Case studies}
@@ -373,6 +813,33 @@ Since any ZX-diagram derived from a knot in the manner described in Section \ref
 
 Furthermore, keeping track of the scalar factors introduced with each application of Theorem \ref{thm:qubit_eliminate_spiders} or Lemma \ref{lem:2_h_edges_vanish} can be done efficiently. [ToDo: proof, if not explicitly doing all this in a scalar-exact fashion. Reference Backens]
 
+
+Having now defined the qutrit ZX-calculus we turn our attention back to our tensor network for the Jones polynomial of a knot (ToDo: ref). We are seeking a diagram in the qutrit ZX-calculus that equals (up to a scalar) the matrix $T_{\pm}^{(q)}$ from \eqref{eq:pm_tensor}.
+
+% where we have used $t = \frac{1}{2}(3 - 2 + \sqrt{3(3-4)}) = e^{i\frac{\pi}{3}}$ as in (ToDo: ref). 
+
+\begin{proposition}\label{prop:pm_map_q3}
+	Under the standard interpretation as a linear map, the following diagram gives (up to a scalar) the required matrix:
+	\begin{equation}
+		\left\llbracket \quad \tikzfig{pm_maps/q3} \quad \right\rrbracket \simeq
+		% 2\sqrt{3}e^{\mp i\frac{5\pi}{6}} \ 
+		\left\llbracket \quad \tikzfig{pm_maps/pm} \quad \right\rrbracket_{q=3} = 
+		\begin{pmatrix}
+			e^{\mp i\frac{\pi}{3}} & 1 & 1 \\
+			1 & e^{\mp i\frac{\pi}{3}} & 1 \\
+			1 & 1 & e^{\mp i\frac{\pi}{3}} \\
+		\end{pmatrix}
+	\end{equation}
+
+	\begin{proof}
+		See Appendix \ref{prop:pm_maps_zx_appendix}.
+	\end{proof}
+\end{proposition}
+
+Crucially, the ZX-diagram in Proposition \ref{prop:pm_map_q3} above is a \textit{stabilizer diagram} in the qutrit ZX-calculus - that is, all angles are integer multiples of $\frac{2\pi}{3}$. Therefore if we can find an algorithm analogous to Theorem 5.4 \cite{graph_theoretic_simplification} that efficiently reduces any stabilizer diagram to a trivial one, then we will have shown that the Jones polynomial of any knot at the lattice roots of unity $\pm e^{i\frac{\pi}{3}}$ is efficiently computable. [ToDo: justify the $\pm$]. In the next subsection, we will do exactly that.
+
+% Again - just like in Remark~\ref{rem:qubit_scalar_exactness} - these rules are complete for qutrit stabilizer quantum mechanics when equality is considered only up to a scalar factor; we give the scalar-exact versions (detailed in \citep{qutrit_exact}) so that we can actually compute Jones polynomials later. 
+
 \subsection{Graph Colouring}
 
 
@@ -380,12 +847,16 @@ Furthermore, keeping track of the scalar factors introduced with each applicatio
 
 
 This also motivates further work in circuit extraction for qutrit circuits so that one can attempt graph-theoretic simplification with the qutrit ZX calculus, analogous to the case of qubits \cite{graph_theoretic_simplification,backens2020again}.
+{\bf harny's crazy generalisations: what can they potentially do for general CSP?}
+
 
 Future work, scalar exact version of the qutrit rewrite rules,
 for concrete applications to problems where $3$-state systems are involved.
 Further,
 generalisation of local complementation and pivot rewrites to arbitrary prime dimension.
 Software implementations a la pyzx could be extended accordingly.
+
+
 
 \section{Acknowledgments}
 {\bf Teague?l}
@@ -402,7 +873,49 @@ KM acknowledges financial support from the Royal Commission for the Exhibition o
 
 \appendix
 
-\section{Appendix}
+\section{Qubit ZX Calculus}
+
+The rewrite rules of the qubit ZX calculus are shown in Fig.\ref{fig:qubit_ZX_rules}.
+
+\begin{figure}
+	\begin{tcolorbox}[colback=white]
+		\begin{equation*}
+		\vspace{-5pt}
+			\tikzfig{qubit_rules/fusion/lhs} \ = \ 
+			\tikzfig{qubit_rules/fusion/rhs} \quad \hypertarget{qubit_rule_fusion}{\mathbf{(f)}}
+			\hspace{50pt}
+			\tikzfig{qubit_rules/bialgebra/lhs} \ = \
+			\tikzfig{qubit_rules/bialgebra/rhs} \quad \hypertarget{qubit_rule_bialgebra}{\mathbf{(b)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qubit_rules/identity/lhs} \ = \
+			\tikzfig{qubit_rules/identity/rhs} \quad \hypertarget{qubit_rule_id}{\mathbf{(id)}}
+			\hspace{50pt}
+			\tikzfig{qubit_rules/hadamard/lhs} \ = \
+			\tikzfig{qubit_rules/hadamard/rhs} \quad \hypertarget{qubit_rule_hadamard}{\mathbf{(H)}}
+			\hspace{50pt}
+			\tikzfig{qubit_rules/colour_change/lhs} \ = \
+			\tikzfig{qubit_rules/colour_change/rhs} \quad \hypertarget{qubit_rule_colour_change}{\mathbf{(cc)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qubit_rules/copy/lhs} \ = \ \
+			\tikzfig{qubit_rules/copy/rhs} \quad \hypertarget{qubit_rule_copy}{\mathbf{(cp)}}
+			\hspace{50pt}
+			\tikzfig{qubit_rules/pi/lhs} \ = \
+			\tikzfig{qubit_rules/pi/rhs} \quad \hypertarget{qubit_rule_pi}{(\bm{\pi})}
+		\end{equation*}
+		\vspace{3pt}
+	\end{tcolorbox}
+	\vspace{5pt}
+	\caption{Rewrite rules for the qubit ZX-calculus where spiders are interpreted as tensors over $\mathbb{C}$.}
+	\label{fig:qubit_ZX_rules}
+	\vspace{-1pt}
+\end{figure}
+
+\section{PM-Boxes in ZX Language}
+\label{app:pmboxes}
 
 We begin with proofs of the translations of the matrix $T_{\pm}^{(q)}$ into the ZX-calculus. 
 
@@ -529,6 +1042,8 @@ We begin with proofs of the translations of the matrix $T_{\pm}^{(q)}$ into the 
 	\end{proof}
 \end{proposition}
 
+\section{Local Pivot in Qutrit ZX}
+
 Next we prove the local pivot equality from Theorem~\ref{thm:local_pivot_equality}. For this, recall that all but the $\qutritRuleCommute$ and $\qutritRuleColourChange$ qutrit rewrite rules hold under taking adjoints, and with the roles of green and red swapped, so in particular rule $\qutritRuleEuler$ also gives:
 
 \begin{equation}\label{eq:qutrit_hadamard_decompositions}
@@ -597,6 +1112,8 @@ Next we prove the local pivot equality from Theorem~\ref{thm:local_pivot_equalit
 
 	\end{proof}
 \end{theorem}
+
+\section{Spider Elimination Rules for Qutrit Stabiliser ZX}
 
 Now we prove the three elimination theorems for $\mathcal{M}$-, $\mathcal{N}$- and \Pspiders. First, we require two lemmas.
 

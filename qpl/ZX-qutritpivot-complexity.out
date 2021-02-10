@@ -1,10 +1,16 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Simplifying Qubit ZX-Diagrams}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{The Qubit ZX-Calculus}{section.2}% 3
-\BOOKMARK [1][-]{section.3}{Simplifying Qutrit ZX-Diagrams}{}% 4
-\BOOKMARK [1][-]{section.4}{Case studies}{}% 5
-\BOOKMARK [2][-]{subsection.4.1}{Jones Polynomial at Lattice Roots of Unity}{section.4}% 6
-\BOOKMARK [2][-]{subsection.4.2}{Graph Colouring}{section.4}% 7
-\BOOKMARK [1][-]{section.5}{Outlook}{}% 8
-\BOOKMARK [1][-]{section.6}{Acknowledgments}{}% 9
-\BOOKMARK [1][-]{appendix.A}{Appendix}{}% 10
+\BOOKMARK [2][-]{subsection.2.2}{Stabilizer Qubit ZX Diagrams}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Simplifying Qutrit ZX-Diagrams}{}% 5
+\BOOKMARK [2][-]{subsection.3.1}{The Qutrit ZX-Calculus}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Graph-Like Qutrit ZX Diagrams}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Case studies}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Jones Polynomial at Lattice Roots of Unity}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Graph Colouring}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{Outlook}{}% 11
+\BOOKMARK [1][-]{section.6}{Acknowledgments}{}% 12
+\BOOKMARK [1][-]{appendix.A}{Qubit ZX Calculus}{}% 13
+\BOOKMARK [1][-]{appendix.B}{PM-Boxes in ZX Language}{}% 14
+\BOOKMARK [1][-]{appendix.C}{Local Pivot in Qutrit ZX}{}% 15
+\BOOKMARK [1][-]{appendix.D}{Spider Elimination Rules for Qutrit Stabiliser ZX}{}% 16

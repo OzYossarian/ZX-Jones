@@ -6,45 +6,47 @@ Database file #1: refs-teague.bib
 Database file #2: refs.bib
 Warning--empty journal in backens_scalar_exact
 Warning--empty journal in graph_theoretic_simplification
-You've used 11 entries,
+Warning--empty journal in qutrit_euler
+Warning--empty journal in harny_completeness
+You've used 13 entries,
             2701 wiz_defined-function locations,
-            641 strings with 6706 characters,
-and the built_in function-call counts, 4667 in all, are:
-= -- 315
-> -- 152
+            647 strings with 6919 characters,
+and the built_in function-call counts, 5340 in all, are:
+= -- 357
+> -- 171
 < -- 2
-+ -- 64
-- -- 52
-* -- 555
-:= -- 574
-add.period$ -- 17
-call.type$ -- 11
-change.case$ -- 48
++ -- 72
+- -- 58
+* -- 631
+:= -- 664
+add.period$ -- 19
+call.type$ -- 13
+change.case$ -- 55
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 370
-empty$ -- 401
-format.name$ -- 60
-if$ -- 901
+cite$ -- 30
+duplicate$ -- 433
+empty$ -- 462
+format.name$ -- 67
+if$ -- 1026
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 74
-newline$ -- 62
-num.names$ -- 22
-pop$ -- 119
+int.to.str$ -- 13
+missing$ -- 87
+newline$ -- 70
+num.names$ -- 26
+pop$ -- 143
 preamble$ -- 1
-purify$ -- 48
+purify$ -- 55
 quote$ -- 0
-skip$ -- 126
+skip$ -- 144
 stack$ -- 0
-substring$ -- 106
-swap$ -- 340
+substring$ -- 116
+swap$ -- 379
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 55
-warning$ -- 2
-while$ -- 26
-width$ -- 13
-write$ -- 114
-(There were 2 warnings)
+type$ -- 65
+warning$ -- 4
+while$ -- 30
+width$ -- 15
+write$ -- 130
+(There were 4 warnings)
