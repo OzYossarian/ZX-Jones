@@ -4,46 +4,47 @@ The top-level auxiliary file: ZX-qutritpivot-complexity.aux
 The style file: eptcs.bst
 Database file #1: refs-teague.bib
 Database file #2: refs.bib
+Warning--empty journal in backens_scalar_exact
 Warning--empty journal in graph_theoretic_simplification
-You've used 10 entries,
+You've used 11 entries,
             2701 wiz_defined-function locations,
-            637 strings with 6614 characters,
-and the built_in function-call counts, 4358 in all, are:
-= -- 296
-> -- 145
+            641 strings with 6706 characters,
+and the built_in function-call counts, 4667 in all, are:
+= -- 315
+> -- 152
 < -- 2
-+ -- 61
-- -- 50
-* -- 522
-:= -- 532
-add.period$ -- 16
-call.type$ -- 10
-change.case$ -- 45
++ -- 64
+- -- 52
+* -- 555
+:= -- 574
+add.period$ -- 17
+call.type$ -- 11
+change.case$ -- 48
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 340
-empty$ -- 371
-format.name$ -- 58
-if$ -- 843
+cite$ -- 24
+duplicate$ -- 370
+empty$ -- 401
+format.name$ -- 60
+if$ -- 901
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 68
-newline$ -- 58
-num.names$ -- 20
-pop$ -- 108
+int.to.str$ -- 11
+missing$ -- 74
+newline$ -- 62
+num.names$ -- 22
+pop$ -- 119
 preamble$ -- 1
-purify$ -- 45
+purify$ -- 48
 quote$ -- 0
-skip$ -- 117
+skip$ -- 126
 stack$ -- 0
-substring$ -- 101
-swap$ -- 323
+substring$ -- 106
+swap$ -- 340
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 50
-warning$ -- 1
-while$ -- 24
-width$ -- 12
-write$ -- 106
-(There was 1 warning)
+type$ -- 55
+warning$ -- 2
+while$ -- 26
+width$ -- 13
+write$ -- 114
+(There were 2 warnings)

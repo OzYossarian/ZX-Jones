@@ -9,7 +9,7 @@
 
 \title{Classifying Complexity with the ZX Calculus}
 
-\author{  Alex Townsend-Teague$^{0,1}$ and Konstantinos Meichanetzidis$^{1,2}$
+\author{  Alex Townsend-Teague $^{0,1}$ and Konstantinos Meichanetzidis $^{1,2}$
 \institute{$^0$ Mathematical Institute, University of Oxford}
 \institute{$^1$ Department of Computer Science, University of Oxford}
 \institute{$^2$ Cambridge Quantum Computing Ltd.} }
@@ -82,20 +82,20 @@ the corresponding ZX diagrams representing the problems exactly correspond to qu
 Going further, the ZH calculus \cite{backens2018zh}, an extension of the ZX calculus, can be imported to make graphically obvious
 why 2SAT is in P but \#2SAT is \#P-complete while 3SAT is NP-complete and \#3SAT is \#P-hard.
 That is, the counting version of 2SAT is hard while deciding is easy, but this is not the case for 3SAT where both deciding and counting are hard.
-The key realisation is in that the decision problem is a counting problem
+The \emph{key realisation} is in that the decision problem is a counting problem
 but where the diagram is interpreted over the Boolean semiring.
 % (where $1+1=2$).
-Then the rewrite rules change accordingly and obviously imply the above result.
+Then the \emph{rewrite rules change accordingly} and obviously imply the above result by allowing efficient simplification strategies.
 
-Such observations make apparent the unifying power of diagrammatic reasoning
-for studying the complexity of problem families of universal interest,
+Such observations make apparent the \emph{unifying power of diagrammatic reasoning
+for studying the complexity} of problem families of universal interest,
 where the degrees of freedom are two-dimensional.
 Building on the spirit of \cite{debeaudrap2020tensor}, we treat ZX as a library comprising out-of-the-box and readily-available diagrammatic rewrite-rules from which we import the appropriate tools for the job depending on the occasion.
 The key rewrite rules that enable the efficient diagram simplification
 of qubit stabiliser ZX diagrams
 are called \emph{local complementation} and \emph{pivot},
 the latter being composition of three of the former \cite{graph_theoretic_simplification}.
-In this work, we recall the qutrit version of complementation and derive the corresponding pivot rule
+In this work, we recall the qutrit version of local complementation and derive the corresponding pivot rule
 which implies that qutrit stabiliser diagrams can be simplified efficiently.
 We then present two case studies: evaluating the Jones polynomial at lattice roots of unity, and graph colouring.
 Both of these problem families reduce to evaluating
@@ -121,13 +121,13 @@ simplification of stabiliser diagrams.
 Here we give a quick introduction to the qubit ZX-calculus.
 The qubit ZX-calculus is a diagrammatic language for quantum mechanics.
 The generators are tensors called \textit{spiders}.
-The spider legs, or \emph{wires}, can be connected to form networks which are again valid ZX diagrams.
+The spider legs, or \emph{wires}, representing vector spaces of dimension $d=2$, can be connected to form networks which are again valid ZX diagrams.
 ZX diagrams are part of a formal language. Diagrams are read bottom-to-top; bottom open wires (not connected to anything) are \emph{input wires} and top ones are \emph{output}.
 Diagrams with only outputs are called \emph{states} and with only inputs are called \emph{effects}.
 A \emph{closed} diagram is one with no input nor output wires
 and it represents a scalar.
 
-Spiders come in two species: green $Z$-spiders and red $X$-spiders, decorated by a \textit{phase} angle $\alpha$. When this phase is zero, we will omit it.
+Spiders come in two species: green $Z$-spiders and red $X$-spiders, decorated by a \textit{phase} $\alpha\in[0,2\pi)$. When $\alpha=0$, we will omit it.
 The concrete representation of the spider generators as tensors over $\mathbb{C}$ is:
 
 	\begin{equation*}
@@ -149,12 +149,13 @@ Often we will instead draw a dashed blue line to represent a \textit{Hadamard ed
 \begin{equation}
 	\tikzfig{qubit_hadamard/yellow_box} \quad = \quad
 	\tikzfig{qubit_hadamard/dashed} \quad = \quad
-	\tikzfig{qubit_hadamard/decomposed}
+	\tikzfig{qubit_hadamard/decomposed} ~~~,
+	\quad \left\llbracket \tikzfig{qubit_hadamard/yellow_box} \right\rrbracket \simeq \ket{0}\bra{0}+\ket{0}\bra{1}+\ket{1}\bra{0}-\ket{1}\bra{1}
 \end{equation}
 
-The rewrite rules of the ZX calculus, shown in \ref{fig:qubit_ZX_rules}, allow one to manipulated diagrams with local tensor-rewrites, while preserving the semantics, i.e. the concrete tensor representation over $\mathbb{C}$ up to a scalar.
+The rewrite rules of the ZX calculus, shown in Fig.\ref{fig:qubit_ZX_rules}, allow manipulation of the diagrams by local tensor-rewrites. Importantly, the rewrites preserve the semantics, i.e. the concrete tensor representation over $\mathbb{C}$, up to a scalar.
 
-\begin{figure}
+\begin{figure}[t]
 	\begin{tcolorbox}[colback=white]
 		\begin{equation*}
 		\vspace{-5pt}
@@ -191,96 +192,41 @@ The rewrite rules of the ZX calculus, shown in \ref{fig:qubit_ZX_rules}, allow o
 	\vspace{-1pt}
 \end{figure}
 
-% \begin{remark}\label{rem:qubit_scalar_exactness} 
-% 	A small technical remark is in order: the rule set given here is complete for qubit stabilizer quantum mechanics when equality is taken only up to a scalar factor. To achieve completeness under exact equality, a slighly modified rule set would be required, as in (for example) \citep{backens_scalar_exact}. But for our purposes this would be overkill; in order to show that the Jones polynomial of knots at lattice roots of unity is efficiently computable, it suffices to consider the `non-exact' rules - i.e. it suffices to show such a Jones polynomial is efficiently computable up to a scalar factor. But of course to actually compute such a Jones polynomial, we will need to keep track of scalars.
-% \end{remark}
+The \textit{stabiliser fragment} of the calculus consists of all diagrams in which all phases are $a=\kappa \frac{\pi}{2}$, $\kappa\in\mathbb{Z}$.
+%We note that both diagrams above fall into this stabilizer fragment. 
+In (Theorem 5.4 \cite{graph_theoretic_simplification}) the authors give an efficient algorithm for simplifying any \emph{qubit} ZX-diagram to an equivalent diagram with fewer spiders.
+The algorithm consists of consecutive applications of spider-eliminating rewrites.
 
-We can now give ZX-diagrams whose standard interpretations are equal (up to a scalar) to the matrices $T_{\pm}^{(q)}$ in \eqref{eq:pm_tensor} for $q \in \{2, 4\}$.
-
-% [Move commented out stuff below to appendix proof?]
-
-% DON"T DELETE!!!!!!!!!!!!!!!!!!!!!!!
- % This is because the standard interpretation of diagrams more complex than a single spider can be derived as follows. First a diagram is divided into horizontal strips, then these strips are themselves divided vertically, so that the diagram consists of spiders composed in parallel (side-by-side, written $\otimes$) and in sequence (on top of each other, with legs fused together, written $\circ$). Such a division always exists, though it may require a diagram deformation. For example:
-
-% For spiders $S$ and $T$, we then have:
-
-% \begin{equation}
-% 	\left\llbracket S \otimes T \right\rrbracket = \left\llbracket S \right\rrbracket \otimes \left\llbracket T \right\rrbracket 
-% \end{equation} 
-% \begin{equation}	
-% 	\left\llbracket S \circ T \right\rrbracket = \left\llbracket S \right\rrbracket \left\llbracket T \right\rrbracket 
-% \end{equation} 
-
-% where on the right hand side of the first equation the $\otimes$ symbol means the Kronecker product of two matrices. Thus a diagram with standard interpretation $T_{2\pm}$ will have one input and one output, while a diagram for $T_{4\pm}$ will have two inputs and two outputs.
-
-\begin{proposition}\label{prop:pm_map_q2_q4}
-	Under the standard interpretation as linear maps, the following diagrams give (up to a scalar) the required matrices:
-	\begin{equation}
-		\left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket \simeq \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=2} , 
-		\qquad\quad
-		\left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket \simeq \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=4} .
-	\end{equation}
-	\begin{proof}
-		See Appendix \ref{prop:pm_maps_zx_appendix}.
-	\end{proof}
-\end{proposition}
-
-The \textit{stabilizer fragment} of the calculus consists of all diagrams in which all phases are integer multiples of $\frac{\pi}{2}$. We note that both diagrams above fall into this stabilizer fragment. Now, in (Theorem 5.4 \cite{graph_theoretic_simplification}) the authors give an efficient algorithm for simplifying any qubit ZX-diagram to an equivalent diagram with fewer spiders. In particular, given a stabilizer diagram that is \textit{closed} (has neither inputs nor outputs), the algorithm efficiently simplifies it until it contains at most one spider. If it exists, this spider is green, legless and has phase in $\{0, \pi\}$. We briefly outline the process here, referring the reader to \cite{graph_theoretic_simplification} for a full discussion. First it is shown that every diagram is equivalent to a \textit{graph-like} diagram.
-
-\begin{definition}
-	Definition 3.1 \cite{graph_theoretic_simplification} A qubit ZX-diagram is \textit{graph-like} when:
-	\begin{enumerate}
-		\item Every spider is a Z-spider.
-		\item Spiders are only connected by Hadamard edges.
-		\item There are no parallel Hadamard edges or self-loops.
-		\item Every input and output is connected to a spider.
-		\item Every spider is connected to at most one input or output.
-	\end{enumerate}
-\end{definition}
-
-Then the following two results are used to eliminate spiders. For more details on \textit{local complementation} and \textit{pivoting}, see Section 4 \cite{graph_theoretic_simplification}. 
-
-\begin{theorem}\label{thm:qubit_eliminate_spiders}
-	The following equation holds in the qubit ZX-calculus:
+First it is shown that every diagram is equivalent to a \textit{graph-like} diagram:
+every spider is green,
+every edge is a Hadamard edge,
+there are no parallel edges or self-loops,
+every input and output wire is connected to a spider
+and every spider has at most one input or output wire.
+Then the following two rewrite rules, derived via
+\textit{local complementation} and \textit{pivoting},
+can be used to eliminate spiders.
+For more details,
+see Section 4 \cite{graph_theoretic_simplification}.
 	\begin{equation}\label{eq:eliminate_clifford}
 		\tikzfig{eliminate/clifford}
 	\end{equation}
-
-	This says we can remove any spider $i$ with phase $\pm\frac{\pi}{2}$, at the cost of performing a local complementation at $i$. Similarly, the following equation holds in the qubit ZX-calculus:
-
 	\begin{equation}\label{eq:eliminate_pauli}
 		\tikzfig{eliminate/pauli}
 	\end{equation}
-
-	This says we can remove any pair $i, j$ of spiders with phases in $\{0, \pi\}$ connected by a Hadamard edge, at the cost of performing a local pivot along the edge $uv$. 
-
-	\begin{proof}
-		These are Lemmas 5.2 and 5.3 in \cite{graph_theoretic_simplification}
-	\end{proof}
-\end{theorem}
-
-After each application of \eqref{eq:eliminate_clifford} or \eqref{eq:eliminate_pauli}, the following lemma is used to remove any parallel Hadamard edges, and ensure the diagram remains graph-like.
-
-\begin{lemma}\label{lem:2_h_edges_vanish}
-	The following result holds in the qubit ZX-calculus:
-	\begin{equation}
-		\tikzfig{hadamard_lemmas/2_h_edges_vanish/lhs} \quad = \quad \tikzfig{hadamard_lemmas/2_h_edges_vanish/rhs}
-	\end{equation}
-	\begin{proof}
-		This is Equation (3) in \cite{graph_theoretic_simplification}. 
-	\end{proof}
-\end{lemma}
-
-Since any ZX-diagram derived from a knot in the manner described in Section \ref{sec:passage} will be closed, this algorithm suffices to prove that the calculation of the Jones polynomial of any knot at the lattice roots of unity $\pm 1$ and $\pm i$ is efficient. This is because reading off the scalar at the end is trivial; either we have the empty diagram, which has standard interpretation $1$, or a single legless $Z$-spider with phase $k\pi$:
-
+Eq.\ref{eq:eliminate_clifford} says that we can remove any spider with phase $\pm\frac{\pi}{2}$ at the cost of performing a local complementation at said spider.
+Furthermore,
+Eq.\ref{eq:eliminate_pauli} says we can remove any pair of spiders with phases in $\{0, \pi\}$ connected by a Hadamard edge at the cost of performing a local pivot along said edge.
+After each application of \eqref{eq:eliminate_clifford} or \eqref{eq:eliminate_pauli}, the following rewrite rule, aka the Hopf rule which can be derived from the qubit ZX rules, can be used to remove any parallel Hadamard edges and ensure the diagram remains graph-like:
+{\bf what about self-loops? also, make the edges blue dashed.}
 \begin{equation}
-	\left\llbracket \ \tikzfig{scalars/Z_kpi_1} \ \right\rrbracket = 
-	\left\llbracket \ \tikzfig{scalars/Z_kpi_2} \ \right\rrbracket = 
-	( \bra{0} + \bra{1} )( \ket{0} + e^{ik\pi}\ket{1} ) =
-	1 + e^{ik\pi}
+		\tikzfig{hadamard_lemmas/2_h_edges_vanish/lhs} \quad = \quad \tikzfig{hadamard_lemmas/2_h_edges_vanish/rhs}
 \end{equation}
 
-Furthermore, keeping track of the scalar factors introduced with each application of Theorem \ref{thm:qubit_eliminate_spiders} or Lemma \ref{lem:2_h_edges_vanish} can be done efficiently. [ToDo: proof, if not explicitly doing all this in a scalar-exact fashion. Reference Backens]
+In particular, and importantly to this work, given a closed stabilizer diagram
+the algorithm \emph{efficiently simplifies} it until it contains at most one spider. If it exists, this spider is green, legless and has phase in $\{0, \pi\}$.
+%We briefly outline the process here, referring the reader to \cite{graph_theoretic_simplification} for a full discussion.
+The point relevant to this work is that spiders can be eliminated efficiently, i.e. with a polynomial number of rewrites in the initial number of spiders. Note that every spider elimination introduces a polynomial number of edges in the diagram, which prevents an overwhelming memory cost of the simplification procedure.
 
 
 \section{Simplifying Qutrit ZX-Diagrams}
@@ -382,6 +328,51 @@ that fully simplify the tensor network and return $Z(q)$
 for $q\in\{1,2,3,4\}$, which correspond to evaluating the Jones polynomial at the lattice roots of unity.
 
 
+\begin{remark}\label{rem:qubit_scalar_exactness} 
+	A small technical remark is in order: the rule set given here is complete for qubit stabilizer quantum mechanics when equality is taken only up to a scalar factor. To achieve completeness under exact equality, a slighly modified rule set would be required, as in (for example) \cite{backens_scalar_exact}. But for our purposes this would be overkill; in order to show that the Jones polynomial of knots at lattice roots of unity is efficiently computable, it suffices to consider the `non-exact' rules - i.e. it suffices to show such a Jones polynomial is efficiently computable up to a scalar factor. But of course to actually compute such a Jones polynomial, we will need to keep track of scalars.
+\end{remark}
+
+We can now give ZX-diagrams whose standard interpretations are equal (up to a scalar) to the matrices $T_{\pm}^{(q)}$ in \eqref{eq:pm_tensor} for $q \in \{2, 4\}$.
+
+% [Move commented out stuff below to appendix proof?]
+
+% DON"T DELETE!!!!!!!!!!!!!!!!!!!!!!!
+ % This is because the standard interpretation of diagrams more complex than a single spider can be derived as follows. First a diagram is divided into horizontal strips, then these strips are themselves divided vertically, so that the diagram consists of spiders composed in parallel (side-by-side, written $\otimes$) and in sequence (on top of each other, with legs fused together, written $\circ$). Such a division always exists, though it may require a diagram deformation. For example:
+
+For spiders $S$ and $T$, we then have:
+
+\begin{equation}
+	\left\llbracket S \otimes T \right\rrbracket = \left\llbracket S \right\rrbracket \otimes \left\llbracket T \right\rrbracket 
+\end{equation} 
+\begin{equation}	
+	\left\llbracket S \circ T \right\rrbracket = \left\llbracket S \right\rrbracket \left\llbracket T \right\rrbracket 
+\end{equation} 
+
+where on the right hand side of the first equation the $\otimes$ symbol means the Kronecker product of two matrices. Thus a diagram with standard interpretation $T_{2\pm}$ will have one input and one output, while a diagram for $T_{4\pm}$ will have two inputs and two outputs.
+
+\begin{proposition}\label{prop:pm_map_q2_q4}
+	Under the standard interpretation as linear maps, the following diagrams give (up to a scalar) the required matrices:
+	\begin{equation}
+		\left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket \simeq \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=2} , 
+		\qquad\quad
+		\left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket \simeq \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=4} .
+	\end{equation}
+	\begin{proof}
+		See Appendix \ref{prop:pm_maps_zx_appendix}.
+	\end{proof}
+\end{proposition}
+
+Since any ZX-diagram derived from a knot in the manner described in Section \ref{sec:passage} will be closed, this algorithm suffices to prove that the calculation of the Jones polynomial of any knot at the lattice roots of unity $\pm 1$ and $\pm i$ is efficient. This is because reading off the scalar at the end is trivial; either we have the empty diagram, which has standard interpretation $1$, or a single legless $Z$-spider with phase $k\pi$:
+
+\begin{equation}
+	\left\llbracket \ \tikzfig{scalars/Z_kpi_1} \ \right\rrbracket = 
+	\left\llbracket \ \tikzfig{scalars/Z_kpi_2} \ \right\rrbracket = 
+	( \bra{0} + \bra{1} )( \ket{0} + e^{ik\pi}\ket{1} ) =
+	1 + e^{ik\pi}
+\end{equation}
+
+Furthermore, keeping track of the scalar factors introduced with each application of Theorem \ref{thm:qubit_eliminate_spiders} or Lemma \ref{lem:2_h_edges_vanish} can be done efficiently. [ToDo: proof, if not explicitly doing all this in a scalar-exact fashion. Reference Backens]
+
 \subsection{Graph Colouring}
 
 
@@ -397,8 +388,11 @@ generalisation of local complementation and pivot rewrites to arbitrary prime di
 Software implementations a la pyzx could be extended accordingly.
 
 \section{Acknowledgments}
-KM wishes to thank Niel de Beaudrap, Aleks Kissinger, Stefanos Kourtis, and Quanlong Wang for inspiring and helpful discussions.
+{\bf Teague?l}
+KM wishes to thank Niel de Beaudrap, Aleks Kissinger, Stefanos 
+Kourtis, and Quanlong Wang for inspiring and helpful discussions.
 KM acknowledges financial support from the Royal Commission for the Exhibition of 1851 through a research fellowship.
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.4)  9 FEB 2021 15:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.4)  10 FEB 2021 15:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1059,7 +1059,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
  (./figures/qubit_spiders/Z_a_labelled.tikz
 
 Package mathptmx Warning: There are no bold math fonts on input line 8.
@@ -1080,6 +1080,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 ) [2] (./figures/qubit_hadamard/yellow_box.tikz)
 (./figures/qubit_hadamard/dashed.tikz)
 (./figures/qubit_hadamard/decomposed.tikz)
+(./figures/qubit_hadamard/yellow_box.tikz)
 (./figures/qubit_rules/fusion/lhs.tikz
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
@@ -1111,45 +1112,51 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/qubit_rules/copy/lhs.tikz) (./figures/qubit_rules/copy/rhs.tikz)
 (./figures/qubit_rules/pi/lhs.tikz) (./figures/qubit_rules/pi/rhs.tikz)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
 
-
-LaTeX Warning: Reference `eq:pm_tensor' on page 3 undefined on input line 198.
-
-(./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/pm_maps/q4.tikz) (./figures/pm_maps/pm.tikz) [3]
-(./figures/eliminate/clifford.tikz) (./figures/eliminate/pauli.tikz)
+[3] (./figures/eliminate/clifford.tikz) (./figures/eliminate/pauli.tikz)
 (./figures/hadamard_lemmas/2_h_edges_vanish/lhs.tikz)
 (./figures/hadamard_lemmas/2_h_edges_vanish/rhs.tikz) [4]
-
-LaTeX Warning: Reference `sec:passage' on page 5 undefined on input line 274.
-
-(./figures/scalars/Z_kpi_1.tikz) (./figures/scalars/Z_kpi_2.tikz)
-<figures/link.jpg, id=165, 573.8238pt x 469.0323pt>
+<figures/link.jpg, id=151, 573.8238pt x 469.0323pt>
 File: figures/link.jpg Graphic file (type jpg)
 <use figures/link.jpg>
-Package pdftex.def Info: figures/link.jpg  used on input line 311.
+Package pdftex.def Info: figures/link.jpg  used on input line 257.
 (pdftex.def)             Requested size: 114.76273pt x 93.8048pt.
- [5 <./figures/link.jpg>]
-<figures/link-tn.jpg, id=176, 1226.4219pt x 481.3182pt>
+<figures/link-tn.jpg, id=153, 1226.4219pt x 481.3182pt>
 File: figures/link-tn.jpg Graphic file (type jpg)
 <use figures/link-tn.jpg>
-Package pdftex.def Info: figures/link-tn.jpg  used on input line 358.
+Package pdftex.def Info: figures/link-tn.jpg  used on input line 304.
 (pdftex.def)             Requested size: 245.28003pt x 96.26193pt.
-<figures/q2.pdf, id=177, 845.04686pt x 597.50786pt>
+ [5 <./figures/link.jpg>]
+<figures/q2.pdf, id=160, 845.04686pt x 597.50786pt>
 File: figures/q2.pdf Graphic file (type pdf)
 <use figures/q2.pdf>
-Package pdftex.def Info: figures/q2.pdf  used on input line 366.
+Package pdftex.def Info: figures/q2.pdf  used on input line 312.
 (pdftex.def)             Requested size: 126.75156pt x 89.6223pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6 <./figures/link-tn.jpg>] (./ZX-qutritpivot-complexity.bbl [7 <./figures/q2.
-pdf>])
+LaTeX Warning: Reference `eq:pm_tensor' on page 6 undefined on input line 335.
 
-LaTeX Warning: Reference `prop:pm_map_q3' on page 8 undefined on input line 415
+(./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
+(./figures/pm_maps/q4.tikz) (./figures/pm_maps/pm.tikz) [6 <./figures/link-tn.j
+pg> <./figures/q2.pdf>]
+
+LaTeX Warning: Reference `sec:passage' on page 7 undefined on input line 365.
+
+(./figures/scalars/Z_kpi_1.tikz) (./figures/scalars/Z_kpi_2.tikz)
+
+LaTeX Warning: Reference `thm:qubit_eliminate_spiders' on page 7 undefined on i
+nput line 374.
+
+
+LaTeX Warning: Reference `lem:2_h_edges_vanish' on page 7 undefined on input li
+ne 374.
+
+(./ZX-qutritpivot-complexity.bbl [7])
+
+LaTeX Warning: Reference `prop:pm_map_q3' on page 8 undefined on input line 409
 .
 
 (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
@@ -1158,15 +1165,12 @@ LaTeX Warning: Reference `prop:pm_map_q3' on page 8 undefined on input line 415
 (./figures/pm_maps/qubit/Z_phase.tikz) (./figures/pm_maps/qubit/X_phase.tikz)
 (./figures/pm_maps/qutrit/Z_phase.tikz) (./figures/pm_maps/qutrit/X_phase.tikz)
 (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
-Underfull \vbox (badness 1158) has occurred while \output is active []
-
- [8]
+(./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz) [8]
 (./figures/qubit_hadamard/yellow_box.tikz)
 (./figures/qubit_hadamard/decomposed.tikz)
 
 LaTeX Warning: Reference `def:qubit_standard_spiders' on page 9 undefined on in
-put line 506.
+put line 500.
 
 (./figures/pm_maps/q4.tikz) (./figures/pm_maps/q4/decomposed.tikz)
 (./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_compare.tikz)
@@ -1180,7 +1184,7 @@ put line 506.
 (./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/pm.tikz)
 
 LaTeX Warning: Reference `thm:local_pivot_equality' on page 9 undefined on inpu
-t line 538.
+t line 532.
 
 (./figures/qutrit_rules/hadamard/euler/h.tikz)
 (./figures/qutrit_rules/hadamard/euler/decomposition.tikz)
@@ -1192,44 +1196,44 @@ t line 538.
 (./figures/hadamard_lemmas/decompositions/h_dagger_zxz.tikz) [9]
 
 LaTeX Warning: Reference `thm:local_pivot_equality' on page 10 undefined on inp
-ut line 547.
+ut line 541.
 
 (./figures/graph_state/proper_local_pivot.tikz)
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 558--559
+Underfull \hbox (badness 10000) in paragraph at lines 552--553
 
  []
 
 (./figures/proper_1_local_pivot/weight_1/step_1.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 (./figures/proper_1_local_pivot/weight_1/step_2.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 (./figures/proper_1_local_pivot/weight_1/step_3.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 (./figures/proper_1_local_pivot/weight_1/step_4.tikz)
 (./figures/proper_1_local_pivot/weight_1/step_5.tikz)
@@ -1237,29 +1241,29 @@ t line 576.
 (./figures/proper_1_local_pivot/weight_1/step_1.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 (./figures/proper_1_local_pivot/weight_1/step_2.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 (./figures/proper_1_local_pivot/weight_1/step_3.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 10 undefined on inpu
-t line 576.
+t line 570.
 
 (./figures/proper_1_local_pivot/weight_1/step_4.tikz)
 (./figures/proper_1_local_pivot/weight_1/step_5.tikz)
@@ -1270,29 +1274,29 @@ Underfull \vbox (badness 1552) has occurred while \output is active []
 (./figures/proper_1_local_pivot/weight_2/step_1.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 (./figures/proper_1_local_pivot/weight_2/step_2.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 (./figures/proper_1_local_pivot/weight_2/step_3.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 (./figures/proper_1_local_pivot/weight_2/step_4.tikz)
 (./figures/proper_1_local_pivot/weight_2/step_5.tikz)
@@ -1300,29 +1304,29 @@ t line 595.
 (./figures/proper_1_local_pivot/weight_2/step_1.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 (./figures/proper_1_local_pivot/weight_2/step_2.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 (./figures/proper_1_local_pivot/weight_2/step_3.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 11 undefined on inpu
-t line 595.
+t line 589.
 
 (./figures/proper_1_local_pivot/weight_2/step_4.tikz)
 (./figures/proper_1_local_pivot/weight_2/step_5.tikz)
@@ -1340,7 +1344,7 @@ t line 595.
 (./figures/m_copies/full/3.tikz) (./figures/m_copies/full/4.tikz) [12]
 
 LaTeX Warning: Reference `thm:eliminate_M_spiders' on page 13 undefined on inpu
-t line 658.
+t line 652.
 
 (./figures/eliminate/M_spiders/theorem_LHS.tikz)
 (./figures/eliminate/M_spiders/theorem_RHS.tikz)
@@ -1385,7 +1389,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./figures/n_states/corollary/0_1/5.tikz)
 
 LaTeX Warning: Reference `thm:eliminate_N_spiders' on page 16 undefined on inpu
-t line 744.
+t line 738.
 
 (./figures/eliminate/N_spiders/0_n/step_1.tikz)
 (./figures/eliminate/N_spiders/0_n/step_9.tikz)
@@ -1395,11 +1399,11 @@ t line 744.
 (./figures/eliminate/N_spiders/0_n/step_2.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 16 undefined on inpu
-t line 782.
+t line 776.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 16 undefined on inpu
-t line 782.
+t line 776.
 
 (./figures/eliminate/N_spiders/0_n/step_3.tikz)
 (./figures/eliminate/N_spiders/0_n/step_4.tikz)
@@ -1407,15 +1411,15 @@ t line 782.
 (./figures/eliminate/N_spiders/0_n/step_6.tikz)
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 16 undefined on input
- line 782.
+ line 776.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 16 undefined on input
- line 782.
+ line 776.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 16 undefined on input
- line 782.
+ line 776.
 
 (./figures/eliminate/N_spiders/0_n/step_7.tikz)
 (./figures/eliminate/N_spiders/0_n/step_8.tikz)
@@ -1424,11 +1428,11 @@ LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 16 undefined on input
 (./figures/eliminate/N_spiders/0_n/step_2.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 16 undefined on inpu
-t line 782.
+t line 776.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 16 undefined on inpu
-t line 782.
+t line 776.
 
 (./figures/eliminate/N_spiders/0_n/step_3.tikz)
 (./figures/eliminate/N_spiders/0_n/step_4.tikz)
@@ -1436,15 +1440,15 @@ t line 782.
 (./figures/eliminate/N_spiders/0_n/step_6.tikz)
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 16 undefined on input
- line 782.
+ line 776.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 16 undefined on input
- line 782.
+ line 776.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 16 undefined on input
- line 782.
+ line 776.
 
 (./figures/eliminate/N_spiders/0_n/step_7.tikz)
 (./figures/eliminate/N_spiders/0_n/step_8.tikz)
@@ -1454,7 +1458,7 @@ LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 16 undefined on input
 (./figures/p_state/5.tikz) (./figures/p_state/6.tikz)
 
 LaTeX Warning: Reference `thm:eliminate_P_spiders' on page 17 undefined on inpu
-t line 807.
+t line 801.
 
 [17] (./figures/eliminate/P_spiders/step_1.tikz)
 (./figures/eliminate/P_spiders/step_9.tikz)
@@ -1462,11 +1466,11 @@ t line 807.
 (./figures/eliminate/P_spiders/step_2.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 18 undefined on inpu
-t line 838.
+t line 832.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 18 undefined on inpu
-t line 838.
+t line 832.
 
 (./figures/eliminate/P_spiders/step_3.tikz)
 (./figures/eliminate/P_spiders/step_4.tikz)
@@ -1474,15 +1478,15 @@ t line 838.
 (./figures/eliminate/P_spiders/step_6.tikz)
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 18 undefined on input
- line 838.
+ line 832.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 18 undefined on input
- line 838.
+ line 832.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 18 undefined on input
- line 838.
+ line 832.
 
 (./figures/eliminate/P_spiders/step_7.tikz)
 (./figures/eliminate/P_spiders/step_8.tikz)
@@ -1491,11 +1495,11 @@ LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 18 undefined on input
 (./figures/eliminate/P_spiders/step_2.tikz)
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 18 undefined on inpu
-t line 838.
+t line 832.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page 18 undefined on inpu
-t line 838.
+t line 832.
 
 (./figures/eliminate/P_spiders/step_3.tikz)
 (./figures/eliminate/P_spiders/step_4.tikz)
@@ -1503,15 +1507,15 @@ t line 838.
 (./figures/eliminate/P_spiders/step_6.tikz)
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 18 undefined on input
- line 838.
+ line 832.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 18 undefined on input
- line 838.
+ line 832.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 18 undefined on input
- line 838.
+ line 832.
 
 (./figures/eliminate/P_spiders/step_7.tikz)
 (./figures/eliminate/P_spiders/step_8.tikz)
@@ -1519,12 +1523,12 @@ LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 18 undefined on input
 \pages=\write7
 \openout7 = `ZX-qutritpivot-complexity.pag'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 843.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 843.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 837.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 837.
 
 (./ZX-qutritpivot-complexity.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 843.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 843.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 837.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 837.
 Package rerunfilecheck Info: File `ZX-qutritpivot-complexity.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: A6D1C6233F16CF42524C43C072979AAF;585.
@@ -1535,13 +1539,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 843.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 837.
  ) 
 Here is how much of TeX's memory you used:
  32111 strings out of 481239
- 675459 string characters out of 5920377
- 1280083 words of memory out of 5000000
- 46083 multiletter control sequences out of 15000+600000
+ 675588 string characters out of 5920377
+ 1280180 words of memory out of 5000000
+ 46085 multiletter control sequences out of 15000+600000
  607484 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,18n,105p,1019b,1113s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1579,10 +1583,10 @@ re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on ZX-qutritpivot-complexity.pdf (18 pages, 536331 bytes).
+Output written on ZX-qutritpivot-complexity.pdf (18 pages, 538220 bytes).
 PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
- 334 compressed objects within 4 object streams
- 89 named destinations out of 1000 (max. 500000)
+ 724 PDF objects out of 1000 (max. 8388607)
+ 327 compressed objects within 4 object streams
+ 85 named destinations out of 1000 (max. 500000)
  252 words of extra memory for PDF output out of 10000 (max. 10000000)
 

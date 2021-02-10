@@ -19,6 +19,12 @@
   \bibinfo{volume}{70}(\bibinfo{number}{5}), \doi{10.1103/physreva.70.052328}.
 \newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevA.70.052328}.
 
+\bibitemdeclare{article}{backens_scalar_exact}
+\bibitem{backens_scalar_exact}
+\bibinfo{author}{Miriam \surnamestart Backens\surnameend}
+  (\bibinfo{year}{2015}): \emph{\bibinfo{title}{Making the stabilizer
+  ZX-calculus complete for scalars}}.
+
 \bibitemdeclare{misc}{backens2018zh}
 \bibitem{backens2018zh}
 \bibinfo{author}{Miriam \surnamestart Backens\surnameend} \&
