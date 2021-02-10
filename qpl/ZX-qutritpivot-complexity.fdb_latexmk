@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex ZX-qutritpivot-complexity"] 1612972551 "ZX-qutritpivot-complexity.aux" "ZX-qutritpivot-complexity.bbl" "ZX-qutritpivot-complexity" 1612972574
+["bibtex ZX-qutritpivot-complexity"] 1612975338 "ZX-qutritpivot-complexity.aux" "ZX-qutritpivot-complexity.bbl" "ZX-qutritpivot-complexity" 1612975362
   "./eptcs.bst" 1581951868 28417 7a4d5f3186f0b1f5e5edac2d6b5dc4de ""
-  "ZX-qutritpivot-complexity.aux" 1612972574 7554 b66da24ad7b47cc4bd542c84cba31331 "pdflatex"
+  "ZX-qutritpivot-complexity.aux" 1612975362 7472 86be0722d7251d758c9d9ed808798f71 "pdflatex"
   "refs-teague.bib" 1612694309 1265 ccc28e114d95ddc56e6f1bd0a63749c1 ""
   "refs.bib" 1612788551 9114 7c057cd52766dca2944b7a74b461f818 ""
   (generated)
-  "ZX-qutritpivot-complexity.blg"
   "ZX-qutritpivot-complexity.bbl"
-["pdflatex"] 1612972551 "ZX-qutritpivot-complexity.tex" "ZX-qutritpivot-complexity.pdf" "ZX-qutritpivot-complexity" 1612972574
+  "ZX-qutritpivot-complexity.blg"
+["pdflatex"] 1612975338 "ZX-qutritpivot-complexity.tex" "ZX-qutritpivot-complexity.pdf" "ZX-qutritpivot-complexity" 1612975362
   "/etc/texmf/web2c/texmf.cnf" 1604519962 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -252,10 +252,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1604520132 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1604520162 8258559 4517ba6383e5da19cbd2ab5a60957498 ""
-  "ZX-qutritpivot-complexity.aux" 1612972574 7554 b66da24ad7b47cc4bd542c84cba31331 "pdflatex"
-  "ZX-qutritpivot-complexity.bbl" 1612972551 5328 f62b8be588a5a6845ab546b0a47df1f8 "bibtex ZX-qutritpivot-complexity"
-  "ZX-qutritpivot-complexity.out" 1612972574 1030 1e6cf7e3373ef6653afa514899645e2b "pdflatex"
-  "ZX-qutritpivot-complexity.tex" 1612972498 77568 c9b9beae2902e71dab7cb879215db9b2 ""
+  "ZX-qutritpivot-complexity.aux" 1612975362 7472 86be0722d7251d758c9d9ed808798f71 "pdflatex"
+  "ZX-qutritpivot-complexity.bbl" 1612975338 5328 f62b8be588a5a6845ab546b0a47df1f8 "bibtex ZX-qutritpivot-complexity"
+  "ZX-qutritpivot-complexity.out" 1612975362 1085 8d1d1b2a35a5c964ae3171e94b91fbcb "pdflatex"
+  "ZX-qutritpivot-complexity.tex" 1612975315 77298 63080dd89412416bf2ac128dcc9b8652 ""
   "definitions.tex" 1612694309 3952 8fd1ac32ce2eab8c46971f64ea163672 ""
   "eptcs.cls" 1581951868 10245 9a4964a4f06c1e9f407c05a079987590 ""
   "figures/a_local_comp/different.tikz" 1612694309 1297 dd03f575b970546073beb2e4d82217d8 ""
@@ -482,8 +482,8 @@
   "zx.tikzdefs" 1612694309 2378 e6c7dc2e250db140001d0c4eb05bca0e ""
   "zx.tikzstyles" 1612694309 3548 3a35635eceb9e45f52d344035e5d3726 ""
   (generated)
-  "ZX-qutritpivot-complexity.log"
-  "ZX-qutritpivot-complexity.out"
-  "ZX-qutritpivot-complexity.pag"
   "ZX-qutritpivot-complexity.aux"
   "ZX-qutritpivot-complexity.pdf"
+  "ZX-qutritpivot-complexity.out"
+  "ZX-qutritpivot-complexity.pag"
+  "ZX-qutritpivot-complexity.log"
