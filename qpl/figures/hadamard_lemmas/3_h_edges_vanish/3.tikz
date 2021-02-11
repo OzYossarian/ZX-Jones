@@ -4,7 +4,7 @@
 		\node [style=none] (12) at (0.75, 2.25) {};
 		\node [style=none] (13) at (0, 2) {...};
 		\node [style=qutrit Z phase] (14) at (0, 1) {$\alpha$ \nodepart{lower} $\beta$};
-		\node [style=none] (22) at (0, -1.75) {...};
+		\node [style=none] (22) at (0, -2) {...};
 		\node [style=qutrit X phase] (23) at (0, -1) {$\gamma$ \nodepart{lower} $\delta$};
 		\node [style=none] (24) at (-0.75, -2.75) {};
 		\node [style=none] (25) at (0.75, -2.75) {};

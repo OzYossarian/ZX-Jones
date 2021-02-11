@@ -3,28 +3,28 @@
 		\node [style=none] (11) at (-0.75, 2.25) {};
 		\node [style=none] (12) at (0.75, 2.25) {};
 		\node [style=none] (13) at (0, 2) {...};
-		\node [style=qutrit Z phase] (14) at (0, 1) {$\alpha$ \nodepart{lower} $\beta$};
-		\node [style=qutrit hadamard unknown] (19) at (-1.075, 0) {$h$};
-		\node [style=qutrit hadamard unknown] (20) at (0, 0) {$h$};
-		\node [style=qutrit hadamard unknown] (21) at (1.1, 0) {$h$};
 		\node [style=none] (29) at (0, -1.825) {...};
-		\node [style=qutrit Z phase] (30) at (0, -1) {$\gamma$ \nodepart{lower} $\delta$};
 		\node [style=qutrit hadamard unknown] (31) at (-0.75, -2.25) {$-h$};
 		\node [style=qutrit hadamard unknown] (32) at (0.75, -2.25) {$-h$};
 		\node [style=none] (33) at (-0.75, -3.5) {};
 		\node [style=none] (34) at (0.75, -3.5) {};
 		\node [style=qutrit hadamard unknown] (35) at (-0.75, -3) {$h$};
 		\node [style=qutrit hadamard unknown] (36) at (0.75, -3) {$h$};
+		\node [style=qutrit Z phase] (37) at (0, 1) {$\alpha$ \nodepart{lower} $\beta$};
+		\node [style=qutrit Z phase] (38) at (0, -1) {$\gamma$ \nodepart{lower} $\delta$};
+		\node [style=qutrit hadamard unknown] (39) at (-0.825, 0) {$h$};
+		\node [style=qutrit hadamard unknown] (40) at (0, 0) {$h$};
+		\node [style=qutrit hadamard unknown] (41) at (0.85, 0) {$h$};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
-		\draw [bend right=15] (11.center) to (14);
-		\draw [bend right=15] (14) to (12.center);
 		\draw (33.center) to (31);
 		\draw (34.center) to (32);
-		\draw [bend left=15] (31) to (30);
-		\draw [bend right=75, looseness=1.25] (14) to (30);
-		\draw [bend left=75, looseness=1.25] (14) to (30);
-		\draw (14) to (30);
-		\draw [bend left=15] (30) to (32);
+		\draw [bend right=60] (37) to (38);
+		\draw [bend left=60] (37) to (38);
+		\draw (37) to (38);
+		\draw [bend right=15] (11.center) to (37);
+		\draw [bend right=15] (37) to (12.center);
+		\draw [bend left=15] (31) to (38);
+		\draw [bend left=15] (38) to (32);
 	\end{pgfonlayer}
 \end{tikzpicture}

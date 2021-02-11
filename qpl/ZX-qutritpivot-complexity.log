@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  11 FEB 2021 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  11 FEB 2021 13:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1136,16 +1136,18 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/hadamard_lemmas/parametrised/2.tikz)
 (./figures/hadamard_lemmas/dashed/purple.tikz)
 (./figures/hadamard_lemmas/decompositions/h_dagger_zxz.tikz)
+(./figures/hadamard_lemmas/parametrised/0.tikz)
+(./figures/hadamard_lemmas/parametrised/empty.tikz)
 (./figures/cups_caps/z_cup.tikz) (./figures/cups_caps/x_cup.tikz)
 (./figures/cups_caps/z_cap.tikz) (./figures/cups_caps/x_cap.tikz)
 (./figures/hadamard_lemmas/io_irrelevant/h/lhs.tikz)
 (./figures/hadamard_lemmas/io_irrelevant/h/rhs.tikz)
 (./figures/hadamard_lemmas/io_irrelevant/h_dagger/lhs.tikz)
-(./figures/hadamard_lemmas/io_irrelevant/h_dagger/rhs.tikz)
+(./figures/hadamard_lemmas/io_irrelevant/h_dagger/rhs.tikz) [5]
 (./figures/qutrit_snake/same_bent.tikz)
 (./figures/qutrit_snake/same_straight.tikz)
 (./figures/qutrit_snake/different_bent.tikz)
-(./figures/qutrit_snake/different_straight.tikz) [5]
+(./figures/qutrit_snake/different_straight.tikz)
 (./figures/hadamard_lemmas/spiders_reluctant_to_fuse/1.tikz)
 (./figures/hadamard_lemmas/spiders_reluctant_to_fuse/2.tikz)
 (./figures/hadamard_lemmas/spiders_reluctant_to_fuse/3.tikz)
@@ -1184,10 +1186,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/eliminate/N_spiders/0_n/bang/general/9.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/1.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/9.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/LHS.tikz)
-Underfull \vbox (badness 2680) has occurred while \output is active []
-
- [10]
+(./figures/eliminate/M_spiders/bang/w_1/LHS.tikz) [10]
 (./figures/eliminate/M_spiders/bang/w_1/RHS.tikz) [11])
 (./main/case_studies.tex
 <figures/link.jpg, id=332, 573.8238pt x 469.0323pt>
@@ -1607,10 +1606,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 34996 strings out of 480608
- 737096 string characters out of 5903629
- 1638411 words of memory out of 5000000
- 49188 multiletter control sequences out of 15000+600000
+ 34999 strings out of 480608
+ 737343 string characters out of 5903629
+ 1639411 words of memory out of 5000000
+ 49187 multiletter control sequences out of 15000+600000
  607741 words of font info for 185 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,21n,105p,1019b,1113s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1628,7 +1627,7 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on ZX-qutritpivot-complexity.pdf (30 pages, 637216 bytes).
+Output written on ZX-qutritpivot-complexity.pdf (30 pages, 637382 bytes).
 PDF statistics:
  939 PDF objects out of 1000 (max. 8388607)
  531 compressed objects within 6 object streams
