@@ -89,7 +89,7 @@ Snakes with differently coloured cups and caps can still be yanked into a straig
 		\hspace{50pt}
 		\tikzfig{qutrit_snake/different_bent} \quad = \quad \tikzfig{qutrit_snake/different_straight}
 \end{equation}
-The above equations hold also if we flip the colours, green $\leftrightarrow$ red.
+The above equations hold also if we flip the colours, green $\leftrightarrow$ red. The full set of rules governing the qutrit ZX calculus is shown in Figure \ref{fig:qutrit_zx_rules}.
 
 
 \subsection{Graph-Like Qutrit ZX Diagrams}
@@ -108,14 +108,14 @@ A graph-like qutrit ZX diagram is a \textit{graph state} when every spider has z
 
 % Thanks to Lemma \ref{lem:h_edges_input_output} we can ignore which of a spider's $H$- and $H^\dagger$-legs are inputs and outputs. For our specific needs, the last two items above will not be relevant, since ZX-diagrams arising from knots will be closed, but we include them to keep the definition consistent with the qubit case.
 
-Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. 
-The following equation, for $h \in \{1,2\}$, helps us get around this:
+Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. Instead, we ensure we have a graph-like diagram by replacing the \textit{plain} wire:
+% The following equation, for $h \in \{1,2\}$, helps us get around this:
 % The following equation, which also holds with the roles of blue and purple interchanged, helps us get around this:
 
 \begin{equation}\label{eq:spiders_reluctant_to_fuse}
-	\tikzfig{hadamard_lemmas/spiders_reluctant_to_fuse/1} \ \xeq{\qutritRuleHadamard} \
-	\tikzfig{hadamard_lemmas/spiders_reluctant_to_fuse/2} \ \xeq{\qutritRuleId} \
-	\tikzfig{hadamard_lemmas/spiders_reluctant_to_fuse/3}
+	\tikzfig{hadamard_lemmas/plain_wire/1} \quad \xeqq{\qutritRuleHadamard}{\qutritRuleId} \quad
+	\tikzfig{hadamard_lemmas/plain_wire/2} \quad = \quad
+	\tikzfig{hadamard_lemmas/plain_wire/3}
 \end{equation}
 
 We will shortly show that every qutrit ZX-diagram is equivalent to a graph-like one, making use of the following lemma:
@@ -148,11 +148,11 @@ The lemmas above justify our notation for Hadamard gates: we can think of Hadama
 	\begin{proof}
 		First use the colour change rule to turn all X-spiders into Z-spiders. Then use Lemma \ref{lem:H_boxes_qutrit} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply Lemmas \ref{lem:h_edges_are_mod_3} and \ref{lem:H_edges_qutrit} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-boxes as needed: 
 		\begin{equation}
-			\tikzfig{is_graph_like/plain_input_output_wire} \quad ,
+			\tikzfig{is_graph_like/plain_input_output_wire_coloured} \quad ,
 			\hspace{50pt}
 			\tikzfig{is_graph_like/input_connected_to_hadamard} \quad ,
 			\hspace{50pt}
-			\tikzfig{is_graph_like/multiple_inputs_connected_to_one_spider}
+			\tikzfig{is_graph_like/multiple_inputs_connected_to_one_spider_coloured}
 		\end{equation}
 	\end{proof}
 \end{corollary}
