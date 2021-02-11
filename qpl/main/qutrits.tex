@@ -108,7 +108,9 @@ A graph-like qutrit ZX diagram is a \textit{graph state} when every spider has z
 
 % Thanks to Lemma \ref{lem:h_edges_input_output} we can ignore which of a spider's $H$- and $H^\dagger$-legs are inputs and outputs. For our specific needs, the last two items above will not be relevant, since ZX-diagrams arising from knots will be closed, but we include them to keep the definition consistent with the qubit case.
 
-Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. The following equation, for $h \in \{1,2\}$, helps us get around this:
+Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. 
+The following equation, for $h \in \{1,2\}$, helps us get around this:
+% The following equation, which also holds with the roles of blue and purple interchanged, helps us get around this:
 
 \begin{equation}\label{eq:spiders_reluctant_to_fuse}
 	\tikzfig{hadamard_lemmas/spiders_reluctant_to_fuse/1} \ \xeq{\qutritRuleHadamard} \
@@ -116,43 +118,23 @@ Note the difference compared to the qubit case: we need not worry about self-loo
 	\tikzfig{hadamard_lemmas/spiders_reluctant_to_fuse/3}
 \end{equation}
 
-We will shortly show that every qutrit ZX-diagram is equivalent to a graph-like one, making use of the following lemmas:
+We will shortly show that every qutrit ZX-diagram is equivalent to a graph-like one, making use of the following lemma:
 
 \begin{lemma}\label{lem:three_H_edges_vanish}
-	The following equation holds in the qutrit ZX-calculus:
+	The following equations hold in the qutrit ZX-calculus:
 	\begin{equation}
-		\tikzfig{hadamard_lemmas/3_h_edges_vanish/blue} \quad = \quad 
-		\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected} \quad = \quad 
-		\tikzfig{hadamard_lemmas/3_h_edges_vanish/purple}
-	\end{equation}
-	\begin{proof}
-		It is shown in Lemma 2.8 \cite{qutrit_euler} that the qutrit ZX-calculus satisfies the following `Hopf law':
-		\begin{equation}\label{eq:qutrit_hopf}
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf/lhs} \quad = \quad 
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf/rhs}
-		\end{equation}
-		Therefore we can argue as follows, for $h \in \{1, 2\}$:
-		\begin{equation}
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/1} \quad \xeq{\qutritRuleHadamard} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/2} \quad \xeq{\qutritRuleColourChange} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/3} \quad \xeq{\eqref{eq:qutrit_hopf}} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/4} \quad \xeq{\eqref{eq:derived_colour_change}} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected}
-		\end{equation}
-	\end{proof}
-\end{lemma}
-
-\begin{lemma}\label{lem:H_edges_qutrit} 
-	The following two equations hold in the qutrit ZX-calculus:
-	\begin{equation}
-		\tikzfig{hadamard_lemmas/2_h_edges_flip/2_blue} \quad = \quad 
-		\tikzfig{hadamard_lemmas/2_h_edges_flip/1_purple} \quad ,
+		\tikzfig{hadamard_lemmas/3_h_edges_vanish/blue} \ = \ 
+		\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected} \ = \ 
+		\tikzfig{hadamard_lemmas/3_h_edges_vanish/purple} \ ,
 		\hspace{50pt}
-		\tikzfig{hadamard_lemmas/2_h_edges_flip/2_purple} \quad = \quad 
+		\tikzfig{hadamard_lemmas/2_h_edges_flip/2_blue} \ = \ 
+		\tikzfig{hadamard_lemmas/2_h_edges_flip/1_purple} \ ,
+		\hspace{50pt}
+		\tikzfig{hadamard_lemmas/2_h_edges_flip/2_purple} \ = \  
 		\tikzfig{hadamard_lemmas/2_h_edges_flip/1_blue}
 	\end{equation}
 	\begin{proof}
-		This is Lemma 3.4 in\ \cite{qutrit_euler}.
+		See Appendix [ToDo]
 	\end{proof}
 \end{lemma}
 
