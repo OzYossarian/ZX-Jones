@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  11 FEB 2021 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  11 FEB 2021 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -112,7 +112,7 @@ Missing character: There is no m in font nullfont!
 <write> ...local_pivot_equality' on page \thepage 
                                                   \space undefined\on@line .
 l.3 ...from Theorem~\ref{thm:local_pivot_equality}
-                                                  . For this, recall that al...
+                                                  . We require the following...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -124,84 +124,53 @@ LaTeX Warning: Reference `thm:local_pivot_equality' on page  undefined on input
  line 3.
 
 Missing character: There is no . in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no , in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no b in font nullfont!
+Missing character: There is no q in font nullfont!
 Missing character: There is no u in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
 ! Undefined control sequence.
-<recently read> \qutritRuleCommute 
-                                   
-l.3 ...recall that all but the $\qutritRuleCommute
-                                                  $ and $\qutritRuleColourCh...
+<recently read> \qutritRuleEuler 
+                                 
+l.3 ...uire the following: since $\qutritRuleEuler
+                                                  $ holds under taking adjoi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-! Undefined control sequence.
-<recently read> \qutritRuleColourChange 
-                                        
-l.3 ...itRuleCommute$ and $\qutritRuleColourChange
-                                                  $ qutrit rewrite rules hol...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no q in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no d in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -225,10 +194,14 @@ Missing character: There is no , in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no p in font nullfont!
 Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -239,63 +212,24 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
 Missing character: There is no , in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no l in font nullfont!
+Missing character: There is no w in font nullfont!
 Missing character: There is no e in font nullfont!
-! Undefined control sequence.
-<recently read> \qutritRuleEuler 
-                                 
-l.3 ...ed, so in particular rule $\qutritRuleEuler
-                                                  $ also gives:
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
+Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no i in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
 Missing character: There is no : in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 3--4
@@ -326,16 +260,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 5--5
 
 ! Undefined control sequence.
 l.6 	\tikzfig
-             {qutrit_rules/hadamard/euler/h} = \tikzfig{qutrit_rules/hadamar...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.6 ...g{qutrit_rules/hadamard/euler/h} = \tikzfig
-                                                  {qutrit_rules/hadamard/eul...
+             {qutrit_rules/hadamard/euler/h} \ = \
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -344,16 +269,7 @@ and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
 l.7 	\tikzfig
-             {qutrit_rules/hadamard/euler/h} = \tikzfig{hadamard_lemmas/deco...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.7 ...g{qutrit_rules/hadamard/euler/h} = \tikzfig
-                                                  {hadamard_lemmas/decomposi...
+             {qutrit_rules/hadamard/euler/decomposition} \ = \
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -362,7 +278,7 @@ and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
 l.8 	\tikzfig
-             {hadamard_lemmas/decompositions/h_dagger} = \tikzfig{hadamard_l...
+             {hadamard_lemmas/decompositions/h} ~~ ,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -370,8 +286,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.8 ..._lemmas/decompositions/h_dagger} = \tikzfig
-                                                  {hadamard_lemmas/decomposi...
+l.10 	\tikzfig
+              {hadamard_lemmas/decompositions/h_dagger} \ = \
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -379,8 +295,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.9 	\tikzfig
-             {hadamard_lemmas/decompositions/h_dagger} = \tikzfig{hadamard_l...
+l.11 	\tikzfig
+              {hadamard_lemmas/decompositions/h_dagger_xzx} \ = \
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -388,8 +304,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.9 ..._lemmas/decompositions/h_dagger} = \tikzfig
-                                                  {hadamard_lemmas/decomposi...
+l.12 	\tikzfig
+              {hadamard_lemmas/decompositions/h_dagger_zxz}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -397,10 +313,9 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (1663.28622pt too wide) detected at line 10
-[][] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ;  [] \OT1/cmr/m/n/10 = [] \OML/cmm/
-m/it/10 ;  [] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 ;  [] \OT1/cmr/m/n/10 = [] 
-
+Overfull \hbox (1221.65758pt too wide) detected at line 13
+[][]  \OT1/cmr/m/n/10 =  []  =  [] [] []\OML/cmm/m/it/10 ;  []  \OT1/cmr/m/n/10
+ =  []  =  []
  []
 
 
@@ -410,7 +325,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 \begin{theorem}
+l.15 \begin{theorem}
                     \label{thm:local_pivot_equality_appendix} \textbf{/\ The...
 
 Your command was ignored.
@@ -424,7 +339,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12 ...\ Theorem~\ref{thm:local_pivot_equality}.}
+l.15 ...\ Theorem~\ref{thm:local_pivot_equality}.}
                                                   
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -432,7 +347,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 <write> ...local_pivot_equality' on page \thepage 
                                                   \space undefined\on@line .
-l.12 ...\ Theorem~\ref{thm:local_pivot_equality}.}
+l.15 ...\ Theorem~\ref{thm:local_pivot_equality}.}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -442,7 +357,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `thm:local_pivot_equality' on page  undefined on input
- line 12.
+ line 15.
 
 Missing character: There is no G in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -450,7 +365,7 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.13 	Given $a \in \mathbb
+l.16 	Given $a \in \mathbb
                           {Z}_3$ and a graph state $(G, W)$ containing conne...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -520,52 +435,52 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (25.74997pt too wide) in paragraph at lines 12--14
+Overfull \hbox (25.74997pt too wide) in paragraph at lines 15--17
 []\OT1/cmr/bx/n/10 /
  []
 
 
-Overfull \hbox (23.49294pt too wide) in paragraph at lines 12--14
+Overfull \hbox (23.49294pt too wide) in paragraph at lines 15--17
 \OT1/cmr/bx/n/10 The-
  []
 
 
-Overfull \hbox (9.58328pt too wide) in paragraph at lines 12--14
+Overfull \hbox (9.58328pt too wide) in paragraph at lines 15--17
 \OT1/cmr/bx/n/10 o-
  []
 
 
-Overfull \hbox (36.20122pt too wide) in paragraph at lines 12--14
+Overfull \hbox (36.20122pt too wide) in paragraph at lines 15--17
 \OT1/cmr/bx/n/10 rem [].
  []
 
 
-Overfull \hbox (14.73029pt too wide) in paragraph at lines 12--14
+Overfull \hbox (14.73029pt too wide) in paragraph at lines 15--17
 \OML/cmm/m/it/10 a \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (11.31253pt too wide) in paragraph at lines 12--14
+Overfull \hbox (11.31253pt too wide) in paragraph at lines 15--17
 \OML/cmm/m/it/10 Z[]$
  []
 
 
-Overfull \hbox (30.91805pt too wide) in paragraph at lines 12--14
+Overfull \hbox (30.91805pt too wide) in paragraph at lines 15--17
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 G; W\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (3.44513pt too wide) in paragraph at lines 12--14
+Overfull \hbox (3.44513pt too wide) in paragraph at lines 15--17
 \OML/cmm/m/it/10 i$
  []
 
 
-Overfull \hbox (4.69049pt too wide) in paragraph at lines 12--14
+Overfull \hbox (4.69049pt too wide) in paragraph at lines 15--17
 \OML/cmm/m/it/10 j$
  []
 
 ! Undefined control sequence.
-l.15 		\item $N_{=}(i, j) \defeq
+l.18 		\item $N_{=}(i, j) \defeq
                                  \left\{k \in N(i) \cap N(j) \mid w_{k,i} = ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -574,13 +489,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (174.61119pt too wide) in paragraph at lines 15--16
+Overfull \hbox (174.61119pt too wide) in paragraph at lines 18--19
 \OML/cmm/m/it/10 N[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i; j\OT1/cmr/m/n/10 ) []$
  
  []
 
 ! Undefined control sequence.
-l.16 		\item $N_{\neq}(i, j) \defeq
+l.19 		\item $N_{\neq}(i, j) \defeq
                                     \left\{k \in N(i) \cap N(j) \mid w_{k,i}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -589,7 +504,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (174.61119pt too wide) in paragraph at lines 16--17
+Overfull \hbox (174.61119pt too wide) in paragraph at lines 19--20
 \OML/cmm/m/it/10 N[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i; j\OT1/cmr/m/n/10 ) []$
  
  []
@@ -655,7 +570,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no : in font nullfont!
 ! Undefined control sequence.
-l.19 	\ctikzfig
+l.22 	\ctikzfig
                {graph_state/proper_local_pivot}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -671,13 +586,13 @@ Missing character: There is no h in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.19 	\ctikzfig{graph_
+l.22 	\ctikzfig{graph_
                       state/proper_local_pivot}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.19 	\ctikzfig{graph_state/proper_local_pivot}
+l.22 	\ctikzfig{graph_state/proper_local_pivot}
                                                
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -692,7 +607,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.20 	\begin{proof}
+l.23 	\begin{proof}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -701,7 +616,7 @@ or  <return>  to continue without it.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.21 ...oy the !-notation. There are four cases ($
+l.24 ...oy the !-notation. There are four cases ($
                                                   a, w_{i,j} \in \{1,2\}$), ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -715,7 +630,7 @@ Missing character: There is no w in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.21 ...e !-notation. There are four cases ($a, w_
+l.24 ...e !-notation. There are four cases ($a, w_
                                                   {i,j} \in \{1,2\}$), which...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -844,79 +759,79 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (7.86249pt too wide) in paragraph at lines 18--22
+Overfull \hbox (7.86249pt too wide) in paragraph at lines 21--25
      $\OML/cmm/m/it/10 G$
  []
 
 
-Overfull \hbox (5.28589pt too wide) in paragraph at lines 18--22
+Overfull \hbox (5.28589pt too wide) in paragraph at lines 21--25
 \OML/cmm/m/it/10 a$
  []
 
 
-Overfull \hbox (8.13562pt too wide) in paragraph at lines 18--22
+Overfull \hbox (8.13562pt too wide) in paragraph at lines 21--25
 \OML/cmm/m/it/10 ij$
  []
 
 
-Overfull \hbox (194.53035pt too wide) in paragraph at lines 18--22
+Overfull \hbox (194.53035pt too wide) in paragraph at lines 21--25
 []\OML/cmm/m/it/10 tate=proper[]ocal[]ivotWeagainemploythe\OT1/cmr/m/n/10 ! \OM
 S/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (131.1249pt too wide) in paragraph at lines 18--22
+Overfull \hbox (131.1249pt too wide) in paragraph at lines 21--25
 \OML/cmm/m/it/10 notation:Therearefourcases\OT1/cmr/m/n/10 ($
  []
 
 
-Overfull \hbox (18.86224pt too wide) in paragraph at lines 18--22
+Overfull \hbox (18.86224pt too wide) in paragraph at lines 21--25
 [] \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (24.44447pt too wide) in paragraph at lines 18--22
+Overfull \hbox (24.44447pt too wide) in paragraph at lines 21--25
 \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OMS/cms
 y/m/n/10 g$
  []
 
 
-Overfull \hbox (15.8414pt too wide) in paragraph at lines 18--22
+Overfull \hbox (15.8414pt too wide) in paragraph at lines 21--25
 \OML/cmm/m/it/10 a \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (16.57701pt too wide) in paragraph at lines 18--22
+Overfull \hbox (16.57701pt too wide) in paragraph at lines 21--25
 \OML/cmm/m/it/10 w[]$
  []
 
 
-Overfull \hbox (15.8414pt too wide) in paragraph at lines 18--22
+Overfull \hbox (15.8414pt too wide) in paragraph at lines 21--25
 \OML/cmm/m/it/10 a \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (16.57701pt too wide) in paragraph at lines 18--22
+Overfull \hbox (16.57701pt too wide) in paragraph at lines 21--25
 \OML/cmm/m/it/10 w[]$
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 18--22
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 21--25
 \OT1/cmr/m/n/10 1$
  []
 
 
-Overfull \hbox (8.13562pt too wide) in paragraph at lines 18--22
+Overfull \hbox (8.13562pt too wide) in paragraph at lines 21--25
 \OML/cmm/m/it/10 ij$
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 18--22
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 21--25
 \OT1/cmr/m/n/10 1$
  []
 
 ! Undefined control sequence.
-l.24 			\allowdisplaybreaks
+l.27 			\allowdisplaybreaks
                            
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -931,15 +846,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 			\begin{align*}
+l.29 			\begin{align*}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Misplaced alignment tab character &.
-l.27 				&
-          \ &&\tikzfig{proper_pivot/a_1/w_1/bang/1} \\
+l.30 				&
+          \ \hspace{-100pt}&&\tikzfig{proper_pivot/a_1/w_1/bang/1} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -948,8 +863,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.27 				&\ &
-             &\tikzfig{proper_pivot/a_1/w_1/bang/1} \\
+l.30 				&\ \hspace{-100pt}&
+                            &\tikzfig{proper_pivot/a_1/w_1/bang/1} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -958,8 +873,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.27 				&\ &&
-              \tikzfig{proper_pivot/a_1/w_1/bang/1} \\
+l.30 				&\ \hspace{-100pt}&&
+                             \tikzfig{proper_pivot/a_1/w_1/bang/1} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -968,8 +883,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.27 				&\ &&\tikzfig
-                      {proper_pivot/a_1/w_1/bang/1} \\
+l.30 				&\ \hspace{-100pt}&&\tikzfig
+                                     {proper_pivot/a_1/w_1/bang/1} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -985,13 +900,13 @@ Missing character: There is no r in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.27 				&\ &&\tikzfig{proper_
-                              pivot/a_1/w_1/bang/1} \\
+l.30 				&\ \hspace{-100pt}&&\tikzfig{proper_
+                                             pivot/a_1/w_1/bang/1} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.27 ...&\ &&\tikzfig{proper_pivot/a_1/w_1/bang/1}
+l.30 ...pt}&&\tikzfig{proper_pivot/a_1/w_1/bang/1}
                                                    \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1002,7 +917,7 @@ deleted material, e.g., by typing `I$}'.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.28 				&
+l.31 				&
           \xeq{\ref{thm:local_comp_equality}}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1012,7 +927,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.28 				&\xeq
+l.31 				&\xeq
               {\ref{thm:local_comp_equality}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1023,7 +938,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...:local_comp_equality' on page \thepage 
                                                   \space undefined\on@line .
-l.28 				&\xeq{\ref{thm:local_comp_equality}
+l.31 				&\xeq{\ref{thm:local_comp_equality}
                                             }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1033,10 +948,10 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page  undefined on input 
-line 28.
+line 31.
 
 ! Misplaced alignment tab character &.
-l.29 				&
+l.32 				&
           &\tikzfig{proper_pivot/a_1/w_1/bang/2} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1046,7 +961,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.29 				&&
+l.32 				&&
            \tikzfig{proper_pivot/a_1/w_1/bang/2} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1056,7 +971,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.29 				&&\tikzfig
+l.32 				&&\tikzfig
                    {proper_pivot/a_1/w_1/bang/2} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1067,7 +982,7 @@ and I'll forget about whatever was undefined.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.30 				&
+l.33 				&
           \xeq{\ref{thm:local_comp_equality}}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1077,7 +992,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.30 				&\xeq
+l.33 				&\xeq
               {\ref{thm:local_comp_equality}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1088,7 +1003,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...:local_comp_equality' on page \thepage 
                                                   \space undefined\on@line .
-l.30 				&\xeq{\ref{thm:local_comp_equality}
+l.33 				&\xeq{\ref{thm:local_comp_equality}
                                             }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1098,10 +1013,10 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page  undefined on input 
-line 30.
+line 33.
 
 ! Misplaced alignment tab character &.
-l.31 				&
+l.34 				&
           &\tikzfig{proper_pivot/a_1/w_1/bang/3} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1111,7 +1026,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.31 				&&
+l.34 				&&
            \tikzfig{proper_pivot/a_1/w_1/bang/3} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1121,7 +1036,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.31 				&&\tikzfig
+l.34 				&&\tikzfig
                    {proper_pivot/a_1/w_1/bang/3} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1132,7 +1047,7 @@ and I'll forget about whatever was undefined.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.32 				&
+l.35 				&
           \xeq{\ref{thm:local_comp_equality}}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1142,7 +1057,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.32 				&\xeq
+l.35 				&\xeq
               {\ref{thm:local_comp_equality}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1153,7 +1068,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <write> ...:local_comp_equality' on page \thepage 
                                                   \space undefined\on@line .
-l.32 				&\xeq{\ref{thm:local_comp_equality}
+l.35 				&\xeq{\ref{thm:local_comp_equality}
                                             }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1163,10 +1078,10 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Reference `thm:local_comp_equality' on page  undefined on input 
-line 32.
+line 35.
 
 ! Misplaced alignment tab character &.
-l.33 				&
+l.36 				&
           &\tikzfig{proper_pivot/a_1/w_1/bang/4} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1176,7 +1091,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.33 				&&
+l.36 				&&
            \tikzfig{proper_pivot/a_1/w_1/bang/4} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1186,7 +1101,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.33 				&&\tikzfig
+l.36 				&&\tikzfig
                    {proper_pivot/a_1/w_1/bang/4} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1197,7 +1112,7 @@ and I'll forget about whatever was undefined.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.34 				&
+l.37 				&
           \xeqq{\eqref{eq:qutrit_hadamard_decompositions}}{\qutritRuleFusion}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1207,7 +1122,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.34 				&\xeqq
+l.37 				&\xeqq
                {\eqref{eq:qutrit_hadamard_decompositions}}{\qutritRuleFusion}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1216,7 +1131,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.34 				&\xeqq{\eqref
+l.37 				&\xeqq{\eqref
                       {eq:qutrit_hadamard_decompositions}}{\qutritRuleFusion}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1225,7 +1140,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.34 ...adamard_decompositions}}{\qutritRuleFusion
+l.37 ...adamard_decompositions}}{\qutritRuleFusion
                                                   }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1234,7 +1149,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Misplaced alignment tab character &.
-l.35 				&
+l.38 				&
           &\tikzfig{proper_pivot/a_1/w_1/bang/5}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1244,7 +1159,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.35 				&&
+l.38 				&&
            \tikzfig{proper_pivot/a_1/w_1/bang/5}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1254,7 +1169,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.35 				&&\tikzfig
+l.38 				&&\tikzfig
                    {proper_pivot/a_1/w_1/bang/5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1269,7 +1184,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.37 			\end{align*}
+l.40 			\end{align*}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1278,7 +1193,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.37 			\end{align*}
+l.40 			\end{align*}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1289,7 +1204,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.37 			\end{align*}
+l.40 			\end{align*}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1298,32 +1213,32 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 27--39
+Overfull \hbox (20.0pt too wide) in paragraph at lines 30--42
 []
  []
 
 
-Overfull \hbox (88.85757pt too wide) in paragraph at lines 27--39
+Overfull \hbox (88.85757pt too wide) in paragraph at lines 30--42
 []\OML/cmm/m/it/10 ivot=a[]=w[]=bang=\OT1/cmr/m/n/10 1[] 
  []
 
 
-Overfull \hbox (128.58557pt too wide) in paragraph at lines 27--39
+Overfull \hbox (128.58557pt too wide) in paragraph at lines 30--42
 [][][] 
  []
 
 
-Overfull \hbox (128.58557pt too wide) in paragraph at lines 27--39
+Overfull \hbox (128.58557pt too wide) in paragraph at lines 30--42
 [][][] 
  []
 
 
-Overfull \hbox (128.58557pt too wide) in paragraph at lines 27--39
+Overfull \hbox (128.58557pt too wide) in paragraph at lines 30--42
 [][][] 
  []
 
 
-Overfull \hbox (274.43825pt too wide) in paragraph at lines 27--39
+Overfull \hbox (274.43825pt too wide) in paragraph at lines 30--42
 [][][]$ 
  []
 
@@ -1334,7 +1249,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 	\end{proof}
+l.43 	\end{proof}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1343,7 +1258,7 @@ or  <return>  to continue without it.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.40 	\end{proof}
+l.43 	\end{proof}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1358,7 +1273,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 \end{theorem}
+l.44 \end{theorem}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1367,7 +1282,7 @@ or  <return>  to continue without it.
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.41 \end{theorem}
+l.44 \end{theorem}
                   
 Things are pretty mixed up, but I think the worst is over.
 
@@ -1379,11 +1294,11 @@ Things are pretty mixed up, but I think the worst is over.
 
  
 Here is how much of TeX's memory you used:
- 31 strings out of 480608
- 575 string characters out of 5903629
+ 29 strings out of 480608
+ 536 string characters out of 5903629
  242610 words of memory out of 5000000
- 16023 multiletter control sequences out of 15000+600000
+ 16021 multiletter control sequences out of 15000+600000
  532646 words of font info for 25 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,5n,15p,354b,109s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 18i,5n,15p,285b,119s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

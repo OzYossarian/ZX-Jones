@@ -1,12 +1,15 @@
 \section{Local Pivot in Qutrit ZX}
 
-Next we prove the local pivot equality from Theorem~\ref{thm:local_pivot_equality}. For this, recall that all but the $\qutritRuleCommute$ and $\qutritRuleColourChange$ qutrit rewrite rules hold under taking adjoints, and with the roles of green and red swapped, so in particular rule $\qutritRuleEuler$ also gives:
+Next we prove the local pivot equality from Theorem~\ref{thm:local_pivot_equality}. We require the following: since $\qutritRuleEuler$ holds under taking adjoints, and swapping the roles of red and green, we have:
 
 \begin{equation}\label{eq:qutrit_hadamard_decompositions}
-	\tikzfig{qutrit_rules/hadamard/euler/h} = \tikzfig{qutrit_rules/hadamard/euler/decomposition} \ , \hspace{50pt} 
-	\tikzfig{qutrit_rules/hadamard/euler/h} = \tikzfig{hadamard_lemmas/decompositions/h} \ , \hspace{50pt} 
-	\tikzfig{hadamard_lemmas/decompositions/h_dagger} = \tikzfig{hadamard_lemmas/decompositions/h_dagger_xzx} \ , \hspace{50pt}
-	\tikzfig{hadamard_lemmas/decompositions/h_dagger} = \tikzfig{hadamard_lemmas/decompositions/h_dagger_zxz} \
+	\tikzfig{qutrit_rules/hadamard/euler/h} \ = \ 
+	\tikzfig{qutrit_rules/hadamard/euler/decomposition} \ = \ 
+	\tikzfig{hadamard_lemmas/decompositions/h} ~~ ,
+	\hspace{50pt} 
+	\tikzfig{hadamard_lemmas/decompositions/h_dagger} \ = \
+	\tikzfig{hadamard_lemmas/decompositions/h_dagger_xzx} \ = \ 
+	\tikzfig{hadamard_lemmas/decompositions/h_dagger_zxz}
 \end{equation}
 
 \begin{theorem}\label{thm:local_pivot_equality_appendix} \textbf{/\ Theorem~\ref{thm:local_pivot_equality}.} 
@@ -18,23 +21,22 @@ Next we prove the local pivot equality from Theorem~\ref{thm:local_pivot_equalit
 	Then the following equation relates $G$ and its proper $a$-local pivot along $ij$:
 	\ctikzfig{graph_state/proper_local_pivot}
 	\begin{proof}
-		We again employ the !-notation. There are four cases ($a, w_{i,j} \in \{1,2\}$), which split into two pairs of symmetric cases: $a = w_{i,j}$ and $a \neq w_{i,j}$. We show just one case - the $1$-local pivot along $ij$ of weight $1$ - the remaining cases being analogous.
+		There are four cases ($a, w_{i,j} \in \{1,2\}$), which split into two pairs of symmetric cases: $a = w_{i,j}$ and $a \neq w_{i,j}$. We show just one case - the $1$-local pivot along $ij$ of weight $1$ - the remaining cases being analogous. We again employ the !-notation. An asterisk \textcolor{red}{$*_a$} next to a node means that at the next step an $a$-local complementation will be performed at this node.
 
 		\begingroup
 			\allowdisplaybreaks
 			\setlength{\jot}{20pt}
-			\begin{align*}
-				&\ &&\tikzfig{proper_pivot/a_1/w_1/bang/1} \\
+			\begin{alignat*}{2}
+				&\ &&\tikzfig{proper_local_pivot/a_1/w_1/bang/1} \\
 				&\xeq{\ref{thm:local_comp_equality}} 
-				&&\tikzfig{proper_pivot/a_1/w_1/bang/2} \\
+				&&\tikzfig{proper_local_pivot/a_1/w_1/bang/2} \\
 				&\xeq{\ref{thm:local_comp_equality}} 
-				&&\tikzfig{proper_pivot/a_1/w_1/bang/3} \\
+				&&\tikzfig{proper_local_pivot/a_1/w_1/bang/3} \\
 				&\xeq{\ref{thm:local_comp_equality}} 
-				&&\tikzfig{proper_pivot/a_1/w_1/bang/4} \\
+				&&\tikzfig{proper_local_pivot/a_1/w_1/bang/4} \\
 				&\xeqq{\eqref{eq:qutrit_hadamard_decompositions}}{\qutritRuleFusion} 
-				&&\tikzfig{proper_pivot/a_1/w_1/bang/5} 
-				% &&&= &&&&\tikzfig{proper_1_local_pivot/weight_1/step_6} \\
-			\end{align*}
+				&&\tikzfig{proper_local_pivot/a_1/w_1/bang/5}
+			\end{alignat*}
 		\endgroup
 
 	\end{proof}
