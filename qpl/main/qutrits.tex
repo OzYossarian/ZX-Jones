@@ -52,7 +52,7 @@ and have the following concrete representation as linear maps:
 When $\alpha = \beta = 0$ we will again omit the angles entirely, and just draw a small green or red dot. Throughout our work, whenever we use an integer $n$ as a spider decoration, this is a shorthand for $\frac{2\pi}{3}n$. Since spider phases hold mod $2\pi$, these integer decorations hold mod $3$. Unless otherwise stated, we will use Greek letters to denote general angles, and Roman letters for these integer shorthands.
 % This shouldn't ever cause confusion.
 
-Hadamard gates are no longer self-adjoint, so we change our notation: we let a yellow parallelogram decorated with a $1$ (mod $3$) denote a Hadamard gate, while decorating with a $2$ (mod $3$) denotes its adjoint. We will shortly explain this choice. We also use a dashed blue line for the \textit{Hadamard edge} (\textit{$H$-edge}) and a purple dashed line for its adjoint (\textit{$H^\dagger$-edge}):
+Hadamard gates are no longer self-adjoint, so we change our notation: we let a yellow box decorated with a $1$ (mod $3$) denote a Hadamard gate, while decorating with a $2$ (mod $3$) denotes its adjoint. We will shortly explain this choice. We also use a dashed blue line for the \textit{Hadamard edge} (\textit{$H$-edge}) and a purple dashed line for its adjoint (\textit{$H^\dagger$-edge}):
 \begin{equation}
 		\tikzfig{hadamard_lemmas/parametrised/1} \ = \ 
 		\tikzfig{hadamard_lemmas/dashed/blue} \ = \ 
@@ -73,8 +73,10 @@ A very important difference from the qubit case is that in qutrit ZX-calculus th
 	\tikzfig{cups_caps/z_cup} \quad \neq \quad \tikzfig{cups_caps/x_cup} \quad , \hspace{50pt}
 	\tikzfig{cups_caps/z_cap} \quad \neq \quad \tikzfig{cups_caps/x_cap}
 \end{equation}
-This has several consequences. Firstly, the maxim that `only topology matters' no longer applies. That is, it is now important to make clear the distinction between a spider's inputs and outputs, unlike in the qubit case where we could freely interchange the two. Diagram components can still be isotoped around the plane but only so long as this input/output distinction is respected. This gives the qutrit calculus a slightly more rigid flavour than its qubit counterpart. That said, this rigidity is loosened by the following two observations.
-Firstly, this distinction is irrelevant for $H$- and $H^\dagger$-edges \cite{qutrit_euler}:
+This has several consequences. Firstly, the maxim that `only topology matters' no longer applies. That is, it is now important to make clear the distinction between a spider's inputs and outputs, unlike in the qubit case where we could freely interchange the two. Diagram components can still be isotoped around the plane but only so long as this input/output distinction is respected. This gives the qutrit calculus a slightly more rigid flavour than its qubit counterpart. 
+That said, this rigidity is loosened in certain cases; in particular, this distinction is irrelevant for $H$- and $H^\dagger$-edges \cite{qutrit_euler}:
+% That said, this rigidity is loosened by the following two observations.
+% Firstly, this distinction is irrelevant for $H$- and $H^\dagger$-edges \cite{qutrit_euler}:
 	\begin{equation}
 		\tikzfig{hadamard_lemmas/io_irrelevant/h/lhs} \ = \ 
 		\tikzfig{hadamard_lemmas/io_irrelevant/h/rhs} \ ,
@@ -82,14 +84,15 @@ Firstly, this distinction is irrelevant for $H$- and $H^\dagger$-edges \cite{qut
 		\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/lhs} \ = \ 
 		\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/rhs}
 	\end{equation}
-Secondly, the `snake equations' hold for \emph{same-colour} cups and caps.
-Snakes with differently coloured cups and caps can still be yanked into a straight wire at the cost of adding two Hadamard boxes, shown below for $h \in \{1, 2\}$:
-\begin{equation}
-		\tikzfig{qutrit_snake/same_bent} \quad = \quad \tikzfig{qutrit_snake/same_straight} \quad ,
-		\hspace{50pt}
-		\tikzfig{qutrit_snake/different_bent} \quad = \quad \tikzfig{qutrit_snake/different_straight}
-\end{equation}
-The above equations hold also if we flip the colours, green $\leftrightarrow$ red. The full set of rules governing the qutrit ZX calculus is shown in Figure \ref{fig:qutrit_zx_rules}.
+% Secondly, the `snake equations' hold for \emph{same-colour} cups and caps.
+% Snakes with differently coloured cups and caps can still be yanked into a straight wire at the cost of adding two Hadamard boxes, shown below for $h \in \{1, 2\}$:
+% \begin{equation}
+% 		\tikzfig{qutrit_snake/same_bent} \quad = \quad \tikzfig{qutrit_snake/same_straight} \quad ,
+% 		\hspace{50pt}
+% 		\tikzfig{qutrit_snake/different_bent} \quad = \quad \tikzfig{qutrit_snake/different_straight}
+% \end{equation}
+% The above equations hold also if we flip the colours, green $\leftrightarrow$ red. 
+The full set of rules governing the qutrit ZX calculus is shown in Figure \ref{fig:qutrit_zx_rules}.
 
 
 \subsection{Graph-Like Qutrit ZX Diagrams}
@@ -108,7 +111,7 @@ A graph-like qutrit ZX diagram is a \textit{graph state} when every spider has z
 
 % Thanks to Lemma \ref{lem:h_edges_input_output} we can ignore which of a spider's $H$- and $H^\dagger$-legs are inputs and outputs. For our specific needs, the last two items above will not be relevant, since ZX-diagrams arising from knots will be closed, but we include them to keep the definition consistent with the qubit case.
 
-Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. Instead, we ensure we have a graph-like diagram by replacing the \textit{plain} wire:
+Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. Instead, we ensure we have a graph-like diagram by replacing the plain wire:
 % The following equation, for $h \in \{1,2\}$, helps us get around this:
 % The following equation, which also holds with the roles of blue and purple interchanged, helps us get around this:
 
@@ -118,7 +121,7 @@ Note the difference compared to the qubit case: we need not worry about self-loo
 	\tikzfig{hadamard_lemmas/plain_wire/3}
 \end{equation}
 
-We will shortly show that every qutrit ZX-diagram is equivalent to a graph-like one, making use of the following lemma:
+Indeed, we will shortly show that every qutrit ZX-diagram is equivalent to a graph-like one, making use of the following lemma:
 
 \begin{lemma}\label{lem:h_edges_are_mod_3}
 	\HEdgesAreModThreeStatement
@@ -146,7 +149,7 @@ The lemmas above justify our notation for Hadamard gates: we can think of Hadama
 \begin{corollary}\label{prop:every_diagram_is_graph_like_qutrit}
 	Every qutrit ZX diagram is equivalent to one that is graph-like.
 	\begin{proof}
-		First use the colour change rule to turn all X-spiders into Z-spiders. Then use Lemma \ref{lem:H_boxes_qutrit} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply Lemmas \ref{lem:h_edges_are_mod_3} and \ref{lem:H_edges_qutrit} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-boxes as needed: 
+		First use the colour change rule to turn all X-spiders into Z-spiders. Then use Lemma \ref{lem:H_boxes_qutrit} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply Lemma \ref{lem:h_edges_are_mod_3} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-boxes as needed: 
 		\begin{equation}
 			\tikzfig{is_graph_like/plain_input_output_wire_coloured} \quad ,
 			\hspace{50pt}
@@ -260,10 +263,10 @@ First, we define (a very small extension of) the !-notation (pronounced `bang no
 	\end{proof}
 \end{theorem}
 
-We can now combine these three elimination theorems into an algorithm for efficiently simplifying a closed graph-like ZX-diagram. First note that after applying any one of the three elimination theorems to such a diagram, the only way we might end up with a non-graph-like diagram is if we introduce parallel $H$- or $H^\dagger$-edges. Fortunately we have shown via Lemmas \ref{lem:h_edges_are_mod_3} and \ref{lem:H_edges_qutrit} that these can always be reduced to just one edge, so we do indeed again have a graph-like diagram.
+We can now combine these three elimination theorems into an algorithm for efficiently simplifying a closed graph-like ZX-diagram. First note that after applying any one of the three elimination theorems to such a diagram, the only way we might end up with a non-graph-like diagram is if we introduce parallel $H$- or $H^\dagger$-edges. Fortunately we have shown via Lemma \ref{lem:h_edges_are_mod_3} that these can always be reduced to just one edge, so we do indeed again have a graph-like diagram.
 
 \begin{theorem}\label{thm:simplification_algorithm_works}
-	Given any closed graph-like ZX-diagram, the following algorithm will always terminate after a finite number of steps, returning an equivalent graph-like ZX-diagram with no \Nspiders, \Pspiders, or adjacent pairs of \Mspiders. Repeat the steps below until no rule matches. After each step, apply Lemmas \ref{lem:h_edges_are_mod_3} and \ref{lem:H_edges_qutrit} as needed until the resulting diagram is graph-like:
+	Given any closed graph-like ZX-diagram, the following algorithm will always terminate after a finite number of steps, returning an equivalent graph-like ZX-diagram with no \Nspiders, \Pspiders, or adjacent pairs of \Mspiders. Repeat the steps below until no rule matches. After each step, apply Lemma \ref{lem:h_edges_are_mod_3} as needed until the resulting diagram is graph-like:
 	\begin{enumerate}
 		\item Eliminate a \Pspider\ via Theorem~\ref{thm:eliminate_P_spiders}.
 		\item Eliminate an \Nspider\ via Theorem~\ref{thm:eliminate_N_spiders}.

@@ -9,7 +9,7 @@
 \tikzstyle{Z phase dot}=[minimum size=5mm, font={\footnotesize\boldmath}, shape=rectangle, rounded corners=2mm, inner sep=1mm, outer sep=-2mm, scale=0.8, tikzit shape=circle, draw=black, fill={rgb,255: red,221; green,255; blue,221}, tikzit draw=blue]
 \tikzstyle{X dot}=[Z dot, shape=circle, draw=black, fill={rgb,255: red,255; green,136; blue,136}]
 \tikzstyle{X phase dot}=[Z phase dot, tikzit shape=circle, tikzit draw=blue, fill={rgb,255: red,255; green,136; blue,136}, font={\footnotesize\boldmath}]
-\tikzstyle{hadamard}=[fill=yellow, draw=black, shape=rectangle, inner sep=0.6mm, minimum height=1.5mm, minimum width=1.5mm, rounded corners=0.2mm]
+\tikzstyle{hadamard}=[fill=yellow, draw=black, shape=rectangle, inner sep=0.6mm, minimum height=1.5mm, minimum width=1.5mm, rounded corners=0.3mm]
 \tikzstyle{qutrit Z phase}=[minimum size=5mm, shape=circle split, draw=black, fill={rgb,255: red,221; green,255; blue,221}, font={\tiny}, inner sep=0.75pt, tikzit draw=blue]
 \tikzstyle{qutrit Z phase rectangle}=[minimum size=5mm, shape=rectangle split, rectangle split parts=2, rounded corners=1mm, draw=black, fill={rgb,255: red,221; green,255; blue,221}, font={\tiny}, inner sep=1pt, outer sep=-0.5mm, tikzit draw=blue, tikzit shape=rectangle]
 \tikzstyle{qutrit X phase}=[minimum size=5mm, shape=circle split, draw=black, fill={rgb,255: red,255; green,136; blue,136}, font={\tiny}, inner sep=0.75pt, tikzit draw=blue]
