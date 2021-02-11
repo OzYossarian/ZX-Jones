@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  11 FEB 2021 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  11 FEB 2021 12:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1362,29 +1362,6 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/qutrit_rules/exceptions/colour_change/lhs.tikz)
 (./figures/qutrit_rules/exceptions/colour_change/flip_rhs.tikz)
 (./figures/qutrit_rules/exceptions/colour_change/flip_lhs.tikz))
-(./appendix/pm_boxes.tex (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz
-) (./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/pm_maps/q4.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/pm_maps/qubit/Z_phase.tikz) (./figures/pm_maps/qubit/X_phase.tikz)
-(./figures/pm_maps/qutrit/Z_phase.tikz) (./figures/pm_maps/qutrit/X_phase.tikz)
-[18] (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/qubit_hadamard/yellow_box.tikz)
-(./figures/qubit_hadamard/decomposed.tikz)
-
-LaTeX Warning: Reference `def:qubit_standard_spiders' on page 19 undefined on i
-nput line 97.
-
-(./figures/pm_maps/q4.tikz) (./figures/pm_maps/q4/decomposed.tikz)
-(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_compare.tikz)
-(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/hadamard.tikz)
-(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_copy.tikz)
-(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/pm_maps/q4.tikz) (./figures/pm_maps/q4/decomposed.tikz)
-(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_compare.tikz)
-(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/hadamard.tikz)
-(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_copy.tikz)
-(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/pm.tikz) [19])
 (./appendix/pivot.tex (./figures/qutrit_rules/hadamard/euler/h.tikz)
 (./figures/qutrit_rules/hadamard/euler/decomposition.tikz)
 (./figures/qutrit_rules/hadamard/euler/h.tikz)
@@ -1393,7 +1370,7 @@ nput line 97.
 (./figures/hadamard_lemmas/decompositions/h_dagger_xzx.tikz)
 (./figures/hadamard_lemmas/decompositions/h_dagger.tikz)
 (./figures/hadamard_lemmas/decompositions/h_dagger_zxz.tikz)
-(./figures/graph_state/proper_local_pivot.tikz)
+(./figures/graph_state/proper_local_pivot.tikz) [18]
 (./figures/proper_pivot/a_1/w_1/bang/1.tikz)
 (./figures/proper_pivot/a_1/w_1/bang/2.tikz)
 (./figures/proper_pivot/a_1/w_1/bang/3.tikz)
@@ -1403,15 +1380,15 @@ nput line 97.
 (./figures/proper_pivot/a_1/w_1/bang/2.tikz)
 (./figures/proper_pivot/a_1/w_1/bang/3.tikz)
 (./figures/proper_pivot/a_1/w_1/bang/4.tikz)
-(./figures/proper_pivot/a_1/w_1/bang/5.tikz) [20])
+(./figures/proper_pivot/a_1/w_1/bang/5.tikz)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19])
 (./appendix/eliminate/p_spiders.tex (./figures/leg_flip/1.tikz)
 (./figures/leg_flip/5.tikz) (./figures/leg_flip/1.tikz)
 (./figures/leg_flip/2.tikz) (./figures/leg_flip/3.tikz)
 (./figures/leg_flip/4.tikz) (./figures/leg_flip/5.tikz)
-Underfull \vbox (badness 2894) has occurred while \output is active []
-
- [21]
-(./figures/m_copies/full/1.tikz) (./figures/m_copies/full/4.tikz)
+(./figures/m_copies/full/1.tikz) (./figures/m_copies/full/4.tikz) [20]
 (./figures/m_copies/part_1/1.tikz) (./figures/m_copies/part_1/2.tikz)
 (./figures/m_copies/part_1/3.tikz) (./figures/m_copies/part_1/4.tikz)
 (./figures/m_copies/part_1/5.tikz) (./figures/m_copies/part_2/1.tikz)
@@ -1430,7 +1407,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/p_state/1.tikz) (./figures/p_state/6.tikz) (./figures/p_state/1.tikz
 ) (./figures/p_state/2.tikz) (./figures/p_state/3.tikz)
 (./figures/p_state/4.tikz) (./figures/p_state/5.tikz) (./figures/p_state/6.tikz
-) [22] (./figures/eliminate/P_spiders/bang/general/1.tikz)
+) [21] (./figures/eliminate/P_spiders/bang/general/1.tikz)
 (./figures/eliminate/P_spiders/bang/general/9.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/1.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/2.tikz)
@@ -1439,15 +1416,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/eliminate/P_spiders/bang/p_1/5.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/6.tikz)
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 22 undefined on input
  line 95.
 
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 22 undefined on input
  line 95.
 
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 22 undefined on input
  line 95.
 
 (./figures/eliminate/P_spiders/bang/p_1/7.tikz)
@@ -1460,20 +1437,20 @@ LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
 (./figures/eliminate/P_spiders/bang/p_1/5.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/6.tikz)
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 22 undefined on input
  line 95.
 
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 22 undefined on input
  line 95.
 
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 22 undefined on input
  line 95.
 
 (./figures/eliminate/P_spiders/bang/p_1/7.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/8.tikz)
-(./figures/eliminate/P_spiders/bang/p_1/9.tikz) [23])
+(./figures/eliminate/P_spiders/bang/p_1/9.tikz))
 (./appendix/eliminate/n_spiders.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1486,7 +1463,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/n_states/0_1/z.tikz) (./figures/n_states/0_1/x.tikz)
 (./figures/n_states/0_2/z.tikz) (./figures/n_states/0_2/x.tikz)
 (./figures/n_states/1_0/z.tikz) (./figures/n_states/1_0/x.tikz)
-(./figures/n_states/2_0/z.tikz) (./figures/n_states/2_0/x.tikz)
+(./figures/n_states/2_0/z.tikz) (./figures/n_states/2_0/x.tikz) [22]
 (./figures/n_states/general/x_n_n'.tikz)
 (./figures/n_states/general/z_n_n'.tikz)
 (./figures/n_states/general/x_n'_n.tikz) (./figures/n_states/0_1/1.tikz)
@@ -1500,7 +1477,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/n_states/corollary/0_1/2.tikz)
 (./figures/n_states/corollary/0_1/3.tikz)
 (./figures/n_states/corollary/0_1/4.tikz)
-(./figures/n_states/corollary/0_1/5.tikz) [24]
+(./figures/n_states/corollary/0_1/5.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/1.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/9.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/1.tikz)
@@ -1512,15 +1489,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/eliminate/N_spiders/0_n/bang/0_1/5.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/0_1/6.tikz)
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 25 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
  line 78.
 
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 25 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
  line 78.
 
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 25 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
  line 78.
 
 (./figures/eliminate/N_spiders/0_n/bang/0_1/7.tikz)
@@ -1533,20 +1510,20 @@ LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 25 undefined on input
 (./figures/eliminate/N_spiders/0_n/bang/0_1/5.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/0_1/6.tikz)
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 25 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
  line 78.
 
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 25 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
  line 78.
 
 
-LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 25 undefined on input
+LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 23 undefined on input
  line 78.
 
 (./figures/eliminate/N_spiders/0_n/bang/0_1/7.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/0_1/8.tikz)
-(./figures/eliminate/N_spiders/0_n/bang/0_1/9.tikz) [25])
+(./figures/eliminate/N_spiders/0_n/bang/0_1/9.tikz) [23])
 (./appendix/eliminate/m_spiders.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1557,6 +1534,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
 (./figures/eliminate/M_spiders/bang/w_1/LHS.tikz)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
 (./figures/eliminate/M_spiders/bang/w_1/RHS.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/1.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/2.tikz)
@@ -1575,25 +1555,48 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/eliminate/M_spiders/bang/w_1/6.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/7.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/8.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/9.tikz) [26]
+(./figures/eliminate/M_spiders/bang/w_1/9.tikz) [25]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
+ [26]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28])
-[29]
+ [27])
+(./appendix/pm_boxes.tex (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz
+) (./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
+(./figures/pm_maps/q4.tikz) (./figures/pm_maps/pm.tikz)
+(./figures/pm_maps/qubit/Z_phase.tikz) (./figures/pm_maps/qubit/X_phase.tikz)
+(./figures/pm_maps/qutrit/Z_phase.tikz) (./figures/pm_maps/qutrit/X_phase.tikz)
+[28] (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
+(./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
+(./figures/qubit_hadamard/yellow_box.tikz)
+(./figures/qubit_hadamard/decomposed.tikz)
+
+LaTeX Warning: Reference `def:qubit_standard_spiders' on page 29 undefined on i
+nput line 97.
+
+(./figures/pm_maps/q4.tikz) (./figures/pm_maps/q4/decomposed.tikz)
+(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_compare.tikz)
+(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/hadamard.tikz)
+(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_copy.tikz)
+(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/pm.tikz)
+(./figures/pm_maps/q4.tikz) (./figures/pm_maps/q4/decomposed.tikz)
+(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_compare.tikz)
+(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/hadamard.tikz)
+(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_copy.tikz)
+(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/pm.tikz) [29]) [30]
 \pages=\write7
 \openout7 = `ZX-qutritpivot-complexity.pag'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
- (./ZX-qutritpivot-complexity.aux)
+
+(./ZX-qutritpivot-complexity.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
 Package rerunfilecheck Info: File `ZX-qutritpivot-complexity.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 815332262F3B08C72F5C6BF109A1648D;1428.
+(rerunfilecheck)             Checksum: EC136EFC8211B1981949C7DB7AE88A61;1428.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1604,10 +1607,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 35114 strings out of 480608
- 739786 string characters out of 5903629
- 1649892 words of memory out of 5000000
- 49307 multiletter control sequences out of 15000+600000
+ 34996 strings out of 480608
+ 737096 string characters out of 5903629
+ 1638411 words of memory out of 5000000
+ 49188 multiletter control sequences out of 15000+600000
  607741 words of font info for 185 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,21n,105p,1019b,1113s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1625,10 +1628,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on ZX-qutritpivot-complexity.pdf (29 pages, 638687 bytes).
+Output written on ZX-qutritpivot-complexity.pdf (30 pages, 637216 bytes).
 PDF statistics:
- 935 PDF objects out of 1000 (max. 8388607)
- 528 compressed objects within 6 object streams
- 157 named destinations out of 1000 (max. 500000)
+ 939 PDF objects out of 1000 (max. 8388607)
+ 531 compressed objects within 6 object streams
+ 158 named destinations out of 1000 (max. 500000)
  348 words of extra memory for PDF output out of 10000 (max. 10000000)
 

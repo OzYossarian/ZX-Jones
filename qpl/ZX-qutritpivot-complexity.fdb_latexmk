@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex ZX-qutritpivot-complexity"] 1613045054 "ZX-qutritpivot-complexity.aux" "ZX-qutritpivot-complexity.bbl" "ZX-qutritpivot-complexity" 1613045384
+["bibtex ZX-qutritpivot-complexity"] 1613047823 "ZX-qutritpivot-complexity.aux" "ZX-qutritpivot-complexity.bbl" "ZX-qutritpivot-complexity" 1613047877
   "./eptcs.bst" 1612981980 28417 7a4d5f3186f0b1f5e5edac2d6b5dc4de ""
-  "ZX-qutritpivot-complexity.aux" 1613045384 8146 889bac088348623eedc05d50ca74ee55 "pdflatex"
+  "ZX-qutritpivot-complexity.aux" 1613047876 8146 6e23731011c9cf9cefcde6ebe75c0480 "pdflatex"
   "refs-teague.bib" 1612981980 1265 ccc28e114d95ddc56e6f1bd0a63749c1 ""
   "refs.bib" 1612981980 9114 7c057cd52766dca2944b7a74b461f818 ""
   (generated)
   "ZX-qutritpivot-complexity.bbl"
   "ZX-qutritpivot-complexity.blg"
-["pdflatex"] 1613045329 "ZX-qutritpivot-complexity.tex" "ZX-qutritpivot-complexity.pdf" "ZX-qutritpivot-complexity" 1613045384
+["pdflatex"] 1613047823 "ZX-qutritpivot-complexity.tex" "ZX-qutritpivot-complexity.pdf" "ZX-qutritpivot-complexity" 1613047877
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -251,10 +251,10 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1605033025 2432453 d84830c72e6c58e19a571faf8b52b73a ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "ZX-qutritpivot-complexity.aux" 1613045384 8146 889bac088348623eedc05d50ca74ee55 "pdflatex"
-  "ZX-qutritpivot-complexity.bbl" 1613045054 5328 f62b8be588a5a6845ab546b0a47df1f8 "bibtex ZX-qutritpivot-complexity"
-  "ZX-qutritpivot-complexity.out" 1613045384 1428 815332262f3b08c72f5c6bf109a1648d "pdflatex"
-  "ZX-qutritpivot-complexity.tex" 1613045323 3198 b609011160267c9df970092713cc0517 ""
+  "ZX-qutritpivot-complexity.aux" 1613047876 8146 6e23731011c9cf9cefcde6ebe75c0480 "pdflatex"
+  "ZX-qutritpivot-complexity.bbl" 1613047823 5328 f62b8be588a5a6845ab546b0a47df1f8 "bibtex ZX-qutritpivot-complexity"
+  "ZX-qutritpivot-complexity.out" 1613047876 1428 ec136efc8211b1981949c7db7ae88a61 "pdflatex"
+  "ZX-qutritpivot-complexity.tex" 1613047714 3198 410ad5f06a86eedbbfea79467fea98d4 ""
   "appendix/eliminate/m_spiders.tex" 1613044902 1327 8daeb84d5514d167e02a585e5032a16d ""
   "appendix/eliminate/n_spiders.tex" 1613044488 4017 668dca320ebef461e73fd5cc5e205180 ""
   "appendix/eliminate/p_spiders.tex" 1613044918 4224 d8fb549ade667d2abbfcc16375635950 ""
@@ -358,8 +358,8 @@
   "figures/is_graph_like/plain_input_output_wire.tikz" 1613007751 677 554f1889500d9f85e2e4c2cd0022a0c1 ""
   "figures/leg_flip/1.tikz" 1612981980 875 d01a9e6fe9db90f14c2191cd0a7aae52 ""
   "figures/leg_flip/2.tikz" 1612981980 1021 8d4c6f1b1d4fd8577af3b5b757126414 ""
-  "figures/leg_flip/3.tikz" 1612981980 935 71904a8b55c387ee3d15163eb23597cf ""
-  "figures/leg_flip/4.tikz" 1612981980 875 05363d36bdf0c6556b336859834ba018 ""
+  "figures/leg_flip/3.tikz" 1613047486 1011 699c099b82188fe58bfba0c70a066531 ""
+  "figures/leg_flip/4.tikz" 1613047612 954 e83f98f3a65c227b15ebb8132e109e86 ""
   "figures/leg_flip/5.tikz" 1612981980 815 e20f43c7483d47162a8672770f2c29f0 ""
   "figures/link-tn.jpg" 1612981980 130141 02b7b8a9dce9c2f9e3e4fa6708a8f8e0 ""
   "figures/link.jpg" 1612981980 63475 a745552a64113ed2a6680232dd703a38 ""
@@ -502,10 +502,10 @@
   "preamble.tex" 1612981980 902 73f9d6c61a24198056ca389864eb5fdc ""
   "tikzit.sty" 1612981980 1052 53f53c246e393608a061701d0c98a0ee ""
   "zx.tikzdefs" 1613041622 2422 92c79c2a217abff810e19b9408b63035 ""
-  "zx.tikzstyles" 1613007751 3617 9d69385533bd034897b4501e915a719b ""
+  "zx.tikzstyles" 1613047535 4022 71d810691e3c16499b61e3b963bd0045 ""
   (generated)
+  "ZX-qutritpivot-complexity.pag"
+  "ZX-qutritpivot-complexity.out"
+  "ZX-qutritpivot-complexity.log"
   "ZX-qutritpivot-complexity.pdf"
   "ZX-qutritpivot-complexity.aux"
-  "ZX-qutritpivot-complexity.log"
-  "ZX-qutritpivot-complexity.out"
-  "ZX-qutritpivot-complexity.pag"
