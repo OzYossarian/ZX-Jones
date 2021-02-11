@@ -14,6 +14,17 @@ The well-known rewrite rules of the qubit ZX calculus are shown in Fig.\ref{fig:
 		\end{equation*}
 		\vspace{5pt}
 		\begin{equation*}
+			\tikzfig{qubit_hadamard/yellow_box} \ = \ 
+			\tikzfig{qubit_hadamard/decomposed} \quad \hypertarget{qubit_rule_euler}{\mathbf{(E)}}
+			\hspace{50pt}
+			\tikzfig{qubit_rules/copy/lhs} \ = \ \
+			\tikzfig{qubit_rules/copy/rhs} \quad \hypertarget{qubit_rule_copy}{\mathbf{(cp)}}
+			\hspace{50pt}
+			\tikzfig{qubit_rules/pi/lhs} \ = \
+			\tikzfig{qubit_rules/pi/rhs} \quad \hypertarget{qubit_rule_pi}{(\bm{\pi})}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
 			\tikzfig{qubit_rules/identity/lhs} \ = \
 			\tikzfig{qubit_rules/identity/rhs} \quad \hypertarget{qubit_rule_id}{\mathbf{(id)}}
 			\hspace{50pt}
@@ -22,14 +33,6 @@ The well-known rewrite rules of the qubit ZX calculus are shown in Fig.\ref{fig:
 			\hspace{50pt}
 			\tikzfig{qubit_rules/colour_change/lhs} \ = \
 			\tikzfig{qubit_rules/colour_change/rhs} \quad \hypertarget{qubit_rule_colour_change}{\mathbf{(cc)}}
-		\end{equation*}
-		\vspace{5pt}
-		\begin{equation*}
-			\tikzfig{qubit_rules/copy/lhs} \ = \ \
-			\tikzfig{qubit_rules/copy/rhs} \quad \hypertarget{qubit_rule_copy}{\mathbf{(cp)}}
-			\hspace{50pt}
-			\tikzfig{qubit_rules/pi/lhs} \ = \
-			\tikzfig{qubit_rules/pi/rhs} \quad \hypertarget{qubit_rule_pi}{(\bm{\pi})}
 		\end{equation*}
 		\vspace{3pt}
 	\end{tcolorbox}
@@ -143,7 +146,7 @@ We now give a full set of rules defining the qutrit ZX-calculus. Our presentatio
 		(D \circ E)^\dagger = D^\dagger \circ E^\dagger
 	\end{equation}
 
-	Furthermore, all but the commutation equations $\qutritRuleCommute$ and the colour change equations $\qutritRuleColourChange$ continue to hold when the roles of green and red (i.e. $Z$ and $X$) are interchanged. For these four exceptions, however, analogous equations can be derived from the existing ones; for example, the corresponding colour change equations will be relevant for us later.
+	Furthermore, it can be derived that all but the commutation equations $\qutritRuleCommute$ and the colour change equations $\qutritRuleColourChange$ continue to hold when the roles of green and red (i.e. $Z$ and $X$) are interchanged. For these four exceptions, however, analogous equations can be derived from the existing ones; for example, the corresponding colour change equations will be relevant for us later.
 \end{definition}
 	
 \begin{proposition}
