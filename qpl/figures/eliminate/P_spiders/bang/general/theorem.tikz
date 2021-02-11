@@ -1,0 +1,128 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=qutrit Z phase rectangle] (0) at (-5.5, 0.25) {$\alpha_k - 1$ \nodepart{second} $\beta_k - 1$};
+		\node [style=none] (1) at (-5.5, 1.25) {...};
+		\node [style=none] (2) at (-6.25, 1.5) {};
+		\node [style=none] (3) at (-4.75, 1.5) {};
+		\node [style=qutrit Z phase rectangle] (4) at (-2, 0.25) {$\gamma_k - 1$ \nodepart{second} $\delta_k - 1$};
+		\node [style=none] (5) at (-2, 1.25) {...};
+		\node [style=none] (6) at (-2.75, 1.5) {};
+		\node [style=none] (7) at (-1.25, 1.5) {};
+		\node [style=none] (13) at (-5.5, 2.075) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_1]}$}};
+		\node [style=none] (14) at (-6.25, -0.5) {};
+		\node [style=none] (15) at (-6.5, -0.25) {};
+		\node [style=none] (16) at (-4.75, -0.5) {};
+		\node [style=none] (17) at (-4.5, -0.25) {};
+		\node [style=none] (18) at (-4.75, 1.75) {};
+		\node [style=none] (19) at (-4.5, 1.5) {};
+		\node [style=none] (20) at (-6.25, 1.75) {};
+		\node [style=none] (21) at (-6.5, 1.5) {};
+		\node [style=none] (45) at (-2, 2.075) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{2}]}$}};
+		\node [style=none] (46) at (-2.75, -0.5) {};
+		\node [style=none] (47) at (-3, -0.25) {};
+		\node [style=none] (48) at (-1.25, -0.5) {};
+		\node [style=none] (49) at (-1, -0.25) {};
+		\node [style=none] (50) at (-1.25, 1.75) {};
+		\node [style=none] (51) at (-1, 1.5) {};
+		\node [style=none] (52) at (-2.75, 1.75) {};
+		\node [style=none] (53) at (-3, 1.5) {};
+		\node [style=none] (64) at (-2.75, 1.75) {};
+		\node [style=qutrit Z phase] (65) at (-3.75, -1.75) {$p$ \nodepart{lower} $p$};
+		\node [style=none] (66) at (0, 0) {$=$};
+		\node [style=qutrit Z phase rectangle] (67) at (2, -1) {$\alpha_k - p$ \nodepart{second} $\beta_k - p$};
+		\node [style=none] (68) at (2, 0) {...};
+		\node [style=none] (69) at (1.25, 0.25) {};
+		\node [style=none] (70) at (2.75, 0.25) {};
+		\node [style=qutrit Z phase rectangle] (71) at (5.5, -1) {$\gamma_k - p$ \nodepart{second} $\delta_k - p$};
+		\node [style=none] (72) at (5.5, 0) {...};
+		\node [style=none] (73) at (4.75, 0.25) {};
+		\node [style=none] (74) at (6.25, 0.25) {};
+		\node [style=none] (75) at (2, 1.825) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_1]}$}};
+		\node [style=none] (76) at (1.25, -1.75) {};
+		\node [style=none] (77) at (1, -1.5) {};
+		\node [style=none] (78) at (2.75, -1.75) {};
+		\node [style=none] (79) at (3, -1.5) {};
+		\node [style=none] (80) at (2.75, 1.5) {};
+		\node [style=none] (81) at (3, 1.25) {};
+		\node [style=none] (82) at (1.25, 1.5) {};
+		\node [style=none] (83) at (1, 1.25) {};
+		\node [style=none] (84) at (5.5, 1.825) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{2}]}$}};
+		\node [style=none] (85) at (4.75, -1.75) {};
+		\node [style=none] (86) at (4.5, -1.5) {};
+		\node [style=none] (87) at (6.25, -1.75) {};
+		\node [style=none] (88) at (6.5, -1.5) {};
+		\node [style=none] (89) at (6.25, 1.5) {};
+		\node [style=none] (90) at (6.5, 1.25) {};
+		\node [style=none] (91) at (4.75, 1.5) {};
+		\node [style=none] (92) at (4.5, 1.25) {};
+		\node [style=none] (93) at (2, 1.5) {};
+		\node [style=none] (94) at (1, 0.5) {};
+		\node [style=none] (95) at (2, 0.5) {};
+		\node [style=none] (96) at (4.75, 1.5) {};
+		\node [style=qutrit hadamard unknown] (97) at (3.75, -1) {$-p$};
+		\node [style=none] (98) at (1.5, 0.5) {};
+		\node [style=none] (99) at (1.5, 1.5) {};
+		\node [style=qutrit hadamard unknown] (100) at (1.5, 1) {$p$};
+		\node [style=none] (101) at (5.5, 1.5) {};
+		\node [style=none] (102) at (4.5, 0.5) {};
+		\node [style=none] (103) at (5.5, 0.5) {};
+		\node [style=none] (104) at (5, 0.5) {};
+		\node [style=none] (105) at (5, 1.5) {};
+		\node [style=qutrit hadamard unknown] (106) at (5, 1) {$p$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right=15, looseness=0.75] (2.center) to (0);
+		\draw [bend right=15, looseness=0.75] (0) to (3.center);
+		\draw [bend right=15, looseness=0.75] (6.center) to (4);
+		\draw [bend right=15, looseness=0.75] (4) to (7.center);
+		\draw [style=bang] (17.center)
+			 to (19.center)
+			 to [bend right=45, looseness=0.75] (18.center)
+			 to (20.center)
+			 to [bend right=45, looseness=0.75] (21.center)
+			 to (15.center)
+			 to [bend right=45, looseness=0.75] (14.center)
+			 to (16.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (49.center)
+			 to (51.center)
+			 to [bend right=45, looseness=0.75] (50.center)
+			 to (52.center)
+			 to [bend right=45, looseness=0.75] (53.center)
+			 to (47.center)
+			 to [bend right=45, looseness=0.75] (46.center)
+			 to (48.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=hadamard edge] (0) to (65);
+		\draw [style=hadamard adjoint adge] (65) to (4);
+		\draw [bend right=15, looseness=0.75] (69.center) to (67);
+		\draw [bend right=15, looseness=0.75] (67) to (70.center);
+		\draw [bend right=15, looseness=0.75] (73.center) to (71);
+		\draw [bend right=15, looseness=0.75] (71) to (74.center);
+		\draw [style=bang] (79.center)
+			 to (81.center)
+			 to [bend right=45, looseness=0.75] (80.center)
+			 to (82.center)
+			 to [bend right=45, looseness=0.75] (83.center)
+			 to (77.center)
+			 to [bend right=45, looseness=0.75] (76.center)
+			 to (78.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (88.center)
+			 to (90.center)
+			 to [bend right=45, looseness=0.75] (89.center)
+			 to (91.center)
+			 to [bend right=45, looseness=0.75] (92.center)
+			 to (86.center)
+			 to [bend right=45, looseness=0.75] (85.center)
+			 to (87.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (93.center) to (95.center);
+		\draw [style=bang] (94.center) to (95.center);
+		\draw (67) to (71);
+		\draw (99.center) to (98.center);
+		\draw [style=bang] (101.center) to (103.center);
+		\draw [style=bang] (102.center) to (103.center);
+		\draw (105.center) to (104.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (13) at (0, 1) {...};
+		\node [style=none] (14) at (-1, 1.5) {};
+		\node [style=none] (15) at (1, 1.5) {};
+		\node [style=Z phase dot] (16) at (0, 0) {$\alpha$};
+		\node [style=none] (17) at (0, -1.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right, looseness=0.75] (16) to (15.center);
+		\draw [bend left, looseness=0.75] (16) to (14.center);
+		\draw [in=180, out=-150, looseness=1.50] (16) to (17.center);
+		\draw [in=0, out=-30, looseness=1.50] (16) to (17.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

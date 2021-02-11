@@ -1,0 +1,243 @@
+
+\section{Spider Elimination Rules for Qutrit ZX}
+
+Now we prove the three elimination theorems for $\mathcal{M}$-, $\mathcal{N}$- and \Pspiders. First, we require two lemmas.
+
+\begin{lemma}\label{lem:leg_flip}
+	The following `leg flip' equation holds in the qutrit ZX-calculus. Moreover, it holds with the roles of green and red swapped.
+	\begin{equation*}
+		\tikzfig{leg_flip/1} = \tikzfig{leg_flip/5}
+	\end{equation*}
+	\begin{proof}
+		\begin{equation*}
+			\tikzfig{leg_flip/1} \ \xeq{\qutritRuleFusion} \ 
+			\tikzfig{leg_flip/2} \ \xeq{\qutritRuleSnake} \ 
+			\tikzfig{leg_flip/3} \ \xeq{\qutritRuleColourChange} \  
+			\tikzfig{leg_flip/4} \ \xeq{\qutritRuleColourChange} \  
+			\tikzfig{leg_flip/5}
+		\end{equation*}
+	\end{proof}
+\end{lemma}
+
+\begin{lemma}\label{lem:substantial_m_copy}
+	The following more substantial `$\mathcal{M}$-copy' rule holds in the qutrit ZX-calculus, for any \Mspider\ state (i.e. $m \in \{0, 1, 2\}$ below). Moreover, it holds with the roles of green and red swapped.
+	\begin{equation*}
+		\tikzfig{m_copies/full/1} = \tikzfig{m_copies/full/4}
+	\end{equation*}
+	\begin{proof}
+		First we prove that an \Mspider\ with non-trivial phase (i.e. $m \in \{1, 2\}$) satisfies a copy rule exactly like the rule $\qutritRuleZeroCopy$:
+		\begin{equation}\label{eq:non_trivial_m_copy}
+			\tikzfig{m_copies/part_1/1} \ \xeq{\qutritRuleFusion} \ 
+			\tikzfig{m_copies/part_1/2} \ \xeq{\qutritRuleMCopy} \ 
+			\tikzfig{m_copies/part_1/3} \ \xeq{\qutritRuleZeroCopy} \ 
+			\tikzfig{m_copies/part_1/4} \ \xeq{\qutritRuleFusion} \ 
+			\tikzfig{m_copies/part_1/5}
+		\end{equation}
+		Then we prove the case $\alpha = \beta = 0$ by induction:
+		\begin{equation}\label{eq:m_copy_through_trivial}
+			\tikzfig{m_copies/part_2/1} \ \xeq{\qutritRuleFusion} \ 
+			\tikzfig{m_copies/part_2/2} \ \xeq{\eqref{eq:non_trivial_m_copy}} \ 
+			\tikzfig{m_copies/part_2/3} \ \xeq{\text{ind.}} \ 
+			\tikzfig{m_copies/part_2/4}
+		\end{equation}
+		Which finally allows us to prove the full statement, where the last equality is just dropping the scalar term:
+		\begin{equation*}
+			\tikzfig{m_copies/full/1} \ \xeq{\qutritRuleFusion} \ 
+			\tikzfig{m_copies/full/2} \ \xeq{\eqref{eq:m_copy_through_trivial}} \ 
+			\tikzfig{m_copies/full/3} \ = \
+			\tikzfig{m_copies/full/4}
+		\end{equation*}
+	\end{proof}
+\end{lemma}
+
+We are now in a position to prove the \Mspider\ elimination theorem.
+
+\begin{theorem}\label{thm:eliminate_M_spiders_appendix} \textbf{/\ Theorem~\ref{thm:eliminate_M_spiders}.}
+	Given any graph-like ZX-diagram containing two interior \Mspiders\ $i$ and $j$ connected by edge $ij$ of weight $w_{i,j} \eqdef w \in \{1,2\}$, suppose we perform a proper $\pm w$-local pivot along $ij$ (both choices give the same result). For the case $w=1$, the new ZX-diagram is related to the old one by the following equality:
+	
+	\begin{equation*}
+		\tikzfig{eliminate/M_spiders/bang/w_1/LHS}
+	\end{equation*}
+	\vspace{10pt}
+	\begin{equation*}
+	 	= \quad \tikzfig{eliminate/M_spiders/bang/w_1/RHS}
+	\end{equation*}
+	
+	The case $w=2$ differs only as follows: in the first diagram (the left hand side of the equation), the edge $ij$ is purple (by definition), while in the lower diagram (the right hand side of the equation), a $\pm 2 = \mp 1$ will replace all occurences of $\pm 1$, and the roles of purple and blue will be swapped throughout.
+
+	\begin{proof}
+		We show the case where $w_{ij} \eqdef w = 1$, with the case $w = 2$ being completely analogous. We can choose either a proper $1$-local pivot or a proper $2$-local pivot; both give the same result. Here we only show the former:
+		\begingroup
+			\allowdisplaybreaks
+			\setlength{\jot}{30pt}
+			\begin{align*}
+				&\ &&\tikzfig{eliminate/M_spiders/bang/w_1/1} \\
+				&\xeq{\qutritRuleFusion} 
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/2} \\
+				&\xeq{\ref{thm:local_pivot_equality_appendix}} 
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/3} \\
+				&\xeq{\qutritRuleColourChange}
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/4} \\
+				&\xeq{\ref{lem:leg_flip}}
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/5} \\
+				&\xeq{\ref{lem:substantial_m_copy}}
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/6} \\
+				&= 
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/7} \\
+				&\xeq{\qutritRuleColourChange}
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/8} \\
+				&\xeq{\qutritRuleFusion}
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/9} \\
+			\end{align*}
+		\endgroup
+	\end{proof}
+\end{theorem}
+
+Proving the corresponding \Nspider\ elimination theorem requires a further lemma, which allows us to turn an \Nspider\ state of one colour into an \Nspider\ state of the other.
+
+\begin{lemma}\label{lem:N_state_colour_change}
+	The following rules hold in the qutrit ZX-calculus:
+	\begin{equation*}
+		\tikzfig{n_states/0_1/z} \ = \ \tikzfig{n_states/0_1/x} \ , \qquad
+		\tikzfig{n_states/0_2/z} \ = \ \tikzfig{n_states/0_2/x} \ , \qquad
+		\tikzfig{n_states/1_0/z} \ = \ \tikzfig{n_states/1_0/x} \ , \qquad
+		\tikzfig{n_states/2_0/z} \ = \ \tikzfig{n_states/2_0/x}
+	\end{equation*}
+	\begin{proof}
+		The key observation is that for any green \Nspider\ state with phase $\qutritZphase{n}{n'}$, we have a choice of two colour change rules which we could use to turn it into a red \Nspider\ state with a $H$- or $H^\dagger$-box on top:
+		
+		\begin{equation*}
+			\tikzfig{n_states/general/x_n_n'} \ \xeq{\qutritRuleColourChange} \ 
+			\tikzfig{n_states/general/z_n_n'} \ \xeq{\qutritRuleColourChange} \ 
+			\tikzfig{n_states/general/x_n'_n}
+		\end{equation*}
+
+		Of these two choices, exactly one has a decomposition of of the $H$-/$H^\dagger$-box as in \eqref{eq:qutrit_hadamard_decompositions} that allows the bottom two red spiders to fuse into an \Mspider, which we can then move past the green spider above it via \ref{lem:substantial_m_copy}. For brevity we only show the case $\qutritZphase{n}{n'} = \qutritZphase{0}{1}$:
+
+		\begin{equation*}
+			\tikzfig{n_states/0_1/1} \ \ \xeq{\qutritRuleColourChange} \ \ 
+			\tikzfig{n_states/0_1/2} \ \ \xeq{\eqref{eq:qutrit_hadamard_decompositions}} \ \ 
+			\tikzfig{n_states/0_1/3} \ \ \xeq{\qutritRuleFusion} \ \ 
+			\tikzfig{n_states/0_1/4} \ \ \xeq{\ref{lem:substantial_m_copy}} \ \ 
+			\tikzfig{n_states/0_1/5} \ \ \xeq{\qutritRuleFusion} \ \ 
+			\tikzfig{n_states/0_1/6}
+		\end{equation*}
+	\end{proof}
+\end{lemma}
+
+\begin{corollary}\label{cor:N_effect}
+	The following equations hold in the qutrit ZX-calculus:
+	\begin{equation*}
+		\tikzfig{n_states/corollary/0_n/lhs} \ = \ \tikzfig{n_states/corollary/0_n/rhs} \ , \qquad
+		\tikzfig{n_states/corollary/n_0/lhs} \ = \ \tikzfig{n_states/corollary/n_0/rhs}
+	\end{equation*}
+	\begin{proof}
+		Again we only prove one case, the rest being analogous. Each case uses \ref{lem:N_state_colour_change} in its adjoint form - recall that the adjoint of a spider is found by swapping inputs and outputs and negating angles.
+		\begin{equation*}
+			\tikzfig{n_states/corollary/0_1/1} \ \ = \ \ 
+			\tikzfig{n_states/corollary/0_1/2} \ \ \xeq{\ref{lem:N_state_colour_change}} \ \ 
+			\tikzfig{n_states/corollary/0_1/3} \ \ \xeq{\qutritRuleFusion} \ \ 
+			\tikzfig{n_states/corollary/0_1/4} \ \ = \ \ 
+			\tikzfig{n_states/corollary/0_1/5}
+		\end{equation*}
+	\end{proof}
+\end{corollary}
+
+\begin{theorem}\label{thm:eliminate_N_spiders_appendix} \textbf{/\ Theorem~\ref{thm:eliminate_N_spiders}.}
+	Given any graph-like ZX-diagram containing an interior \Nspider\ $k$ with phase \qutritZphase{0}{n} for $n \in \{1,2\}$, suppose we perform a $(-n)$-local complementation at $k$. Then the new ZX-diagram is related to the old one by the equality:
+
+	\begin{equation*}
+		\tikzfig{eliminate/N_spiders/0_n/step_1} \quad = \quad \tikzfig{eliminate/N_spiders/0_n/step_9}
+	\end{equation*}
+
+	where all changes to weights of edges where neither endpoint is $k$ are omitted. If instead $k$ has phase \qutritZphase{n}{0} for $n \in \{1,2\}$, suppose we perform the same $(-n)$-local complementation at $k$. Then the equality relating the new and old diagrams becomes:
+
+	% Spiders with phases \qutritZphase{a_1}{b_1} ... \qutritZphase{a_r}{b_r} are all the neighbours of $k$ connected by a $1$-weighted (blue) edge, while spider with phases \qutritZphase{c_1}{d_1} ... \qutritZphase{c_s}{d_s} are all the neighbours of $k$ connected by a $2$-weighted (purple) edge.\newline
+
+	\begin{equation*}
+		\tikzfig{eliminate/N_spiders/n_0/step_1} \quad = \quad \tikzfig{eliminate/N_spiders/n_0/step_9}
+	\end{equation*}
+
+	\begin{proof}
+		We prove the case where $k$ has phase \qutritZphase{0}{n} for $n \in \{1,2\}$, the other case being near-identical.
+		\begingroup
+			\allowdisplaybreaks
+			\setlength{\jot}{20pt}
+				\begin{align*}
+					&\ &&\tikzfig{eliminate/N_spiders/0_n/step_1} 
+					&&&\xeq{\qutritRuleFusion} 
+					&&&&\tikzfig{eliminate/N_spiders/0_n/step_2} \\
+					&\xeq{\ref{thm:local_comp_equality}} 
+					&&\tikzfig{eliminate/N_spiders/0_n/step_3} 
+					&&&\xeqq{\ref{cor:N_effect}}{\qutritRuleFusion} 
+					&&&&\tikzfig{eliminate/N_spiders/0_n/step_4} \\
+					&\xeq{\ref{lem:leg_flip}} 
+					&&\tikzfig{eliminate/N_spiders/0_n/step_5} 
+					&&&\xeq{\ref{lem:substantial_m_copy}} 
+					&&&&\tikzfig{eliminate/N_spiders/0_n/step_6} \\
+					&\xeq{\eqref{eq:qutrit_dashed_lines}}
+					&&\tikzfig{eliminate/N_spiders/0_n/step_7} 
+					&&&\xeq{\qutritRuleColourChange} 
+					&&&&\tikzfig{eliminate/N_spiders/0_n/step_8} \\
+					&\xeq{\qutritRuleFusion} 
+					&&\tikzfig{eliminate/N_spiders/0_n/step_9} \\
+				\end{align*}
+		\endgroup
+	\end{proof}
+\end{theorem}
+
+Similarly the corresponding \Pspider\ elimination theorem requires a lemma allowing us to turn a \Pspider\ state of one colour into a \Pspider\ state of the other. As above, we will use this lemma its adjoint form in the proof of the main theorem.
+
+\begin{lemma}\label{lem:P_state_colour_change}
+	The following rule holds in the qutrit ZX-calculus:
+	\begin{equation*}
+		\tikzfig{p_state/1} \ = \ \tikzfig{p_state/6}
+	\end{equation*}
+	\begin{proof}
+		The proof structure is exactly as in \ref{lem:N_state_colour_change}, only for \Pspiders\ it's even simpler:
+		\begin{equation*}
+			\tikzfig{p_state/1} \ \ \xeq{\qutritRuleColourChange} \ \ 
+			\tikzfig{p_state/2} \ \ \xeq{\eqref{eq:qutrit_hadamard_decompositions}} \ \ 
+			\tikzfig{p_state/3} \ \ \xeq{\qutritRuleFusion} \ \ 
+			\tikzfig{p_state/4} \ \ \xeq{\ref{lem:substantial_m_copy}} \ \ 
+			\tikzfig{p_state/5} \ \ \xeq{\qutritRuleFusion} \ \ 
+			\tikzfig{p_state/6}
+		\end{equation*}
+	\end{proof}
+\end{lemma}
+
+\begin{theorem}\label{thm:eliminate_P_spiders_appendix} \textbf{/\ Theorem~\ref{thm:eliminate_P_spiders}.} 
+	Given any graph-like ZX-diagram containing an interior \Pspider\ $k$ with phase \qutritZphase{p}{p} for $p \in \{1,2\}$, suppose we perform a $p$-local complementation at $k$. Then the new ZX-diagram is related to the old one by the equality:
+
+	\begin{equation*}
+		\tikzfig{eliminate/P_spiders/step_1} \quad = \quad \tikzfig{eliminate/P_spiders/step_9}
+	\end{equation*}
+
+	where all changes to weights of edges where neither endpoint is $k$ are omitted. 
+
+	\begin{proof}
+		\begingroup
+			\allowdisplaybreaks
+			\setlength{\jot}{20pt}
+				\begin{align*}
+					&\ &&\tikzfig{eliminate/P_spiders/step_1} 
+					&&&\xeq{\qutritRuleFusion} 
+					&&&&\tikzfig{eliminate/P_spiders/step_2} \\
+					&\xeq{\ref{thm:local_comp_equality}} 
+					&&\tikzfig{eliminate/P_spiders/step_3} 
+					&&&\xeqq{\ref{lem:P_state_colour_change}}{\qutritRuleFusion} 
+					&&&&\tikzfig{eliminate/P_spiders/step_4} \\
+					&\xeq{\ref{lem:leg_flip}} 
+					&&\tikzfig{eliminate/P_spiders/step_5} 
+					&&&\xeq{\ref{lem:substantial_m_copy}} 
+					&&&&\tikzfig{eliminate/P_spiders/step_6} \\
+					&\xeq{\eqref{eq:qutrit_dashed_lines}}
+					&&\tikzfig{eliminate/P_spiders/step_7} 
+					&&&\xeq{\qutritRuleColourChange} 
+					&&&&\tikzfig{eliminate/P_spiders/step_8} \\
+					&\xeq{\qutritRuleFusion} 
+					&&\tikzfig{eliminate/P_spiders/step_9} \\
+				\end{align*}
+		\endgroup
+	\end{proof}
+\end{theorem}

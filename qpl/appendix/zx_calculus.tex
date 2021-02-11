@@ -1,0 +1,157 @@
+\section{Qubit ZX Calculus}
+
+The well-known rewrite rules of the qubit ZX calculus are shown in Fig.\ref{fig:qubit_ZX_rules}.
+
+\begin{figure}
+	\begin{tcolorbox}[colback=white]
+		\begin{equation*}
+		\vspace{-5pt}
+			\tikzfig{qubit_rules/fusion/lhs} \ = \ 
+			\tikzfig{qubit_rules/fusion/rhs} \quad \hypertarget{qubit_rule_fusion}{\mathbf{(f)}}
+			\hspace{50pt}
+			\tikzfig{qubit_rules/bialgebra/lhs} \ = \
+			\tikzfig{qubit_rules/bialgebra/rhs} \quad \hypertarget{qubit_rule_bialgebra}{\mathbf{(b)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qubit_rules/identity/lhs} \ = \
+			\tikzfig{qubit_rules/identity/rhs} \quad \hypertarget{qubit_rule_id}{\mathbf{(id)}}
+			\hspace{50pt}
+			\tikzfig{qubit_rules/hadamard/lhs} \ = \
+			\tikzfig{qubit_rules/hadamard/rhs} \quad \hypertarget{qubit_rule_hadamard}{\mathbf{(H)}}
+			\hspace{50pt}
+			\tikzfig{qubit_rules/colour_change/lhs} \ = \
+			\tikzfig{qubit_rules/colour_change/rhs} \quad \hypertarget{qubit_rule_colour_change}{\mathbf{(cc)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qubit_rules/copy/lhs} \ = \ \
+			\tikzfig{qubit_rules/copy/rhs} \quad \hypertarget{qubit_rule_copy}{\mathbf{(cp)}}
+			\hspace{50pt}
+			\tikzfig{qubit_rules/pi/lhs} \ = \
+			\tikzfig{qubit_rules/pi/rhs} \quad \hypertarget{qubit_rule_pi}{(\bm{\pi})}
+		\end{equation*}
+		\vspace{3pt}
+	\end{tcolorbox}
+	\vspace{5pt}
+	\caption{Rewrite rules for the qubit ZX-calculus where spiders are interpreted as tensors over $\mathbb{C}$.}
+	\label{fig:qubit_ZX_rules}
+	\vspace{-1pt}
+\end{figure}
+
+\section{Qutrit ZX calculus}
+
+
+We now give a full set of rules defining the qutrit ZX-calculus. Our presentation aims for clarity and accessibility; for a more rigourous description, see \cite{harny_completeness}.
+
+\begin{figure}
+	\begin{tcolorbox}[colback=white]
+		\begin{equation*}
+			% \tikzfig{qutrit_rules/fusion/lhs} \quad = \quad 
+			% \tikzfig{qutrit_rules/fusion/middle} \quad = \quad 
+			% \tikzfig{qutrit_rules/fusion/rhs} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
+			\tikzfig{qutrit_rules/fusion/all} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/identity/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/identity/rhs} \quad \hypertarget{qutrit_rule_id}{\mathbf{(id)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/twisted_cup/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/twisted_cup/rhs} \quad \hypertarget{qutrit_rule_twisted_cup}{\mathbf{(t)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/0_copy/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/0_copy/rhs} \quad \hypertarget{qutrit_rule_0_copy}{\mathbf{(cp_0)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/bialgebra/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/bialgebra/rhs} \quad \hypertarget{qutrit_rule_bialgebra}{\mathbf{(b)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/m_copy/1_2_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/m_copy/1_2_rhs} \quad \hypertarget{qutrit_rule_m_copy}{\mathbf{(cp_{\mathcal{M}})}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/m_copy/2_1_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/m_copy/2_1_rhs} \quad \mathbf{(cp_{\mathcal{M}})}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/commute/1_2_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/commute/1_2_rhs} \quad \hypertarget{qutrit_rule_commute}{\mathbf{(cm)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/commute/2_1_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/commute/2_1_rhs} \quad {\mathbf{(cm)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/hadamard/h_hdagger} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/identity} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/hdagger_h} \quad \hypertarget{qutrit_rule_hadamard}{\mathbf{(H)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/hadamard/euler/h} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/euler/decomposition} \quad \hypertarget{qutrit_rule_euler}{\mathbf{(E)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/colour_change/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/colour_change/rhs} \quad \hypertarget{qutrit_rule_colour_change}{\mathbf{(cc)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/colour_change/flip_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/colour_change/flip_rhs} \quad \mathbf{(cc)}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/snake/snake} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hopf_ish} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hadamards} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hadamard_adjoints} \quad \hypertarget{qutrit_rule_snake}{\mathbf{(s)}}
+		\end{equation*}
+	\end{tcolorbox}
+	\vspace{5pt}
+	\caption{Rewrite rules for the qutrit ZX-calculus.}
+	\label{fig:qutrit_ZX_rules}
+\end{figure}
+
+\begin{definition}\label{def:qutrit_ZX_rules}
+	The \textit{qutrit ZX-calculus} is a graphical calculus generated by the following diagrams, where $\alpha, \beta \in [0, 2 \pi]$:
+
+	\begin{equation}
+		\tikzfig{qutrit_generators/spiders/Z_a_b} \quad , \qquad 
+		\tikzfig{qutrit_generators/spiders/X_a_b} \quad , \qquad
+		\tikzfig{qutrit_generators/hadamard} \quad , \qquad
+		\tikzfig{qutrit_generators/swap} \quad , \qquad
+		\tikzfig{qutrit_generators/identity}
+	\end{equation}
+
+	and their adjoints $(-)^\dagger$. The non-spider generators' adjoints are their vertical reflections, whereas spiders' adjoints are found by swapping inputs and outputs and negating angles: 
+
+	\begin{equation}
+		\left(\ \tikzfig{qutrit_generators/spiders/Z_a_b_labelled}\ \right)^\dagger = \tikzfig{qutrit_generators/spiders/Z_a_b_adjoint_labelled} \quad , \qquad 
+		\left(\ \tikzfig{qutrit_generators/spiders/X_a_b_labelled}\ \right)^\dagger = \tikzfig{qutrit_generators/spiders/X_a_b_adjoint_labelled}
+	\end{equation}
+
+	These generators can be composed in parallel ($\otimes$) and sequentially ($\circ$), and the resulting diagrams are governed by the rewrite rules in Figure \ref{fig:qutrit_ZX_rules}, wherein addition is modulo $2\pi$. The fusion rule $\qutritRuleFusion$ applies to spiders of the same colour connected by at least one wire. Importantly, all the rules hold under taking adjoints, where for diagrams $D$ and $E$ we have:
+
+	\begin{equation}
+		(D \otimes E)^\dagger = D^\dagger \otimes E^\dagger
+	\end{equation}
+	\begin{equation}
+		(D \circ E)^\dagger = D^\dagger \circ E^\dagger
+	\end{equation}
+
+	Furthermore, all but the commutation equations $\qutritRuleCommute$ and the colour change equations $\qutritRuleColourChange$ continue to hold when the roles of green and red (i.e. $Z$ and $X$) are interchanged. For these four exceptions, however, analogous equations can be derived from the existing ones; for example, the corresponding colour change equations will be relevant for us later.
+\end{definition}
+	
+\begin{proposition}
+	The following equations are derivable in the qutrit ZX-calculus:
+	\begin{equation}\label{eq:derived_colour_change}
+		\tikzfig{qutrit_rules/exceptions/colour_change/rhs} \quad = \quad \tikzfig{qutrit_rules/exceptions/colour_change/lhs}
+		\quad , \qquad
+		\tikzfig{qutrit_rules/exceptions/colour_change/flip_rhs} \quad = \quad \tikzfig{qutrit_rules/exceptions/colour_change/flip_lhs}
+	\end{equation}
+	\begin{proof}
+		Add $H$- and $H^\dagger$-boxes to both sides of the original colour change equations in such a way that we can then cancel Hadamards on the legs of the red spiders via $\qutritRuleHadamard$.
+	\end{proof}
+\end{proposition}

@@ -1,0 +1,127 @@
+\section{PM-Boxes in ZX Language}
+\label{app:pmboxes}
+
+We begin with proofs of the translations of the matrix $T_{\pm}^{(q)}$ into the ZX-calculus. 
+
+\begin{proposition}\label{prop:pm_maps_zx_appendix} \textbf{/\ Propositions~\ref{prop:pm_map_q2_q4}, \ref{prop:pm_map_q3}.}
+	The following equalities hold up to a scalar under the standard interpretation:
+	\begin{equation*}
+		\left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket \simeq \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=2} \ , \qquad
+		\left\llbracket \ \tikzfig{pm_maps/q3} \ \right\rrbracket \simeq \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=3} \ , \quad
+		\left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket \simeq \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=4}
+	\end{equation*}
+
+	\begin{proof}
+		Recalling $\omega = e^{i\frac{2\pi}{3}}$, the standard interpretations of phase gates in matrix form are:
+		
+		\begin{equation*}
+			\left\llbracket \ \tikzfig{pm_maps/qubit/Z_phase} \ \right\rrbracket = 
+			\begin{pmatrix}
+				1 & 0 \\
+				0 & e^{i\alpha}
+			\end{pmatrix} \ , \quad
+			\left\llbracket \ \tikzfig{pm_maps/qubit/X_phase} \ \right\rrbracket = 
+			\frac{1}{2} \begin{pmatrix}
+				1 + e^{i\alpha} & 1 - e^{i\alpha} \\
+				1 - e^{i\alpha} & 1 + e^{i\alpha}
+			\end{pmatrix} \ , \quad
+			\left\llbracket \ \tikzfig{pm_maps/qutrit/Z_phase} \ \right\rrbracket = 
+			\begin{pmatrix}
+				1 & 0 & 0\\
+				0 & e^{i\alpha} & 0 \\
+				0 & 0 & e^{i\beta}
+			\end{pmatrix}
+		\end{equation*}
+		\begin{equation*}
+			\left\llbracket \ \tikzfig{pm_maps/qutrit/X_phase} \ \right\rrbracket = 
+			\frac{1}{3} \begin{pmatrix}
+				1 + e^{i\alpha} + e^{i\beta} & 1 + \bar{\omega}e^{i\alpha} + {\omega}e^{i\beta} & 1 + {\omega}e^{i\alpha} + \bar{\omega}e^{i\beta} \\
+				1 + {\omega}e^{i\alpha} + \bar{\omega}e^{i\beta} & 1 + e^{i\alpha} + e^{i\beta} & 1 + \bar{\omega}e^{i\alpha} + {\omega}e^{i\beta} \\
+				1 + \bar{\omega}e^{i\alpha} + {\omega}e^{i\beta} & 1 + {\omega}e^{i\alpha} + \bar{\omega}e^{i\beta} & 1 + e^{i\alpha} + e^{i\beta} \\
+			\end{pmatrix}
+		\end{equation*}
+
+		So in the simplest case $q=2$ it is fairly straightforward to see that:
+
+		\begin{equation}
+			\left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket \ = \ 
+			\frac{1}{2} \begin{pmatrix}
+				1 \pm i & 1 \mp i \\
+				1 \mp i & 1 \pm i \\
+			\end{pmatrix} \ = \ 
+			\frac{\sqrt{2}}{2} e^{\mp i \frac{\pi}{4}} \begin{pmatrix}
+				\pm i & 1 \\
+				1 & \pm i \\
+			\end{pmatrix} \ = \ 
+			\frac{\sqrt{2}}{2} e^{\mp i \frac{\pi}{4}} \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=2}
+		\end{equation}
+
+		The next case $q=3$ is proved similarly:
+
+		\begin{equation}
+		\begin{aligned}
+				\left\llbracket \ \tikzfig{pm_maps/q3} \ \right\rrbracket
+				&= \frac{1}{3} \begin{pmatrix}
+					1 + e^{\pm i\frac{2\pi}{3}} + e^{\pm i\frac{2\pi}{3}} & 1 + \bar{\omega}e^{\pm i\frac{2\pi}{3}} + {\omega}e^{\pm i\frac{2\pi}{3}} & 1 + {\omega}e^{\pm i\frac{2\pi}{3}} + \bar{\omega}e^{\pm i\frac{2\pi}{3}} \\
+					1 + {\omega}e^{\pm i\frac{2\pi}{3}} + \bar{\omega}e^{\pm i\frac{2\pi}{3}} & 1 + e^{\pm i\frac{2\pi}{3}} + e^{\pm i\frac{2\pi}{3}} & 1 + \bar{\omega}e^{\pm i\frac{2\pi}{3}} + {\omega}e^{\pm i\frac{2\pi}{3}} \\
+					1 + \bar{\omega}e^{\pm i\frac{2\pi}{3}} + {\omega}e^{\pm i\frac{2\pi}{3}} & 1 + {\omega}e^{\pm i\frac{2\pi}{3}} + \bar{\omega}e^{\pm i\frac{2\pi}{3}} & 1 + e^{\pm i\frac{2\pi}{3}} + e^{\pm i\frac{2\pi}{3}} \\
+				\end{pmatrix} \\
+				&= \frac{1}{3} \begin{pmatrix}
+					\sqrt{3}e^{\pm i\frac{\pi}{2}} & \sqrt{3}e^{\mp i\frac{\pi}{6}} & \sqrt{3}e^{\mp i\frac{\pi}{6}} \\
+					\sqrt{3}e^{\mp i\frac{\pi}{6}} & \sqrt{3}e^{\pm i\frac{\pi}{2}} & \sqrt{3}e^{\mp i\frac{\pi}{6}} \\
+					\sqrt{3}e^{\mp i\frac{\pi}{6}} & \sqrt{3}e^{\mp i\frac{\pi}{6}} & \sqrt{3}e^{\pm i\frac{\pi}{2}} \\
+				\end{pmatrix} \\
+				&= \frac{\sqrt{3}}{3} e^{\mp i\frac{\pi}{6}}\begin{pmatrix}
+					e^{\pm i\frac{2\pi}{3}} & 1 & 1 \\
+					1 & e^{\pm i\frac{2\pi}{3}} & 1 \\
+					1 & 1 & e^{\pm i\frac{2\pi}{3}} \\
+				\end{pmatrix} \\
+				&= \frac{\sqrt{3}}{3} e^{\mp i\frac{\pi}{6}} \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=3}
+			\end{aligned}
+		\end{equation}
+
+		For the other qubit case $q=4$ we first note:
+
+		\begin{equation}
+			\left\llbracket \ \tikzfig{qubit_hadamard/yellow_box} \ \right\rrbracket = 
+			\left\llbracket \ \tikzfig{qubit_hadamard/decomposed} \ \right\rrbracket =
+			\left\llbracket \ \qubitZphase{\frac{\pi}{2}} \ \right\rrbracket
+			\left\llbracket \ \qubitXphase{\frac{\pi}{2}} \ \right\rrbracket
+			\left\llbracket \ \qubitZphase{\frac{\pi}{2}} \ \right\rrbracket = 
+			\frac{1}{2\sqrt{2}} \begin{pmatrix}
+				1 & 1 \\
+				1 & -1 \\
+			\end{pmatrix}
+		\end{equation}
+
+		Then using the standard interpretation for spiders (Definition \ref{def:qubit_standard_spiders}) we decompose the diagram in such a way that we can apply the standard interpretation:
+
+		\begingroup
+			\allowdisplaybreaks
+				\begin{align*}
+					\left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket 
+					&= \left\llbracket \ \tikzfig{pm_maps/q4/decomposed} \ \right\rrbracket \\
+					&= \left(
+						\left\llbracket \ \tikzfig{pm_maps/q4/id} \ \right\rrbracket \otimes 
+						\left\llbracket \ \tikzfig{pm_maps/q4/pi_compare} \ \right\rrbracket
+					\right)
+					\left(
+						\left\llbracket \ \tikzfig{pm_maps/q4/id} \ \right\rrbracket \otimes 
+						\left\llbracket \ \tikzfig{pm_maps/q4/hadamard} \ \right\rrbracket \otimes 
+						\left\llbracket \ \tikzfig{pm_maps/q4/id} \ \right\rrbracket 
+					\right)
+					\left(
+						\left\llbracket \ \tikzfig{pm_maps/q4/pi_copy} \ \right\rrbracket \otimes 
+						\left\llbracket \ \tikzfig{pm_maps/q4/id} \ \right\rrbracket
+					\right) \\
+					&= \frac{\sqrt{2}}{8} \begin{pmatrix}
+						-1 & 1 & 1 & 1 \\
+						1 & -1 & 1 & 1 \\
+						1 & 1 & -1 & 1 \\
+						1 & 1 & 1 & -1 \\
+					\end{pmatrix} \\
+					&= \frac{\sqrt{2}}{8} \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{q=4}
+				\end{align*}
+		\endgroup
+	\end{proof}
+\end{proposition}

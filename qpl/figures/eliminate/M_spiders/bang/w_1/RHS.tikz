@@ -1,0 +1,256 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (2.875, 5.25) {...};
+		\node [style=none] (1) at (1.875, 5.5) {};
+		\node [style=none] (2) at (3.875, 5.5) {};
+		\node [style=none] (3) at (8.5, 3.75) {...};
+		\node [style=none] (4) at (7.5, 4) {};
+		\node [style=none] (5) at (9.5, 4) {};
+		\node [style=none] (6) at (10.75, 0) {...};
+		\node [style=none] (7) at (9.75, 0.25) {};
+		\node [style=none] (8) at (11.75, 0.25) {};
+		\node [style=none] (9) at (10.75, -3.5) {...};
+		\node [style=none] (10) at (9.75, -3.25) {};
+		\node [style=none] (11) at (11.75, -3.25) {};
+		\node [style=none] (12) at (-2.875, 5.25) {...};
+		\node [style=none] (13) at (-1.875, 5.5) {};
+		\node [style=none] (14) at (-3.875, 5.5) {};
+		\node [style=none] (15) at (-8.5, 3.75) {...};
+		\node [style=none] (16) at (-7.5, 4) {};
+		\node [style=none] (17) at (-9.5, 4) {};
+		\node [style=none] (18) at (-10.75, 0) {...};
+		\node [style=none] (19) at (-9.75, 0.25) {};
+		\node [style=none] (20) at (-11.75, 0.25) {};
+		\node [style=qutrit Z phase rectangle] (21) at (-8.5, 2.5) {$\alpha_k^{11} \mp 1 + m_j + m_i$ \nodepart{second} $\beta_k^{11} \mp 1 - m_j - m_i$};
+		\node [style=qutrit Z phase rectangle] (22) at (-2.875, 4) {$\alpha_k^{12} \pm 1 + m_j - m_i$ \nodepart{second} $\beta_k^{12} \pm 1 - m_j + m_i$};
+		\node [style=qutrit Z phase rectangle] (23) at (2.875, 4) {$\alpha_k^{21}  \pm 1 - m_j + m_i$ \nodepart{second} $\beta_k^{21} \pm 1 + m_j - m_i$};
+		\node [style=qutrit Z phase rectangle] (24) at (8.5, 2.5) {$\alpha_k^{22} \mp 1 - m_j - m_i$ \nodepart{second} $\beta_k^{22} \mp 1 + m_j + m_i$};
+		\node [style=qutrit Z phase rectangle] (25) at (10.75, -1.25) {$\alpha_{k}^{01} + m_i$ \nodepart{second} $\beta_{k}^{01} - m_i$};
+		\node [style=qutrit Z phase rectangle] (26) at (10.75, -4.75) {$\alpha_{k}^{02} - m_i$ \nodepart{second} $\beta_{k}^{02} + m_i$};
+		\node [style=qutrit Z phase rectangle] (27) at (-10.75, -4.75) {$\alpha_k^{10} + m_j$ \nodepart{second} $\beta_k^{10} - m_j$};
+		\node [style=qutrit Z phase rectangle] (28) at (-10.75, -1.25) {$\alpha_k^{20} - m_j$ \nodepart{second} $\beta_k^{20} + m_j$};
+		\node [style=none] (29) at (-10.75, -3.5) {...};
+		\node [style=none] (30) at (-9.75, -3.25) {};
+		\node [style=none] (31) at (-11.75, -3.25) {};
+		\node [style=none] (36) at (10.25, -1.5) {};
+		\node [style=none] (41) at (10, -5) {};
+		\node [style=none] (46) at (-10, -1.5) {};
+		\node [style=none] (51) at (-10, -5) {};
+		\node [style=none] (66) at (2.875, 3.5) {};
+		\node [style=none] (71) at (-2.875, 3.5) {};
+		\node [style=none] (101) at (8, 2) {};
+		\node [style=none] (103) at (-8, 2) {};
+		\node [style=none] (124) at (10.75, -2.675) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{02}]}$}};
+		\node [style=none] (125) at (10.75, 0.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{01}]}$}};
+		\node [style=none] (126) at (8.5, 4.625) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{22}]}$}};
+		\node [style=none] (127) at (-2.875, 6.125) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{12}]}$}};
+		\node [style=none] (128) at (2.875, 6.125) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{21}]}$}};
+		\node [style=none] (129) at (-8.5, 4.625) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{11}]}$}};
+		\node [style=none] (130) at (-10.875, 0.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{20}]}$}};
+		\node [style=none] (131) at (-10.5, -2.675) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{10}]}$}};
+		\node [style=none] (132) at (-12, -5.75) {};
+		\node [style=none] (133) at (-12.25, -5.5) {};
+		\node [style=none] (134) at (-9.5, -5.75) {};
+		\node [style=none] (135) at (-9.25, -5.5) {};
+		\node [style=none] (136) at (-9.5, -3) {};
+		\node [style=none] (137) at (-9.25, -3.25) {};
+		\node [style=none] (138) at (-12, -3) {};
+		\node [style=none] (139) at (-12.25, -3.25) {};
+		\node [style=none] (140) at (-12, -2.25) {};
+		\node [style=none] (141) at (-12.25, -2) {};
+		\node [style=none] (142) at (-9.5, -2.25) {};
+		\node [style=none] (143) at (-9.25, -2) {};
+		\node [style=none] (144) at (-9.5, 0.5) {};
+		\node [style=none] (145) at (-9.25, 0.25) {};
+		\node [style=none] (146) at (-12, 0.5) {};
+		\node [style=none] (147) at (-12.25, 0.25) {};
+		\node [style=none] (148) at (-10.75, 1.5) {};
+		\node [style=none] (149) at (-11, 1.75) {};
+		\node [style=none] (150) at (-6.25, 1.5) {};
+		\node [style=none] (151) at (-6, 1.75) {};
+		\node [style=none] (152) at (-6.25, 4.25) {};
+		\node [style=none] (153) at (-6, 4) {};
+		\node [style=none] (154) at (-10.75, 4.25) {};
+		\node [style=none] (155) at (-11, 4) {};
+		\node [style=none] (156) at (-11, 3.75) {};
+		\node [style=none] (157) at (-10.5, 4.25) {};
+		\node [style=none] (158) at (-10.5, 3.75) {};
+		\node [style=none] (159) at (-10.75, 3.75) {};
+		\node [style=none] (160) at (6.25, 1.5) {};
+		\node [style=none] (161) at (6, 1.75) {};
+		\node [style=none] (162) at (10.75, 1.5) {};
+		\node [style=none] (163) at (11, 1.75) {};
+		\node [style=none] (164) at (10.75, 4.25) {};
+		\node [style=none] (165) at (11, 4) {};
+		\node [style=none] (166) at (6.25, 4.25) {};
+		\node [style=none] (167) at (6, 4) {};
+		\node [style=none] (168) at (6, 3.75) {};
+		\node [style=none] (169) at (6.5, 4.25) {};
+		\node [style=none] (170) at (6.5, 3.75) {};
+		\node [style=none] (171) at (6.25, 3.75) {};
+		\node [style=none] (172) at (0.625, 3) {};
+		\node [style=none] (173) at (0.375, 3.25) {};
+		\node [style=none] (174) at (5.125, 3) {};
+		\node [style=none] (175) at (5.375, 3.25) {};
+		\node [style=none] (176) at (5.125, 5.75) {};
+		\node [style=none] (177) at (5.375, 5.5) {};
+		\node [style=none] (178) at (0.625, 5.75) {};
+		\node [style=none] (179) at (0.375, 5.5) {};
+		\node [style=none] (180) at (0.375, 5.25) {};
+		\node [style=none] (181) at (0.875, 5.75) {};
+		\node [style=none] (182) at (0.875, 5.25) {};
+		\node [style=none] (183) at (0.625, 5.25) {};
+		\node [style=none] (184) at (-5.125, 3) {};
+		\node [style=none] (185) at (-5.375, 3.25) {};
+		\node [style=none] (186) at (-0.625, 3) {};
+		\node [style=none] (187) at (-0.375, 3.25) {};
+		\node [style=none] (188) at (-0.625, 5.75) {};
+		\node [style=none] (189) at (-0.375, 5.5) {};
+		\node [style=none] (190) at (-5.125, 5.75) {};
+		\node [style=none] (191) at (-5.375, 5.5) {};
+		\node [style=none] (192) at (-5.375, 5.25) {};
+		\node [style=none] (193) at (-4.875, 5.75) {};
+		\node [style=none] (194) at (-4.875, 5.25) {};
+		\node [style=none] (195) at (-5.125, 5.25) {};
+		\node [style=none] (196) at (9.5, -2.25) {};
+		\node [style=none] (197) at (9.25, -2) {};
+		\node [style=none] (198) at (12, -2.25) {};
+		\node [style=none] (199) at (12.25, -2) {};
+		\node [style=none] (200) at (12, 0.5) {};
+		\node [style=none] (201) at (12.25, 0.25) {};
+		\node [style=none] (202) at (9.5, 0.5) {};
+		\node [style=none] (203) at (9.25, 0.25) {};
+		\node [style=none] (204) at (9.5, -5.75) {};
+		\node [style=none] (205) at (9.25, -5.5) {};
+		\node [style=none] (206) at (12, -5.75) {};
+		\node [style=none] (207) at (12.25, -5.5) {};
+		\node [style=none] (208) at (12, -3) {};
+		\node [style=none] (209) at (12.25, -3.25) {};
+		\node [style=none] (210) at (9.5, -3) {};
+		\node [style=none] (211) at (9.25, -3.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right=15, looseness=0.75] (31.center) to (27);
+		\draw [bend right=15, looseness=0.75] (27) to (30.center);
+		\draw [bend right=15, looseness=0.75] (20.center) to (28);
+		\draw [bend right=15, looseness=0.75] (28) to (19.center);
+		\draw [bend right=15, looseness=0.75] (17.center) to (21);
+		\draw [bend right=15, looseness=0.75] (21) to (16.center);
+		\draw [bend right=15, looseness=0.75] (14.center) to (22);
+		\draw [bend right=15, looseness=0.75] (22) to (13.center);
+		\draw [bend left=15, looseness=0.75] (11.center) to (26);
+		\draw [bend left=15, looseness=0.75] (26) to (10.center);
+		\draw [bend left=15, looseness=0.75] (8.center) to (25);
+		\draw [bend left=15, looseness=0.75] (25) to (7.center);
+		\draw [bend left=15, looseness=0.75] (5.center) to (24);
+		\draw [bend left=15, looseness=0.75] (24) to (4.center);
+		\draw [bend left=15, looseness=0.75] (2.center) to (23);
+		\draw [bend left=15, looseness=0.75] (23) to (1.center);
+		\draw [style=hadamard edge] (51.center) to (41.center);
+		\draw [style=hadamard edge] (51.center) to (71.center);
+		\draw [style=hadamard adjoint adge] (51.center) to (36.center);
+		\draw [style=hadamard adjoint adge] (51.center) to (66.center);
+		\draw [style=hadamard adjoint adge] (46.center) to (41.center);
+		\draw [style=hadamard adjoint adge] (46.center) to (71.center);
+		\draw [style=hadamard edge] (46.center) to (66.center);
+		\draw [style=hadamard edge] (46.center) to (36.center);
+		\draw [style=hadamard edge] (71.center) to (41.center);
+		\draw [style=hadamard adjoint adge] (66.center) to (41.center);
+		\draw [style=hadamard adjoint adge] (71.center) to (36.center);
+		\draw [style=hadamard edge] (66.center) to (36.center);
+		\draw [style=hadamard edge] (71.center) to (66.center);
+		\draw [style=hadamard edge] (51.center) to (101.center);
+		\draw [style=hadamard adjoint adge] (46.center) to (101.center);
+		\draw [style=hadamard adjoint adge] (101.center) to (41.center);
+		\draw [style=hadamard edge] (101.center) to (36.center);
+		\draw [style=hadamard adjoint adge] (51.center) to (103.center);
+		\draw [style=hadamard edge] (46.center) to (103.center);
+		\draw [style=hadamard edge] (41.center) to (103.center);
+		\draw [style=hadamard adjoint adge] (36.center) to (103.center);
+		\draw [style=hadamard adjoint adge] (103.center) to (101.center);
+		\draw [style=bang] (135.center)
+			 to (137.center)
+			 to [bend right=45, looseness=0.75] (136.center)
+			 to (138.center)
+			 to [bend right=45, looseness=0.75] (139.center)
+			 to (133.center)
+			 to [bend right=45, looseness=0.75] (132.center)
+			 to (134.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (143.center)
+			 to (145.center)
+			 to [bend right=45, looseness=0.75] (144.center)
+			 to (146.center)
+			 to [bend right=45, looseness=0.75] (147.center)
+			 to (141.center)
+			 to [bend right=45, looseness=0.75] (140.center)
+			 to (142.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (151.center)
+			 to (153.center)
+			 to [bend right=45, looseness=0.75] (152.center)
+			 to (154.center)
+			 to [bend right=45, looseness=0.75] (155.center)
+			 to (149.center)
+			 to [bend right=45, looseness=0.75] (148.center)
+			 to (150.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (156.center) to (158.center);
+		\draw [style=bang] (157.center) to (158.center);
+		\draw [style=hadamard edge] (154.center) to (159.center);
+		\draw [style=bang] (160.center)
+			 to (162.center)
+			 to [bend right=45, looseness=0.75] (163.center)
+			 to (165.center)
+			 to [bend right=45, looseness=0.75] (164.center)
+			 to (166.center)
+			 to [bend right=45, looseness=0.75] (167.center)
+			 to (161.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (168.center) to (170.center);
+		\draw [style=bang] (169.center) to (170.center);
+		\draw [style=hadamard edge] (166.center) to (171.center);
+		\draw [style=bang] (179.center)
+			 to (173.center)
+			 to [bend right=45, looseness=0.75] (172.center)
+			 to (174.center)
+			 to [bend right=45, looseness=0.75] (175.center)
+			 to (177.center)
+			 to [bend right=45, looseness=0.75] (176.center)
+			 to (178.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (180.center) to (182.center);
+		\draw [style=bang] (181.center) to (182.center);
+		\draw [style=hadamard adjoint adge] (178.center) to (183.center);
+		\draw [style=bang] (188.center)
+			 to (190.center)
+			 to [bend right=45, looseness=0.75] (191.center)
+			 to (185.center)
+			 to [bend right=45, looseness=0.75] (184.center)
+			 to (186.center)
+			 to [bend right=45, looseness=0.75] (187.center)
+			 to (189.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (192.center) to (194.center);
+		\draw [style=bang] (193.center) to (194.center);
+		\draw [style=hadamard adjoint adge] (190.center) to (195.center);
+		\draw [style=bang] (203.center)
+			 to (197.center)
+			 to [bend right=45, looseness=0.75] (196.center)
+			 to (198.center)
+			 to [bend right=45, looseness=0.75] (199.center)
+			 to (201.center)
+			 to [bend right=45, looseness=0.75] (200.center)
+			 to (202.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (204.center)
+			 to (206.center)
+			 to [bend right=45, looseness=0.75] (207.center)
+			 to (209.center)
+			 to [bend right=45, looseness=0.75] (208.center)
+			 to (210.center)
+			 to [bend right=45, looseness=0.75] (211.center)
+			 to (205.center)
+			 to [bend right=45, looseness=0.75] cycle;
+	\end{pgfonlayer}
+\end{tikzpicture}

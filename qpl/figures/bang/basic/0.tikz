@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z dot] (0) at (-0.75, -1.25) {};
+		\node [style=X dot] (1) at (0.75, -1.25) {};
+	\end{pgfonlayer}
+\end{tikzpicture}

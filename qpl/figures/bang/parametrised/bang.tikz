@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z dot] (0) at (-0.75, -1.25) {};
+		\node [style=X dot] (1) at (0.75, -1.25) {};
+		\node [style=qutrit Z phase] (2) at (0, 0.25) {$\alpha_k$ \nodepart{lower} $\beta_k$};
+		\node [style=none] (7) at (0, 1.375) {};
+		\node [style=none] (15) at (1.875, -0.3) {\textcolor{bang_orange}{$\scriptstyle{k \in [3]}$}};
+		\node [style=none] (17) at (-0.75, -0.5) {};
+		\node [style=none] (18) at (-1, -0.25) {};
+		\node [style=none] (19) at (0.75, -0.5) {};
+		\node [style=none] (20) at (1, -0.25) {};
+		\node [style=none] (21) at (0.75, 1.5) {};
+		\node [style=none] (22) at (1, 1.25) {};
+		\node [style=none] (23) at (-0.75, 1.5) {};
+		\node [style=none] (24) at (-1, 1.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend left=15] (0) to (2);
+		\draw [bend left=15, looseness=0.75] (2) to (1);
+		\draw (7.center) to (2);
+		\draw [style=bang] (20.center)
+			 to (22.center)
+			 to [bend right=45, looseness=0.75] (21.center)
+			 to (23.center)
+			 to [bend right=45, looseness=0.75] (24.center)
+			 to (18.center)
+			 to [bend right=45, looseness=0.75] (17.center)
+			 to (19.center)
+			 to [bend right=45, looseness=0.75] cycle;
+	\end{pgfonlayer}
+\end{tikzpicture}

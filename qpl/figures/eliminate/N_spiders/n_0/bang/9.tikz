@@ -1,0 +1,75 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=qutrit Z phase rectangle] (0) at (-2.25, -1) {$\alpha_k + n  + 1$ \nodepart{second} $\beta_k + n + 2$};
+		\node [style=none] (1) at (-2.25, 0) {...};
+		\node [style=none] (2) at (-3, 0.25) {};
+		\node [style=none] (3) at (-1.5, 0.25) {};
+		\node [style=qutrit Z phase rectangle] (4) at (2.25, -1) {$\gamma_k + n + 2$ \nodepart{second} $\delta_k + n + 1$};
+		\node [style=none] (5) at (2.25, 0) {...};
+		\node [style=none] (6) at (1.5, 0.25) {};
+		\node [style=none] (7) at (3, 0.25) {};
+		\node [style=none] (13) at (-2.25, 1.825) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_1]}$}};
+		\node [style=none] (14) at (-3.5, -1.75) {};
+		\node [style=none] (15) at (-3.75, -1.5) {};
+		\node [style=none] (16) at (-1, -1.75) {};
+		\node [style=none] (17) at (-0.75, -1.5) {};
+		\node [style=none] (18) at (-1, 1.5) {};
+		\node [style=none] (19) at (-0.75, 1.25) {};
+		\node [style=none] (20) at (-3.5, 1.5) {};
+		\node [style=none] (21) at (-3.75, 1.25) {};
+		\node [style=none] (45) at (2.25, 1.825) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{2}]}$}};
+		\node [style=none] (46) at (1, -1.75) {};
+		\node [style=none] (47) at (0.75, -1.5) {};
+		\node [style=none] (48) at (3.5, -1.75) {};
+		\node [style=none] (49) at (3.75, -1.5) {};
+		\node [style=none] (50) at (3.5, 1.5) {};
+		\node [style=none] (51) at (3.75, 1.25) {};
+		\node [style=none] (52) at (1, 1.5) {};
+		\node [style=none] (53) at (0.75, 1.25) {};
+		\node [style=none] (64) at (1, 1.5) {};
+		\node [style=qutrit hadamard unknown] (69) at (0, -1) {$n$};
+		\node [style=none] (70) at (2.25, 1.5) {};
+		\node [style=none] (71) at (0.75, 0.5) {};
+		\node [style=none] (72) at (2.25, 0.5) {};
+		\node [style=none] (73) at (1.5, 0.5) {};
+		\node [style=none] (74) at (1.5, 1.5) {};
+		\node [style=qutrit hadamard unknown] (75) at (1.5, 1) {$-n$};
+		\node [style=none] (76) at (-2.25, 1.5) {};
+		\node [style=none] (77) at (-3.75, 0.5) {};
+		\node [style=none] (78) at (-2.25, 0.5) {};
+		\node [style=none] (79) at (-3, 0.5) {};
+		\node [style=none] (80) at (-3, 1.5) {};
+		\node [style=qutrit hadamard unknown] (81) at (-3, 1) {$-n$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right=15, looseness=0.75] (2.center) to (0);
+		\draw [bend right=15, looseness=0.75] (0) to (3.center);
+		\draw [bend right=15, looseness=0.75] (6.center) to (4);
+		\draw [bend right=15, looseness=0.75] (4) to (7.center);
+		\draw [style=bang] (17.center)
+			 to (19.center)
+			 to [bend right=45, looseness=0.75] (18.center)
+			 to (20.center)
+			 to [bend right=45, looseness=0.75] (21.center)
+			 to (15.center)
+			 to [bend right=45, looseness=0.75] (14.center)
+			 to (16.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw [style=bang] (49.center)
+			 to (51.center)
+			 to [bend right=45, looseness=0.75] (50.center)
+			 to (52.center)
+			 to [bend right=45, looseness=0.75] (53.center)
+			 to (47.center)
+			 to [bend right=45, looseness=0.75] (46.center)
+			 to (48.center)
+			 to [bend right=45, looseness=0.75] cycle;
+		\draw (0) to (4);
+		\draw [style=bang] (70.center) to (72.center);
+		\draw [style=bang] (71.center) to (72.center);
+		\draw (74.center) to (73.center);
+		\draw [style=bang] (76.center) to (78.center);
+		\draw [style=bang] (77.center) to (78.center);
+		\draw (80.center) to (79.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Z dot] (0) at (-0.875, -1.25) {};
+		\node [style=X dot] (1) at (0.875, -1.25) {};
+		\node [style=qutrit Z phase] (2) at (-0.875, 0.25) {$\alpha_1$ \nodepart{lower} $\beta_1$};
+		\node [style=none] (7) at (-0.875, 1.5) {};
+		\node [style=qutrit Z phase] (10) at (0.875, 0.25) {$\alpha_2$ \nodepart{lower} $\beta_2$};
+		\node [style=none] (11) at (0.875, 1.5) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (7.center) to (2);
+		\draw (0) to (2);
+		\draw (2) to (1);
+		\draw (11.center) to (10);
+		\draw (0) to (10);
+		\draw (1) to (10);
+		\draw [style=hadamard edge] (2) to (10);
+	\end{pgfonlayer}
+\end{tikzpicture}

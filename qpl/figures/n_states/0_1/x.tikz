@@ -1,6 +1,6 @@
 \begin{tikzpicture}
 	\begin{pgfonlayer}{nodelayer}
-		\node [style=qutrit X phase] (0) at (0, 0) {$0$ \nodepart{lower} $2$};
+		\node [style=qutrit X phase] (0) at (0, 0) {$2$ \nodepart{lower} $0$};
 		\node [style=none] (6) at (0, 1) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
