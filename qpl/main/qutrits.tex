@@ -120,21 +120,10 @@ The following equation, for $h \in \{1,2\}$, helps us get around this:
 
 We will shortly show that every qutrit ZX-diagram is equivalent to a graph-like one, making use of the following lemma:
 
-\begin{lemma}\label{lem:three_H_edges_vanish}
-	The following equations hold in the qutrit ZX-calculus:
-	\begin{equation}
-		\tikzfig{hadamard_lemmas/3_h_edges_vanish/blue} \ = \ 
-		\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected} \ = \ 
-		\tikzfig{hadamard_lemmas/3_h_edges_vanish/purple} \ ,
-		\hspace{50pt}
-		\tikzfig{hadamard_lemmas/2_h_edges_flip/2_blue} \ = \ 
-		\tikzfig{hadamard_lemmas/2_h_edges_flip/1_purple} \ ,
-		\hspace{50pt}
-		\tikzfig{hadamard_lemmas/2_h_edges_flip/2_purple} \ = \  
-		\tikzfig{hadamard_lemmas/2_h_edges_flip/1_blue}
-	\end{equation}
+\begin{lemma}\label{lem:h_edges_are_mod_3}
+	\HEdgesAreModThreeStatement
 	\begin{proof}
-		See Appendix [ToDo]
+		See Appendix \ref{lem:h_edges_are_mod_3_appendix}
 	\end{proof}
 \end{lemma}
 
@@ -157,7 +146,7 @@ The lemmas above justify our notation for Hadamard gates: we can think of Hadama
 \begin{corollary}\label{prop:every_diagram_is_graph_like_qutrit}
 	Every qutrit ZX diagram is equivalent to one that is graph-like.
 	\begin{proof}
-		First use the colour change rule to turn all X-spiders into Z-spiders. Then use Lemma \ref{lem:H_boxes_qutrit} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply Lemmas \ref{lem:three_H_edges_vanish} and \ref{lem:H_edges_qutrit} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-boxes as needed: 
+		First use the colour change rule to turn all X-spiders into Z-spiders. Then use Lemma \ref{lem:H_boxes_qutrit} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply Lemmas \ref{lem:h_edges_are_mod_3} and \ref{lem:H_edges_qutrit} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-boxes as needed: 
 		\begin{equation}
 			\tikzfig{is_graph_like/plain_input_output_wire} \quad ,
 			\hspace{50pt}
@@ -286,10 +275,10 @@ exactly as in Theorem 3.1 \cite{harny_completeness}. We call a spider in a graph
 	\end{proof}
 \end{theorem}
 
-We can now combine these three elimination theorems into an algorithm for efficiently simplifying a closed graph-like ZX-diagram. First note that after applying any one of the three elimination theorems to such a diagram, the only way we might end up with a non-graph-like diagram is if we introduce parallel $H$- or $H^\dagger$-edges. Fortunately we have shown via Lemmas \ref{lem:three_H_edges_vanish} and \ref{lem:H_edges_qutrit} that these can always be reduced to just one edge, so we do indeed again have a graph-like diagram.
+We can now combine these three elimination theorems into an algorithm for efficiently simplifying a closed graph-like ZX-diagram. First note that after applying any one of the three elimination theorems to such a diagram, the only way we might end up with a non-graph-like diagram is if we introduce parallel $H$- or $H^\dagger$-edges. Fortunately we have shown via Lemmas \ref{lem:h_edges_are_mod_3} and \ref{lem:H_edges_qutrit} that these can always be reduced to just one edge, so we do indeed again have a graph-like diagram.
 
 \begin{theorem}\label{thm:simplification_algorithm_works}
-	Given any closed graph-like ZX-diagram, the following algorithm will always terminate after a finite number of steps, returning an equivalent graph-like ZX-diagram with no \Nspiders, \Pspiders, or adjacent pairs of \Mspiders. Repeat the steps below until no rule matches. After each step, apply Lemmas \ref{lem:three_H_edges_vanish} and \ref{lem:H_edges_qutrit} as needed until the resulting diagram is graph-like:
+	Given any closed graph-like ZX-diagram, the following algorithm will always terminate after a finite number of steps, returning an equivalent graph-like ZX-diagram with no \Nspiders, \Pspiders, or adjacent pairs of \Mspiders. Repeat the steps below until no rule matches. After each step, apply Lemmas \ref{lem:h_edges_are_mod_3} and \ref{lem:H_edges_qutrit} as needed until the resulting diagram is graph-like:
 	\begin{enumerate}
 		\item Eliminate a \Pspider\ via Theorem~\ref{thm:eliminate_P_spiders}.
 		\item Eliminate an \Nspider\ via Theorem~\ref{thm:eliminate_N_spiders}.

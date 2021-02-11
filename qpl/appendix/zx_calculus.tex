@@ -156,18 +156,21 @@ We now give a full set of rules defining the qutrit ZX-calculus. Our presentatio
 	\end{proof}
 \end{proposition}
 
-\begin{lemma}\label{lem:three_H_edges_vanish_appendix} \textbf{/\ Lemma~\ref{lem:three_H_edges_vanish}.}
-	It is shown in Lemma 2.8 \cite{qutrit_euler} that the qutrit ZX-calculus satisfies the following `Hopf law':
-		\begin{equation}\label{eq:qutrit_hopf}
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf/lhs} \quad = \quad 
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf/rhs}
-		\end{equation}
-		Therefore we can argue as follows, for $h \in \{1, 2\}$:
-		\begin{equation}
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/1} \quad \xeq{\qutritRuleHadamard} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/2} \quad \xeq{\qutritRuleColourChange} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/3} \quad \xeq{\eqref{eq:qutrit_hopf}} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/4} \quad \xeq{\eqref{eq:derived_colour_change}} \quad
-			\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected}
-		\end{equation}
+\begin{lemma}\label{lem:h_edges_are_mod_3_appendix} \textbf{/\ Lemma~\ref{lem:h_edges_are_mod_3}.}
+	\HEdgesAreModThreeStatement
+	\begin{proof}
+		It is shown in Lemma 2.8 \cite{qutrit_euler} that the qutrit ZX-calculus satisfies the following `Hopf law':
+			\begin{equation}\label{eq:qutrit_hopf}
+				\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf/lhs} \quad = \quad 
+				\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf/rhs}
+			\end{equation}
+			Therefore we can argue as follows, for $h \in \{1, 2\}$:
+			\begin{equation}
+				\tikzfig{hadamard_lemmas/3_h_edges_vanish/1} \quad \xeq{\qutritRuleHadamard} \quad
+				\tikzfig{hadamard_lemmas/3_h_edges_vanish/2} \quad \xeq{\qutritRuleColourChange} \quad
+				\tikzfig{hadamard_lemmas/3_h_edges_vanish/3} \quad \xeq{\eqref{eq:qutrit_hopf}} \quad
+				\tikzfig{hadamard_lemmas/3_h_edges_vanish/4} \quad \xeq{\eqref{eq:derived_colour_change}} \quad
+				\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected}
+			\end{equation}
+		\end{proof}
 \end{lemma}
