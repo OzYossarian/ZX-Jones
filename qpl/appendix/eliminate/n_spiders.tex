@@ -1,0 +1,81 @@
+\subsection{\Nspider\ Elimination}
+
+Proving the corresponding \Nspider\ elimination theorem requires a further lemma, which allows us to turn an \Nspider\ state of one colour into an \Nspider\ state of the other.
+
+\begin{lemma}\label{lem:N_state_colour_change}
+	The following rules hold in the qutrit ZX-calculus:
+	\begin{equation*}
+		\tikzfig{n_states/0_1/z} \ = \ \tikzfig{n_states/0_1/x} \ , \qquad
+		\tikzfig{n_states/0_2/z} \ = \ \tikzfig{n_states/0_2/x} \ , \qquad
+		\tikzfig{n_states/1_0/z} \ = \ \tikzfig{n_states/1_0/x} \ , \qquad
+		\tikzfig{n_states/2_0/z} \ = \ \tikzfig{n_states/2_0/x}
+	\end{equation*}
+	\begin{proof}
+		The key observation is that for any green \Nspider\ state with phase $\qutritZphase{n}{n'}$, we have a choice of two colour change rules which we could use to turn it into a red \Nspider\ state with a $H$- or $H^\dagger$-box on top:
+		
+		\begin{equation*}
+			\tikzfig{n_states/general/x_n_n'} \ \xeq{\qutritRuleColourChange} \ 
+			\tikzfig{n_states/general/z_n_n'} \ \xeq{\qutritRuleColourChange} \ 
+			\tikzfig{n_states/general/x_n'_n}
+		\end{equation*}
+
+		Of these two choices, exactly one has a decomposition of of the $H$-/$H^\dagger$-box as in \eqref{eq:qutrit_hadamard_decompositions} that allows the bottom two red spiders to fuse into an \Mspider, which we can then move past the green spider above it via \ref{lem:substantial_m_copy}. For brevity we only show the case $\qutritZphase{n}{n'} = \qutritZphase{0}{1}$:
+
+		\begin{equation*}
+			\tikzfig{n_states/0_1/1} \ \ \xeq{\qutritRuleColourChange} \ \ 
+			\tikzfig{n_states/0_1/2} \ \ \xeq{\eqref{eq:qutrit_hadamard_decompositions}} \ \ 
+			\tikzfig{n_states/0_1/3} \ \ \xeq{\qutritRuleFusion} \ \ 
+			\tikzfig{n_states/0_1/4} \ \ \xeq{\ref{lem:substantial_m_copy}} \ \ 
+			\tikzfig{n_states/0_1/5} \ \ \xeq{\qutritRuleFusion} \ \ 
+			\tikzfig{n_states/0_1/6}
+		\end{equation*}
+	\end{proof}
+\end{lemma}
+
+\begin{corollary}\label{cor:N_effect}
+	The following equations hold in the qutrit ZX-calculus:
+	\begin{equation*}
+		\tikzfig{n_states/corollary/0_n/lhs} \ = \ \tikzfig{n_states/corollary/0_n/rhs} \ , \qquad
+		\tikzfig{n_states/corollary/n_0/lhs} \ = \ \tikzfig{n_states/corollary/n_0/rhs}
+	\end{equation*}
+	\begin{proof}
+		Again we only prove one case, the rest being analogous. Each case uses \ref{lem:N_state_colour_change} in its adjoint form - recall that the adjoint of a spider is found by swapping inputs and outputs and negating angles.
+		\begin{equation*}
+			\tikzfig{n_states/corollary/0_1/1} \ \ = \ \ 
+			\tikzfig{n_states/corollary/0_1/2} \ \ \xeq{\ref{lem:N_state_colour_change}} \ \ 
+			\tikzfig{n_states/corollary/0_1/3} \ \ \xeq{\qutritRuleFusion} \ \ 
+			\tikzfig{n_states/corollary/0_1/4} \ \ = \ \ 
+			\tikzfig{n_states/corollary/0_1/5}
+		\end{equation*}
+	\end{proof}
+\end{corollary}
+
+\begin{theorem}\label{thm:eliminate_N_spiders_appendix} \textbf{/\ Theorem~\ref{thm:eliminate_N_spiders}.}
+	\eliminateNSpidersStatement
+	\begin{proof}
+		We prove the case where $x$ has phase \qutritZphase{0}{1}, the other cases being near-identical.
+		\begingroup
+			\allowdisplaybreaks
+			\setlength{\jot}{20pt}
+				\begin{align*}
+					&\ &&\tikzfig{eliminate/N_spiders/0_n/bang/0_1/1} 
+					&&&\xeq{\qutritRuleFusion} 
+					&&&&\tikzfig{eliminate/N_spiders/0_n/bang/0_1/2}
+					&&&&&\xeq{\ref{thm:local_comp_equality}} 
+					&&&&&&\tikzfig{eliminate/N_spiders/0_n/bang/0_1/3} \\
+					&\xeqq{\ref{cor:N_effect}}{\qutritRuleFusion} 
+					&&\tikzfig{eliminate/N_spiders/0_n/bang/0_1/4}
+					&&&\xeq{\ref{lem:leg_flip}} 
+					&&&&\tikzfig{eliminate/N_spiders/0_n/bang/0_1/5} 
+					&&&&&\xeq{\ref{lem:substantial_m_copy}} 
+					&&&&&&\tikzfig{eliminate/N_spiders/0_n/bang/0_1/6} \\
+					&\xeq{\eqref{eq:qutrit_dashed_lines}}
+					&&\tikzfig{eliminate/N_spiders/0_n/bang/0_1/7} 
+					&&&\xeq{\qutritRuleColourChange} 
+					&&&&\tikzfig{eliminate/N_spiders/0_n/bang/0_1/8}
+					&&&&&\xeq{\qutritRuleFusion} 
+					&&&&&&\tikzfig{eliminate/N_spiders/0_n/bang/0_1/9} \\
+				\end{align*}
+		\endgroup
+	\end{proof}
+\end{theorem}

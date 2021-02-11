@@ -1,0 +1,98 @@
+Now we prove the three elimination theorems for $\mathcal{P}$-, $\mathcal{N}$- and \Mspiders. All require the following two lemma.
+
+\begin{lemma}\label{lem:leg_flip}
+	The following `leg flip' equation holds in the qutrit ZX-calculus. Moreover, it holds with the roles of green and red swapped.
+	\begin{equation*}
+		\tikzfig{leg_flip/1} = \tikzfig{leg_flip/5}
+	\end{equation*}
+	\begin{proof}
+		\begin{equation*}
+			\tikzfig{leg_flip/1} \ \xeq{\qutritRuleFusion} \ 
+			\tikzfig{leg_flip/2} \ \xeq{\qutritRuleSnake} \ 
+			\tikzfig{leg_flip/3} \ \xeq{\qutritRuleColourChange} \  
+			\tikzfig{leg_flip/4} \ \xeq{\qutritRuleColourChange} \  
+			\tikzfig{leg_flip/5}
+		\end{equation*}
+	\end{proof}
+\end{lemma}
+
+\begin{lemma}\label{lem:substantial_m_copy}
+	The following more substantial `$\mathcal{M}$-copy' rule holds in the qutrit ZX-calculus, for any \Mspider\ state (i.e. $m \in \{0, 1, 2\}$ below). Moreover, it holds with the roles of green and red swapped.
+	\begin{equation*}
+		\tikzfig{m_copies/full/1} = \tikzfig{m_copies/full/4}
+	\end{equation*}
+	\begin{proof}
+		First we prove that an \Mspider\ with non-trivial phase (i.e. $m \in \{1, 2\}$) satisfies a copy rule exactly like the rule $\qutritRuleZeroCopy$:
+		\begin{equation}\label{eq:non_trivial_m_copy}
+			\tikzfig{m_copies/part_1/1} \ \xeq{\qutritRuleFusion} \ 
+			\tikzfig{m_copies/part_1/2} \ \xeq{\qutritRuleMCopy} \ 
+			\tikzfig{m_copies/part_1/3} \ \xeq{\qutritRuleZeroCopy} \ 
+			\tikzfig{m_copies/part_1/4} \ \xeq{\qutritRuleFusion} \ 
+			\tikzfig{m_copies/part_1/5}
+		\end{equation}
+		Then we prove the case $\alpha = \beta = 0$ by induction:
+		\begin{equation}\label{eq:m_copy_through_trivial}
+			\tikzfig{m_copies/part_2/1} \ \xeq{\qutritRuleFusion} \ 
+			\tikzfig{m_copies/part_2/2} \ \xeq{\eqref{eq:non_trivial_m_copy}} \ 
+			\tikzfig{m_copies/part_2/3} \ \xeq{\text{ind.}} \ 
+			\tikzfig{m_copies/part_2/4}
+		\end{equation}
+		Which finally allows us to prove the full statement, where the last equality is just dropping the scalar term:
+		\begin{equation*}
+			\tikzfig{m_copies/full/1} \ \xeq{\qutritRuleFusion} \ 
+			\tikzfig{m_copies/full/2} \ \xeq{\eqref{eq:m_copy_through_trivial}} \ 
+			\tikzfig{m_copies/full/3} \ = \
+			\tikzfig{m_copies/full/4}
+		\end{equation*}
+	\end{proof}
+\end{lemma}
+
+\subsection{\Pspider\ Elimination}
+
+The \Pspider\ elimination theorem requires a lemma allowing us to turn a \Pspider\ state of one colour into a \Pspider\ state of the other. We will use this lemma its adjoint form in the proof of the main theorem.
+
+\begin{lemma}\label{lem:P_state_colour_change}
+	The following rule holds in the qutrit ZX-calculus:
+	\begin{equation*}
+		\tikzfig{p_state/1} \ = \ \tikzfig{p_state/6}
+	\end{equation*}
+	\begin{proof}
+		\begin{equation*}
+			\tikzfig{p_state/1} \ \ \xeq{\qutritRuleColourChange} \ \ 
+			\tikzfig{p_state/2} \ \ \xeq{\eqref{eq:qutrit_hadamard_decompositions}} \ \ 
+			\tikzfig{p_state/3} \ \ \xeq{\qutritRuleFusion} \ \ 
+			\tikzfig{p_state/4} \ \ \xeq{\ref{lem:substantial_m_copy}} \ \ 
+			\tikzfig{p_state/5} \ \ \xeq{\qutritRuleFusion} \ \ 
+			\tikzfig{p_state/6}
+		\end{equation*}
+	\end{proof}
+\end{lemma}
+
+\begin{theorem}\label{thm:eliminate_P_spiders_appendix} \textbf{/\ Theorem~\ref{thm:eliminate_P_spiders}.} 
+	\eliminatePSpidersStatement
+	\begin{proof}
+		\begingroup
+			\allowdisplaybreaks
+			\setlength{\jot}{20pt}
+				\begin{align*}
+					&\ &&\tikzfig{eliminate/P_spiders/bang/p_1/1} 
+					&&&\xeq{\qutritRuleFusion} 
+					&&&&\tikzfig{eliminate/P_spiders/bang/p_1/2}
+					&&&&&\xeq{\ref{thm:local_comp_equality}} 
+					&&&&&&\tikzfig{eliminate/P_spiders/bang/p_1/3} \\
+					&\xeqq{\ref{lem:P_state_colour_change}}{\qutritRuleFusion} 
+					&&\tikzfig{eliminate/P_spiders/bang/p_1/4}
+					&&&\xeq{\ref{lem:leg_flip}} 
+					&&&&\tikzfig{eliminate/P_spiders/bang/p_1/5} 
+					&&&&&\xeq{\ref{lem:substantial_m_copy}} 
+					&&&&&&\tikzfig{eliminate/P_spiders/bang/p_1/6} \\
+					&\xeq{\eqref{eq:qutrit_dashed_lines}}
+					&&\tikzfig{eliminate/P_spiders/bang/p_1/7} 
+					&&&\xeq{\qutritRuleColourChange} 
+					&&&&\tikzfig{eliminate/P_spiders/bang/p_1/8}
+					&&&&&\xeq{\qutritRuleFusion} 
+					&&&&&&\tikzfig{eliminate/P_spiders/bang/p_1/9} \\
+				\end{align*}
+		\endgroup
+	\end{proof}
+\end{theorem}

@@ -284,46 +284,21 @@ We classify spiders into three families:
 exactly as in Theorem 3.1 \cite{harny_completeness}. We call a spider in a graph-like ZX-diagram \textit{interior} if it isn't connected to an input or output (so for our use case all spiders are interior). Given any graph-like ZX-diagram, we will show that we can eliminate standalone interior $\mathcal{P}$- and \Nspiders\ by local complementation, and pairs of connected interior \Mspiders\ by local pivoting. 
 
 \begin{theorem}\label{thm:eliminate_P_spiders}
-	Given any graph-like ZX-diagram containing an interior \Pspider\ $x$ with phase \qutritZphase{p}{p} for $p \in \{1,2\}$, suppose we perform a $p$-local complementation at $x$. Then the new ZX-diagram is related to the old one by the following equality:
-
-	\begin{equation*}
-		\tikzfig{eliminate/P_spiders/bang/general/1} \quad = \quad \tikzfig{eliminate/P_spiders/bang/general/9}
-	\end{equation*}
-
+	\eliminatePSpidersStatement
 	\begin{proof}
 		See Appendix \ref{thm:eliminate_P_spiders_appendix}.
-	\end{proof} 
-
-	% Spiders with phases \qutritZphase{a_1}{b_1} ... \qutritZphase{a_r}{b_r} are all the neighbours of $k$ connected by a $1$-weighted (blue) edge, while spider with phases \qutritZphase{c_1}{d_1} ... \qutritZphase{c_s}{d_s} are all the neighbours of $k$ connected by a $2$-weighted (purple) edge.\newline
+	\end{proof}
 \end{theorem}
 
 \begin{theorem}\label{thm:eliminate_N_spiders}
-	Given any graph-like ZX-diagram containing an interior \Nspider\ $x$ with phase \qutritZphase{0}{n} or \qutritZphase{n}{0} for $n \in \{1,2\}$, suppose we perform a $(-n)$-local complementation at $x$. Then, treating the two cases separately, the new ZX-diagrams are related to the old ones by the equalities:
-
-	\begin{equation*}
-		\tikzfig{eliminate/N_spiders/0_n/bang/general/1} ~~ = ~~ \tikzfig{eliminate/N_spiders/0_n/bang/general/9} ~~ ,
-		\hspace{30pt}
-		\tikzfig{eliminate/N_spiders/n_0/bang/1} ~~ = ~~ \tikzfig{eliminate/N_spiders/n_0/bang/9}
-	\end{equation*}
-
+	\eliminateNSpidersStatement
 	\begin{proof}
 		See Appendix \ref{thm:eliminate_N_spiders_appendix}.
 	\end{proof}
 \end{theorem}
 
 \begin{theorem}\label{thm:eliminate_M_spiders}
-	Given any graph-like ZX-diagram containing two interior \Mspiders\ $i$ and $j$ connected by edge $ij$ of weight $w_{i,j} \eqdef w \in \{1,2\}$, suppose we perform a proper $\pm w$-local pivot along $ij$ (both choices give the same result). For the case $w=1$, the new ZX-diagram is related to the old one by the following equality:
-	
-	\begin{equation*}
-		\tikzfig{eliminate/M_spiders/bang/w_1/LHS}
-	\end{equation*}
-	\vspace{10pt}
-	\begin{equation*}
-	 	= \quad \tikzfig{eliminate/M_spiders/bang/w_1/RHS}
-	\end{equation*}
-	
-	The case $w=2$ differs only as follows: in the first diagram (the left hand side of the equation), the edge $ij$ is purple (by definition), while in the lower diagram (the right hand side of the equation), a $\pm 2 = \mp 1$ will replace all occurences of $\pm 1$, and the roles of purple and blue will be swapped throughout.
-
+	\eliminateMSpidersStatement
 	\begin{proof}
 		See Appendix \ref{thm:eliminate_M_spiders_appendix}.
 	\end{proof}

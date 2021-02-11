@@ -1,0 +1,33 @@
+\subsection{\Mspider\ Elimination}
+
+We close with the proof of the \Mspider\ elimination theorem.
+
+\begin{theorem}\label{thm:eliminate_M_spiders_appendix} \textbf{/\ Theorem~\ref{thm:eliminate_M_spiders}.}
+	\eliminateMSpidersStatement
+	\begin{proof}
+		We show the case where $w_{ij} \eqdef w = 1$, with the case $w = 2$ being completely analogous. We can choose either a proper $1$-local pivot or a proper $2$-local pivot; both give the same result. Here we only show the former:
+		\begingroup
+			\allowdisplaybreaks
+			\setlength{\jot}{30pt}
+			\begin{align*}
+				&\ &&\tikzfig{eliminate/M_spiders/bang/w_1/1} \\
+				&\xeq{\qutritRuleFusion} 
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/2} \\
+				&\xeq{\ref{thm:local_pivot_equality_appendix}} 
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/3} \\
+				&\xeq{\qutritRuleColourChange}
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/4} \\
+				&\xeq{\ref{lem:leg_flip}}
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/5} \\
+				&\xeq{\ref{lem:substantial_m_copy}}
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/6} \\
+				&= 
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/7} \\
+				&\xeq{\qutritRuleColourChange}
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/8} \\
+				&\xeq{\qutritRuleFusion}
+				&&\tikzfig{eliminate/M_spiders/bang/w_1/9} \\
+			\end{align*}
+		\endgroup
+	\end{proof}
+\end{theorem}
