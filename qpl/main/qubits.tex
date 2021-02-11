@@ -81,6 +81,19 @@ every edge is a Hadamard edge,
 there are no parallel edges or self-loops,
 every input and output wire is connected to a spider
 and every spider has at most one input or output wire.
+The following derivable rules are key to this:
+
+\begin{equation}\label{eq:maintain_graph_like}
+	\tikzfig{hadamard_lemmas/2_h_edges_vanish/lhs} \ = \  
+	\tikzfig{hadamard_lemmas/2_h_edges_vanish/rhs} \ ,
+	\hspace{50pt}
+	\tikzfig{self_loop/plain/lhs} \ = \  
+	\tikzfig{self_loop/plain/rhs} \ ,
+	\hspace{50pt}
+	\tikzfig{self_loop/hadamard/lhs} \ = \  
+	\tikzfig{self_loop/hadamard/rhs}
+\end{equation}
+
 Then the following two rewrite rules, derived via
 \textit{local complementation} and \textit{pivoting},
 can be used to eliminate spiders:
@@ -95,11 +108,7 @@ see Section 4 \cite{graph_theoretic_simplification}.
 Eq.\ref{eq:eliminate_clifford} says that we can remove any spider with phase $\pm\frac{\pi}{2}$ at the cost of performing a local complementation at said spider.
 Furthermore,
 Eq.\ref{eq:eliminate_pauli} says we can remove any pair of spiders with phases in $\{0, \pi\}$ connected by a Hadamard edge at the cost of performing a local pivot along said edge.
-After each application of \eqref{eq:eliminate_clifford} or \eqref{eq:eliminate_pauli}, the following rewrite rule, aka the Hopf rule which can be derived from the qubit ZX rules, can be used to remove any parallel Hadamard edges and ensure the diagram remains graph-like:
-{\bf what about self-loops? also, make the edges blue dashed.}
-\begin{equation}
-		\tikzfig{hadamard_lemmas/2_h_edges_vanish/lhs} \quad = \quad \tikzfig{hadamard_lemmas/2_h_edges_vanish/rhs}
-\end{equation}
+After each application of \eqref{eq:eliminate_clifford} or \eqref{eq:eliminate_pauli}, we can use \eqref{eq:maintain_graph_like} to remove any parallel Hadamard edges and ensure the diagram remains graph-like.
 
 In particular, and importantly to this work, given a closed stabilizer diagram
 the algorithm \emph{efficiently simplifies} it until it contains at most one spider. If it exists, this spider is green, legless and has phase in $\{0, \pi\}$.

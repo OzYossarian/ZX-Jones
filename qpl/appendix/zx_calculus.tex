@@ -125,11 +125,13 @@ We now give a full set of rules defining the qutrit ZX-calculus. Our presentatio
 		\tikzfig{qutrit_generators/identity}
 	\end{equation}
 
-	and their adjoints $(-)^\dagger$. The non-spider generators' adjoints are their vertical reflections, whereas spiders' adjoints are found by swapping inputs and outputs and negating angles: 
+	and their adjoints $(-)^\dagger$. Adjoints are found by swapping inputs and outputs and negating any decorations - recall negation is mod $2\pi$ for general spider phases, and mod $3$ for integer spider phases and Hadamards. Thus the two rightmost generators are self-adjoint, whereas the first three satisfy: 
 
 	\begin{equation}
-		\left(\ \tikzfig{qutrit_generators/spiders/Z_a_b_labelled}\ \right)^\dagger = \tikzfig{qutrit_generators/spiders/Z_a_b_adjoint_labelled} \quad , \qquad 
-		\left(\ \tikzfig{qutrit_generators/spiders/X_a_b_labelled}\ \right)^\dagger = \tikzfig{qutrit_generators/spiders/X_a_b_adjoint_labelled}
+		\left(\ \tikzfig{qutrit_generators/spiders/Z_a_b_labelled}\ \right)^\dagger = \ \tikzfig{qutrit_generators/spiders/Z_a_b_adjoint_labelled}\quad , \qquad 
+		\left(\ \tikzfig{qutrit_generators/spiders/X_a_b_labelled}\ \right)^\dagger = \ \tikzfig{qutrit_generators/spiders/X_a_b_adjoint_labelled}
+		\quad , \qquad 
+		\left(~~\tikzfig{qutrit_generators/hadamard}~~\right)^\dagger = \ \tikzfig{hadamard_lemmas/parametrised/2}
 	\end{equation}
 
 	These generators can be composed in parallel ($\otimes$) and sequentially ($\circ$), and the resulting diagrams are governed by the rewrite rules in Figure \ref{fig:qutrit_ZX_rules}, wherein addition is modulo $2\pi$. The fusion rule $\qutritRuleFusion$ applies to spiders of the same colour connected by at least one wire. Importantly, all the rules hold under taking adjoints, where for diagrams $D$ and $E$ we have:
