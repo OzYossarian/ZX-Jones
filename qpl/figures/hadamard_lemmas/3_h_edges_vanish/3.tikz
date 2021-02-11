@@ -1,0 +1,25 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (11) at (-0.75, 2.25) {};
+		\node [style=none] (12) at (0.75, 2.25) {};
+		\node [style=none] (13) at (0, 2) {...};
+		\node [style=qutrit Z phase] (14) at (0, 1) {$\alpha$ \nodepart{lower} $\beta$};
+		\node [style=none] (22) at (0, -1.75) {...};
+		\node [style=qutrit X phase] (23) at (0, -1) {$\gamma$ \nodepart{lower} $\delta$};
+		\node [style=none] (24) at (-0.75, -2.75) {};
+		\node [style=none] (25) at (0.75, -2.75) {};
+		\node [style=qutrit hadamard unknown] (26) at (-0.75, -2.25) {$h$};
+		\node [style=qutrit hadamard unknown] (27) at (0.75, -2.25) {$h$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right=15] (11.center) to (14);
+		\draw [bend right=15] (14) to (12.center);
+		\draw [bend left=15] (26) to (23);
+		\draw [bend left=15] (23) to (27);
+		\draw (26) to (24.center);
+		\draw (27) to (25.center);
+		\draw [bend right=60] (14) to (23);
+		\draw [bend left=60] (14) to (23);
+		\draw (14) to (23);
+	\end{pgfonlayer}
+\end{tikzpicture}
