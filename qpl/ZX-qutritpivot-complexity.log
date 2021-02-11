@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  11 FEB 2021 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  11 FEB 2021 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1098,11 +1098,13 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 ) (./figures/qubit_hadamard/yellow_box.tikz)
 (./figures/qubit_hadamard/dashed.tikz)
 (./figures/qubit_hadamard/decomposed.tikz)
-(./figures/qubit_hadamard/yellow_box.tikz) (./figures/eliminate/clifford.tikz)
-(./figures/eliminate/pauli.tikz) [3]
+(./figures/qubit_hadamard/yellow_box.tikz)
 (./figures/hadamard_lemmas/2_h_edges_vanish/lhs.tikz)
-(./figures/hadamard_lemmas/2_h_edges_vanish/rhs.tikz)) (./main/qutrits.tex
-(./figures/qutrit_generators/spiders/Z_a_b_labelled.tikz
+(./figures/hadamard_lemmas/2_h_edges_vanish/rhs.tikz)
+(./figures/self_loop/plain/lhs.tikz) (./figures/self_loop/plain/rhs.tikz)
+(./figures/self_loop/hadamard/lhs.tikz) (./figures/self_loop/hadamard/rhs.tikz)
+[3] (./figures/eliminate/clifford.tikz) (./figures/eliminate/pauli.tikz))
+(./main/qutrits.tex (./figures/qutrit_generators/spiders/Z_a_b_labelled.tikz
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
 
@@ -1144,13 +1146,9 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/hadamard_lemmas/io_irrelevant/h/rhs.tikz)
 (./figures/hadamard_lemmas/io_irrelevant/h_dagger/lhs.tikz)
 (./figures/hadamard_lemmas/io_irrelevant/h_dagger/rhs.tikz) [5]
-(./figures/qutrit_snake/same_bent.tikz)
-(./figures/qutrit_snake/same_straight.tikz)
-(./figures/qutrit_snake/different_bent.tikz)
-(./figures/qutrit_snake/different_straight.tikz)
-(./figures/hadamard_lemmas/spiders_reluctant_to_fuse/1.tikz)
-(./figures/hadamard_lemmas/spiders_reluctant_to_fuse/2.tikz)
-(./figures/hadamard_lemmas/spiders_reluctant_to_fuse/3.tikz)
+(./figures/hadamard_lemmas/plain_wire/1.tikz)
+(./figures/hadamard_lemmas/plain_wire/2.tikz)
+(./figures/hadamard_lemmas/plain_wire/3.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/blue.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/disconnected.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/purple.tikz)
@@ -1161,88 +1159,70 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/hadamard_lemmas/boxes/4_vanish.tikz)
 (./figures/hadamard_lemmas/boxes/3_flip.tikz)
 (./figures/hadamard_lemmas/boxes/2_separate.tikz) [6]
-
-LaTeX Warning: Reference `lem:H_edges_qutrit' on page 7 undefined on input line
- 160.
-
-(./figures/is_graph_like/plain_input_output_wire.tikz)
+(./figures/is_graph_like/plain_input_output_wire_coloured.tikz)
 (./figures/is_graph_like/input_connected_to_hadamard.tikz)
-(./figures/is_graph_like/multiple_inputs_connected_to_one_spider.tikz)
+(./figures/is_graph_like/multiple_inputs_connected_to_one_spider_coloured.tikz)
 (./figures/a_local_comp/same.tikz) (./figures/a_local_comp/different.tikz)
-[7] (./figures/graph_state/local_comp.tikz)
-(./figures/graph_state/proper_local_pivot.tikz) (./figures/bang/basic/bang.tikz
-) (./figures/bang/basic/0.tikz) (./figures/bang/basic/1.tikz)
-(./figures/bang/basic/2.tikz) (./figures/bang/basic/3.tikz)
-(./figures/bang/parametrised/bang.tikz) (./figures/bang/parametrised/3.tikz)
-[8] (./figures/bang/connected/bang.tikz) (./figures/bang/connected/0.tikz)
+(./figures/graph_state/local_comp.tikz) [7]
+(./figures/graph_state/proper_local_pivot.tikz)
+(./figures/bang/connected/K.tikz) (./figures/bang/connected/0.tikz)
 (./figures/bang/connected/1.tikz) (./figures/bang/connected/2.tikz)
-(./figures/bang/connected/3.tikz)
+(./figures/bang/connected/3.tikz) [8]
 (./figures/eliminate/P_spiders/bang/general/1.tikz)
-(./figures/eliminate/P_spiders/bang/general/9.tikz) [9]
+(./figures/eliminate/P_spiders/bang/general/9.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/1.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/9.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/1.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/9.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/LHS.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/RHS.tikz) [10]
-
-LaTeX Warning: Reference `lem:H_edges_qutrit' on page 11 undefined on input lin
-e 289.
-
-
-LaTeX Warning: Reference `lem:H_edges_qutrit' on page 11 undefined on input lin
-e 292.
-
-) (./main/case_studies.tex
-<figures/link.jpg, id=283, 573.8238pt x 469.0323pt>
+(./figures/eliminate/M_spiders/bang/w_1/LHS.tikz) [9]
+(./figures/eliminate/M_spiders/bang/w_1/RHS.tikz)) (./main/case_studies.tex
+[10]
+<figures/link.jpg, id=298, 573.8238pt x 469.0323pt>
 File: figures/link.jpg Graphic file (type jpg)
 <use figures/link.jpg>
 Package pdftex.def Info: figures/link.jpg  used on input line 17.
 (pdftex.def)             Requested size: 114.76273pt x 93.8048pt.
  [11 <./figures/link.jpg>]
-<figures/link-tn.jpg, id=296, 1226.4219pt x 481.3182pt>
+<figures/link-tn.jpg, id=305, 1226.4219pt x 481.3182pt>
 File: figures/link-tn.jpg Graphic file (type jpg)
 <use figures/link-tn.jpg>
 Package pdftex.def Info: figures/link-tn.jpg  used on input line 64.
 (pdftex.def)             Requested size: 245.28003pt x 96.26193pt.
-<figures/q2.pdf, id=297, 845.04686pt x 597.50786pt>
+<figures/q2.pdf, id=306, 845.04686pt x 597.50786pt>
 File: figures/q2.pdf Graphic file (type pdf)
 <use figures/q2.pdf>
 Package pdftex.def Info: figures/q2.pdf  used on input line 72.
 (pdftex.def)             Requested size: 126.75156pt x 89.6223pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12 <./figures/link-tn.jpg>]
+LaTeX Warning: Reference `eq:pm_tensor' on page 12 undefined on input line 95.
 
-LaTeX Warning: Reference `eq:pm_tensor' on page 13 undefined on input line 95.
-
-(./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/pm_maps/q4.tikz) (./figures/pm_maps/pm.tikz)
+[12 <./figures/link-tn.jpg> <./figures/q2.pdf>] (./figures/pm_maps/q2.tikz)
+(./figures/pm_maps/pm.tikz) (./figures/pm_maps/q4.tikz)
+(./figures/pm_maps/pm.tikz)
 
 LaTeX Warning: Reference `sec:passage' on page 13 undefined on input line 125.
 
-(./figures/scalars/Z_kpi_1.tikz) (./figures/scalars/Z_kpi_2.tikz) [13 <./figure
-s/q2.pdf>]
+(./figures/scalars/Z_kpi_1.tikz) (./figures/scalars/Z_kpi_2.tikz)
 
-LaTeX Warning: Reference `thm:qubit_eliminate_spiders' on page 14 undefined on 
+LaTeX Warning: Reference `thm:qubit_eliminate_spiders' on page 13 undefined on 
 input line 134.
 
 
-LaTeX Warning: Reference `lem:2_h_edges_vanish' on page 14 undefined on input l
+LaTeX Warning: Reference `lem:2_h_edges_vanish' on page 13 undefined on input l
 ine 134.
 
 
-LaTeX Warning: Reference `eq:pm_tensor' on page 14 undefined on input line 137.
+LaTeX Warning: Reference `eq:pm_tensor' on page 13 undefined on input line 137.
 
 
-(./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz))
+(./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)) [13]
 (./ZX-qutritpivot-complexity.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
- [14]) (./appendix/zx_calculus.tex
+) (./appendix/zx_calculus.tex
 (./figures/qubit_rules/fusion/lhs.tikz
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
@@ -1265,14 +1245,15 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 
 ) (./figures/qubit_rules/bialgebra/lhs.tikz)
 (./figures/qubit_rules/bialgebra/rhs.tikz)
-(./figures/qubit_rules/identity/lhs.tikz)
+(./figures/qubit_hadamard/yellow_box.tikz)
+(./figures/qubit_hadamard/decomposed.tikz) (./figures/qubit_rules/copy/lhs.tikz
+) (./figures/qubit_rules/copy/rhs.tikz) (./figures/qubit_rules/pi/lhs.tikz)
+(./figures/qubit_rules/pi/rhs.tikz) (./figures/qubit_rules/identity/lhs.tikz)
 (./figures/qubit_rules/identity/rhs.tikz)
 (./figures/qubit_rules/hadamard/lhs.tikz)
 (./figures/qubit_rules/hadamard/rhs.tikz)
 (./figures/qubit_rules/colour_change/lhs.tikz)
 (./figures/qubit_rules/colour_change/rhs.tikz)
-(./figures/qubit_rules/copy/lhs.tikz) (./figures/qubit_rules/copy/rhs.tikz)
-(./figures/qubit_rules/pi/lhs.tikz) (./figures/qubit_rules/pi/rhs.tikz)
 (./figures/qutrit_rules/fusion/all.tikz
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
@@ -1337,7 +1318,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 49.
 (./figures/qutrit_generators/spiders/X_a_b.tikz)
 (./figures/qutrit_generators/hadamard.tikz)
 (./figures/qutrit_generators/swap.tikz)
-(./figures/qutrit_generators/identity.tikz)
+(./figures/qutrit_generators/identity.tikz) [14]
 (./figures/qutrit_generators/spiders/Z_a_b_labelled.tikz
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
@@ -1366,10 +1347,19 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 
-) [15] (./figures/qutrit_rules/exceptions/colour_change/rhs.tikz)
+) (./figures/qutrit_generators/hadamard.tikz)
+(./figures/hadamard_lemmas/parametrised/2.tikz) [15] [16]
+(./figures/qutrit_rules/exceptions/colour_change/rhs.tikz)
 (./figures/qutrit_rules/exceptions/colour_change/lhs.tikz)
 (./figures/qutrit_rules/exceptions/colour_change/flip_rhs.tikz)
-(./figures/qutrit_rules/exceptions/colour_change/flip_lhs.tikz) [16] [17]
+(./figures/qutrit_rules/exceptions/colour_change/flip_lhs.tikz)
+(./figures/hadamard_lemmas/3_h_edges_vanish/blue.tikz)
+(./figures/hadamard_lemmas/3_h_edges_vanish/disconnected.tikz)
+(./figures/hadamard_lemmas/3_h_edges_vanish/purple.tikz)
+(./figures/hadamard_lemmas/2_h_edges_flip/2_blue.tikz)
+(./figures/hadamard_lemmas/2_h_edges_flip/1_purple.tikz)
+(./figures/hadamard_lemmas/2_h_edges_flip/2_purple.tikz)
+(./figures/hadamard_lemmas/2_h_edges_flip/1_blue.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/hopf/lhs.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/hopf/rhs.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/1.tikz)
@@ -1379,36 +1369,34 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/hadamard_lemmas/3_h_edges_vanish/disconnected.tikz))
 (./appendix/pivot.tex (./figures/qutrit_rules/hadamard/euler/h.tikz)
 (./figures/qutrit_rules/hadamard/euler/decomposition.tikz)
-(./figures/qutrit_rules/hadamard/euler/h.tikz)
 (./figures/hadamard_lemmas/decompositions/h.tikz)
 (./figures/hadamard_lemmas/decompositions/h_dagger.tikz)
 (./figures/hadamard_lemmas/decompositions/h_dagger_xzx.tikz)
-(./figures/hadamard_lemmas/decompositions/h_dagger.tikz)
-(./figures/hadamard_lemmas/decompositions/h_dagger_zxz.tikz)
-(./figures/graph_state/proper_local_pivot.tikz) [18]
-(./figures/proper_pivot/a_1/w_1/bang/1.tikz)
-(./figures/proper_pivot/a_1/w_1/bang/2.tikz)
-(./figures/proper_pivot/a_1/w_1/bang/3.tikz)
-(./figures/proper_pivot/a_1/w_1/bang/4.tikz)
-(./figures/proper_pivot/a_1/w_1/bang/5.tikz)
-(./figures/proper_pivot/a_1/w_1/bang/1.tikz)
-(./figures/proper_pivot/a_1/w_1/bang/2.tikz)
-(./figures/proper_pivot/a_1/w_1/bang/3.tikz)
-(./figures/proper_pivot/a_1/w_1/bang/4.tikz)
-(./figures/proper_pivot/a_1/w_1/bang/5.tikz)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19])
+(./figures/hadamard_lemmas/decompositions/h_dagger_zxz.tikz) [17]
+(./figures/graph_state/proper_local_pivot.tikz)
+(./figures/proper_local_pivot/a_1/w_1/bang/1.tikz)
+(./figures/proper_local_pivot/a_1/w_1/bang/2.tikz)
+(./figures/proper_local_pivot/a_1/w_1/bang/3.tikz)
+(./figures/proper_local_pivot/a_1/w_1/bang/4.tikz)
+(./figures/proper_local_pivot/a_1/w_1/bang/5.tikz)
+(./figures/proper_local_pivot/a_1/w_1/bang/1.tikz)
+(./figures/proper_local_pivot/a_1/w_1/bang/2.tikz)
+(./figures/proper_local_pivot/a_1/w_1/bang/3.tikz)
+(./figures/proper_local_pivot/a_1/w_1/bang/4.tikz)
+(./figures/proper_local_pivot/a_1/w_1/bang/5.tikz) [18])
 (./appendix/eliminate/p_spiders.tex (./figures/leg_flip/1.tikz)
 (./figures/leg_flip/5.tikz) (./figures/leg_flip/1.tikz)
 (./figures/leg_flip/2.tikz) (./figures/leg_flip/3.tikz)
 (./figures/leg_flip/4.tikz) (./figures/leg_flip/5.tikz)
+Underfull \vbox (badness 2894) has occurred while \output is active []
+
+ [19]
 (./figures/m_copies/full/1.tikz) (./figures/m_copies/full/4.tikz)
 (./figures/m_copies/part_1/1.tikz) (./figures/m_copies/part_1/2.tikz)
 (./figures/m_copies/part_1/3.tikz) (./figures/m_copies/part_1/4.tikz)
 (./figures/m_copies/part_1/5.tikz) (./figures/m_copies/part_2/1.tikz)
 (./figures/m_copies/part_2/2.tikz) (./figures/m_copies/part_2/3.tikz)
-(./figures/m_copies/part_2/4.tikz) [20] (./figures/m_copies/full/1.tikz)
+(./figures/m_copies/part_2/4.tikz) (./figures/m_copies/full/1.tikz)
 (./figures/m_copies/full/2.tikz) (./figures/m_copies/full/3.tikz)
 (./figures/m_copies/full/4.tikz)
 
@@ -1422,7 +1410,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/p_state/1.tikz) (./figures/p_state/6.tikz) (./figures/p_state/1.tikz
 ) (./figures/p_state/2.tikz) (./figures/p_state/3.tikz)
 (./figures/p_state/4.tikz) (./figures/p_state/5.tikz) (./figures/p_state/6.tikz
-) (./figures/eliminate/P_spiders/bang/general/1.tikz)
+) [20] (./figures/eliminate/P_spiders/bang/general/1.tikz)
 (./figures/eliminate/P_spiders/bang/general/9.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/1.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/2.tikz)
@@ -1432,15 +1420,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/eliminate/P_spiders/bang/p_1/6.tikz)
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 21 undefined on input
- line 95.
+ line 96.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 21 undefined on input
- line 95.
+ line 96.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 21 undefined on input
- line 95.
+ line 96.
 
 (./figures/eliminate/P_spiders/bang/p_1/7.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/8.tikz)
@@ -1453,15 +1441,15 @@ LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 21 undefined on input
 (./figures/eliminate/P_spiders/bang/p_1/6.tikz)
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 21 undefined on input
- line 95.
+ line 96.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 21 undefined on input
- line 95.
+ line 96.
 
 
 LaTeX Warning: Reference `eq:qutrit_dashed_lines' on page 21 undefined on input
- line 95.
+ line 96.
 
 (./figures/eliminate/P_spiders/bang/p_1/7.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/8.tikz)
@@ -1481,7 +1469,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/n_states/2_0/z.tikz) (./figures/n_states/2_0/x.tikz)
 (./figures/n_states/general/x_n_n'.tikz)
 (./figures/n_states/general/z_n_n'.tikz)
-(./figures/n_states/general/x_n'_n.tikz) [22] (./figures/n_states/0_1/1.tikz)
+(./figures/n_states/general/x_n'_n.tikz) (./figures/n_states/0_1/1.tikz)
 (./figures/n_states/0_1/2.tikz) (./figures/n_states/0_1/3.tikz)
 (./figures/n_states/0_1/4.tikz) (./figures/n_states/0_1/5.tikz)
 (./figures/n_states/0_1/6.tikz) (./figures/n_states/corollary/0_n/lhs.tikz)
@@ -1492,7 +1480,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/n_states/corollary/0_1/2.tikz)
 (./figures/n_states/corollary/0_1/3.tikz)
 (./figures/n_states/corollary/0_1/4.tikz)
-(./figures/n_states/corollary/0_1/5.tikz)
+(./figures/n_states/corollary/0_1/5.tikz) [22]
 (./figures/eliminate/N_spiders/0_n/bang/general/1.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/9.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/1.tikz)
@@ -1549,7 +1537,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
 (./figures/eliminate/M_spiders/bang/w_1/LHS.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/RHS.tikz) [24]
+(./figures/eliminate/M_spiders/bang/w_1/RHS.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/1.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/2.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/3.tikz)
@@ -1567,27 +1555,40 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/eliminate/M_spiders/bang/w_1/6.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/7.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/8.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/9.tikz)
+(./figures/eliminate/M_spiders/bang/w_1/9.tikz) [24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [26])
+(./appendix/pm_boxes.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 
- [27])
-(./appendix/pm_boxes.tex (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz
-) (./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\pm' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+(./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
+(./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q4.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/qubit/Z_phase.tikz) (./figures/pm_maps/qubit/X_phase.tikz)
 (./figures/pm_maps/qutrit/Z_phase.tikz) (./figures/pm_maps/qutrit/X_phase.tikz)
-(./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz) [28]
+[27] (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
+(./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/qubit_hadamard/yellow_box.tikz)
 (./figures/qubit_hadamard/decomposed.tikz)
 
-LaTeX Warning: Reference `def:qubit_standard_spiders' on page 29 undefined on i
+LaTeX Warning: Reference `def:qubit_standard_spiders' on page 28 undefined on i
 nput line 97.
 
 (./figures/pm_maps/q4.tikz) (./figures/pm_maps/q4/decomposed.tikz)
@@ -1599,7 +1600,7 @@ nput line 97.
 (./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_compare.tikz)
 (./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/hadamard.tikz)
 (./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_copy.tikz)
-(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/pm.tikz)) [29]
+(./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/pm.tikz) [28]) [29]
 \pages=\write7
 \openout7 = `ZX-qutritpivot-complexity.pag'.
 
@@ -1611,7 +1612,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
 Package rerunfilecheck Info: File `ZX-qutritpivot-complexity.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: EC136EFC8211B1981949C7DB7AE88A61;1428.
+(rerunfilecheck)             Checksum: 7666F2EDC8C967892377B18517D998E2;1365.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1622,13 +1623,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
  ) 
 Here is how much of TeX's memory you used:
- 34998 strings out of 480608
- 737357 string characters out of 5903629
- 1595449 words of memory out of 5000000
- 49188 multiletter control sequences out of 15000+600000
- 607741 words of font info for 185 fonts, out of 8000000 for 9000
+ 35047 strings out of 480608
+ 738229 string characters out of 5903629
+ 1650789 words of memory out of 5000000
+ 49235 multiletter control sequences out of 15000+600000
+ 612374 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,21n,105p,1019b,1113s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,21n,105p,1283b,1113s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1643,10 +1644,10 @@ fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on ZX-qutritpivot-complexity.pdf (29 pages, 637846 bytes).
+Output written on ZX-qutritpivot-complexity.pdf (29 pages, 645121 bytes).
 PDF statistics:
- 930 PDF objects out of 1000 (max. 8388607)
- 523 compressed objects within 6 object streams
+ 937 PDF objects out of 1000 (max. 8388607)
+ 521 compressed objects within 6 object streams
  156 named destinations out of 1000 (max. 500000)
- 348 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 340 words of extra memory for PDF output out of 10000 (max. 10000000)
 
