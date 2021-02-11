@@ -19,11 +19,17 @@
   \bibinfo{volume}{70}(\bibinfo{number}{5}), \doi{10.1103/physreva.70.052328}.
 \newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevA.70.052328}.
 
-\bibitemdeclare{article}{backens_scalar_exact}
-\bibitem{backens_scalar_exact}
-\bibinfo{author}{Miriam \surnamestart Backens\surnameend}
-  (\bibinfo{year}{2015}): \emph{\bibinfo{title}{Making the stabilizer
-  ZX-calculus complete for scalars}}.
+\bibitemdeclare{article}{Aharonov_2008}
+\bibitem{Aharonov_2008}
+\bibinfo{author}{Dorit \surnamestart Aharonov\surnameend},
+  \bibinfo{author}{Vaughan \surnamestart Jones\surnameend} \&
+  \bibinfo{author}{Zeph \surnamestart Landau\surnameend}
+  (\bibinfo{year}{2008}): \emph{\bibinfo{title}{A Polynomial Quantum Algorithm
+  for Approximating the Jones Polynomial}}.
+\newblock {\sl \bibinfo{journal}{Algorithmica}}
+  \bibinfo{volume}{55}(\bibinfo{number}{3}), p. \bibinfo{pages}{395–421},
+  \doi{10.1007/s00453-008-9168-0}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1007/s00453-008-9168-0}.
 
 \bibitemdeclare{misc}{backens2018zh}
 \bibitem{backens2018zh}
@@ -96,6 +102,83 @@
   (\bibinfo{year}{2020}): \emph{\bibinfo{title}{Hyper-optimized tensor network
   contraction}}.
 
+\bibitemdeclare{article}{jaeger_vertigan_welsh_1990}
+\bibitem{jaeger_vertigan_welsh_1990}
+\bibinfo{author}{F.~\surnamestart Jaeger\surnameend}, \bibinfo{author}{D.~L.
+  \surnamestart Vertigan\surnameend} \& \bibinfo{author}{D.~J.~A. \surnamestart
+  Welsh\surnameend} (\bibinfo{year}{1990}): \emph{\bibinfo{title}{On the
+  computational complexity of the Jones and Tutte polynomials}}.
+\newblock {\sl \bibinfo{journal}{Mathematical Proceedings of the Cambridge
+  Philosophical Society}} \bibinfo{volume}{108}(\bibinfo{number}{1}), p.
+  \bibinfo{pages}{35–53}, \doi{10.1017/S0305004100068936}.
+
+\bibitemdeclare{book}{Kauffman2001}
+\bibitem{Kauffman2001}
+\bibinfo{author}{Louis~H \surnamestart Kauffman\surnameend}
+  (\bibinfo{year}{2001}): \emph{\bibinfo{title}{Knots and Physics}}.
+\newblock \bibinfo{publisher}{{WORLD} {SCIENTIFIC}}, \doi{10.1142/4256}.
+\newblock \urlprefix\url{https://doi.org/10.1142/4256}.
+
+\bibitemdeclare{article}{10.21468/SciPostPhys.7.5.060}
+\bibitem{10.21468/SciPostPhys.7.5.060}
+\bibinfo{author}{Stefanos \surnamestart Kourtis\surnameend},
+  \bibinfo{author}{Claudio \surnamestart Chamon\surnameend},
+  \bibinfo{author}{Eduardo~R. \surnamestart Mucciolo\surnameend} \&
+  \bibinfo{author}{Andrei~E. \surnamestart Ruckenstein\surnameend}
+  (\bibinfo{year}{2019}): \emph{\bibinfo{title}{{Fast counting with tensor
+  networks}}}.
+\newblock {\sl \bibinfo{journal}{SciPost Phys.}} \bibinfo{volume}{7},
+  p.~\bibinfo{pages}{60}, \doi{10.21468/SciPostPhys.7.5.060}.
+\newblock \urlprefix\url{https://scipost.org/10.21468/SciPostPhys.7.5.060}.
+
+\bibitemdeclare{misc}{kuperberg2014hard}
+\bibitem{kuperberg2014hard}
+\bibinfo{author}{Greg \surnamestart Kuperberg\surnameend}
+  (\bibinfo{year}{2014}): \emph{\bibinfo{title}{How hard is it to approximate
+  the Jones polynomial?}}
+
+\bibitemdeclare{article}{Levaillant_2015}
+\bibitem{Levaillant_2015}
+\bibinfo{author}{Claire \surnamestart Levaillant\surnameend},
+  \bibinfo{author}{Bela \surnamestart Bauer\surnameend},
+  \bibinfo{author}{Michael \surnamestart Freedman\surnameend},
+  \bibinfo{author}{Zhenghan \surnamestart Wang\surnameend} \&
+  \bibinfo{author}{Parsa \surnamestart Bonderson\surnameend}
+  (\bibinfo{year}{2015}): \emph{\bibinfo{title}{Universal gates via fusion and
+  measurement operations onSU(2)4anyons}}.
+\newblock {\sl \bibinfo{journal}{Physical Review A}}
+  \bibinfo{volume}{92}(\bibinfo{number}{1}), \doi{10.1103/physreva.92.012301}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevA.92.012301}.
+
+\bibitemdeclare{article}{PhysRevE.100.033303}
+\bibitem{PhysRevE.100.033303}
+\bibinfo{author}{Konstantinos \surnamestart Meichanetzidis\surnameend} \&
+  \bibinfo{author}{Stefanos \surnamestart Kourtis\surnameend}
+  (\bibinfo{year}{2019}): \emph{\bibinfo{title}{Evaluating the Jones polynomial
+  with tensor networks}}.
+\newblock {\sl \bibinfo{journal}{Phys. Rev. E}} \bibinfo{volume}{100}, p.
+  \bibinfo{pages}{033303}, \doi{10.1103/PhysRevE.100.033303}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevE.100.033303}.
+
+\bibitemdeclare{book}{pachos_2012}
+\bibitem{pachos_2012}
+\bibinfo{author}{Jiannis~K. \surnamestart Pachos\surnameend}
+  (\bibinfo{year}{2012}): \emph{\bibinfo{title}{Introduction to Topological
+  Quantum Computation}}.
+\newblock \bibinfo{publisher}{Cambridge University Press},
+  \doi{10.1017/CBO9780511792908}.
+
+\bibitemdeclare{article}{Rowell_2018}
+\bibitem{Rowell_2018}
+\bibinfo{author}{Eric~C. \surnamestart Rowell\surnameend} \&
+  \bibinfo{author}{Zhenghan \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2018}): \emph{\bibinfo{title}{Mathematics of topological
+  quantum computing}}.
+\newblock {\sl \bibinfo{journal}{Bulletin of the American Mathematical
+  Society}} \bibinfo{volume}{55}(\bibinfo{number}{2}), p.
+  \bibinfo{pages}{183–238}, \doi{10.1090/bull/1605}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1090/BULL/1605}.
+
 \bibitemdeclare{article}{harny_completeness}
 \bibitem{harny_completeness}
 \bibinfo{author}{Quanlong \surnamestart Wang\surnameend}
@@ -113,5 +196,13 @@
 \bibinfo{author}{John \surnamestart van~de Wetering\surnameend}
   (\bibinfo{year}{2020}): \emph{\bibinfo{title}{ZX-calculus for the working
   quantum computer scientist}}.
+
+\bibitemdeclare{article}{RevModPhys.64.1099}
+\bibitem{RevModPhys.64.1099}
+\bibinfo{author}{F.~Y. \surnamestart Wu\surnameend} (\bibinfo{year}{1992}):
+  \emph{\bibinfo{title}{Knot theory and statistical mechanics}}.
+\newblock {\sl \bibinfo{journal}{Rev. Mod. Phys.}} \bibinfo{volume}{64}, pp.
+  \bibinfo{pages}{1099--1131}, \doi{10.1103/RevModPhys.64.1099}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/RevModPhys.64.1099}.
 
 \end{thebibliography}
