@@ -56,5 +56,6 @@
 \newcommand{\spiderrule}{\footnotesize\SpiderRule}
 \newcommand{\fusionrule}{\footnotesize\SpiderRule}
 
-
 \newcommand{\comp}[1]{\overline{#1}}
+
+\definecolor{bang_orange}{RGB}{255, 128, 0}

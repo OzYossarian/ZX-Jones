@@ -9,7 +9,7 @@
 		\node [style=none] (6) at (2.75, 0.25) {};
 		\node [style=none] (8) at (6.5, 0.25) {};
 		\node [style=none] (9) at (8, 0.25) {};
-		\node [style=none] (10) at (4.5, -0.5) {$G *_a k$};
+		\node [style=none] (10) at (4.5, -0.5) {$G *_a x$};
 		\node [style=none] (11) at (1.5, 1.75) {};
 		\node [style=none] (12) at (2.75, 1.75) {};
 		\node [style=none] (14) at (6.5, 1.75) {};
@@ -21,8 +21,8 @@
 		\node [style=qutrit Z phase] (35) at (5.25, 1) {$-a$ \nodepart{lower} $-a$};
 		\node [style=none] (36) at (4, 1) {...};
 		\node [style=none] (37) at (7.25, 1) {...};
-		\node [style={scale=0.7}] (38) at (4, 2.25) {$\overbrace{\hspace{60pt}}^{N(k)}$};
-		\node [style={scale=0.7}] (39) at (1.5, 2.25) {$\overbrace{\quad}^{k}$};
+		\node [style={scale=0.7}] (38) at (4, 2.25) {$\overbrace{\hspace{60pt}}^{N(x)}$};
+		\node [style={scale=0.7}] (39) at (1.5, 2.25) {$\overbrace{\quad}^{x}$};
 		\node [style=none] (40) at (-8, 0.25) {};
 		\node [style=none] (41) at (-1, 0.25) {};
 		\node [style=none] (42) at (-4.75, -1.75) {};
@@ -40,8 +40,8 @@
 		\node [style=none] (56) at (-4, 0.75) {};
 		\node [style=none] (58) at (-5.25, 0.5) {...};
 		\node [style=none] (59) at (-2, 0.5) {...};
-		\node [style={scale=0.7}] (60) at (-5.25, 1.25) {$\overbrace{\hspace{60pt}}^{N(k)}$};
-		\node [style={scale=0.7}] (61) at (-7.75, 1.25) {$\overbrace{\quad}^{k}$};
+		\node [style={scale=0.7}] (60) at (-5.25, 1.25) {$\overbrace{\hspace{60pt}}^{N(x)}$};
+		\node [style={scale=0.7}] (61) at (-7.75, 1.25) {$\overbrace{\quad}^{x}$};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw (1.center) to (4.center);

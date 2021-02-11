@@ -269,10 +269,10 @@ and have the following concrete representation as linear maps:
 			% e^{i\beta}\ket{\bar{\omega}}^{\otimes m}\bra{\bar{\omega}}^{\otimes n}
 		\end{align}
 \endgroup
-When $\alpha = \beta = 0$ we will again omit the angles entirely, and just draw a small green or red dot. Frequently we will consider spiders whose phases are integer multiples of $\frac{2\pi}{3}$. Indeed, throughout our work, whenever we use an integer $n$ as a spider decoration, this is a shorthand for $\frac{2\pi}{3}n$. Since spider phases hold mod $2\pi$, these integer decorations hold mod $3$. Unless otherwise stated, we will use Greek letters to denote general angles, and Roman letters for these integer shorthands.
+When $\alpha = \beta = 0$ we will again omit the angles entirely, and just draw a small green or red dot. Throughout our work, whenever we use an integer $n$ as a spider decoration, this is a shorthand for $\frac{2\pi}{3}n$. Since spider phases hold mod $2\pi$, these integer decorations hold mod $3$. Unless otherwise stated, we will use Greek letters to denote general angles, and Roman letters for these integer shorthands.
 % This shouldn't ever cause confusion.
 
-Hadamard boxes are now neither self-conjugate nor self-adjoint, so we change our notation: we let a yellow parallelogram decorated with a $1$ (mod $3$) denote a Hadamard gate, while decorating with a $2$ (mod $3$) denotes its adjoint. We will shortly explain this choice. We also use a dashed blue line for the \textit{Hadamard edge} (\textit{$H$-edge}) and a purple dashed line for its adjoint (\textit{$H^\dagger$-edge}):
+Hadamard gates are no longer self-adjoint, so we change our notation: we let a yellow parallelogram decorated with a $1$ (mod $3$) denote a Hadamard gate, while decorating with a $2$ (mod $3$) denotes its adjoint. We will shortly explain this choice. We also use a dashed blue line for the \textit{Hadamard edge} (\textit{$H$-edge}) and a purple dashed line for its adjoint (\textit{$H^\dagger$-edge}):
 \begin{equation}
 		\tikzfig{hadamard_lemmas/parametrised/1} \ = \ 
 		\tikzfig{hadamard_lemmas/dashed/blue} \ = \ 
@@ -376,7 +376,7 @@ We will shortly show that every qutrit ZX-diagram is equivalent to a graph-like 
 	\end{proof}
 \end{lemma}
 
-As we will formalise later, the lemmas above justify our notation for Hadamard gates: we can think of Hadamard edges as $1$-weighted edges and their adjoints as $2$-weighted edges, then work modulo $3$, since every triple of parallel edges disappears. Where the previous lemmas relate single $H$- and $H^\dagger$-boxes across multiple edges, the next relates multiple $H$- and $H^\dagger$- boxes on single edges.
+The lemmas above justify our notation for Hadamard gates: we can think of Hadamard edges as $1$-weighted edges and their adjoints as $2$-weighted edges, then work modulo $3$, since every triple of parallel edges disappears. Where the previous lemmas relate single $H$- and $H^\dagger$-boxes across multiple edges, the next relates multiple $H$- and $H^\dagger$- boxes on single edges.
 
 \begin{lemma}\label{lem:H_boxes_qutrit} 
 	The following three equations hold in the qutrit ZX calculus, for $h \in \{1, 2\}$:
@@ -391,8 +391,6 @@ As we will formalise later, the lemmas above justify our notation for Hadamard g
 		For the first equation, negate the top two boxes via $\qutritRuleSnake$, then cancel twice via $\qutritRuleHadamard$. Similarly, for the second equation, negate the top two boxes via $\qutritRuleSnake$, then cancel once via $\qutritRuleHadamard$. The third equation is just a simple application of $\qutritRuleId$.
 	\end{proof}
 \end{lemma}
-
-Again, intuitively we can think of Hadamard boxes of having value $1$ and their adjoints $-1$ and then work modulo $4$.
 
 \begin{corollary}\label{prop:every_diagram_is_graph_like_qutrit}
 	Every qutrit ZX diagram is equivalent to one that is graph-like.
@@ -412,13 +410,13 @@ Again, intuitively we can think of Hadamard boxes of having value $1$ and their 
 A graph state is described fully by its underlying multigraph, or equivalently by an adjacency matrix, where edges take weights in $\mathbb{Z}_3$\ [Lemma 4.2 \cite{harny_completeness}. Nodes correspond to phaseless green spiders, edges of weight $1$ correspond to Hadamard edges, and edges of weight $2$ correspond to $H^\dagger$ edges. As in the qubit case, graph states admit a local complementation operation\ Definition 2.6 \cite{harny_completeness}, though the effect is now slightly more complicated. We'll give the intuition after the formal definition:
 
 \begin{definition}\label{def:local_complementation_qutrit}
-	Given $a \in \mathbb{Z}_3$ and a graph state $G$ with adjacency matrix $W = (w_{i,j})$, the \textit{$a$-local complentation} at node $k$ is the new graph state $G *_a i$, whose adjacency matrix $W' = (w'_{i,j})$ given by:
+	Given $a \in \mathbb{Z}_3$ and a graph state $G$ with adjacency matrix $W = (w_{i,j})$, the \textit{$a$-local complentation} at node $x$ is the new graph state $G *_a x$, whose adjacency matrix $W' = (w'_{i,j})$ given by:
 	\begin{equation}
-		w'_{i,j} = w_{i,j} + aw_{i,k}w_{j,k}
+		w'_{i,j} = w_{i,j} + aw_{i,x}w_{j,x}
 	\end{equation}
 \end{definition}
 
-So only those edges between neighbours of node $k$ are affected, but rather than just having their weight increased by $1$ (modulo $2$) as in the qubit case, the increase in weight also depends on the weights of the edges from $i$ and $j$ to $k$. As always, this is best seen graphically. For two nodes $i$ and $j$ both connected to $k$ by the same colour edge, $a$-local complementation at $k$ increases weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $k$ by edges of different colour, $a$-local complementation at $k$ decreases $w_{i,j}$ by $a$. We show a fragment of a ZX-diagram below under the effect of this operation:
+So only those edges between neighbours of node $x$ are affected, but rather than just having their weight increased by $1$ (modulo $2$) as in the qubit case, the increase in weight also depends on the weights of the edges from $i$ and $j$ to $x$. As always, this is best seen graphically. For two nodes $i$ and $j$ both connected to $x$ by the same colour edge, $a$-local complementation at $x$ increases weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $x$ by edges of different colour, $a$-local complementation at $x$ decreases $w_{i,j}$ by $a$. We show a fragment of a ZX-diagram below under the effect of this operation:
 
 \begin{equation}
 	\tikzfig{a_local_comp/same}
@@ -429,7 +427,7 @@ So only those edges between neighbours of node $k$ are affected, but rather than
 But the fragment above doesn't give the full picture. As in the qubit case, local complementation gives an equality up to introducing some single qubit phase gates on the outputs.
 
 \begin{theorem}\label{thm:local_comp_equality}
-	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing a node $k$, let $N(k)$ denote the neighbours of $k$ - that is, nodes $i$ with weight $w_{i,k} \in \{1, 2\}$. Then the following equality holds:
+	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing a node $x$, let $N(x)$ denote the neighbours of $x$ - that is, nodes $i$ with weight $w_{i,x} \in \{1, 2\}$. Then the following equality holds:
 	\ctikzfig{graph_state/local_comp}
 	\begin{proof}
 		This is Theorem 4.4 and Corollary 4.5 in\ \cite{harny_completeness}.
@@ -447,8 +445,8 @@ This again results in an equality, up to introducing some extra gates on outputs
 \begin{theorem}\label{thm:local_pivot_equality}
 	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing connected nodes $i$ and $j$, define the following:
 	\begin{itemize}
-		\item $N_{=}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} = w_{k,j} \right\}$
-		\item $N_{\neq}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} \neq w_{k,j} \right\}$
+		\item $N_{=}(i, j) \defeq \left\{x \in N(i) \cap N(j) \mid w_{x,i} = w_{x,j} \right\}$
+		\item $N_{\neq}(i, j) \defeq \left\{x \in N(i) \cap N(j) \mid w_{x,i} \neq w_{x,j} \right\}$
 	\end{itemize} 
 	Then the following equation relates $G$ and its proper $a$-local pivot along $ij$:
 	\ctikzfig{graph_state/proper_local_pivot}
@@ -458,7 +456,42 @@ This again results in an equality, up to introducing some extra gates on outputs
 	\end{proof}
 \end{theorem}
 
-These two operations are again the drivers behind the simplification procedure. We classify spiders into three families:
+\subsection{!-Box Notation}
+
+We define here (a very small extension of) the !-notation (pronounced `bang notation'), as introduced in [ToDo] for general string diagrams. A !-box in a ZX-diagram allows its contents to `unfold' out arbitrarily; that is, the contents of the !-box, along with any wires into or out of the box, can be copied $n$ times for any non-negative integer $n$, and placed side-by-side. Consider, for example, the following !-diagram and the infinite set of diagrams it represents:
+
+\begin{equation*}
+	\tikzfig{bang/basic/bang} \ = \ \left\{ \quad
+		\tikzfig{bang/basic/0} \quad , \quad
+		\tikzfig{bang/basic/1} \quad , \quad 
+		\tikzfig{bang/basic/2} \quad , \quad 
+		\tikzfig{bang/basic/3} \quad , \quad
+		... \quad
+	\right\}
+\end{equation*}
+
+Following the style of [ToDo], we also allow a parameter over which a !-box unfolds. This can parametrise an infinite family of diagrams or restrict to a single instance - for example, letting $[K] = \{1, ..., K\}$, we can write:
+
+\begin{equation*}
+	\tikzfig{bang/parametrised/bang} \ = \ 
+	\tikzfig{bang/parametrised/3}
+\end{equation*}
+
+Finally, we extend this notation as follows: in the corner of the !-box we allow a small further diagram, which denotes that the unfolded diagrams should all be pairwise connected by the diagram in the corner of the box. A common choice of this `corner diagram' is just the plain wire. In our context (qutrit ZX-calculus) this notation will only be well-defined for certain scenarios: in particular, it is well-defined when the corner diagram is a $H$- or $H^{\dagger}$-edge (since then the distinction between a spider's input and output wires disappears) and the main contents of the !-box is equivalent to a single spider (since then there is no ambiguity about which spiders are connected by the corner diagram). For example, we have:
+
+\begin{equation*}
+	\tikzfig{bang/connected/bang} \ = \ \left\{ \quad
+		\tikzfig{bang/connected/0} \quad , \quad
+		\tikzfig{bang/connected/1} \quad , \quad 
+		\tikzfig{bang/connected/2} \quad , \quad 
+		\tikzfig{bang/connected/3} \quad , \quad
+		... \quad
+	\right\}
+\end{equation*}
+
+\subsection{Qutrit Elimination Theorems}
+
+We classify spiders into three families:
 
 \begin{equation*}
 	\mathcal{M} = \left\{\qutritZspider{0}{0}, \qutritZspider{1}{2}, \qutritZspider{2}{1}\right\},
@@ -468,49 +501,14 @@ These two operations are again the drivers behind the simplification procedure. 
 	\mathcal{P} = \left\{\qutritZspider{1}{1}, \qutritZspider{2}{2}\right\}.
 \end{equation*}
 
- exactly as in Theorem 3.1 \cite{harny_completeness}. We call a spider in a graph-like ZX-diagram \textit{interior} if it isn't connected to an input or output (so for our use case all spiders are interior). Given any graph-like ZX-diagram, we will show that we can eliminate pairs of connected interior \Mspiders\ by local pivoting, and standalone interior $\mathcal{N}$- and \Pspiders\ by local complementation.
-
-\begin{theorem}\label{thm:eliminate_M_spiders}
-	Given any graph-like ZX-diagram containing two interior \Mspiders\ $i$ and $j$ connected by edge $ij$ of weight $w_{i,j} \eqdef w \in \{1,2\}$, suppose we perform a proper $\pm w$-local pivot along $ij$. Then the new ZX-diagram is related to the old one by the equality:
-	
-	\ctikzfig{eliminate/M_spiders/theorem_LHS}
-	\ctikzfig{eliminate/M_spiders/theorem_RHS}
-	
-	where all changes to weights of edges where neither endpoint is $i$ or $j$ are omitted. Furthermore, in order to save space, each node with phase \qutritZphase{a_x^y}{b_x^y} is representative of \textit{all} nodes connected to $i$ by an $x$-weighted edge and to $j$ by a $y$-weighted edge.
-
-	\begin{proof}
-		See \ref{thm:eliminate_M_spiders_appendix} in the Appendix.
-	\end{proof}
-\end{theorem}
-
-\begin{theorem}\label{thm:eliminate_N_spiders}
-	Given any graph-like ZX-diagram containing an interior \Nspider\ $k$ with phase \qutritZphase{0}{n} for $n \in \{1,2\}$, suppose we perform a $(-n)$-local complementation at $k$. Then the new ZX-diagram is related to the old one by the equality:
-
-	\begin{equation*}
-		\tikzfig{eliminate/N_spiders/0_n/step_1} \quad = \quad \tikzfig{eliminate/N_spiders/0_n/step_9}
-	\end{equation*}
-
-	where all changes to weights of edges where neither endpoint is $k$ are omitted. If instead $k$ has phase \qutritZphase{n}{0} for $n \in \{1,2\}$, suppose we perform the same $(-n)$-local complementation at $k$. Then the equality relating the new and old diagrams becomes:
-
-	% Spiders with phases \qutritZphase{a_1}{b_1} ... \qutritZphase{a_r}{b_r} are all the neighbours of $k$ connected by a $1$-weighted (blue) edge, while spider with phases \qutritZphase{c_1}{d_1} ... \qutritZphase{c_s}{d_s} are all the neighbours of $k$ connected by a $2$-weighted (purple) edge.\newline
-
-	\begin{equation*}
-		\tikzfig{eliminate/N_spiders/n_0/step_1} \quad = \quad \tikzfig{eliminate/N_spiders/n_0/step_9}
-	\end{equation*}
-
-	\begin{proof}
-		See Appendix \ref{thm:eliminate_N_spiders_appendix}.
-	\end{proof}
-\end{theorem}
+exactly as in Theorem 3.1 \cite{harny_completeness}. We call a spider in a graph-like ZX-diagram \textit{interior} if it isn't connected to an input or output (so for our use case all spiders are interior). Given any graph-like ZX-diagram, we will show that we can eliminate standalone interior $\mathcal{P}$- and \Nspiders\ by local complementation, and pairs of connected interior \Mspiders\ by local pivoting. 
 
 \begin{theorem}\label{thm:eliminate_P_spiders}
-	Given any graph-like ZX-diagram containing an interior \Pspider\ $k$ with phase \qutritZphase{p}{p} for $p \in \{1,2\}$, suppose we perform a $p$-local complementation at $k$. Then the new ZX-diagram is related to the old one by the equality:
+	Given any graph-like ZX-diagram containing an interior \Pspider\ $x$ with phase \qutritZphase{p}{p} for $p \in \{1,2\}$, suppose we perform a $p$-local complementation at $x$. Then the new ZX-diagram is related to the old one by the following equality:
 
 	\begin{equation*}
-		\tikzfig{eliminate/P_spiders/step_1} \quad = \quad \tikzfig{eliminate/P_spiders/step_9}
+		\tikzfig{eliminate/P_spiders/bang/general/1} \quad = \quad \tikzfig{eliminate/P_spiders/bang/general/9}
 	\end{equation*}
-
-	where all changes to weights of edges where neither endpoint is $k$ are omitted.
 
 	\begin{proof}
 		See Appendix \ref{thm:eliminate_P_spiders_appendix}.
@@ -519,13 +517,45 @@ These two operations are again the drivers behind the simplification procedure. 
 	% Spiders with phases \qutritZphase{a_1}{b_1} ... \qutritZphase{a_r}{b_r} are all the neighbours of $k$ connected by a $1$-weighted (blue) edge, while spider with phases \qutritZphase{c_1}{d_1} ... \qutritZphase{c_s}{d_s} are all the neighbours of $k$ connected by a $2$-weighted (purple) edge.\newline
 \end{theorem}
 
-We can now combine these three elimination theorems into an algorithm for efficiently simplifying a closed graph-like ZX-diagram. First note that after applying any one of the three elimination theorems to such a diagram we may end up with a state that is no longer graph-like. Fortunately the only way in which this can happen is if two spiders end up being connected by multiple $H$- or $H^\dagger$-edges, and we have shown via Lemmas \ref{lem:three_H_edges_vanish} and \ref{lem:H_edges_qutrit} that these can always be reduced to just one edge.
+\begin{theorem}\label{thm:eliminate_N_spiders}
+	Given any graph-like ZX-diagram containing an interior \Nspider\ $x$ with phase \qutritZphase{0}{n} or \qutritZphase{n}{0} for $n \in \{1,2\}$, suppose we perform a $(-n)$-local complementation at $x$. Then, treating the two cases separately, the new ZX-diagrams are related to the old ones by the equalities:
+
+	\begin{equation*}
+		\tikzfig{eliminate/N_spiders/0_n/bang/general/1} ~~ = ~~ \tikzfig{eliminate/N_spiders/0_n/bang/general/9} ~~ ,
+		\hspace{30pt}
+		\tikzfig{eliminate/N_spiders/n_0/bang/1} ~~ = ~~ \tikzfig{eliminate/N_spiders/n_0/bang/9}
+	\end{equation*}
+
+	\begin{proof}
+		See Appendix \ref{thm:eliminate_N_spiders_appendix}.
+	\end{proof}
+\end{theorem}
+
+\begin{theorem}\label{thm:eliminate_M_spiders}
+	Given any graph-like ZX-diagram containing two interior \Mspiders\ $i$ and $j$ connected by edge $ij$ of weight $w_{i,j} \eqdef w \in \{1,2\}$, suppose we perform a proper $\pm w$-local pivot along $ij$ (both choices give the same result). For the case $w=1$, the new ZX-diagram is related to the old one by the following equality:
+	
+	\begin{equation*}
+		\tikzfig{eliminate/M_spiders/bang/w_1/LHS}
+	\end{equation*}
+	\vspace{10pt}
+	\begin{equation*}
+	 	= \quad \tikzfig{eliminate/M_spiders/bang/w_1/RHS}
+	\end{equation*}
+	
+	The case $w=2$ differs only as follows: in the first diagram (the left hand side of the equation), the edge $ij$ is purple (by definition), while in the lower diagram (the right hand side of the equation), a $\pm 2 = \mp 1$ will replace all occurences of $\pm 1$, and the roles of purple and blue will be swapped throughout.
+
+	\begin{proof}
+		See Appendix \ref{thm:eliminate_M_spiders_appendix}.
+	\end{proof}
+\end{theorem}
+
+We can now combine these three elimination theorems into an algorithm for efficiently simplifying a closed graph-like ZX-diagram. First note that after applying any one of the three elimination theorems to such a diagram, the only way we might end up with a non-graph-like diagram is if we introduce parallel $H$- or $H^\dagger$-edges. Fortunately we have shown via Lemmas \ref{lem:three_H_edges_vanish} and \ref{lem:H_edges_qutrit} that these can always be reduced to just one edge, so we do indeed again have a graph-like diagram.
 
 \begin{theorem}\label{thm:simplification_algorithm_works}
 	Given any closed graph-like ZX-diagram, the following algorithm will always terminate after a finite number of steps, returning an equivalent graph-like ZX-diagram with no \Nspiders, \Pspiders, or adjacent pairs of \Mspiders. Repeat the steps below until no rule matches. After each step, apply Lemmas \ref{lem:three_H_edges_vanish} and \ref{lem:H_edges_qutrit} as needed until the resulting diagram is graph-like:
 	\begin{enumerate}
-		\item Eliminate an \Nspider\ via Theorem~\ref{thm:eliminate_N_spiders}.
 		\item Eliminate a \Pspider\ via Theorem~\ref{thm:eliminate_P_spiders}.
+		\item Eliminate an \Nspider\ via Theorem~\ref{thm:eliminate_N_spiders}.
 		\item Eliminate two adjacent \Mspiders\ via Theorem~\ref{thm:eliminate_M_spiders}.
 	\end{enumerate}
 	\begin{proof}
@@ -634,7 +664,7 @@ for $q\in\{1,2,3,4\}$, which correspond to evaluating the Jones polynomial at th
 
 
 \begin{remark}\label{rem:qubit_scalar_exactness} 
-	A small technical remark is in order: the rule set given here is complete for qubit stabilizer quantum mechanics when equality is taken only up to a scalar factor. To achieve completeness under exact equality, a slighly modified rule set would be required, as in (for example) \cite{backens_scalar_exact}. But for our purposes this would be overkill; in order to show that the Jones polynomial of knots at lattice roots of unity is efficiently computable, it suffices to consider the `non-exact' rules - i.e. it suffices to show such a Jones polynomial is efficiently computable up to a scalar factor. But of course to actually compute such a Jones polynomial, we will need to keep track of scalars.
+	A small technical remark is in order: the rule set given here is complete for qubit stabilizer quantum mechanics when equality is taken only up to a scalar factor. To achieve completeness under exact equality, a slighly modified rule set would be required, as in (for example) \cite{backens_scalar_exact}. But for our purposes this would be overkill; in order to show that the Jones polynomial of knots at lattice roots of unity is efficiently computable, it suffices to consider the `non-exact' rules - i.e. it suffices to show such a Jones polynomial is efficiently computable up to a scalar factor. But of course to actually compute such a Jones polynomial, we would need to keep track of scalars.
 \end{remark}
 
 We can now give ZX-diagrams whose standard interpretations are equal (up to a scalar) to the matrices $T_{\pm}^{(q)}$ in \eqref{eq:pm_tensor} for $q \in \{2, 4\}$.
@@ -736,6 +766,6 @@ KM acknowledges financial support from the Royal Commission for the Exhibition o
 \bibliographystyle{eptcs}
 \bibliography{refs-teague,refs}
 
-% \input{appendix/appendix}
+\input{appendix/appendix}
 
 \end{document} 
