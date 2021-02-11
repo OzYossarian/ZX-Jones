@@ -207,39 +207,6 @@ This again results in an equality, up to introducing some extra gates on outputs
 	\end{proof}
 \end{theorem}
 
-\subsection{!-Box Notation}
-
-We define here (a very small extension of) the !-notation (pronounced `bang notation'), as introduced in [ToDo] for general string diagrams. A !-box in a ZX-diagram allows its contents to `unfold' out arbitrarily; that is, the contents of the !-box, along with any wires into or out of the box, can be copied $n$ times for any non-negative integer $n$, and placed side-by-side. Consider, for example, the following !-diagram and the infinite set of diagrams it represents:
-
-\begin{equation*}
-	\tikzfig{bang/basic/bang} \ = \ \left\{ \quad
-		\tikzfig{bang/basic/0} \quad , \quad
-		\tikzfig{bang/basic/1} \quad , \quad 
-		\tikzfig{bang/basic/2} \quad , \quad 
-		\tikzfig{bang/basic/3} \quad , \quad
-		... \quad
-	\right\}
-\end{equation*}
-
-Following the style of [ToDo], we also allow a parameter over which a !-box unfolds. This can parametrise an infinite family of diagrams or restrict to a single instance - for example, letting $[K] = \{1, ..., K\}$, we can write:
-
-\begin{equation*}
-	\tikzfig{bang/parametrised/bang} \ = \ 
-	\tikzfig{bang/parametrised/3}
-\end{equation*}
-
-Finally, we extend this notation as follows: in the corner of the !-box we allow a small further diagram, which denotes that the unfolded diagrams should all be pairwise connected by the diagram in the corner of the box. A common choice of this `corner diagram' is just the plain wire. In our context (qutrit ZX-calculus) this notation will only be well-defined for certain scenarios: in particular, it is well-defined when the corner diagram is a $H$- or $H^{\dagger}$-edge (since then the distinction between a spider's input and output wires disappears) and the main contents of the !-box is equivalent to a single spider (since then there is no ambiguity about which spiders are connected by the corner diagram). For example, we have:
-
-\begin{equation*}
-	\tikzfig{bang/connected/bang} \ = \ \left\{ \quad
-		\tikzfig{bang/connected/0} \quad , \quad
-		\tikzfig{bang/connected/1} \quad , \quad 
-		\tikzfig{bang/connected/2} \quad , \quad 
-		\tikzfig{bang/connected/3} \quad , \quad
-		... \quad
-	\right\}
-\end{equation*}
-
 \subsection{Qutrit Elimination Theorems}
 
 We classify spiders into three families:
@@ -253,6 +220,24 @@ We classify spiders into three families:
 \end{equation*}
 
 exactly as in Theorem 3.1 \cite{harny_completeness}. We call a spider in a graph-like ZX-diagram \textit{interior} if it isn't connected to an input or output (so for our use case all spiders are interior). Given any graph-like ZX-diagram, we will show that we can eliminate standalone interior $\mathcal{P}$- and \Nspiders\ by local complementation, and pairs of connected interior \Mspiders\ by local pivoting. 
+
+First, we define (a very small extension of) the !-notation (pronounced `bang notation'), as introduced in [ToDo] for general string diagrams. A !-box in a ZX-diagram allows its contents to `unfold' out arbitrarily; that is, the contents of the !-box, along with any wires into or out of the box, can be copied $n$ times for any non-negative integer $n$, and placed side-by-side. Following the style of [ToDo], we also allow a parameter over which a !-box unfolds. We extend this notation as follows: in the corner of the !-box we allow a small further diagram, which denotes that the unfolded diagrams should all be pairwise connected by the diagram in the corner of the box. The simplest choice of this `corner diagram' is just the plain wire. In our context (qutrit ZX-calculus) this notation will only be well-defined for certain scenarios: in particular, it is well-defined when the corner diagram is a $H$- or $H^{\dagger}$-edge (since then the distinction between a spider's input and output wires disappears) and the main contents of the !-box is equivalent to a single spider (since then there is no ambiguity about which spiders are connected by the corner diagram). For example, letting $[K] = \{1, ..., K\}$, we have: 
+
+\begin{equation*}
+	\left\{ \tikzfig{bang/connected/K} ~~ \middle| ~~ K \in \{0, 1, 2, 3\} \right\} = \ 
+	% \left( \ 
+	% 	\tikzfig{bang/connected/bang_0} \ , \
+	% 	\tikzfig{bang/connected/bang_1} \ , \ 
+	% 	\tikzfig{bang/connected/bang_2} \ , \ 
+	% 	\tikzfig{bang/connected/bang_3} \
+	% \right) \ = \ 
+	\left\{ ~
+		\tikzfig{bang/connected/0} \quad , \quad
+		\tikzfig{bang/connected/1} \quad , \quad
+		\tikzfig{bang/connected/2} \quad , \quad
+		\tikzfig{bang/connected/3} \quad
+	~ \right\}
+\end{equation*}
 
 \begin{theorem}\label{thm:eliminate_P_spiders}
 	\eliminatePSpidersStatement
