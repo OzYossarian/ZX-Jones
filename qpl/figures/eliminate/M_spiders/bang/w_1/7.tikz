@@ -32,14 +32,6 @@
 		\node [style=none] (29) at (-9.625, 3) {...};
 		\node [style=none] (30) at (-8.625, 3.25) {};
 		\node [style=none] (31) at (-10.625, 3.25) {};
-		\node [style=none] (83) at (9.625, 4.325) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{02}]}$}};
-		\node [style=none] (84) at (6.875, 4.325) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{01}]}$}};
-		\node [style=none] (85) at (4.125, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{22}]}$}};
-		\node [style=none] (86) at (-1.375, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{12}]}$}};
-		\node [style=none] (87) at (1.375, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{21}]}$}};
-		\node [style=none] (88) at (-4.125, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{11}]}$}};
-		\node [style=none] (89) at (-9.625, 4.325) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{10}]}$}};
-		\node [style=none] (90) at (-6.875, 4.325) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{20}]}$}};
 		\node [style=none] (91) at (8.625, -0.25) {};
 		\node [style=none] (92) at (8.375, 0) {};
 		\node [style=none] (93) at (10.625, -0.25) {};
@@ -152,6 +144,14 @@
 		\node [style=qutrit hadamard adjoint] (238) at (0.925, -4.25) {};
 		\node [style=qutrit hadamard adjoint] (239) at (4.925, -4.25) {};
 		\node [style=qutrit hadamard adjoint] (240) at (9.15, -4.25) {};
+		\node [style=none] (241) at (9.625, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{02}]}$}};
+		\node [style=none] (242) at (6.875, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{01}]}$}};
+		\node [style=none] (243) at (4.125, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{22}]}$}};
+		\node [style=none] (244) at (-1.375, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{12}]}$}};
+		\node [style=none] (245) at (1.375, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{21}]}$}};
+		\node [style=none] (246) at (-4.125, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{11}]}$}};
+		\node [style=none] (247) at (-9.625, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{10}]}$}};
+		\node [style=none] (248) at (-6.875, 4.375) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{20}]}$}};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw [bend right=15, looseness=0.75] (31.center) to (27);

@@ -1,10 +1,10 @@
 \begin{tikzpicture}
 	\begin{pgfonlayer}{nodelayer}
-		\node [style=qutrit Z phase rectangle] (0) at (-1.75, -1) {$\alpha_k - 1$ \nodepart{second} $\beta_k - 1$};
+		\node [style=qutrit Z phase rectangle] (0) at (-1.75, -1) {$\alpha_k - p$ \nodepart{second} $\beta_k - p$};
 		\node [style=none] (1) at (-1.75, 0) {...};
 		\node [style=none] (2) at (-2.5, 0.25) {};
 		\node [style=none] (3) at (-1, 0.25) {};
-		\node [style=qutrit Z phase rectangle] (4) at (1.75, -1) {$\gamma_k - 1$ \nodepart{second} $\delta_k - 1$};
+		\node [style=qutrit Z phase rectangle] (4) at (1.75, -1) {$\gamma_k - p$ \nodepart{second} $\delta_k - p$};
 		\node [style=none] (5) at (1.75, 0) {...};
 		\node [style=none] (6) at (1, 0.25) {};
 		\node [style=none] (7) at (2.5, 0.25) {};
