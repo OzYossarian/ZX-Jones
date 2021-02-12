@@ -40,7 +40,7 @@ where it can be evaluated efficiently (in time $O(poly(c))$) \cite{jaeger_vertig
 In the context of quantum computation,
 additively approximating the Jones polynomial at \emph{non-lattice roots of unity} is the paradigmatic BQP-complete complete problem \cite{Aharonov_2008,kuperberg2014hard}.
 % For the lattice roots of unity, the quantum amplitude to which the problem reduces can be computed efficiently classically.
-% Specifically, the quantum circuits that need to be simulated are stabiliser circuits which are known to be classically tractable [ref? Kuperberg? Aharonov?].
+% Specifically, the quantum circuits that need to be simulated are stabilizer circuits which are known to be classically tractable [ref? Kuperberg? Aharonov?].
 From the more natural for knot theory point of view
 of topological quantum computation \cite{pachos_2012},
 the Jones polynomial at roots of unity corresponds to a quantum amplitude in the fusion space of non-abelian anyons, emergent quasiparticles with exotic exchange statistics.
@@ -73,9 +73,9 @@ The partition function $Z_{G_L}(d\in\mathbb{N})$ can be expressed as a closed te
 \includegraphics[scale=0.4]{figures/link-tn.pdf}
 \label{eq:link-tn}
 \end{equation}
-The $\pm$-boxes have concrete interpretation as matrices as
+The $\pm$-boxes have the following concrete interpretation as matrices:
 	\begin{equation}\label{eq:pm_tensor}
-\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket \quad = \quad  \sum_{i,j=0}^{d-1}(1 - (1+t(d)^{\mp}) \delta_{ij} ) \ket{i}\bra{j} ~~.
+\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket \quad = \quad  \sum_{i,j=0}^{d-1}(1 - (1+t(d)^{\mp 1}) \delta_{ij} ) \ket{i}\bra{j} ~~.
 	\end{equation}
 % \begin{remark}\label{rem:qubit_scalar_exactness} 
 % 	A small technical remark is in order: the rule set given here is complete for qubit stabilizer quantum mechanics when equality is taken only up to a scalar factor. To achieve completeness under exact equality, a slighly modified rule set would be required, as in (for example) \cite{backens_scalar_exact}. But for our purposes this would be overkill; in order to show that the Jones polynomial of knots at lattice roots of unity is efficiently computable, it suffices to consider the `non-exact' rules - i.e. it suffices to show such a Jones polynomial is efficiently computable up to a scalar factor. But of course to actually compute such a Jones polynomial, we would need to keep track of scalars.
@@ -93,6 +93,7 @@ The $\pm$-boxes have concrete interpretation as matrices as
 % where on the right hand side of the first equation the $\otimes$ symbol means the Kronecker product of two matrices. Thus a diagram with standard interpretation $T_{2\pm}$ will have one input and one output, while a diagram for $T_{4\pm}$ will have two inputs and two outputs.
 
 
+
 We can now express the $\pm$-boxes in the ZX calculus.
 The $\pm$-matrices \eqref{eq:pm_tensor} for $d \in \{2, 4\}$
 are equal up to a scalar to concrete interpretations of \emph{qubit stabiliser} ZX-diagrams, and the $\pm$-matrices for $d=3$ of \emph{qutrit stabiliser} ZX-diagrams (see Appendix \ref{prop:pm_maps_zx_appendix}):
@@ -102,16 +103,12 @@ are equal up to a scalar to concrete interpretations of \emph{qubit stabiliser} 
 		\left\llbracket \quad \tikzfig{pm_maps/pm} \quad \right\rrbracket_{d=3} \simeq
 		\left\llbracket \quad \tikzfig{pm_maps/q3} \quad \right\rrbracket \quad,
 		\qquad\quad
-		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4} \simeq \left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket \quad.
+		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4} \simeq \left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket \quad 
 	\end{equation}
-
-Since these generators decompose as stabiliser diagrams,
+Since these generators decompose as stabilizer diagrams,
 then $Z_{G_L}(d\in\{2,3,4\})$ can be evaluated \emph{efficiently}
 via stabiliser ZX diagram simplification.
 Thus, we recover the known result that evaluating the Jones polynomial at $t\in\Lambda$ is in P.
-
-
-
 
 %%%%%%%%%%%%%%%%%$ MAYBE SAVE DISCUSSIONS ABOUT WHAT THE SCALAR IS FOR WHEN WE DO THE SCALAR-EXACT VERSION %%%%%%%%%%%%%%%%%%
 % Since any ZX-diagram derived from a knot in the manner described in Section \ref{sec:passage} will be closed, this algorithm suffices to prove that the calculation of the Jones polynomial of any knot at the lattice roots of unity $\pm 1$ and $\pm i$ is efficient. This is because reading off the scalar at the end is trivial; either we have the empty diagram, which has standard interpretation $1$, or a single legless $Z$-spider with phase $k\pi$:
@@ -145,7 +142,7 @@ Thus, we recover the known result that evaluating the Jones polynomial at $t\in\
 % 	\end{proof}
 % \end{proposition}
 
-% Crucially, the ZX-diagram in Proposition \ref{prop:pm_map_q3} above is a \textit{stabilizer diagram} in the qutrit ZX-calculus - that is, all angles are integer multiples of $\frac{2\pi}{3}$. Therefore if we can find an algorithm analogous to Theorem 5.4 \cite{graph_theoretic_simplification} that efficiently reduces any stabilizer diagram to a trivial one, then we will have shown that the Jones polynomial of any knot at the lattice roots of unity $\pm e^{i\frac{\pi}{3}}$ is efficiently computable. [ToDo: justify the $\pm$]. In the next subsection, we will do exactly that.
+% Crucially, the ZX-diagram in Proposition \ref{prop:pm_map_q3} above is a \emph{stabilizer diagram} in the qutrit ZX-calculus - that is, all angles are integer multiples of $\frac{2\pi}{3}$. Therefore if we can find an algorithm analogous to Theorem 5.4 \cite{graph_theoretic_simplification} that efficiently reduces any stabilizer diagram to a trivial one, then we will have shown that the Jones polynomial of any knot at the lattice roots of unity $\pm e^{i\frac{\pi}{3}}$ is efficiently computable. [ToDo: justify the $\pm$]. In the next subsection, we will do exactly that.
 
 % Again - just like in Remark~\ref{rem:qubit_scalar_exactness} - these rules are complete for qutrit stabilizer quantum mechanics when equality is considered only up to a scalar factor; we give the scalar-exact versions (detailed in \citep{qutrit_exact}) so that we can actually compute Jones polynomials later. 
 
@@ -155,15 +152,11 @@ Thus, we recover the known result that evaluating the Jones polynomial at $t\in\
 \subsection{Graph Colouring}
 
 
-Finally, let us briefly look at the problem graph vertex-colouring.
-That is, given $d$ colours and a graph $G$, count
-the number of colour assignments to the vertices of $G$
-so that no neighbouring vertices have the same colour.
-Again, this problem can be interpreted as the zero-temperature
+Finally, let us briefly look at the \emph{graph colouring problem}. A \emph{$d$-colouring} of a graph $G$ is an assignment of colours $\{1, ..., d\}$ to the vertices of $G$ so that no neighbouring vertices have the same colour. Given a graph $G$ and an integer $d$, we wish to count the number of such $d$-colourings. Again, this problem can be interpreted as the zero-temperature
 partition function of an antiferromagnetic Potts model (there is an energy cost for adjacent spins to be in the same state).
-To keep with the spirit of our graphical exposition, we recall that computing partition functions and counting problems are essentially the same problem, as they can be straightforwardly encoded as closed tensor networks \cite{10.21468/SciPostPhys.7.5.060,debeaudrap2020tensor}.
+In keeping with the spirit of our graphical exposition, we recall that computing partition functions and counting problems are essentially the same problem, as they can be straightforwardly encoded as closed tensor networks \cite{10.21468/SciPostPhys.7.5.060,debeaudrap2020tensor}.
 
-Given a graph $G$, the problem of counting vertex $d$-colourings can be encoded as a ZX diagram as follows. Every vertex of the graph is mapped to a $d$-dimensional (green) phaseless $Z$-spider.
+Given a graph $G$, the graph colouring problem can be encoded as a ZX diagram as follows. Every vertex of the graph is mapped to a $d$-dimensional (green) phaseless $Z$-spider.
 Every edge is mapped to a wire connecting the spiders
 which goes through an $X$-box.
 \begin{equation}
@@ -171,9 +164,10 @@ which goes through an $X$-box.
 \label{eq:link-tn}
 \end{equation}
 The $X$-boxes have the concrete interpretation (they are the special case of the $\pm$-boxes for $t=0$):
-	\begin{equation}\label{eq:X_tensor}
+\begin{equation}\label{eq:X_tensor}
 \left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket \quad = \quad  \sum_{i,j=0}^{d-1} (1 -  \delta_{ij} ) \ket{i}\bra{j} ~~.
 	\end{equation}
+Indeed, they are just a special case of the $\pm$-boxes in \eqref{eq:pm_tensor} for $t=0$.
 
 It is known that for arbitrary graphs 2-colouring is in P {\bf [ref]}.
 For $d=2$, we trivially notice that the $X$-matrix is just the Pauli X, as shown in \eqref{eq:XmatricesinZX}, and so the problem reduces to simplifying a stabiliser diagram,

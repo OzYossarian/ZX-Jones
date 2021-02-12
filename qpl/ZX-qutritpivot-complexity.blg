@@ -7,45 +7,45 @@ Database file #2: refs.bib
 Warning--empty journal in graph_theoretic_simplification
 Warning--empty journal in qutrit_euler
 Warning--empty journal in harny_completeness
-You've used 22 entries,
+You've used 24 entries,
             2701 wiz_defined-function locations,
-            727 strings with 8906 characters,
-and the built_in function-call counts, 10599 in all, are:
-= -- 764
-> -- 299
-< -- 8
-+ -- 126
-- -- 102
-* -- 1251
-:= -- 1253
-add.period$ -- 44
-call.type$ -- 22
-change.case$ -- 95
+            739 strings with 9262 characters,
+and the built_in function-call counts, 11547 in all, are:
+= -- 832
+> -- 323
+< -- 9
++ -- 136
+- -- 110
+* -- 1368
+:= -- 1365
+add.period$ -- 48
+call.type$ -- 24
+change.case$ -- 103
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 860
-empty$ -- 886
-format.name$ -- 117
-if$ -- 2106
+cite$ -- 51
+duplicate$ -- 943
+empty$ -- 966
+format.name$ -- 127
+if$ -- 2290
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 171
-newline$ -- 122
-num.names$ -- 44
-pop$ -- 206
+int.to.str$ -- 24
+missing$ -- 187
+newline$ -- 132
+num.names$ -- 48
+pop$ -- 220
 preamble$ -- 1
-purify$ -- 95
+purify$ -- 103
 quote$ -- 0
-skip$ -- 323
+skip$ -- 350
 stack$ -- 0
-substring$ -- 367
-swap$ -- 823
-text.length$ -- 8
+substring$ -- 401
+swap$ -- 901
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 106
+type$ -- 116
 warning$ -- 3
-while$ -- 61
-width$ -- 24
-write$ -- 243
+while$ -- 68
+width$ -- 26
+write$ -- 263
 (There were 3 warnings)

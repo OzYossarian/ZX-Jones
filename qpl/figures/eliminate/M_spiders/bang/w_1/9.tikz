@@ -24,14 +24,6 @@
 		\node [style=none] (29) at (-13.625, 2) {...};
 		\node [style=none] (30) at (-12.625, 2.25) {};
 		\node [style=none] (31) at (-14.625, 2.25) {};
-		\node [style=none] (83) at (13.625, 2.825) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{02}]}$}};
-		\node [style=none] (84) at (10.875, 2.825) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{01}]}$}};
-		\node [style=none] (85) at (7.125, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{22}]}$}};
-		\node [style=none] (86) at (-2.375, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{12}]}$}};
-		\node [style=none] (87) at (2.375, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{21}]}$}};
-		\node [style=none] (88) at (-7.125, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{11}]}$}};
-		\node [style=none] (89) at (-13.625, 2.825) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{10}]}$}};
-		\node [style=none] (90) at (-10.875, 2.825) {\textcolor{bang_orange}{$\scriptstyle{k \in [n_{20}]}$}};
 		\node [style=none] (91) at (12.625, -0.25) {};
 		\node [style=none] (92) at (12.375, 0) {};
 		\node [style=none] (93) at (14.625, -0.25) {};
@@ -128,6 +120,14 @@
 		\node [style=qutrit Z phase rectangle] (234) at (13.625, 0.75) {$a_0^2 - m_i$ \nodepart{second} $b_0^2 + m_i$};
 		\node [style=qutrit Z phase rectangle] (235) at (-13.625, 0.75) {$a_1^0  + m_j$ \nodepart{second} $b_1^0 -  m_j$};
 		\node [style=qutrit Z phase rectangle] (236) at (-10.875, 0.75) {$a_2^0 - m_j$ \nodepart{second} $b_2^0 + m_j$};
+		\node [style=none] (237) at (13.625, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{02}]}$}};
+		\node [style=none] (238) at (10.875, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{01}]}$}};
+		\node [style=none] (239) at (7.125, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{22}]}$}};
+		\node [style=none] (240) at (-2.375, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{12}]}$}};
+		\node [style=none] (241) at (2.375, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{21}]}$}};
+		\node [style=none] (242) at (-7.125, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{11}]}$}};
+		\node [style=none] (243) at (-13.625, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{10}]}$}};
+		\node [style=none] (244) at (-10.875, 2.875) {\textcolor{bang_orange}{$\scriptstyle{k \in [K_{20}]}$}};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw [style=bang] (94.center)
