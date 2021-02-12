@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.4)  11 FEB 2021 20:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.4)  12 FEB 2021 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1177,23 +1177,29 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q4.tikz)
-Overfull \hbox (3.72684pt too wide) detected at line 107
+Overfull \hbox (18.92651pt too wide) detected at line 106
 [][] \OMS/ztmcm/m/n/10.95 ' []  \OML/ztmcm/m/it/10.95 ;   [][] \OMS/ztmcm/m/n/1
-0.95 ' []   [][] ' []  \OML/ztmcm/m/it/10.95 ;
+0.95 ' []  \OML/ztmcm/m/it/10.95 ;   [][] \OMS/ztmcm/m/n/10.95 ' []  \OML/ztmcm
+/m/it/10.95 :
  []
 
 <figures/G-tn.pdf, id=328, 995.84645pt x 227.62206pt>
 File: figures/G-tn.pdf Graphic file (type pdf)
 <use figures/G-tn.pdf>
-Package pdftex.def Info: figures/G-tn.pdf  used on input line 176.
+Package pdftex.def Info: figures/G-tn.pdf  used on input line 170.
 (pdftex.def)             Requested size: 398.33153pt x 91.0472pt.
-[12 <./figures/link-tn.pdf>] (./figures/pm_maps/x.tikz))
+(./figures/pm_maps/x.tikz) [12 <./figures/link-tn.pdf> <./figures/G-tn.pdf
+
+pdfTeX warning: pdflatex (file ./figures/G-tn.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+>] (./figures/pm_maps/x.tikz) (./figures/pm_maps/q2x.tikz)
+(./figures/pm_maps/x.tikz) (./figures/pm_maps/q3x.tikz))
 (./ZX-qutritpivot-complexity.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
- [13 <./figures/G-tn.pdf>]
+ [13]
 Underfull \hbox (badness 1320) in paragraph at lines 142--152
 \OT1/ptm/m/it/10 ver-sal gates via fu-sion and mea-sure-ment op-er-a-tions onSU
 (2)4anyons\OT1/ptm/m/n/10 .  \OT1/ptm/m/sl/10 Phys-i-cal Re-view A \OT1/ptm/m/n
@@ -1237,7 +1243,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/qubit_rules/hadamard/lhs.tikz)
 (./figures/qubit_rules/hadamard/rhs.tikz)
 (./figures/qubit_rules/colour_change/lhs.tikz)
-(./figures/qubit_rules/colour_change/rhs.tikz)
+(./figures/qubit_rules/colour_change/rhs.tikz) [14]
 (./figures/qutrit_rules/fusion/all.tikz
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
@@ -1297,7 +1303,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 49.
 (./figures/qutrit_rules/snake/snake.tikz)
 (./figures/qutrit_rules/snake/hopf_ish.tikz)
 (./figures/qutrit_rules/snake/hadamards.tikz)
-(./figures/qutrit_rules/snake/hadamard_adjoints.tikz) [14]
+(./figures/qutrit_rules/snake/hadamard_adjoints.tikz)
 (./figures/qutrit_generators/spiders/Z_a_b.tikz)
 (./figures/qutrit_generators/spiders/X_a_b.tikz)
 (./figures/qutrit_generators/hadamard.tikz)
@@ -1563,6 +1569,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
 
+LaTeX Warning: Reference `prop:pm_map_q2_q4' on page 27 undefined on input line
+ 6.
+
+
 LaTeX Warning: Reference `prop:pm_map_q3' on page 27 undefined on input line 6.
 
 
@@ -1592,15 +1602,15 @@ nput line 97.
 \pages=\write7
 \openout7 = `ZX-qutritpivot-complexity.pag'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 89.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 89.
 
 (./ZX-qutritpivot-complexity.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 89.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 89.
 Package rerunfilecheck Info: File `ZX-qutritpivot-complexity.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 7666F2EDC8C967892377B18517D998E2;1365.
+(rerunfilecheck)             Checksum: A39154AA69A96E55BB6F1DD8E9888A51;1365.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1611,13 +1621,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 89.
  ) 
 Here is how much of TeX's memory you used:
- 35033 strings out of 481239
- 735579 string characters out of 5920377
- 1642640 words of memory out of 5000000
- 48597 multiletter control sequences out of 15000+600000
+ 35048 strings out of 481239
+ 735889 string characters out of 5920377
+ 1642656 words of memory out of 5000000
+ 48602 multiletter control sequences out of 15000+600000
  612374 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,21n,105p,1283b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1634,10 +1644,10 @@ hare/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ZX-qutritpivot-complexity.pdf (29 pages, 527360 bytes).
+Output written on ZX-qutritpivot-complexity.pdf (29 pages, 528176 bytes).
 PDF statistics:
- 975 PDF objects out of 1000 (max. 8388607)
- 559 compressed objects within 6 object streams
+ 974 PDF objects out of 1000 (max. 8388607)
+ 558 compressed objects within 6 object streams
  160 named destinations out of 1000 (max. 500000)
  335 words of extra memory for PDF output out of 10000 (max. 10000000)
 

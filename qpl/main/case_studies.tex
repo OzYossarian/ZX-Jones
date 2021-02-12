@@ -94,30 +94,24 @@ The $\pm$-boxes have concrete interpretation as matrices as
 
 
 We can now express the $\pm$-boxes in the ZX calculus.
-\begin{proposition}\label{prop:pm_map_q2_q4}
 The $\pm$-matrices \eqref{eq:pm_tensor} for $d \in \{2, 4\}$
-are equal up to a scalar to concrete interpretations of \emph{qubit stabiliser} ZX-diagrams, and the $\pm$-matrices for $d=3$ of \emph{qutrit stabiliser} ZX-diagrams.
+are equal up to a scalar to concrete interpretations of \emph{qubit stabiliser} ZX-diagrams, and the $\pm$-matrices for $d=3$ of \emph{qutrit stabiliser} ZX-diagrams (see Appendix \ref{prop:pm_maps_zx_appendix}):
 	\begin{equation}
 		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=2} \simeq \left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket  \quad, 
 		\qquad\quad
 		\left\llbracket \quad \tikzfig{pm_maps/pm} \quad \right\rrbracket_{d=3} \simeq
-		\left\llbracket \quad \tikzfig{pm_maps/q3} \quad \right\rrbracket
+		\left\llbracket \quad \tikzfig{pm_maps/q3} \quad \right\rrbracket \quad,
 		\qquad\quad
-		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4} \simeq \left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket \quad,  
+		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4} \simeq \left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket \quad.
 	\end{equation}
-	\begin{proof}
-		See Appendix \ref{prop:pm_maps_zx_appendix}.
-	\end{proof}
-\end{proposition}
 
 Since these generators decompose as stabiliser diagrams,
 then $Z_{G_L}(d\in\{2,3,4\})$ can be evaluated \emph{efficiently}
 via stabiliser ZX diagram simplification.
-Thus, we recover the known result that evaluating the Jones polynomial at $t\in\Lambda$ is in P,
-where we used the ZX calculus to express all the whole problem family on equal footing.
+Thus, we recover the known result that evaluating the Jones polynomial at $t\in\Lambda$ is in P.
 
 
-{\bf what does the $\pm$ matrix look like for $d=5$? Here it should not be a stabiliser, showing that ZX cannot efficiently get the Jones, as expected.}
+
 
 %%%%%%%%%%%%%%%%%$ MAYBE SAVE DISCUSSIONS ABOUT WHAT THE SCALAR IS FOR WHEN WE DO THE SCALAR-EXACT VERSION %%%%%%%%%%%%%%%%%%
 % Since any ZX-diagram derived from a knot in the manner described in Section \ref{sec:passage} will be closed, this algorithm suffices to prove that the calculation of the Jones polynomial of any knot at the lattice roots of unity $\pm 1$ and $\pm i$ is efficient. This is because reading off the scalar at the end is trivial; either we have the empty diagram, which has standard interpretation $1$, or a single legless $Z$-spider with phase $k\pi$:
@@ -176,11 +170,18 @@ which goes through an $X$-box.
 \includegraphics[scale=0.4]{figures/G-tn.pdf}
 \label{eq:link-tn}
 \end{equation}
-The $X$-boxes have the concrete interpretation (they are the special case of the $\pm$ boxes for $t=0$):
+The $X$-boxes have the concrete interpretation (they are the special case of the $\pm$-boxes for $t=0$):
 	\begin{equation}\label{eq:X_tensor}
 \left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket \quad = \quad  \sum_{i,j=0}^{d-1} (1 -  \delta_{ij} ) \ket{i}\bra{j} ~~.
 	\end{equation}
 
-
-{\bf for $d=2$ it's just the Pauli X so it's stabiliser.}
-{\bf what does the $X$ matrix look like for $d=3$? Here it should not be a stabiliser, showing that ZX cannot efficiently do $3$-colouring which is \#P-complete. [ref]}
+It is known that for arbitrary graphs 2-colouring is in P {\bf [ref]}.
+For $d=2$, we trivially notice that the $X$-matrix is just the Pauli X, as shown in \eqref{eq:XmatricesinZX}, and so the problem reduces to simplifying a stabiliser diagram,
+which can be done efficiently.
+However, for $d=3$ the $X$-matrix cannot be expressed as a stabilizer qutrit diagram, and so the problem is not expected that there exists an efficient simplification strategy for the corresponding qutrit ZX diagram. This is consistent with the fact that 3-colouring is \#P-complete {\bf [ref]}.
+	\begin{equation}\label{eq:XmatricesinZX}
+		\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket_{d=2} \simeq \left\llbracket \ \tikzfig{pm_maps/q2x} \ \right\rrbracket  \quad, 
+		\qquad\quad
+		\left\llbracket \quad \tikzfig{pm_maps/x} \quad \right\rrbracket_{d=3} \not\simeq
+		\left\llbracket \quad \tikzfig{pm_maps/q3x} \quad \right\rrbracket~~,~~~~\forall a,b\in\{0,1,2\}~.
+	\end{equation}
