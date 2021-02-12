@@ -1,6 +1,6 @@
-\section{Local Pivot in Qutrit ZX}
+\section{Pivoting in the Qutrit ZX-Calculus}
 
-Next we prove the local pivot equality from Theorem~\ref{thm:local_pivot_equality}. We require the following: since $\qutritRuleEuler$ holds under taking adjoints, and swapping the roles of red and green, we have:
+Next we prove the pivot equality from Theorem~\ref{thm:local_pivot_equality}. We require the following: since $\qutritRuleEuler$ holds under taking adjoints, and swapping the roles of red and green, we have:
 
 \begin{equation}\label{eq:qutrit_hadamard_decompositions}
 	\tikzfig{qutrit_rules/hadamard/euler/h} \ = \ 
@@ -18,10 +18,10 @@ Next we prove the local pivot equality from Theorem~\ref{thm:local_pivot_equalit
 		\item $N_{=}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} = w_{k,j} \right\}$
 		\item $N_{\neq}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} \neq w_{k,j} \right\}$
 	\end{itemize} 
-	Then the following equation relates $G$ and its proper $a$-local pivot along $ij$:
+	Then the following equation relates $G$ and its proper $a$-pivot along $ij$:
 	\ctikzfig{graph_state/proper_local_pivot}
 	\begin{proof}
-		There are four cases ($a, w_{i,j} \in \{1,2\}$), which split into two pairs of symmetric cases: $a = w_{i,j}$ and $a \neq w_{i,j}$. We show just one case - the $1$-local pivot along $ij$ of weight $1$ - the remaining cases being analogous. We again employ the !-notation. An asterisk \textcolor{red}{$*_a$} next to a spider means that at the next step an $a$-local complementation will be performed at this spider.
+		There are four cases ($a, w_{i,j} \in \{1,2\}$), which split into two pairs of symmetric cases: $a = w_{i,j}$ and $a \neq w_{i,j}$. We show just one case - the $1$-pivot along $ij$ of weight $1$ - the remaining cases being analogous. We again employ the !-notation. An asterisk \textcolor{red}{$*_a$} next to a spider means that at the next step an $a$-local complementation will be performed at this spider.
 
 		\begingroup
 			\allowdisplaybreaks
