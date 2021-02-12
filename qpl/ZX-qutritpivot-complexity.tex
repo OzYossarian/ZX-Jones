@@ -45,14 +45,28 @@ a broad range of classical or quantum problems.
 
 \section{Outlook}
 
-This also motivates further work in circuit extraction for qutrit circuits so that one can attempt graph-theoretic simplification with the qutrit ZX calculus, analogous to the case of qubits \cite{graph_theoretic_simplification,backens2020again}.
-{\bf harny's crazy generalisations: what can they potentially do for general CSP?}
 
-Future work, scalar exact version of the qutrit rewrite rules,
-for concrete applications to problems where $3$-state systems are involved.
-Further,
-generalisation of local complementation and pivot rewrites to arbitrary prime dimension.
-Software implementations a la pyzx could be extended accordingly.
+In this work, we have advocated for the use of the ZX calculus
+as a convenient graphical language, which can treat a broad range of many-body problems on equal footing,
+for diagnosing the complexity of interesting problem-families.
+When the solution to a problem is encoded as a closed ZX diagram,
+this solution can be obtained by full diagram simplification by applying the rules of the calculus.
+The problem can be solved efficiently when the diagram encoding its answer is in the stabiliser fragment of the calculus.
+In this work specifically, we have fleshed out the simplifications strategies that make this apparent for the case of qutrits.
+
+We also looked at two case studies.
+We reviewed complexity results on evaluating the Jones polynomial and counting graph-colourings, problems which can be cast in tensor-network form.
+We recover known complexity results, all in the language of ZX calculus.
+
+A main path for future work entails the generalisation
+of our stabiliser simplification rules for all prime dimensions.
+Tangentially, this also motivates work in circuit extraction \cite{backens2020again} for qudit circuits so that one can attempt graph-theoretic simplification \cite{graph_theoretic_simplification}, analogous to the case of qubits.
+Another direction regards defining scalar-exact versions of the rewrite rules which would be necessary for
+for concrete applications to problems where $d$-state systems are the native degrees of freedom.
+% Finally, it would be interesting to investigate
+% the expressive power of generalisations of ZX calculus
+% in terms of what problems it can encode.
+
 
 \section{Acknowledgments}
 Alex would like to thank Aleks Kissinger and Quanlong (Harny) Wang for their help throughout this research.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.4)  11 FEB 2021 20:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.4)  12 FEB 2021 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -924,36 +924,36 @@ LaTeX Info: Redefining \bm on input line 209.
 )) (./zx.tikzstyles))
 (./definitions.tex
 \c@theorem=\count319
-) (./ZX-qutritpivot-complexity.aux
+) (./statements.tex) (./ZX-qutritpivot-complexity.aux
 
 LaTeX Warning: Label `eq:link-tn' multiply defined.
 
 )
 \openout1 = `ZX-qutritpivot-complexity.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
-1.
+2.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box104
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring OFF on input line 22.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -966,9 +966,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count320
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \nameref on input line 22.
 
 (./ZX-qutritpivot-complexity.out) (./ZX-qutritpivot-complexity.out)
 \@outlinefile=\write6
@@ -1010,54 +1010,54 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@posthook=\toks44
 )
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 23.
+ 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 23.
+ 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 23.
+ 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 23.
+ 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
-3.
+4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 23.
+(Font)              using `U/stmry/m/n' instead on input line 24.
 
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-3.
+4.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 24.
  (./main/intro.tex
 [1
 
@@ -1154,17 +1154,17 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/graph_state/proper_local_pivot.tikz)
 (./figures/bang/connected/K.tikz) (./figures/bang/connected/0.tikz)
 (./figures/bang/connected/1.tikz) (./figures/bang/connected/2.tikz)
-(./figures/bang/connected/3.tikz) [8]
+(./figures/bang/connected/3.tikz)
 (./figures/eliminate/P_spiders/bang/general/1.tikz)
-(./figures/eliminate/P_spiders/bang/general/9.tikz)
+(./figures/eliminate/P_spiders/bang/general/9.tikz) [8]
 (./figures/eliminate/N_spiders/0_n/bang/general/1.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/9.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/1.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/9.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/LHS.tikz) [9]
-(./figures/eliminate/M_spiders/bang/w_1/RHS.tikz)) (./main/case_studies.tex
+(./figures/eliminate/M_spiders/bang/w_1/LHS.tikz)
+(./figures/eliminate/M_spiders/bang/w_1/RHS.tikz) [9]) (./main/case_studies.tex
 [10]
-<figures/link-tn.pdf, id=309, 995.84645pt x 227.62204pt>
+<figures/link-tn.pdf, id=313, 995.84645pt x 227.62204pt>
 File: figures/link-tn.pdf Graphic file (type pdf)
 <use figures/link-tn.pdf>
 Package pdftex.def Info: figures/link-tn.pdf  used on input line 73.
@@ -1177,31 +1177,36 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q4.tikz)
-Overfull \hbox (3.72684pt too wide) detected at line 107
+Overfull \hbox (14.67683pt too wide) detected at line 107
 [][] \OMS/ztmcm/m/n/10.95 ' []  \OML/ztmcm/m/it/10.95 ;   [][] \OMS/ztmcm/m/n/1
-0.95 ' []   [][] ' []  \OML/ztmcm/m/it/10.95 ;
+0.95 ' []  \OML/ztmcm/m/it/10.95 ;   [][] \OMS/ztmcm/m/n/10.95 ' [] 
  []
 
-<figures/G-tn.pdf, id=328, 995.84645pt x 227.62206pt>
+<figures/G-tn.pdf, id=332, 995.84645pt x 227.62206pt>
 File: figures/G-tn.pdf Graphic file (type pdf)
 <use figures/G-tn.pdf>
-Package pdftex.def Info: figures/G-tn.pdf  used on input line 176.
+Package pdftex.def Info: figures/G-tn.pdf  used on input line 163.
 (pdftex.def)             Requested size: 398.33153pt x 91.0472pt.
-[12 <./figures/link-tn.pdf>] (./figures/pm_maps/x.tikz))
+(./figures/pm_maps/x.tikz) [12 <./figures/link-tn.pdf> <./figures/G-tn.pdf
+
+pdfTeX warning: pdflatex (file ./figures/G-tn.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+>] (./figures/pm_maps/x.tikz) (./figures/pm_maps/q2x.tikz)
+(./figures/pm_maps/x.tikz) (./figures/pm_maps/q3x.tikz))
 (./ZX-qutritpivot-complexity.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
- [13 <./figures/G-tn.pdf>]
-Underfull \hbox (badness 1320) in paragraph at lines 142--152
+ [13]
+Underfull \hbox (badness 1320) in paragraph at lines 160--170
 \OT1/ptm/m/it/10 ver-sal gates via fu-sion and mea-sure-ment op-er-a-tions onSU
 (2)4anyons\OT1/ptm/m/n/10 .  \OT1/ptm/m/sl/10 Phys-i-cal Re-view A \OT1/ptm/m/n
 /10 92(1),
  []
 
-
-Underfull \hbox (badness 1226) in paragraph at lines 202--207
+[14]
+Underfull \hbox (badness 1226) in paragraph at lines 220--225
 []\OT1/ptm/m/n/10 F. Y. Wu (1992): \OT1/ptm/m/it/10 Knot the-ory and sta-tis-ti
 -cal me-chan-ics\OT1/ptm/m/n/10 .  \OT1/ptm/m/sl/10 Rev. Mod. Phys. \OT1/ptm/m/
 n/10 64, pp. 1099--1131,
@@ -1297,12 +1302,12 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 49.
 (./figures/qutrit_rules/snake/snake.tikz)
 (./figures/qutrit_rules/snake/hopf_ish.tikz)
 (./figures/qutrit_rules/snake/hadamards.tikz)
-(./figures/qutrit_rules/snake/hadamard_adjoints.tikz) [14]
+(./figures/qutrit_rules/snake/hadamard_adjoints.tikz)
 (./figures/qutrit_generators/spiders/Z_a_b.tikz)
 (./figures/qutrit_generators/spiders/X_a_b.tikz)
 (./figures/qutrit_generators/hadamard.tikz)
 (./figures/qutrit_generators/swap.tikz)
-(./figures/qutrit_generators/identity.tikz)
+(./figures/qutrit_generators/identity.tikz) [15] [16]
 (./figures/qutrit_generators/spiders/Z_a_b_labelled.tikz
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
@@ -1332,7 +1337,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 
 ) (./figures/qutrit_generators/hadamard.tikz)
-(./figures/hadamard_lemmas/parametrised/2.tikz) [15] [16]
+(./figures/hadamard_lemmas/parametrised/2.tikz)
 (./figures/qutrit_rules/exceptions/colour_change/rhs.tikz)
 (./figures/qutrit_rules/exceptions/colour_change/lhs.tikz)
 (./figures/qutrit_rules/exceptions/colour_change/flip_rhs.tikz)
@@ -1345,7 +1350,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/hadamard_lemmas/2_h_edges_flip/2_purple.tikz)
 (./figures/hadamard_lemmas/2_h_edges_flip/1_blue.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/hopf/lhs.tikz)
-(./figures/hadamard_lemmas/3_h_edges_vanish/hopf/rhs.tikz)
+(./figures/hadamard_lemmas/3_h_edges_vanish/hopf/rhs.tikz) [17]
 (./figures/hadamard_lemmas/3_h_edges_vanish/1.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/2.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/3.tikz)
@@ -1356,7 +1361,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/hadamard_lemmas/decompositions/h.tikz)
 (./figures/hadamard_lemmas/decompositions/h_dagger.tikz)
 (./figures/hadamard_lemmas/decompositions/h_dagger_xzx.tikz)
-(./figures/hadamard_lemmas/decompositions/h_dagger_zxz.tikz) [17]
+(./figures/hadamard_lemmas/decompositions/h_dagger_zxz.tikz)
 (./figures/graph_state/proper_local_pivot.tikz)
 (./figures/proper_local_pivot/a_1/w_1/bang/1.tikz)
 (./figures/proper_local_pivot/a_1/w_1/bang/2.tikz)
@@ -1367,14 +1372,11 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/proper_local_pivot/a_1/w_1/bang/2.tikz)
 (./figures/proper_local_pivot/a_1/w_1/bang/3.tikz)
 (./figures/proper_local_pivot/a_1/w_1/bang/4.tikz)
-(./figures/proper_local_pivot/a_1/w_1/bang/5.tikz) [18])
+(./figures/proper_local_pivot/a_1/w_1/bang/5.tikz) [18] [19])
 (./appendix/eliminate/p_spiders.tex (./figures/leg_flip/1.tikz)
 (./figures/leg_flip/5.tikz) (./figures/leg_flip/1.tikz)
 (./figures/leg_flip/2.tikz) (./figures/leg_flip/3.tikz)
 (./figures/leg_flip/4.tikz) (./figures/leg_flip/5.tikz)
-Underfull \vbox (badness 2894) has occurred while \output is active []
-
- [19]
 (./figures/m_copies/full/1.tikz) (./figures/m_copies/full/4.tikz)
 (./figures/m_copies/part_1/1.tikz) (./figures/m_copies/part_1/2.tikz)
 (./figures/m_copies/part_1/3.tikz) (./figures/m_copies/part_1/4.tikz)
@@ -1382,7 +1384,7 @@ Underfull \vbox (badness 2894) has occurred while \output is active []
 (./figures/m_copies/part_2/2.tikz) (./figures/m_copies/part_2/3.tikz)
 (./figures/m_copies/part_2/4.tikz) (./figures/m_copies/full/1.tikz)
 (./figures/m_copies/full/2.tikz) (./figures/m_copies/full/3.tikz)
-(./figures/m_copies/full/4.tikz)
+(./figures/m_copies/full/4.tikz) [20]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 50.
@@ -1394,7 +1396,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/p_state/1.tikz) (./figures/p_state/6.tikz) (./figures/p_state/1.tikz
 ) (./figures/p_state/2.tikz) (./figures/p_state/3.tikz)
 (./figures/p_state/4.tikz) (./figures/p_state/5.tikz) (./figures/p_state/6.tikz
-) [20] (./figures/eliminate/P_spiders/bang/general/1.tikz)
+) (./figures/eliminate/P_spiders/bang/general/1.tikz)
 (./figures/eliminate/P_spiders/bang/general/9.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/1.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/2.tikz)
@@ -1459,12 +1461,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/n_states/0_1/6.tikz) (./figures/n_states/corollary/0_n/lhs.tikz)
 (./figures/n_states/corollary/0_n/rhs.tikz)
 (./figures/n_states/corollary/n_0/lhs.tikz)
-(./figures/n_states/corollary/n_0/rhs.tikz)
+(./figures/n_states/corollary/n_0/rhs.tikz) [22]
 (./figures/n_states/corollary/0_1/1.tikz)
 (./figures/n_states/corollary/0_1/2.tikz)
 (./figures/n_states/corollary/0_1/3.tikz)
 (./figures/n_states/corollary/0_1/4.tikz)
-(./figures/n_states/corollary/0_1/5.tikz) [22]
+(./figures/n_states/corollary/0_1/5.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/1.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/9.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/1.tikz)
@@ -1521,7 +1523,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
 (./figures/eliminate/M_spiders/bang/w_1/LHS.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/RHS.tikz)
+(./figures/eliminate/M_spiders/bang/w_1/RHS.tikz) [24]
 (./figures/eliminate/M_spiders/bang/w_1/1.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/2.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/3.tikz)
@@ -1539,7 +1541,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/eliminate/M_spiders/bang/w_1/6.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/7.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/8.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/9.tikz) [24]
+(./figures/eliminate/M_spiders/bang/w_1/9.tikz)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
@@ -1563,21 +1565,25 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
 
-LaTeX Warning: Reference `prop:pm_map_q3' on page 27 undefined on input line 6.
+LaTeX Warning: Reference `prop:pm_map_q2_q4' on page 27 undefined on input line
+ 5.
 
 
-(./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
-(./figures/pm_maps/q4.tikz) (./figures/pm_maps/pm.tikz)
+LaTeX Warning: Reference `prop:pm_map_q3' on page 27 undefined on input line 5.
+
+
+[27] (./figures/pm_maps/pm.tikz) (./figures/pm_maps/q2.tikz)
+(./figures/pm_maps/pm.tikz) (./figures/pm_maps/q3.tikz)
+(./figures/pm_maps/pm.tikz) (./figures/pm_maps/q4.tikz)
 (./figures/pm_maps/qubit/Z_phase.tikz) (./figures/pm_maps/qubit/X_phase.tikz)
 (./figures/pm_maps/qutrit/Z_phase.tikz) (./figures/pm_maps/qutrit/X_phase.tikz)
-[27] (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
+(./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/qubit_hadamard/yellow_box.tikz)
 (./figures/qubit_hadamard/decomposed.tikz)
 
 LaTeX Warning: Reference `def:qubit_standard_spiders' on page 28 undefined on i
-nput line 97.
+nput line 101.
 
 (./figures/pm_maps/q4.tikz) (./figures/pm_maps/q4/decomposed.tikz)
 (./figures/pm_maps/q4/id.tikz) (./figures/pm_maps/q4/pi_compare.tikz)
@@ -1592,15 +1598,15 @@ nput line 97.
 \pages=\write7
 \openout7 = `ZX-qutritpivot-complexity.pag'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
 
 (./ZX-qutritpivot-complexity.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
 Package rerunfilecheck Info: File `ZX-qutritpivot-complexity.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 7666F2EDC8C967892377B18517D998E2;1365.
+(rerunfilecheck)             Checksum: AC2AD353E6E4A5645C52B8F59F98BD1B;1366.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1611,16 +1617,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 75.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
  ) 
 Here is how much of TeX's memory you used:
- 35033 strings out of 481239
- 735579 string characters out of 5920377
- 1642640 words of memory out of 5000000
- 48597 multiletter control sequences out of 15000+600000
+ 35125 strings out of 481239
+ 736989 string characters out of 5920377
+ 1548905 words of memory out of 5000000
+ 48676 multiletter control sequences out of 15000+600000
  612374 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,21n,105p,1283b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,21n,105p,1334b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -1634,10 +1640,10 @@ hare/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ZX-qutritpivot-complexity.pdf (29 pages, 527360 bytes).
+Output written on ZX-qutritpivot-complexity.pdf (29 pages, 529316 bytes).
 PDF statistics:
- 975 PDF objects out of 1000 (max. 8388607)
- 559 compressed objects within 6 object streams
- 160 named destinations out of 1000 (max. 500000)
+ 981 PDF objects out of 1000 (max. 8388607)
+ 565 compressed objects within 6 object streams
+ 161 named destinations out of 1000 (max. 500000)
  335 words of extra memory for PDF output out of 10000 (max. 10000000)
 

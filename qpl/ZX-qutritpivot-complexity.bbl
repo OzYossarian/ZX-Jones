@@ -79,6 +79,16 @@
   \doi{10.1007/s00037-000-0170-4}.
 \newblock \urlprefix\url{https://doi.org/10.1007/s00037-000-0170-4}.
 
+\bibitemdeclare{article}{dixon2009graphical}
+\bibitem{dixon2009graphical}
+\bibinfo{author}{Lucas \surnamestart Dixon\surnameend} \& \bibinfo{author}{Ross
+  \surnamestart Duncan\surnameend} (\bibinfo{year}{2009}):
+  \emph{\bibinfo{title}{Graphical reasoning in compact closed categories for
+  quantum computation}}.
+\newblock {\sl \bibinfo{journal}{Annals of Mathematics and Artificial
+  Intelligence}} \bibinfo{volume}{56}(\bibinfo{number}{1}), pp.
+  \bibinfo{pages}{23--42}.
+
 \bibitemdeclare{article}{graph_theoretic_simplification}
 \bibitem{graph_theoretic_simplification}
 \bibinfo{author}{Ross \surnamestart Duncan\surnameend}, \bibinfo{author}{Aleks
@@ -94,6 +104,14 @@
   \bibinfo{author}{Quanlong \surnamestart Wang\surnameend}
   (\bibinfo{year}{2017}): \emph{\bibinfo{title}{Equivalence of Local
   Complementation and Euler Decomposition in the Qutrit ZX-calculus}}.
+
+\bibitemdeclare{article}{gong2017equivalence}
+\bibitem{gong2017equivalence}
+\bibinfo{author}{Xiaoyan \surnamestart Gong\surnameend} \&
+  \bibinfo{author}{Quanlong \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2017}): \emph{\bibinfo{title}{Equivalence of local
+  complementation and Euler decomposition in the qutrit ZX-calculus}}.
+\newblock {\sl \bibinfo{journal}{arXiv preprint arXiv:1704.05955}}.
 
 \bibitemdeclare{misc}{gray2020hyperoptimized}
 \bibitem{gray2020hyperoptimized}
