@@ -53,7 +53,7 @@ When $\alpha = \beta = 0$ we will again omit the angles entirely, and just draw 
 % This shouldn't ever cause confusion.
 
 Hadamard gates are no longer self-adjoint, so we change our notation: we let a yellow box decorated with a $1$ (mod $3$) denote a Hadamard gate, while decorating with a $2$ (mod $3$) denotes its adjoint. We will shortly explain this choice. We also use a dashed blue line for the \emph{Hadamard edge} (\emph{$H$-edge}) and a purple dashed line for its adjoint (\emph{$H^\dagger$-edge}):
-\begin{equation}
+\begin{equation}\label{eq:qutrit_dashed_lines}
 		\tikzfig{hadamard_lemmas/parametrised/1} \ = \ 
 		\tikzfig{hadamard_lemmas/dashed/blue} \ = \ 
 		\tikzfig{qutrit_rules/hadamard/euler/decomposition} ~~ , 
@@ -114,15 +114,14 @@ A graph-like qutrit ZX diagram is a \emph{graph state} when every spider has zer
 Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. Instead, we can ensure we have a graph-like diagram by replacing the plain wire:
 % The following equation, for $h \in \{1,2\}$, helps us get around this:
 % The following equation, which also holds with the roles of blue and purple interchanged, helps us get around this:
-
 \begin{equation}\label{eq:spiders_reluctant_to_fuse}
-	\tikzfig{hadamard_lemmas/plain_wire/1} \quad \xeqq{\qutritRuleHadamard}{\qutritRuleId} \quad
-	\tikzfig{hadamard_lemmas/plain_wire/2} \quad = \quad
-	\tikzfig{hadamard_lemmas/plain_wire/3}
+	\tikzfig{hadamard_lemmas/plain_wire/1} \quad \xeq{\qutritRuleHadamard} \quad
+	\tikzfig{hadamard_lemmas/plain_wire/2} \quad \xeq{\qutritRuleId} \quad
+	\tikzfig{hadamard_lemmas/plain_wire/3} \quad = \quad
+	\tikzfig{hadamard_lemmas/plain_wire/4}
 \end{equation}
 
 Indeed, we can show that every qutrit ZX-diagram is equivalent to a graph-like one. The following equations, derived in Appendix \ref{lem:h_edges_are_mod_3_appendix}, are vital to this:
-
 \begin{equation}\label{eq:h_edges_are_mod_3}
 	\tikzfig{hadamard_lemmas/3_h_edges_vanish/blue} \ = \ 
 	\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected} \ = \ 
@@ -136,8 +135,7 @@ Indeed, we can show that every qutrit ZX-diagram is equivalent to a graph-like o
 \end{equation}
 
 This justifies our notation for Hadamard gates: we can think of Hadamard edges as $1$-weighted edges and their adjoints as $2$-weighted edges, then work modulo $3$, since every triple of parallel edges disappears. Where the previous equations relate single $H$- and $H^\dagger$-boxes across multiple edges, the next three relate multiple $H$- and $H^\dagger$- boxes on single edges. They hold for $h \in \{1, 2\}$, and are proved via simple applications of rules $\qutritRuleId$, $\qutritRuleHadamard$ and $\qutritRuleSnake$.
-
-\begin{equation}
+\begin{equation}\label{eq:h_boxes_are_mod_4}
 	\tikzfig{hadamard_lemmas/boxes/4_vanish} \quad ,
 	\hspace{50pt}
 	\tikzfig{hadamard_lemmas/boxes/3_flip} \quad ,
@@ -148,7 +146,7 @@ This justifies our notation for Hadamard gates: we can think of Hadamard edges a
 \begin{proposition}\label{prop:every_diagram_is_graph_like_qutrit}
 	Every qutrit ZX diagram is equivalent to one that is graph-like.
 	\begin{proof}
-		First use the colour change rule to turn all X-spiders into Z-spiders. Then use Lemma \ref{lem:H_boxes_qutrit} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply \eqref{eq:h_edges_are_mod_3} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-edges as needed: 
+		First use the colour change rule to turn all X-spiders into Z-spiders. Then use \eqref{eq:h_boxes_are_mod_4} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply \eqref{eq:h_edges_are_mod_3} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-edges as needed: 
 		\begin{equation}
 			\tikzfig{is_graph_like/plain_input_output_wire_coloured} \quad ,
 			\hspace{50pt}
@@ -169,7 +167,6 @@ A graph state is described fully by its underlying multigraph, or equivalently b
 \end{definition}
 
 So only those edges between neighbours of node $x$ are affected. Specifically, for two nodes $i$ and $j$ both connected to $x$ by the \emph{same} colour edge, $a$-local complementation at $x$ \emph{increases} weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $x$ by edges of \emph{different} colours, $a$-local complementation at $x$ \emph{decreases} $w_{i,j}$ by $a$. This is shown graphically below, and holds with the roles of blue and purple interchanged:
-
 \begin{equation}
 	\tikzfig{a_local_comp/same}
 	\hspace{75pt}
@@ -209,7 +206,6 @@ This pivot operation again leads to an equality, up to introducing some extra ga
 \subsection{Qutrit Elimination Theorems}
 
 We classify spiders into three families exactly as in (Theorem 3.1, \cite{harny_completeness}):
-
 \begin{equation}
 	\mathcal{M} = \left\{\qutritZspider{0}{0}, \qutritZspider{1}{2}, \qutritZspider{2}{1}\right\},
 	\hspace{10pt}
@@ -217,11 +213,9 @@ We classify spiders into three families exactly as in (Theorem 3.1, \cite{harny_
 	\hspace{10pt}
 	\mathcal{P} = \left\{\qutritZspider{1}{1}, \qutritZspider{2}{2}\right\}.
 \end{equation}
-
 We call a spider in a graph-like ZX-diagram \emph{interior} if it isn't connected to an input or output. Given any graph-like ZX-diagram, we will show that we can eliminate standalone interior $\mathcal{P}$- and \Nspiders\ by local complementation, and pairs of connected interior \Mspiders\ by pivoting. 
 
 First, we define (a very small extension of) the \emph{!-box} notation (pronounced \emph{`bang-box'}), as introduced in \cite{dixon2009graphical} for general string diagrams. A !-box in a ZX-diagram allows its contents to `unfold' out arbitrarily; that is, the contents of the !-box, along with any wires into or out of the box, can be copied $n$ times for any non-negative integer $n$, and placed side-by-side. Following the style of \cite{backens2018zh}, we also allow a parameter over which a !-box unfolds. We extend this notation as follows: in the corner of the !-box we allow a small further diagram, which denotes that the unfolded diagrams should all be pairwise connected by the diagram in the corner of the box. The simplest choice of this `corner diagram' is just the plain wire. In qutrit ZX-diagrams this notation will only be well-defined in certain scenarios: in particular, it is well-defined when the corner diagram is a $H$- or $H^{\dagger}$-edge (since then the distinction between a spider's input and output wires disappears) and the main contents of the !-box is equivalent to a single spider (since then there is no ambiguity about which spiders are connected by the corner diagram). For example, letting $[K] = \{1, ..., K\}$, we have: 
-
 \begin{equation*}
 	\left\{ \tikzfig{bang/connected/K} ~ : ~ K \in \{0, 1, 2, 3, ...\} \right\} = \ 
 	% \left( \ 

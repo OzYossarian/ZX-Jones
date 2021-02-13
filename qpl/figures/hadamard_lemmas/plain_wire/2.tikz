@@ -4,7 +4,6 @@
 		\node [style=none] (4) at (0, -1.5) {};
 		\node [style=qutrit hadamard] (5) at (0, -0.75) {};
 		\node [style=qutrit hadamard adjoint] (6) at (0, 0.75) {};
-		\node [style=Z dot] (7) at (0, 0) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw (3.center) to (4.center);

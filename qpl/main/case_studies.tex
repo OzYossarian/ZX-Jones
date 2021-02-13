@@ -3,7 +3,7 @@
 In this section we present two problems which can naturally be cast in tensor-network form.
 These problem families are interesting in that they show a transition in complexity when the dimension $d$ carried by the wires of the network is greater than a specific value.
 First we present the problem of evaluating the Jones polynomial at specific points, which is a prominent link invariant in knot theory.
-Finally, we briefly look at graph vertex-colouring.
+Subsequently, we briefly look at graph colouring.
 
 \subsection{Jones Polynomial at Lattice Roots of Unity}
 
@@ -14,7 +14,7 @@ Finally, we briefly look at graph vertex-colouring.
 A knot $K$ is a circle embedded in $\mathbb{R}^3$.
 A set of knots tangled together make a \emph{link} $L$.
 A link $L$ can be represented by a \emph{link diagram}
-as its projection on the plane,
+by projecting it on to the plane
 but retaining the information of \emph{over or under crossings}.
 % For example, the trefoil knot linked with an unknot can be drawn as:
 % \begin{equation}
@@ -41,22 +41,23 @@ In the context of quantum computation,
 additively approximating the Jones polynomial at \emph{non-lattice roots of unity} is the paradigmatic BQP-complete complete problem \cite{Aharonov_2008,kuperberg2014hard}.
 % For the lattice roots of unity, the quantum amplitude to which the problem reduces can be computed efficiently classically.
 % Specifically, the quantum circuits that need to be simulated are stabilizer circuits which are known to be classically tractable [ref? Kuperberg? Aharonov?].
-From the more natural for knot theory point of view
-of topological quantum computation \cite{pachos_2012},
+From the point of view
+of topological quantum computation \cite{pachos_2012}, which is more natural for knot theory, 
 the Jones polynomial at roots of unity corresponds to a quantum amplitude in the fusion space of non-abelian anyons, emergent quasiparticles with exotic exchange statistics.
-Computation is performed by initialising the anyons by creating them from the vacuum, then braiding them, and finally fusing them back to the vacuum.
+Computation is performed by creating anyons from the vacuum, then braiding them, and finally fusing them back to the vacuum.
 Specifically, in the case of $\text{SU}(2)_k$ anyons, the Jones polynomial is evaluated at $t(k) = e^{i\frac{2\pi}{2+k}}$ \cite{Rowell_2018}.
 
 
 
 Remarkably, $V_L(t\in\Lambda)$ can be expressed as an unphysical partition function $Z_{G_L}(d)$ of a $d$-state Potts model with suitable spin-spin interactions \cite{RevModPhys.64.1099}.
 The Potts model is defined on a signed graph $G_L$, obtained as follows.
-The link diagram is bicoloured checkerboard-style
-and every coloured area is mapped to a vertex and every crossing is mapped to a signed edge according
+The link diagram is bicoloured checkerboard-style,
+then every coloured area is mapped to a vertex and every crossing is mapped to a signed edge according
 its orientation relative to the surrounding colours.
-The Jones polynomial then is equal to this partition function up to an efficiently computable scalar which depends on the link diagram  $V_L(t(d)) \simeq Z_{G_L}(d)$.
+The Jones polynomial is then equal to this partition function up to an efficiently computable scalar which depends on the link diagram.  
+% $V_L(t(d)) \simeq Z_{G_L}(d)$.
 
-The relation between the Jones' evaluation point and the dimension of the spins is $d = t + t^{-1} +2$,
+The relation between the point $t$ at which the Jones is evaluated and the dimension $d$ of the spins is $d = t + t^{-1} +2$,
 which can be solved for $t(d)$ \cite{PhysRevE.100.033303}.
 % Every vertex is assigned a $q$-state classical spin
 % and every signed edge indicates a spin-spin Tait-sign-dependent interaction $J_\pm\in\mathbb{C}$ which relate to the Jones polynomial's variable as $e^{J_\pm}=-t^\mp$.
@@ -64,19 +65,26 @@ which can be solved for $t(d)$ \cite{PhysRevE.100.033303}.
 % in fact, the interactions $J_\pm$ are such so that the graph operations corresponding to Reidemeister moves leave $Z(q)$ invariant.
 % Multiplying with an efficiently computatble prefactor $\mathcal{A}(t) = (-t^\frac{1}{2}-t^{-\frac{1}{2}})^{(-|V|-1)} (-t^\frac{3}{4})^w t^{\frac{1}{4}\tau}$ for bookkeeping of twist factors, the relation to the Jones polynomial is
 % $V_L(t) = \mathcal{A}(t) Z(q)$.
-Note the correspondence between the dimension $d$ in the Potts approach and the level $k$ in the anyon-braiding approach to the Jones polynomial, $\{t(d) | ~ d \in\{1,2,3,4\} \} = \{ t(k) | ~ k\in\{1,2,4\} \}$.
+Note the correspondence between the dimension $d$ in the Potts approach and the level $k$ in the anyon-braiding approach to the Jones polynomial: $\{t(d) | ~ d \in\{1,2,3,4\} \} = \{ t(k) | ~ k\in\{1,2,4\} \}$.
 This is consistent with the fact that braiding-only topological quantum computation with $\text{SU}(2)_2$ anyons (Ising) or $\text{SU}(2)_4$ anyons is not universal (unless the $\text{SU}(2)_4$ anyons are augmented by fusion and measurements \cite{Levaillant_2015}).
 A key observation is that if $d\in\{2,3,4\}$ then $t(d)\in\Lambda$ (the case $d=1$ is trivial \cite{jaeger_vertigan_welsh_1990}).
 
-The partition function $Z_{G_L}(d\in\mathbb{N})$ can be expressed as a closed tensor network in terms of phaseless (green) $d$-dimensional $Z$-spiders connected via wires that go through $\pm$-boxes \cite{PhysRevE.100.033303}:
+The partition function $Z_{G_L}(d\in\mathbb{N})$ can be expressed as a closed tensor network in terms of phaseless (green) $d$-dimensional $Z$-spiders connected via wires that go through \emph{$\pm$-boxes} \cite{PhysRevE.100.033303}:
 \begin{equation}
-\includegraphics[scale=0.4]{figures/link-tn.pdf}
+\includegraphics[scale=0.4, valign=c]{figures/link-tn.pdf}
 \label{eq:link-tn}
 \end{equation}
 The $\pm$-boxes have the following concrete interpretation as matrices:
-	\begin{equation}\label{eq:pm_tensor}
-\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket \quad = \quad  \sum_{i,j=0}^{d-1}(1 - (1+t(d)^{\mp 1}) \delta_{ij} ) \ket{i}\bra{j} ~~.
-	\end{equation}
+\begin{equation}\label{eq:pm_tensor}
+	\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket ~~ = ~~  
+	\sum_{i,j=0}^{d-1}(1 - (1+t(d)^{\mp 1}) \delta_{ij} ) \ket{i}\bra{j} ~~ = ~~  
+	\begin{pmatrix}
+		-t(d)^{\mp 1} & 1 & \dots & 1 \\
+		1 & -t(d)^{\mp 1} & \dots & 1 \\
+		\vdots & \vdots & \ddots & \vdots\\
+		1 & 1 & \dots & -t(d)^{\mp 1}
+	\end{pmatrix}
+\end{equation}
 % \begin{remark}\label{rem:qubit_scalar_exactness} 
 % 	A small technical remark is in order: the rule set given here is complete for qubit stabilizer quantum mechanics when equality is taken only up to a scalar factor. To achieve completeness under exact equality, a slighly modified rule set would be required, as in (for example) \cite{backens_scalar_exact}. But for our purposes this would be overkill; in order to show that the Jones polynomial of knots at lattice roots of unity is efficiently computable, it suffices to consider the `non-exact' rules - i.e. it suffices to show such a Jones polynomial is efficiently computable up to a scalar factor. But of course to actually compute such a Jones polynomial, we would need to keep track of scalars.
 % \end{remark}
@@ -95,19 +103,21 @@ The $\pm$-boxes have the following concrete interpretation as matrices:
 
 
 We can now express the $\pm$-boxes in the ZX calculus.
-The $\pm$-matrices \eqref{eq:pm_tensor} for $d \in \{2, 4\}$
-are equal up to a scalar to concrete interpretations of \emph{qubit stabiliser} ZX-diagrams, and the $\pm$-matrices for $d=3$ of \emph{qutrit stabiliser} ZX-diagrams (see Appendix \ref{prop:pm_maps_zx_appendix}):
+The $\pm$-matrices above for $d \in \{2, 4\}$
+are equal up to a scalar to concrete interpretations of \emph{qubit stabilizer} ZX-diagrams, and the $\pm$-matrices for $d=3$ of \emph{qutrit stabilizer} ZX-diagrams (see Appendix \ref{prop:pm_maps_zx_appendix}):
 	\begin{equation}
-		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=2} \simeq \left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket  \quad, 
-		\qquad\quad
-		\left\llbracket \quad \tikzfig{pm_maps/pm} \quad \right\rrbracket_{d=3} \simeq
-		\left\llbracket \quad \tikzfig{pm_maps/q3} \quad \right\rrbracket \quad,
-		\qquad\quad
-		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4} \simeq \left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket \quad 
+		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=2} \simeq 
+		\left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket ~, 
+		\hspace{30pt}
+		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=3} \simeq
+		\left\llbracket \ \tikzfig{pm_maps/q3} \ \right\rrbracket ~,
+		\hspace{30pt}
+		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4} \simeq 
+		\left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket
 	\end{equation}
 Since these generators decompose as stabilizer diagrams,
-then $Z_{G_L}(d\in\{2,3,4\})$ can be evaluated \emph{efficiently}
-via stabiliser ZX diagram simplification.
+$Z_{G_L}(d\in\{2,3,4\})$ can be evaluated \emph{efficiently}
+via stabilizer ZX diagram simplification.
 Thus, we recover the known result that evaluating the Jones polynomial at $t\in\Lambda$ is in P.
 
 %%%%%%%%%%%%%%%%%$ MAYBE SAVE DISCUSSIONS ABOUT WHAT THE SCALAR IS FOR WHEN WE DO THE SCALAR-EXACT VERSION %%%%%%%%%%%%%%%%%%
@@ -154,25 +164,30 @@ Thus, we recover the known result that evaluating the Jones polynomial at $t\in\
 
 Finally, let us briefly look at the \emph{graph colouring problem}. A \emph{$d$-colouring} of a graph $G$ is an assignment of colours $\{1, ..., d\}$ to the vertices of $G$ so that no neighbouring vertices have the same colour. Given a graph $G$ and an integer $d$, we wish to count the number of such $d$-colourings. Again, this problem can be interpreted as the zero-temperature
 partition function of an antiferromagnetic Potts model (there is an energy cost for adjacent spins to be in the same state).
-In keeping with the spirit of our graphical exposition, we recall that computing partition functions and counting problems are essentially the same problem, as they can be straightforwardly encoded as closed tensor networks \cite{10.21468/SciPostPhys.7.5.060,debeaudrap2020tensor}.
+Through the lens of our graphical exposition we see that counting problems and computing partition functions are essentially the same problem, since both can be straightforwardly encoded as closed tensor networks \cite{10.21468/SciPostPhys.7.5.060,debeaudrap2020tensor}.
 
-Given a graph $G$, the graph colouring problem can be encoded as a ZX diagram as follows. Every vertex of the graph is mapped to a $d$-dimensional (green) phaseless $Z$-spider.
+Given a graph $G$, the graph colouring problem can be encoded as a ZX diagram as follows. Every vertex of the graph is mapped to a $d$-dimensional phaseless (green) $Z$-spider.
 Every edge is mapped to a wire connecting the spiders
 which goes through an $X$-box.
-\begin{equation}
-\includegraphics[scale=0.4]{figures/G-tn.pdf}
-\label{eq:link-tn}
+\begin{equation}\label{eq:link-tn}
+	\includegraphics[scale=0.4, valign=c]{figures/G-tn.pdf}
 \end{equation}
-The $X$-boxes have the concrete interpretation (they are the special case of the $\pm$-boxes for $t=0$):
+The $X$-boxes have the following concrete interpretation (they are a special case of the $\pm$-boxes, where $t=0$):
 \begin{equation}\label{eq:X_tensor}
-\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket \quad = \quad  \sum_{i,j=0}^{d-1} (1 -  \delta_{ij} ) \ket{i}\bra{j} ~~.
-	\end{equation}
-Indeed, they are just a special case of the $\pm$-boxes in \eqref{eq:pm_tensor} for $t=0$.
+	\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket ~~ = ~~  
+	\sum_{i,j=0}^{d-1} (1 -  \delta_{ij} ) \ket{i}\bra{j} ~~ = ~~  
+	\begin{pmatrix}
+		0 & 1 & \dots & 1 \\
+		1 & 0 & \dots & 1 \\
+		\vdots & \vdots & \ddots & \vdots\\
+		1 & 1 & \dots & 0
+	\end{pmatrix}
+\end{equation}
 
 It is known that for arbitrary graphs 2-colouring is in P {\bf [ref]}.
-For $d=2$, we trivially notice that the $X$-matrix is just the Pauli X, as shown in \eqref{eq:XmatricesinZX}, and so the problem reduces to simplifying a stabiliser diagram,
+For $d=2$, the $X$-matrix is just the Pauli X, and so the problem reduces to simplifying a stabilizer diagram,
 which can be done efficiently.
-However, for $d=3$ the $X$-matrix cannot be expressed as a stabilizer qutrit diagram, and so the problem is not expected that there exists an efficient simplification strategy for the corresponding qutrit ZX diagram. This is consistent with the fact that 3-colouring is \#P-complete {\bf [ref]}.
+However, for $d=3$ the $X$-matrix cannot be expressed as a stabilizer qutrit diagram, and so it is not expected that there exists an efficient simplification strategy for the corresponding qutrit ZX diagram. This is consistent with the fact that 3-colouring is \#P-complete {\bf [ref]}.
 	\begin{equation}\label{eq:XmatricesinZX}
 		\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket_{d=2} \simeq \left\llbracket \ \tikzfig{pm_maps/q2x} \ \right\rrbracket  \quad, 
 		\qquad\quad
