@@ -32,15 +32,15 @@ For spiders $S$ and $S'$, we denote these as
 
 Spiders come in two species: green $Z$-spiders and red $X$-spiders, decorated by a \emph{phase} $\alpha\in[0,2\pi)$. When $\alpha=0$, we will omit it.
 The \emph{standard representation} of the spider generators as tensors over $\mathbb{C}$ is:
-\begin{equation*}
+\begin{equation}\label{eq:qubit_standard_interpretation}
 	\left\llbracket \ \tikzfig{qubit_spiders/Z_a_labelled} \ \right\rrbracket = 
 	\ket{0}^{\otimes m}\bra{0}^{\otimes n} + 
 	e^{i\alpha}\ket{1}^{\otimes m}\bra{1}^{\otimes n} ,
 	\quad
 	\left\llbracket \ \tikzfig{qubit_spiders/X_a_labelled} \ \right\rrbracket = 
 	\ket{+}^{\otimes m}\bra{+}^{\otimes n} + 
-	e^{i\alpha}\ket{-}^{\otimes m}\bra{-}^{\otimes n}~~~,
-\end{equation*}
+	e^{i\alpha}\ket{-}^{\otimes m}\bra{-}^{\otimes n}
+\end{equation}
 where $\{\ket{0}$, $\ket{1}\}$ is the \emph{$Z$-basis} and
 $\ket{\pm}=\ket{0}\pm\ket{1}$ the \emph{$X$-basis} in $\mathbb{C}^2$, in Dirac notation.
 The Hadamard gate $H$, whose function is to switch between the $Z$ and $X$ bases, is denoted as a yellow box.

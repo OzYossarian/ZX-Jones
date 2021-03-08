@@ -43,7 +43,7 @@ additively approximating the Jones polynomial at \emph{non-lattice roots of unit
 % Specifically, the quantum circuits that need to be simulated are stabilizer circuits which are known to be classically tractable [ref? Kuperberg? Aharonov?].
 From the point of view
 of topological quantum computation \cite{pachos_2012}, which is more natural for knot theory, 
-the Jones polynomial at roots of unity corresponds to a quantum amplitude in the fusion space of non-abelian anyons, emergent quasiparticles with exotic exchange statistics.
+the Jones polynomial at roots of unity corresponds to a quantum amplitude in the fusion space of \emph{non-abelian anyons} - emergent quasiparticles with exotic exchange statistics.
 Computation is performed by creating anyons from the vacuum, then braiding them, and finally fusing them back to the vacuum.
 Specifically, in the case of $\text{SU}(2)_k$ anyons, the Jones polynomial is evaluated at $t(k) = e^{i\frac{2\pi}{2+k}}$ \cite{Rowell_2018}.
 
@@ -189,8 +189,9 @@ For $d=2$, the $X$-matrix is just the Pauli X, and so the problem reduces to sim
 which can be done efficiently.
 However, for $d=3$ the $X$-matrix cannot be expressed as a stabilizer qutrit diagram, and so it is not expected that there exists an efficient simplification strategy for the corresponding qutrit ZX diagram. This is consistent with the fact that 3-colouring is \#P-complete {\bf [ref]}.
 	\begin{equation}\label{eq:XmatricesinZX}
-		\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket_{d=2} \simeq \left\llbracket \ \tikzfig{pm_maps/q2x} \ \right\rrbracket  \quad, 
+		\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket_{d=2} \simeq 
+		\left\llbracket \ \tikzfig{pm_maps/q2x} \ \right\rrbracket \quad, 
 		\qquad\quad
-		\left\llbracket \quad \tikzfig{pm_maps/x} \quad \right\rrbracket_{d=3} \not\simeq
-		\left\llbracket \quad \tikzfig{pm_maps/q3x} \quad \right\rrbracket~~,~~~~\forall a,b\in\{0,1,2\}~.
+		\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket_{d=3} \not\simeq
+		\left\llbracket \ \tikzfig{pm_maps/q3x} \ \right\rrbracket~~,~~~~\forall a,b\in\{0,1,2\}~.
 	\end{equation}
