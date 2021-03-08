@@ -5,6 +5,7 @@ A plethora of hard problems of interest to physics and computer science
 regard interacting many-body multi-state systems, classical or quantum,
 and reduce to \emph{exactly} computing a single scalar.
 These range from probability amplitudes in quantum mechanics,
+with notable relevance for simulating quantum circuits,
 partition functions in classical statistical mechanics,
 counting problems, probabilistic inference, and many more.
 Problem instances can be encoded as a \emph{closed}
@@ -32,17 +33,19 @@ By simulation here we mean the \emph{exact} computation of \emph{amplitudes}.
 These circuits are can be expressed by the \emph{stabilizer} fragment of the ZX calculus.
 An alternative, and in fact more general, proof of the Gottesman-Knill theorem for qubits has been obtained graphically in terms of the qubit ZX calculus.
 Interestingly, even if the motivation for studying stabilizer diagrams stems from quantum computation, the result that stabilizer ZX diagrams can be simplified efficiently has broader applicability. This is because
-ZX diagrams can express arbitrary linear maps; not every ZX diagram is a quantum circuit, but every quantum circuit can be cast as a ZX diagram.
+ZX diagrams can express arbitrary linear maps;
+every quantum circuit is a ZX diagram but not vice versa.
+%not every ZX diagram is a quantum circuit, but every quantum circuit can be cast in ZX notation.
 
 Beyond quantum computing, ZX diagrams have been leveraged to study the complexity of boolean satisfiability (SAT) and model counting (\#SAT) \cite{debeaudrap2020tensor}.
-Model counting entails computing the number of satisfying assignments to a boolean formula (which is given in conjunctive normal form)
-and this number can be expressed a closed diagram.
+Model counting entails computing the number of satisfying assignments to a boolean formula (given in conjunctive normal form)
+and this number can be expressed as a closed diagram.
 Specifically, one finds that in the case of XORSAT and \#XORSAT,
 which are known to be tractable,
 the corresponding ZX diagrams representing the problems exactly correspond to qubit stabilizer diagrams, which are efficient to simplify.
 Going further, the ZH calculus \cite{backens2018zh}, an extension of the ZX calculus, can be imported to make graphically obvious
 why 2SAT is in P but \#2SAT is \#P-complete while 3SAT is NP-complete and \#3SAT is \#P-hard.
-That is, the counting version of 2SAT is hard while deciding is easy, but this is not the case for 3SAT, where both deciding and counting are hard.
+That is, the counting version of 2SAT is hard while deciding is easy, but this is not the case for 3SAT where both deciding and counting are hard.
 The \emph{key realisation} is in that the decision problem is a counting problem
 but where the diagram is interpreted over the Boolean semiring.
 % (where $1+1=2$).
@@ -66,5 +69,5 @@ at a particular dimension, below which the tensor network corresponds to a stabi
 We underline that throughout this work, all rewrites are valid
 \emph{up to scalar}
 since we are only concerned about making statements about complexity.
-Importantly, note that keeping track of multiplicative scalar factors that arise under diagram rewriting can be done efficiently {\bf [ToDo: ref]}.
+Importantly, note that keeping track of multiplicative scalar factors that arise under diagram rewriting can be done efficiently.
 We are thus justified in omitting them for the purposes of this work.
