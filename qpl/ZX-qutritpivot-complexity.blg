@@ -9,43 +9,43 @@ Warning--empty journal in qutrit_euler
 Warning--empty journal in harny_completeness
 You've used 24 entries,
             2701 wiz_defined-function locations,
-            739 strings with 9262 characters,
-and the built_in function-call counts, 11547 in all, are:
-= -- 832
-> -- 323
+            741 strings with 9238 characters,
+and the built_in function-call counts, 11515 in all, are:
+= -- 839
+> -- 308
 < -- 9
-+ -- 136
-- -- 110
-* -- 1368
-:= -- 1365
++ -- 130
+- -- 104
+* -- 1354
+:= -- 1355
 add.period$ -- 48
 call.type$ -- 24
-change.case$ -- 103
+change.case$ -- 100
 chr.to.int$ -- 0
 cite$ -- 51
-duplicate$ -- 943
-empty$ -- 966
-format.name$ -- 127
-if$ -- 2290
+duplicate$ -- 942
+empty$ -- 972
+format.name$ -- 120
+if$ -- 2293
 int.to.chr$ -- 0
 int.to.str$ -- 24
-missing$ -- 187
+missing$ -- 184
 newline$ -- 132
 num.names$ -- 48
-pop$ -- 220
+pop$ -- 213
 preamble$ -- 1
-purify$ -- 103
+purify$ -- 100
 quote$ -- 0
-skip$ -- 350
+skip$ -- 357
 stack$ -- 0
-substring$ -- 401
-swap$ -- 901
+substring$ -- 423
+swap$ -- 898
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 116
 warning$ -- 3
-while$ -- 68
+while$ -- 69
 width$ -- 26
 write$ -- 263
 (There were 3 warnings)

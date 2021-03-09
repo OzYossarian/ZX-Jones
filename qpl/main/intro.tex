@@ -17,17 +17,17 @@ The ZX calculus is a graphical language whose origin lies in the field of quantu
 It allows for reasoning about ZX diagrams, i.e. tensor networks which are expressed in terms of primitive generators \cite{vandewetering2020zxcalculus}.
 The generators have a concrete representation as tensors over
 a (semi)ring and they obey a set of rewrite rules which respect semantics \cite{wang2020completeness}.
-% Importantly, the rewrite rules \emph{depend} on the (semi)ring over which the diagram is interpreted as a tensor network.
-If a scalar of interest is expressed as a ZX diagram,
+Importantly, the rewrite rules \emph{depend} on the (semi)ring over which the diagram is interpreted as a tensor network.
+If a scalar of interest is expressed as a closed ZX diagram,
 one can rewrite the diagram by applying rewrite rules; one's goal is then to perform \emph{full diagram simplification} in order to compute the desired scalar.
-%Again, simplifying arbitrary closed ZX diagrams is \#P-hard and finding the optimal rewrite strategy is NP-hard.
+Again, simplifying arbitrary closed ZX diagrams is \#P-hard and finding the optimal rewrite strategy is NP-hard.
 Note that
 given an arbitrary tensor network, one can attempt to invent rewrite rules by inspecting the contents of the tensors and performing linear-algebra operations \cite{gray2020hyperoptimized}.
 
 In the context of quantum computing,
 the Gottesman-Knill theorem states that stabilizer (or Clifford) circuits can be
 simulated \emph{efficiently} on classical computers \cite{Aaronson2004}.
-% By simulation here we mean the \emph{exact} computation of \emph{amplitudes}.
+By simulation here we mean the \emph{exact} computation of \emph{amplitudes}.
 These circuits can be expressed by the \emph{stabilizer} fragment of the ZX calculus.
 An alternative - and in fact more general - proof of the Gottesman-Knill theorem for qubits has been obtained graphically in terms of the qubit ZX calculus.
 Interestingly, though the motivation for studying stabilizer diagrams stems from quantum computation, the result that stabilizer ZX diagrams can be simplified efficiently has broader applicability. This is because
@@ -43,14 +43,10 @@ Specifically, one finds that in the case of XORSAT and \#XORSAT,
 which are known to be tractable,
 the corresponding ZX diagrams representing the problems exactly correspond to qubit stabilizer diagrams, which are efficient to simplify.
 Going further, the ZH calculus \cite{backens2018zh}, an extension of the ZX calculus, can be imported to make graphically obvious
-why the decision problem 2SAT is easy but the counting version \#2SAT is hard, and why this is not the case for 3SAT, where both deciding and counting are hard.
-
-% 2SAT is in P but \#2SAT is \#P-complete, whereas 3SAT is NP-complete and \#3SAT is \#P-hard.
-% That is, the counting version of 2SAT is hard yet deciding is easy, but this is not the case for 3SAT, where both deciding and counting are hard.
-% The \emph{key realisation} is in that the decision problem is a counting problem
-% but where the diagram is interpreted over the Boolean semiring.
-% % (where $1+1=2$).
-% Then the \emph{rewrite rules change accordingly} and obviously imply the above result by allowing efficient simplification strategies.
+why 2SAT is in P but \#2SAT is \#P-complete while 3SAT and \#3SAT are both hard.
+The \emph{key realisation} is in that the decision problem is a counting problem
+but where the diagram is interpreted over the Boolean semiring.
+Then the \emph{rewrite rules change accordingly} and obviously imply the above result by allowing efficient simplification strategies.
 
 Such observations make apparent the unifying power of diagrammatic reasoning
 for studying the complexity of problem families.  
@@ -61,8 +57,8 @@ The key rewrite rules that enable the efficient simplification
 of qubit stabilizer ZX diagrams
 are called \emph{local complementation} and \emph{pivot},
 the latter being composition of three of the former \cite{graph_theoretic_simplification}.
-In this work, we recall the qutrit version of local complementation and derive the corresponding pivot rule, 
-which implies that qutrit stabilizer diagrams can be simplified efficiently.
+In this work, we recall the \emph{qutrit} version of local complementation and \emph{derive the corresponding pivot rule},
+which implies that qutrit stabilizer diagrams can be simplified \emph{efficiently}.
 We then present two case studies: evaluating the Jones polynomial at lattice roots of unity, and graph colouring.
 Both of these problem families reduce to evaluating
 closed tensor networks and show a transition in complexity

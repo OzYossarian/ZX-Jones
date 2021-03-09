@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.4)  8 MAR 2021 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.4)  10 MAR 2021 01:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1208,23 +1208,20 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/graph_state/proper_local_pivot.tikz) [7]
 (./figures/bang/connected/K.tikz) (./figures/bang/connected/0.tikz)
 (./figures/bang/connected/1.tikz) (./figures/bang/connected/2.tikz)
-(./figures/bang/connected/3.tikz)
+(./figures/bang/connected/3.tikz) (./figures/bang/connected/4.tikz)
 (./figures/eliminate/P_spiders/bang/general/1.tikz)
 (./figures/eliminate/P_spiders/bang/general/9.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/1.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/9.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/1.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/9.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/LHS.tikz)
-Underfull \vbox (badness 4096) has occurred while \output is active []
-
- [8]
+(./figures/eliminate/M_spiders/bang/w_1/LHS.tikz) [8]
 (./figures/eliminate/M_spiders/bang/w_1/RHS.tikz) [9]) (./main/case_studies.tex
 [10]
-<figures/link-tn.pdf, id=308, 995.84645pt x 227.62204pt>
+<figures/link-tn.pdf, id=310, 995.84645pt x 227.62204pt>
 File: figures/link-tn.pdf Graphic file (type pdf)
 <use figures/link-tn.pdf>
-Package pdftex.def Info: figures/link-tn.pdf  used on input line 74.
+Package pdftex.def Info: figures/link-tn.pdf  used on input line 75.
 (pdftex.def)             Requested size: 398.33153pt x 91.0472pt.
  (./figures/pm_maps/pm.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
@@ -1233,32 +1230,26 @@ Package pdftex.def Info: figures/link-tn.pdf  used on input line 74.
 <figures/G-tn.pdf, id=312, 930.01376pt x 193.59253pt>
 File: figures/G-tn.pdf Graphic file (type pdf)
 <use figures/G-tn.pdf>
-Package pdftex.def Info: figures/G-tn.pdf  used on input line 173.
+Package pdftex.def Info: figures/G-tn.pdf  used on input line 175.
 (pdftex.def)             Requested size: 371.99892pt x 77.43562pt.
- [11 <./figures/link-tn.pdf> <./figures/G-tn.pdf
-
-pdfTeX warning: pdflatex (file ./figures/G-tn.pdf): PDF inclusion: multiple pdf
-s with page group included in a single page
->] (./figures/pm_maps/x.tikz) (./figures/pm_maps/x.tikz)
+ [11 <./figures/link-tn.pdf>]
+(./figures/pm_maps/x.tikz) (./figures/pm_maps/x.tikz)
 (./figures/pm_maps/q2x.tikz) (./figures/pm_maps/x.tikz)
-(./figures/pm_maps/q3x.tikz)) (./main/outlook.tex)
+(./figures/pm_maps/q3x.tikz)) (./main/outlook.tex) [12 <./figures/G-tn.pdf>]
 (./ZX-qutritpivot-complexity.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 
-Underfull \vbox (badness 1337) has occurred while \output is active []
-
- [12]
-Underfull \hbox (badness 1320) in paragraph at lines 160--170
+Underfull \hbox (badness 1320) in paragraph at lines 148--158
 \OT1/ptm/m/it/10 ver-sal gates via fu-sion and mea-sure-ment op-er-a-tions onSU
 (2)4anyons\OT1/ptm/m/n/10 .  \OT1/ptm/m/sl/10 Phys-i-cal Re-view A \OT1/ptm/m/n
 /10 92(1),
  []
 
 [13]
-Underfull \hbox (badness 1226) in paragraph at lines 220--225
+Underfull \hbox (badness 1226) in paragraph at lines 218--223
 []\OT1/ptm/m/n/10 F. Y. Wu (1992): \OT1/ptm/m/it/10 Knot the-ory and sta-tis-ti
 -cal me-chan-ics\OT1/ptm/m/n/10 .  \OT1/ptm/m/sl/10 Rev. Mod. Phys. \OT1/ptm/m/
 n/10 64, pp. 1099--1131,
@@ -1354,12 +1345,12 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 49.
 (./figures/qutrit_rules/snake/snake.tikz)
 (./figures/qutrit_rules/snake/hopf_ish.tikz)
 (./figures/qutrit_rules/snake/hadamards.tikz)
-(./figures/qutrit_rules/snake/hadamard_adjoints.tikz)
+(./figures/qutrit_rules/snake/hadamard_adjoints.tikz) [14]
 (./figures/qutrit_generators/spiders/Z_a_b.tikz)
 (./figures/qutrit_generators/spiders/X_a_b.tikz)
 (./figures/qutrit_generators/hadamard.tikz)
 (./figures/qutrit_generators/swap.tikz)
-(./figures/qutrit_generators/identity.tikz) [14] [15]
+(./figures/qutrit_generators/identity.tikz)
 (./figures/qutrit_generators/spiders/Z_a_b_labelled.tikz
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
@@ -1402,12 +1393,12 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/hadamard_lemmas/2_h_edges_flip/2_purple.tikz)
 (./figures/hadamard_lemmas/2_h_edges_flip/1_blue.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/hopf/lhs.tikz)
-(./figures/hadamard_lemmas/3_h_edges_vanish/hopf/rhs.tikz)
+(./figures/hadamard_lemmas/3_h_edges_vanish/hopf/rhs.tikz) [15] [16]
 (./figures/hadamard_lemmas/3_h_edges_vanish/1.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/2.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/3.tikz)
 (./figures/hadamard_lemmas/3_h_edges_vanish/4.tikz)
-(./figures/hadamard_lemmas/3_h_edges_vanish/disconnected.tikz) [16])
+(./figures/hadamard_lemmas/3_h_edges_vanish/disconnected.tikz))
 (./appendix/pivot.tex (./figures/qutrit_rules/hadamard/euler/h.tikz)
 (./figures/qutrit_rules/hadamard/euler/decomposition.tikz)
 (./figures/hadamard_lemmas/decompositions/h.tikz)
@@ -1424,9 +1415,9 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/proper_local_pivot/a_1/w_1/bang/2.tikz)
 (./figures/proper_local_pivot/a_1/w_1/bang/3.tikz)
 (./figures/proper_local_pivot/a_1/w_1/bang/4.tikz)
-(./figures/proper_local_pivot/a_1/w_1/bang/5.tikz) [17])
+(./figures/proper_local_pivot/a_1/w_1/bang/5.tikz) [17] [18])
 (./appendix/eliminate/p_spiders.tex (./figures/leg_flip/1.tikz)
-(./figures/leg_flip/5.tikz) [18] (./figures/leg_flip/1.tikz)
+(./figures/leg_flip/5.tikz) (./figures/leg_flip/1.tikz)
 (./figures/leg_flip/2.tikz) (./figures/leg_flip/3.tikz)
 (./figures/leg_flip/4.tikz) (./figures/leg_flip/5.tikz)
 (./figures/m_copies/full/1.tikz) (./figures/m_copies/full/4.tikz)
@@ -1436,7 +1427,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/m_copies/part_2/2.tikz) (./figures/m_copies/part_2/3.tikz)
 (./figures/m_copies/part_2/4.tikz) (./figures/m_copies/full/1.tikz)
 (./figures/m_copies/full/2.tikz) (./figures/m_copies/full/3.tikz)
-(./figures/m_copies/full/4.tikz)
+(./figures/m_copies/full/4.tikz) [19]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 50.
@@ -1445,10 +1436,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 50.
 
-[19] (./figures/p_state/1.tikz) (./figures/p_state/6.tikz)
-(./figures/p_state/1.tikz) (./figures/p_state/2.tikz) (./figures/p_state/3.tikz
-) (./figures/p_state/4.tikz) (./figures/p_state/5.tikz)
-(./figures/p_state/6.tikz) (./figures/eliminate/P_spiders/bang/general/1.tikz)
+(./figures/p_state/1.tikz) (./figures/p_state/6.tikz) (./figures/p_state/1.tikz
+) (./figures/p_state/2.tikz) (./figures/p_state/3.tikz)
+(./figures/p_state/4.tikz) (./figures/p_state/5.tikz) (./figures/p_state/6.tikz
+) (./figures/eliminate/P_spiders/bang/general/1.tikz)
 (./figures/eliminate/P_spiders/bang/general/9.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/1.tikz)
 (./figures/eliminate/P_spiders/bang/p_1/2.tikz)
@@ -1489,12 +1480,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/n_states/0_1/6.tikz) (./figures/n_states/corollary/0_n/lhs.tikz)
 (./figures/n_states/corollary/0_n/rhs.tikz)
 (./figures/n_states/corollary/n_0/lhs.tikz)
-(./figures/n_states/corollary/n_0/rhs.tikz)
+(./figures/n_states/corollary/n_0/rhs.tikz) [21]
 (./figures/n_states/corollary/0_1/1.tikz)
 (./figures/n_states/corollary/0_1/2.tikz)
 (./figures/n_states/corollary/0_1/3.tikz)
 (./figures/n_states/corollary/0_1/4.tikz)
-(./figures/n_states/corollary/0_1/5.tikz) [21]
+(./figures/n_states/corollary/0_1/5.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/1.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/general/9.tikz)
 (./figures/eliminate/N_spiders/n_0/bang/1.tikz)
@@ -1516,7 +1507,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/eliminate/N_spiders/0_n/bang/0_1/6.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/0_1/7.tikz)
 (./figures/eliminate/N_spiders/0_n/bang/0_1/8.tikz)
-(./figures/eliminate/N_spiders/0_n/bang/0_1/9.tikz))
+(./figures/eliminate/N_spiders/0_n/bang/0_1/9.tikz) [22])
 (./appendix/eliminate/m_spiders.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1526,8 +1517,8 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[22] (./figures/eliminate/M_spiders/bang/w_1/LHS.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/RHS.tikz)
+(./figures/eliminate/M_spiders/bang/w_1/LHS.tikz)
+(./figures/eliminate/M_spiders/bang/w_1/RHS.tikz) [23]
 (./figures/eliminate/M_spiders/bang/w_1/1.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/2.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/3.tikz)
@@ -1545,7 +1536,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/eliminate/M_spiders/bang/w_1/6.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/7.tikz)
 (./figures/eliminate/M_spiders/bang/w_1/8.tikz)
-(./figures/eliminate/M_spiders/bang/w_1/9.tikz) [23]
+(./figures/eliminate/M_spiders/bang/w_1/9.tikz)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
@@ -1570,10 +1561,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 (./figures/pm_maps/pm.tikz) (./figures/pm_maps/q2.tikz)
 (./figures/pm_maps/pm.tikz) (./figures/pm_maps/q3.tikz)
-(./figures/pm_maps/pm.tikz) (./figures/pm_maps/q4.tikz)
+(./figures/pm_maps/pm.tikz) (./figures/pm_maps/q4.tikz) [26]
 (./figures/pm_maps/qubit/Z_phase.tikz) (./figures/pm_maps/qubit/X_phase.tikz)
 (./figures/pm_maps/qutrit/Z_phase.tikz) (./figures/pm_maps/qutrit/X_phase.tikz)
-(./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz) [26]
+(./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/qubit_hadamard/yellow_box.tikz)
 (./figures/qubit_hadamard/decomposed.tikz) (./figures/pm_maps/q4.tikz)
@@ -1586,15 +1577,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (./figures/pm_maps/q4/pi_compare.tikz) (./figures/pm_maps/q4/id.tikz)
 (./figures/pm_maps/q4/hadamard.tikz) (./figures/pm_maps/q4/id.tikz)
 (./figures/pm_maps/q4/pi_copy.tikz) (./figures/pm_maps/q4/id.tikz)
-(./figures/pm_maps/pm.tikz)) [27]
+(./figures/pm_maps/pm.tikz) [27]) [28]
 \pages=\write7
 \openout7 = `ZX-qutritpivot-complexity.pag'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
  (./ZX-qutritpivot-complexity.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
 Package rerunfilecheck Info: File `ZX-qutritpivot-complexity.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: 5AFDBD243710800062C6DBB92E55ADE9;1376.
@@ -1605,16 +1596,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  ) 
 Here is how much of TeX's memory you used:
- 36120 strings out of 481239
- 753369 string characters out of 5920377
- 1659438 words of memory out of 5000000
- 49637 multiletter control sequences out of 15000+600000
+ 36127 strings out of 481239
+ 753486 string characters out of 5920377
+ 1567901 words of memory out of 5000000
+ 49640 multiletter control sequences out of 15000+600000
  612374 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,21n,105p,1019b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,21n,105p,1271b,1114s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -1628,10 +1619,10 @@ hare/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ZX-qutritpivot-complexity.pdf (27 pages, 529329 bytes).
+Output written on ZX-qutritpivot-complexity.pdf (28 pages, 528203 bytes).
 PDF statistics:
- 1002 PDF objects out of 1200 (max. 8388607)
- 551 compressed objects within 6 object streams
- 156 named destinations out of 1000 (max. 500000)
+ 1010 PDF objects out of 1200 (max. 8388607)
+ 558 compressed objects within 6 object streams
+ 158 named destinations out of 1000 (max. 500000)
  335 words of extra memory for PDF output out of 10000 (max. 10000000)
 
