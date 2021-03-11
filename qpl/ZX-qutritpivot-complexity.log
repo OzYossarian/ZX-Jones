@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  11 MAR 2021 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.10)  11 MAR 2021 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -994,11 +994,7 @@ Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 LaTeX Info: Redefining \bm on input line 209.
 )) (./zx.tikzstyles)) (./definitions.tex
 \c@theorem=\count321
-) (./statements.tex) (./ZX-qutritpivot-complexity.aux
-
-LaTeX Warning: Label `eq:link-tn' multiply defined.
-
-)
+) (./statements.tex) (./ZX-qutritpivot-complexity.aux)
 \openout1 = `ZX-qutritpivot-complexity.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -1019,7 +1015,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
 2.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box107
@@ -1235,19 +1232,19 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/eliminate/M_spiders/bang/w_1/LHS.tikz) [8]
 (./figures/eliminate/M_spiders/bang/w_1/RHS.tikz) [9]) (./main/case_studies.tex
 [10]
-<figures/link-tn.pdf, id=313, 995.84645pt x 227.62204pt>
+<figures/link-tn.pdf, id=315, 995.84645pt x 227.62204pt>
 File: figures/link-tn.pdf Graphic file (type pdf)
 <use figures/link-tn.pdf>
-Package pdftex.def Info: figures/link-tn.pdf  used on input line 71.
+Package pdftex.def Info: figures/link-tn.pdf  used on input line 63.
 (pdftex.def)             Requested size: 398.33153pt x 91.0472pt.
  (./figures/pm_maps/pm.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q2.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q3.tikz) (./figures/pm_maps/pm.tikz)
 (./figures/pm_maps/q4.tikz)
-<figures/G-tn.pdf, id=315, 930.01376pt x 193.59253pt>
+<figures/G-tn.pdf, id=317, 930.01376pt x 193.59253pt>
 File: figures/G-tn.pdf Graphic file (type pdf)
 <use figures/G-tn.pdf>
-Package pdftex.def Info: figures/G-tn.pdf  used on input line 171.
+Package pdftex.def Info: figures/G-tn.pdf  used on input line 163.
 (pdftex.def)             Requested size: 371.99892pt x 77.43562pt.
  [11 <./figures/link-tn.pdf>]
 (./figures/pm_maps/x.tikz) (./figures/pm_maps/x.tikz)
@@ -1259,14 +1256,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
 
-Underfull \hbox (badness 1320) in paragraph at lines 148--158
+Underfull \hbox (badness 1320) in paragraph at lines 161--171
 \OT1/ptm/m/it/10 ver-sal gates via fu-sion and mea-sure-ment op-er-a-tions onSU
 (2)4anyons\OT1/ptm/m/n/10 .  \OT1/ptm/m/sl/10 Phys-i-cal Re-view A \OT1/ptm/m/n
 /10 92(1),
  []
 
 [13]
-Underfull \hbox (badness 1226) in paragraph at lines 218--223
+Underfull \hbox (badness 1226) in paragraph at lines 231--236
 []\OT1/ptm/m/n/10 F. Y. Wu (1992): \OT1/ptm/m/it/10 Knot the-ory and sta-tis-ti
 -cal me-chan-ics\OT1/ptm/m/n/10 .  \OT1/ptm/m/sl/10 Rev. Mod. Phys. \OT1/ptm/m/
 n/10 64, pp. 1099--1131,
@@ -1302,7 +1299,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 11.
 (./figures/qubit_rules/hadamard/lhs.tikz)
 (./figures/qubit_rules/hadamard/rhs.tikz)
 (./figures/qubit_rules/colour_change/lhs.tikz)
-(./figures/qubit_rules/colour_change/rhs.tikz)
+(./figures/qubit_rules/colour_change/rhs.tikz) [14]
 (./figures/qutrit_rules/fusion/all.tikz
 
 LaTeX Font Warning: Command \tiny invalid in math mode on input line 10.
@@ -1362,7 +1359,7 @@ LaTeX Font Warning: Command \tiny invalid in math mode on input line 49.
 (./figures/qutrit_rules/snake/snake.tikz)
 (./figures/qutrit_rules/snake/hopf_ish.tikz)
 (./figures/qutrit_rules/snake/hadamards.tikz)
-(./figures/qutrit_rules/snake/hadamard_adjoints.tikz) [14]
+(./figures/qutrit_rules/snake/hadamard_adjoints.tikz)
 (./figures/qutrit_generators/spiders/Z_a_b.tikz)
 (./figures/qutrit_generators/spiders/X_a_b.tikz)
 (./figures/qutrit_generators/hadamard.tikz)
@@ -1610,17 +1607,14 @@ ed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 64.
  ) 
 Here is how much of TeX's memory you used:
- 36151 strings out of 480608
- 756468 string characters out of 5903629
- 1670492 words of memory out of 5000000
- 50275 multiletter control sequences out of 15000+600000
- 612060 words of font info for 196 fonts, out of 8000000 for 9000
+ 36157 strings out of 480608
+ 756542 string characters out of 5903629
+ 1669574 words of memory out of 5000000
+ 50280 multiletter control sequences out of 15000+600000
+ 612374 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  67i,21n,105p,1271b,1113s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1637,10 +1631,10 @@ fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1
 /urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times
 /utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ZX-qutritpivot-complexity.pdf (27 pages, 530180 bytes).
+Output written on ZX-qutritpivot-complexity.pdf (27 pages, 531309 bytes).
 PDF statistics:
- 1023 PDF objects out of 1200 (max. 8388607)
- 572 compressed objects within 6 object streams
- 172 named destinations out of 1000 (max. 500000)
+ 1029 PDF objects out of 1200 (max. 8388607)
+ 578 compressed objects within 6 object streams
+ 173 named destinations out of 1000 (max. 500000)
  335 words of extra memory for PDF output out of 10000 (max. 10000000)
 

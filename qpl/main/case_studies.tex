@@ -38,35 +38,27 @@ where it can be evaluated at cost $O(poly(c))$ \cite{jaeger_vertigan_welsh_1990}
 
 In the context of quantum computation,
 additively approximating the Jones polynomial at \emph{non-lattice roots of unity} is the paradigmatic BQP-complete complete problem \cite{Aharonov_2008,kuperberg2014hard}.
-% For the lattice roots of unity, the quantum amplitude to which the problem reduces can be computed efficiently classically.
-% Specifically, the quantum circuits that need to be simulated are stabilizer circuits which are known to be classically tractable [ref? Kuperberg? Aharonov?].
-From the point of view
-of topological quantum computation \cite{pachos_2012}, which is the most natural for knot theory, 
-the Jones polynomial at roots of unity corresponds to a quantum amplitude in the fusion space of non-abelian anyons, emergent quasiparticles with exotic exchange statistics.
-Computation is performed by creating anyons from the vacuum, then braiding them, and finally fusing them back to the vacuum.
-In a universal anyonic theory, any unitary evolution can be efficiently approximated by a braid.
-Specifically, in the case of $\text{SU}(2)_k$ anyons, the Jones polynomial is evaluated at $t(k) = e^{i 2\pi/(2+k)}$ \cite{Witten1989,Rowell_2018}.
+Topological quantum computation \cite{Freedman2002,pachos_2012} is the most natural model for such knot theoretic questions. In this model, quantum states are defined in the fusion space of \emph{non-abelian anyons}, emergent quasiparticles with nontrivial exchange statistics arising in two-dimensional exotic phases of matter.
+Quantum computation is performed by creating anyons from the vacuum, then braiding them, and finally fusing them back to the vacuum, where braids play the role of unitary gates.
+The world-lines of the anyons define a closed braid, i.e. a link.
+Such a link encodes a quantum amplitude corresponding to its Jones polynomial evaluated at a lattice root of unity depending on the anyon theory at hand \cite{Witten1989}. 
+Specifically, in the case of $\text{SU}(2)_k$ anyons, the Jones polynomial is evaluated at $t(k) = e^{i 2\pi/(2+k)}$ \cite{Rowell_2018}.
 
-The relation between the point $t$ at which the Jones is evaluated and the dimension $d$ of the spins is $d = t + t^{-1} +2$,
-which can be solved for $t(d)$ \cite{PhysRevE.100.033303}.
-% Every vertex is assigned a $q$-state classical spin
-% and every signed edge indicates a spin-spin Tait-sign-dependent interaction $J_\pm\in\mathbb{C}$ which relate to the Jones polynomial's variable as $e^{J_\pm}=-t^\mp$.
-% The role of the link invariant is played by the partition function $Z(q)$;
-% in fact, the interactions $J_\pm$ are such so that the graph operations corresponding to Reidemeister moves leave $Z(q)$ invariant.
-% Multiplying with an efficiently computatble prefactor $\mathcal{A}(t) = (-t^\frac{1}{2}-t^{-\frac{1}{2}})^{(-|V|-1)} (-t^\frac{3}{4})^w t^{\frac{1}{4}\tau}$ for bookkeeping of twist factors, the relation to the Jones polynomial is
-% $V_L(t) = \mathcal{A}(t) Z(q)$.
-Note the correspondence between the dimension $d$ in the Potts approach and the level $k$ in the anyon-braiding approach to the Jones polynomial: $\{t(d) | ~ d \in\{1,2,3,4\} \} = \{ t(k) | ~ k\in\{1,2,4,\infty\} \} \subseteq \Lambda$.
-This is consistent with the fact that braiding-only topological quantum computation with $\text{SU}(2)_2$ anyons (Ising) or $\text{SU}(2)_4$ anyons is not universal (unless the $\text{SU}(2)_4$ anyons are augmented by fusion and measurements \cite{Levaillant_2015}).
-% A key observation is that if $d\in\{2,3,4\}$ then $t(d)\in\Lambda$ (the case $d=1$ is trivial \cite{jaeger_vertigan_welsh_1990}).
-
-Remarkably, $V_L(t(d))$ can be expressed as an unphysical partition function $Z_{G_L}(d)$ of a $d$-state Potts model with suitable spin-spin interactions \cite{RevModPhys.64.1099}.
-The Potts model is defined on a signed graph $G_L$, obtained as follows.
+Remarkably, the evaluation of the Jones polynomial at certain points can be expressed as an unphysical partition function $Z_{G_L}(d)$ of a $d$-state Potts model with suitable spin-spin interactions \cite{RevModPhys.64.1099}.
+This Potts model is defined on a signed graph $G_L$, obtained as follows.
 The link diagram is bicoloured checkerboard-style,
 then every coloured area is mapped to a vertex and every crossing is mapped to a signed edge according
-its orientation relative to the surrounding colours.
-The Jones polynomial is then equal to this partition function $Z_{G_L}(d)$ up to an efficiently computable scalar which depends on the link diagram.  
+its orientation relative to the surrounding colours, as in \eqref{eq:link-tn} below.
+The Jones polynomial is then equal to this partition function up to an efficiently computable scalar which depends on the link diagram.  
 % $V_L(t(d)) \simeq Z_{G_L}(d)$.
-Diagrammatically, $Z_{G_L}(d\in\mathbb{N})$ can be expressed as a closed tensor network in terms of phaseless (green) $d$-dimensional $Z$-spiders connected via wires that go through \emph{$\pm$-boxes} \cite{PhysRevE.100.033303}:
+The relation between the point $t(d)$ at which the Jones polynomial is evaluated and the dimension $d$ of the spins is $d = t + t^{-1} +2$,
+which can be solved for $t(d)$ \cite{PhysRevE.100.033303}.
+
+Note the correspondence between the dimension $d$ in the Potts approach and the level $k$ in the anyon-braiding approach to the Jones polynomial: $\{t(d) | ~ d \in\{1,2,3,4\} \} = \{ t(k) | ~ k\in\{1,2,4,\infty\} \} \subseteq \Lambda$.
+This is consistent with the fact that braiding $\text{SU}(2)_2$ anyons (Ising) or $\text{SU}(2)_4$ anyons is not universal (unless the $\text{SU}(2)_4$ anyons are augmented by fusion and measurements \cite{Levaillant_2015}).
+% A key observation is that if $d\in\{2,3,4\}$ then $t(d)\in\Lambda$ (the case $d=1$ is trivial \cite{jaeger_vertigan_welsh_1990}).
+
+The partition function $Z_{G_L}(d\in\mathbb{N})$ can be expressed as a closed tensor network in terms of phaseless (green) $d$-dimensional $Z$-spiders connected via wires that go through \emph{$\pm$-boxes} \cite{PhysRevE.100.033303}:
 \begin{equation}
 \includegraphics[scale=0.4, valign=c]{figures/link-tn.pdf}
 \label{eq:link-tn}
@@ -167,7 +159,7 @@ Through the lens of our graphical exposition we see that counting problems and c
 Given a graph $G$, the graph colouring problem can be encoded as a ZX-diagram as follows. Every vertex of the graph is mapped to a $d$-dimensional phaseless (green) $Z$-spider.
 Every edge is mapped to a wire connecting the spiders
 which goes through an $X$-box.
-\begin{equation}\label{eq:link-tn}
+\begin{equation}\label{eq:G-tn}
 	\includegraphics[scale=0.4, valign=c]{figures/G-tn.pdf}
 \end{equation}
 The $X$-boxes have the following concrete interpretation (as special case of the $\pm$-boxes, where $t=0$):

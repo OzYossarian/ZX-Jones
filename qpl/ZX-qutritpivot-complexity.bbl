@@ -27,8 +27,8 @@
   (\bibinfo{year}{2008}): \emph{\bibinfo{title}{A Polynomial Quantum Algorithm
   for Approximating the Jones Polynomial}}.
 \newblock {\sl \bibinfo{journal}{Algorithmica}}
-  \bibinfo{volume}{55}(\bibinfo{number}{3}), p. \bibinfo{pages}{395–421},
-  \doi{10.1007/s00453-008-9168-0}.
+  \bibinfo{volume}{55}(\bibinfo{number}{3}), p.
+  \bibinfo{pages}{395â€“421}, \doi{10.1007/s00453-008-9168-0}.
 \newblock \urlprefix\url{http://dx.doi.org/10.1007/s00453-008-9168-0}.
 
 \bibitemdeclare{misc}{backens2018zh}
@@ -98,6 +98,19 @@
   \emph{\bibinfo{title}{Graph-theoretic Simplification of Quantum Circuits with
   the ZX-calculus}}.
 
+\bibitemdeclare{article}{Freedman2002}
+\bibitem{Freedman2002}
+\bibinfo{author}{Michael~H. \surnamestart Freedman\surnameend},
+  \bibinfo{author}{Alexei \surnamestart Kitaev\surnameend},
+  \bibinfo{author}{Michael~J. \surnamestart Larsen\surnameend} \&
+  \bibinfo{author}{Zhenghan \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2002}): \emph{\bibinfo{title}{Topological quantum
+  computation}}.
+\newblock {\sl \bibinfo{journal}{Bulletin of the American Mathematical
+  Society}} \bibinfo{volume}{40}(\bibinfo{number}{01}), pp.
+  \bibinfo{pages}{31--39}, \doi{10.1090/s0273-0979-02-00964-3}.
+\newblock \urlprefix\url{https://doi.org/10.1090/s0273-0979-02-00964-3}.
+
 \bibitemdeclare{article}{qutrit_euler}
 \bibitem{qutrit_euler}
 \bibinfo{author}{Xiaoyan \surnamestart Gong\surnameend} \&
@@ -128,7 +141,7 @@
   computational complexity of the Jones and Tutte polynomials}}.
 \newblock {\sl \bibinfo{journal}{Mathematical Proceedings of the Cambridge
   Philosophical Society}} \bibinfo{volume}{108}(\bibinfo{number}{1}), p.
-  \bibinfo{pages}{35–53}, \doi{10.1017/S0305004100068936}.
+  \bibinfo{pages}{35â€“53}, \doi{10.1017/S0305004100068936}.
 
 \bibitemdeclare{book}{Kauffman2001}
 \bibitem{Kauffman2001}
@@ -182,7 +195,7 @@
   quantum computing}}.
 \newblock {\sl \bibinfo{journal}{Bulletin of the American Mathematical
   Society}} \bibinfo{volume}{55}(\bibinfo{number}{2}), p.
-  \bibinfo{pages}{183–238}, \doi{10.1090/bull/1605}.
+  \bibinfo{pages}{183â€“238}, \doi{10.1090/bull/1605}.
 \newblock \urlprefix\url{http://dx.doi.org/10.1090/BULL/1605}.
 
 \bibitemdeclare{article}{harny_completeness}
