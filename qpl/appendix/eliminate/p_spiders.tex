@@ -2,25 +2,25 @@ Now we prove the three elimination theorems for $\mathcal{P}$-, $\mathcal{N}$- a
 
 \begin{lemma}\label{lem:leg_flip}
 	The following `leg flip' equation holds in the qutrit ZX-calculus:
-	\begin{equation*}
+	\begin{equation}
 		\tikzfig{leg_flip/1} = \tikzfig{leg_flip/5}
-	\end{equation*}
+	\end{equation}
 	\begin{proof}
-		\begin{equation*}
+		\begin{equation}
 			\tikzfig{leg_flip/1} \ \xeq{\qutritRuleFusion} \ 
 			\tikzfig{leg_flip/2} \ \xeq{\qutritRuleSnake} \ 
 			\tikzfig{leg_flip/3} \ \xeq{\qutritRuleColourChange} \  
 			\tikzfig{leg_flip/4} \ \xeq{\qutritRuleColourChange} \  
 			\tikzfig{leg_flip/5}
-		\end{equation*}
+		\end{equation}
 	\end{proof}
 \end{lemma}
 
 \begin{lemma}\label{lem:substantial_m_copy}
 	The following more substantial `$\mathcal{M}$-copy' rule holds in the qutrit ZX-calculus, for any \Mspider\ state (i.e. $m \in \{0, 1, 2\}$ below):
-	\begin{equation*}
+	\begin{equation}
 		\tikzfig{m_copies/full/1} = \tikzfig{m_copies/full/4}
-	\end{equation*}
+	\end{equation}
 	\begin{proof}
 		First we prove that an \Mspider\ with non-trivial phase (i.e. $m \in \{1, 2\}$) satisfies a copy rule exactly like the rule $\qutritRuleZeroCopy$:
 		\begin{equation}\label{eq:non_trivial_m_copy}
@@ -38,12 +38,12 @@ Now we prove the three elimination theorems for $\mathcal{P}$-, $\mathcal{N}$- a
 			\tikzfig{m_copies/part_2/4}
 		\end{equation}
 		Which finally allows us to prove the full statement, where the last equality is just dropping the scalar term:
-		\begin{equation*}
+		\begin{equation}
 			\tikzfig{m_copies/full/1} \ \xeq{\qutritRuleFusion} \ 
 			\tikzfig{m_copies/full/2} \ \xeq{\eqref{eq:m_copy_through_trivial}} \ 
 			\tikzfig{m_copies/full/3} \ = \
 			\tikzfig{m_copies/full/4}
-		\end{equation*}
+		\end{equation}
 	\end{proof}
 \end{lemma}
 
@@ -53,18 +53,18 @@ The \Pspider\ elimination theorem additionally requires a lemma allowing us to t
 
 \begin{lemma}\label{lem:P_state_colour_change}
 	The following rule holds in the qutrit ZX-calculus, for $p \in \{1, 2\}$:
-	\begin{equation*}
+	\begin{equation}
 		\tikzfig{p_state/1} \ = \ \tikzfig{p_state/6}
-	\end{equation*}
+	\end{equation}
 	\begin{proof}
-		\begin{equation*}
+		\begin{equation}
 			\tikzfig{p_state/1} \ \ \xeq{\qutritRuleColourChange} \ \ 
 			\tikzfig{p_state/2} \ \ \xeq{\eqref{eq:qutrit_hadamard_decompositions}} \ \ 
 			\tikzfig{p_state/3} \ \ \xeq{\qutritRuleFusion} \ \ 
 			\tikzfig{p_state/4} \ \ \xeq{\ref{lem:substantial_m_copy}} \ \ 
 			\tikzfig{p_state/5} \ \ \xeq{\qutritRuleFusion} \ \ 
 			\tikzfig{p_state/6}
-		\end{equation*}
+		\end{equation}
 	\end{proof}
 \end{lemma}
 

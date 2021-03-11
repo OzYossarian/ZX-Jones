@@ -1,14 +1,14 @@
 \section{Simplifying Qutrit ZX-Diagrams}\label{sec:qutrits}
 
-We now turn to the qutrit ZX-calculus and examine the analogous story to that of the previous subsection
+We now turn to the qutrit ZX-calculus and examine the analogous story to that of the previous subsection,
 but now for the case where the dimension of the vector space carried by the wires is $d=3$.
 
 
 \subsection{The Qutrit ZX-Calculus}
 
 
-As in the qubit case, the qutrit ZX calculus concerns spiders connected by wires, but there are key differences, some subtler than others.
-Again, spiders come in two species, Z (green) and X (red),
+As in the qubit case, the qutrit ZX-calculus concerns spiders connected by wires, but there are key differences, some subtler than others.
+Again, spiders come in two species, $Z$ (green) and $X$ (red),
 with the three-dimensional \emph{Z-basis} denoted as $\{\ket{0},\ket{1},\ket{2}\}$ .
 % To get a feel for the qutrit calculus, we outline these differences briefly here before giving a formal definition. First of all, the qubit $Z$-basis consisted of two vectors $\ket{0} = \smallcolvec{1\\0}$ and $\ket{1} = \smallcolvec{0\\1}$, whereas the qutrit $Z$-basis consists of three vectors:
 % \begin{equation}
@@ -24,7 +24,7 @@ The qutrit \emph{$X$-basis} consists of the three vectors:
 	\ket{\omega} = \frac{1}{\sqrt{3}} \left(\ket{0} + \omega\ket{1} + \bar{\omega}\ket{2}\right)~,~~
 	\ket{\bar{\omega}} = \frac{1}{\sqrt{3}} \left(\ket{0} + \bar{\omega}\ket{1} + \omega\ket{2}\right)
 \end{equation}
-In qutrit ZX,
+In the qutrit ZX-calculus,
 spiders carry \emph{two} phases $\alpha$ and $\beta$,
 and have the following \emph{standard representation} as linear maps:
 \begingroup
@@ -73,7 +73,7 @@ A very important difference from the qubit case is that in qutrit ZX-calculus th
 	\tikzfig{cups_caps/z_cup} \quad \neq \quad \tikzfig{cups_caps/x_cup} \quad , \hspace{50pt}
 	\tikzfig{cups_caps/z_cap} \quad \neq \quad \tikzfig{cups_caps/x_cap}
 \end{equation}
-This has several consequences. Firstly, the maxim that \emph{`only topology matters' no longer applies}. That is, it is now important to make clear the distinction between a spider's inputs and outputs, unlike in the qubit case where we could freely interchange the two. Diagram components can still be isotoped around the plane but only so long as this input/output distinction is respected. This gives the qutrit calculus a slightly more rigid flavour than its qubit counterpart. 
+This has several consequences. Firstly, the maxim that \emph{`only topology matters' no longer applies}. That is, it is now important to make clear the distinction between a spider's input and output wires, unlike in the qubit case where we could freely interchange the two. Diagram components can still be isotoped around the plane but only so long as this input/output distinction is respected. This gives the qutrit calculus a slightly more rigid flavour than its qubit counterpart. 
 That said, this rigidity is loosened in certain cases; in particular, this distinction is irrelevant for $H$- and $H^\dagger$-edges \cite{qutrit_euler}:
 % That said, this rigidity is loosened by the following two observations.
 % Firstly, this distinction is irrelevant for $H$- and $H^\dagger$-edges \cite{qutrit_euler}:
@@ -92,7 +92,7 @@ That said, this rigidity is loosened in certain cases; in particular, this disti
 % 		\tikzfig{qutrit_snake/different_bent} \quad = \quad \tikzfig{qutrit_snake/different_straight}
 % \end{equation}
 % The above equations hold also if we flip the colours, green $\leftrightarrow$ red. 
-The full set of rules governing the qutrit ZX calculus is shown in Figure \ref{fig:qutrit_ZX_rules} in Appendix \ref{app:zx_calculus}.
+The full set of rules governing the qutrit ZX-calculus is shown in Figure \ref{fig:qutrit_ZX_rules} in Appendix \ref{app:zx_calculus}.
 
 
 \subsection{Graph-Like Qutrit ZX Diagrams}
@@ -100,18 +100,18 @@ The full set of rules governing the qutrit ZX calculus is shown in Figure \ref{f
 % \numbered{Definition}{A \emph{Hadamard edge} (or \emph{H-edge}) is a Hadamard map connecting two spiders. A \emph{Hadamard adjoint edge} (or \emph{$H^\dagger$-edge) }}
 
 
-A \emph{graph-like qutrit ZX diagram} is one where
+A \emph{graph-like} qutrit ZX-diagram is one where
 every spider is green,
 spiders are only connected by blue Hadamard edges (\emph{$H$-edges})
 or their purple adjoints (\emph{$H^\dagger$-edges}),
 every pair of spiders is connected by at most one $H$-edge or $H^\dagger$-edge,
 every input and output wire is connected to a spider,
 and every spider is connected to at most one input or output wire.
-A graph-like qutrit ZX diagram is a \emph{graph state} when every spider has zero phase (top and bottom) and is connected to an output. 
+A graph-like qutrit ZX-diagram is a \emph{graph state} when every spider has zero phase (top and bottom) and is connected to an output. 
 
 % Thanks to Lemma \ref{lem:h_edges_input_output} we can ignore which of a spider's $H$- and $H^\dagger$-legs are inputs and outputs. For our specific needs, the last two items above will not be relevant, since ZX-diagrams arising from knots will be closed, but we include them to keep the definition consistent with the qubit case.
 
-Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. Instead, we can ensure we have a graph-like diagram by replacing the plain wire:
+Note the difference compared to the qubit case: we need not worry about self-loops beacuse the qutrit ZX-calculus doesn't define a `plain' cap or cup. But this comes at a cost: spiders in the qutrit case fuse more fussily. Specifically, when two spiders of the same colour are connected by at least one plain edge and at least one $H$- or $H^\dagger$-edge, fusion is not possible. Instead, should we want to ensure we have a graph-like diagram, we can replace the plain wire:
 % The following equation, for $h \in \{1,2\}$, helps us get around this:
 % The following equation, which also holds with the roles of blue and purple interchanged, helps us get around this:
 \begin{equation}\label{eq:spiders_reluctant_to_fuse}
@@ -144,9 +144,9 @@ This justifies our notation for Hadamard gates: we can think of Hadamard edges a
 \end{equation}
 
 \begin{proposition}\label{prop:every_diagram_is_graph_like_qutrit}
-	Every qutrit ZX diagram is equivalent to one that is graph-like.
+	Every qutrit ZX-diagram is equivalent to one that is graph-like.
 	\begin{proof}
-		First use the colour change rule to turn all X-spiders into Z-spiders. Then use \eqref{eq:h_boxes_are_mod_4} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply \eqref{eq:h_edges_are_mod_3} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-edges as needed: 
+		First use the colour change rule to turn all $X$-spiders into $Z$-spiders. Then use \eqref{eq:h_boxes_are_mod_4} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply \eqref{eq:h_edges_are_mod_3} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-edges as needed: 
 		\begin{equation}
 			\tikzfig{is_graph_like/plain_input_output_wire_coloured} \quad ,
 			\hspace{50pt}
@@ -157,7 +157,7 @@ This justifies our notation for Hadamard gates: we can think of Hadamard edges a
 	\end{proof}
 \end{proposition}
 
-A graph state is described fully by its underlying multigraph, or equivalently by an adjacency matrix, where edges take weights in $\mathbb{Z}_3$\ (Lemma 4.2, \cite{harny_completeness}). Nodes correspond to phaseless green spiders, edges of weight $1$ correspond to Hadamard edges, and edges of weight $2$ correspond to $H^\dagger$ edges. As in the qubit case, graph states admit a \emph{local complementation} operation\ (Definition 2.6, \cite{harny_completeness}), though the effect is now slightly more complicated. We'll give the intuition after the formal definition:
+A graph state is described fully by its underlying multigraph, or equivalently by an adjacency matrix, where edges take weights in $\mathbb{Z}_3$\ (Lemma 4.2, \cite{harny_completeness}). Nodes correspond to phaseless green spiders, edges of weight $1$ correspond to Hadamard edges, and edges of weight $2$ correspond to $H^\dagger$-edges. As in the qubit case, graph states admit a \emph{local complementation} operation\ (Definition 2.6, \cite{harny_completeness}), though the effect is now slightly more complicated. We'll give the intuition after the formal definition:
 
 \begin{definition}\label{def:local_complementation_qutrit}
 	Given $a \in \mathbb{Z}_3$ and a graph state $G$ with adjacency matrix $W = (w_{i,j})$, the \emph{$a$-local complentation} at node $x$ is the new graph state $G *_a x$, whose adjacency matrix $W' = (w'_{i,j})$ is given by $w'_{i,j} = w_{i,j} + aw_{i,x}w_{j,x}$.
@@ -168,8 +168,8 @@ A graph state is described fully by its underlying multigraph, or equivalently b
 
 So only those edges between neighbours of node $x$ are affected. Specifically, for two nodes $i$ and $j$ both connected to $x$ by the \emph{same} colour edge, $a$-local complementation at $x$ \emph{increases} weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $x$ by edges of \emph{different} colours, $a$-local complementation at $x$ \emph{decreases} $w_{i,j}$ by $a$. This is shown graphically below, and holds with the roles of blue and purple interchanged:
 \begin{equation}
-	\tikzfig{a_local_comp/same}
-	\hspace{75pt}
+	\tikzfig{a_local_comp/same} \quad ,
+	\hspace{50pt}
 	\tikzfig{a_local_comp/different}
 \end{equation}
 
@@ -177,7 +177,9 @@ So only those edges between neighbours of node $x$ are affected. Specifically, f
 
 \begin{theorem}\label{thm:local_comp_equality} (Theorem 4.4, Corollary 4.5, \cite{harny_completeness})~
 	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing a node $x$, let $N(x)$ denote the neighbours of $x$; that is, nodes $i$ with weight $w_{i,x} \in \{1, 2\}$. Then the following equality holds:
-	\ctikzfig{graph_state/local_comp}
+	\begin{equation}
+		\tikzfig{graph_state/local_comp}
+	\end{equation}
 \end{theorem}
 
 % Composing local complementations gives a \emph{pivot} operation.
@@ -189,18 +191,7 @@ So only those edges between neighbours of node $x$ are affected. Specifically, f
 This pivot operation again leads to an equality, up to introducing some extra gates on outputs, whose proof is found in Appendix \ref{thm:local_pivot_equality_appendix}. Here we shall only consider an $(a,-a,a)$-pivot along an edge $ij$ of non-zero weight, for $a \in \{1, 2\}$. We will call this a \emph{proper $a$-pivot} along $ij$, and denote it $G \wedge_a ij$.
 
 \begin{theorem}\label{thm:local_pivot_equality}
-	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing connected nodes $i$ and $j$, define $N_{=}(i, j) \defeq \left\{x \in N(i) \cap N(j) \mid w_{x,i} = w_{x,j} \right\}$ and $N_{\neq}(i, j) \defeq \left\{x \in N(i) \cap N(j) \mid w_{x,i} \neq w_{x,j} \right\}$. Then the following equation relates $G$ and its proper $a$-pivot along $ij$:
-	% Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing connected nodes $i$ and $j$, define the following:
-	% \begin{itemize}
-	% 	\item $N_{=}(i, j) \defeq \left\{x \in N(i) \cap N(j) \mid w_{x,i} = w_{x,j} \right\}$
-	% 	\item $N_{\neq}(i, j) \defeq \left\{x \in N(i) \cap N(j) \mid w_{x,i} \neq w_{x,j} \right\}$
-	% \end{itemize} 
-	% Then the following equation relates $G$ and its proper $a$-pivot along $ij$:
-	\ctikzfig{graph_state/proper_local_pivot}
-
-	% \begin{proof}
-	% 	See Appendix \ref{thm:local_pivot_equality_appendix}.
-	% \end{proof}
+	\qutritPivotEqualityStatement
 \end{theorem}
 
 \subsection{Qutrit Elimination Theorems}
@@ -211,7 +202,7 @@ We classify spiders into three families exactly as in (Theorem 3.1, \cite{harny_
 	\hspace{10pt}
 	\mathcal{N} = \left\{\qutritZspider{0}{1}, \qutritZspider{1}{0}, \qutritZspider{0}{2}, \qutritZspider{2}{0}\right\},
 	\hspace{10pt}
-	\mathcal{P} = \left\{\qutritZspider{1}{1}, \qutritZspider{2}{2}\right\}.
+	\mathcal{P} = \left\{\qutritZspider{1}{1}, \qutritZspider{2}{2}\right\}
 \end{equation}
 We call a spider in a graph-like ZX-diagram \emph{interior} if it isn't connected to an input or output. Given any graph-like ZX-diagram, we will show that we can eliminate standalone interior $\mathcal{P}$- and \Nspiders\ by local complementation, and pairs of connected interior \Mspiders\ by pivoting. 
 

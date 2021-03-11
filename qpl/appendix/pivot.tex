@@ -13,13 +13,7 @@ Next we prove the pivot equality from Theorem~\ref{thm:local_pivot_equality}. We
 \end{equation}
 
 \begin{theorem}\label{thm:local_pivot_equality_appendix} \textbf{/\ Theorem~\ref{thm:local_pivot_equality}.} 
-	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing connected nodes $i$ and $j$, define the following:
-	\begin{itemize}
-		\item $N_{=}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} = w_{k,j} \right\}$
-		\item $N_{\neq}(i, j) \defeq \left\{k \in N(i) \cap N(j) \mid w_{k,i} \neq w_{k,j} \right\}$
-	\end{itemize} 
-	Then the following equation relates $G$ and its proper $a$-pivot along $ij$:
-	\ctikzfig{graph_state/proper_local_pivot}
+	\qutritPivotEqualityStatement
 	\begin{proof}
 		There are four cases ($a, w_{i,j} \in \{1,2\}$), which split into two pairs of symmetric cases: $a = w_{i,j}$ and $a \neq w_{i,j}$. We show just one case - the $1$-pivot along $ij$ of weight $1$ - the remaining cases being analogous. We again employ the !-notation. An asterisk \textcolor{red}{$*_a$} next to a spider means that at the next step an $a$-local complementation will be performed at this spider.
 		\begingroup
