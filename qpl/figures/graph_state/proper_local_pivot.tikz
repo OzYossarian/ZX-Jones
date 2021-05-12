@@ -9,30 +9,30 @@
 		\node [style=none] (6) at (3.75, 0.25) {};
 		\node [style=none] (10) at (7, -0.75) {${G \wedge_a ij}$};
 		\node [style=none] (12) at (3.75, 2) {};
-		\node [style=qutrit Z phase] (32) at (3.75, 1) {$a$ \nodepart{lower} $a$};
+		\node [style=qutrit Z phase] (32) at (7.5, 1) {$a$ \nodepart{lower} $a$};
 		\node [style=none] (33) at (6.25, 0.25) {};
 		\node [style=none] (34) at (6.25, 2) {};
-		\node [style=qutrit Z phase] (35) at (6.25, 1) {$a$ \nodepart{lower} $a$};
-		\node [style=none] (36) at (5, 1) {...};
+		\node [style=qutrit Z phase] (35) at (10, 1) {$a$ \nodepart{lower} $a$};
+		\node [style=none] (36) at (8.75, 1) {...};
 		\node [style={scale=0.7}] (38) at (5, 2.5) {$\overbrace{\hspace{60pt}}^{N_{=}(i, j)}$};
-		\node [style={scale=0.7}] (39) at (1.25, 2.5) {$\overbrace{\quad}^{j}$};
+		\node [style={scale=0.7}] (39) at (2.5, 2.5) {$\overbrace{\quad}^{j}$};
 		\node [style=none] (62) at (11.25, 0.25) {};
 		\node [style=none] (63) at (11.25, 2) {};
 		\node [style=none] (65) at (13.75, 0.25) {};
 		\node [style=none] (66) at (13.75, 2) {};
 		\node [style=none] (68) at (12.5, 1) {...};
 		\node [style=none] (79) at (2.5, 0.25) {};
-		\node [style=none] (80) at (2.5, 1.25) {};
-		\node [style={scale=0.7}] (82) at (2.5, 2.5) {$\overbrace{\quad}^{i}$};
+		\node [style=none] (80) at (2.5, 2) {};
+		\node [style={scale=0.7}] (82) at (1.25, 2.5) {$\overbrace{\quad}^{i}$};
 		\node [style=qutrit hadamard unknown] (109) at (1.25, 1) {$-a$};
 		\node [style=qutrit hadamard unknown] (110) at (2.5, 1) {$a$};
 		\node [style=none] (111) at (7.5, 0.25) {};
 		\node [style=none] (112) at (7.5, 2) {};
-		\node [style=qutrit Z phase] (113) at (7.5, 1) {$-a$ \nodepart{lower} $-a$};
+		\node [style=qutrit Z phase] (113) at (3.75, 1) {$-a$ \nodepart{lower} $-a$};
 		\node [style=none] (114) at (10, 0.25) {};
 		\node [style=none] (115) at (10, 2) {};
-		\node [style=qutrit Z phase] (116) at (10, 1) {$-a$ \nodepart{lower} $-a$};
-		\node [style=none] (117) at (8.75, 1) {...};
+		\node [style=qutrit Z phase] (116) at (6.25, 1) {$-a$ \nodepart{lower} $-a$};
+		\node [style=none] (117) at (5, 1) {...};
 		\node [style={scale=0.7}] (118) at (8.75, 2.5) {$\overbrace{\hspace{60pt}}^{N_{\neq}(i, j)}$};
 		\node [style=none] (119) at (-13.75, 0.25) {};
 		\node [style=none] (120) at (-0.75, 0.25) {};
@@ -62,9 +62,7 @@
 		\node [style=none] (149) at (-4.75, 0.75) {};
 		\node [style=none] (151) at (-6, 0.5) {...};
 		\node [style={scale=0.7}] (152) at (-6, 1.25) {$\overbrace{\hspace{60pt}}^{N_{\neq}(i, j)}$};
-		\node [style=none] (154) at (1.25, 2) {};
-		\node [style=none] (155) at (1.25, 1.25) {};
-		\node [style=none] (156) at (2.5, 2) {};
+		\node [style=none] (155) at (1.25, 2) {};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw (1.center) to (4.center);
@@ -90,8 +88,6 @@
 		\draw (140.center) to (141.center);
 		\draw (145.center) to (146.center);
 		\draw (148.center) to (149.center);
-		\draw [in=-90, out=90, looseness=0.50] (80.center) to (154.center);
-		\draw [in=-90, out=90, looseness=0.50] (155.center) to (156.center);
 		\draw (5.center) to (155.center);
 	\end{pgfonlayer}
 \end{tikzpicture}

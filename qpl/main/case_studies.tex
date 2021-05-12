@@ -41,7 +41,7 @@ additively approximating the Jones polynomial at \emph{non-lattice roots of unit
 Topological quantum computation \cite{Freedman2002,pachos_2012} is the most natural model for such knot theoretic questions. In this model, quantum states are defined in the fusion space of \emph{non-abelian anyons}, emergent quasiparticles with nontrivial exchange statistics arising in two-dimensional exotic phases of matter.
 Quantum computation is performed by creating anyons from the vacuum, then braiding them, and finally fusing them back to the vacuum, where braids play the role of unitary gates.
 The world-lines of the anyons define a closed braid, i.e. a link.
-Such a link encodes a quantum amplitude corresponding to its Jones polynomial evaluated at a lattice root of unity depending on the anyon theory at hand \cite{Witten1989}. 
+Such a link encodes a quantum amplitude corresponding to its Jones polynomial evaluated at a root of unity depending on the anyon theory at hand \cite{Witten1989}. 
 Specifically, in the case of $\text{SU}(2)_k$ anyons, the Jones polynomial is evaluated at $t(k) = e^{i 2\pi/(2+k)}$ \cite{Rowell_2018}.
 
 Remarkably, the evaluation of the Jones polynomial at certain points can be expressed as an unphysical partition function $Z_{G_L}(d)$ of a $d$-state Potts model with suitable spin-spin interactions \cite{RevModPhys.64.1099}.
@@ -178,11 +178,7 @@ Counting k-colourings for $k\geq 3$ is a canonical \#P-complete problem,
 while for $k=0,1,2$ the problem is in P \cite{jaeger_vertigan_welsh_1990}.
 And indeed, for $d=2$ the $X$-matrix is just the Pauli X, and so the problem reduces to simplifying a stabilizer diagram,
 which can be done efficiently.
-However, for $d=3$ the $X$-matrix cannot be expressed as a stabilizer qutrit diagram.
 	\begin{equation}\label{eq:XmatricesinZX}
-		\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket_{d=2} \simeq \left\llbracket \ \tikzfig{pm_maps/q2x} \ \right\rrbracket  \quad, 
-		\qquad\quad
-		\left\llbracket \quad \tikzfig{pm_maps/x} \quad \right\rrbracket_{d=3} \not\simeq
-		\left\llbracket \quad \tikzfig{pm_maps/q3x} \quad \right\rrbracket~~,~~~~\forall a,b\in\{0,1,2\}
+		\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket_{d=2} \simeq \left\llbracket \ \tikzfig{pm_maps/q2x} \ \right\rrbracket
 	\end{equation}
-Thus it is not expected that there exists an efficient simplification strategy for the corresponding qutrit ZX-diagram. This is consistent with the fact that counting 3-colourings is \#P-complete.
+However, for $d=3$ the $X$-matrix cannot be expressed as a stabilizer qutrit diagram; any such diagram must be unitary \cite{Hostens_2005}, but the $X$-matrix is not. Thus it is not expected that there exists an efficient simplification strategy for the corresponding qutrit ZX-diagram. This is consistent with the fact that counting 3-colourings is \#P-complete.
