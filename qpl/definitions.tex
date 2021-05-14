@@ -37,6 +37,17 @@
 		\draw [bend left=15] (10) to (5.center);
 	\end{pgfonlayer}
 \end{tikzpicture}}
+\newcommand{\qutritState}[3]{\, \begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (1) at (0, 0.75) {};
+		\node [style=qutrit #1 phase] (2) at (0, -0.5) {$#2$ \nodepart{lower} $#3$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (1.center) to (2);
+	\end{pgfonlayer}
+\end{tikzpicture}}
+\newcommand{\qutritZstate}[2]{\qutritState{Z}{#1}{#2}}
+\newcommand{\qutritXstate}[2]{\qutritState{X}{#1}{#2}}
 
 \newcommand{\qubitPhaseGate}[2]{\,\begin{tikzpicture}
 	\begin{pgfonlayer}{nodelayer}

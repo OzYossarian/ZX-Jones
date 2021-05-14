@@ -1,6 +1,6 @@
 \section{$\bf{\pm}$-Boxes in the ZX Calculus}
 
-We close by proving that the $\pm$-boxes in \eqref{eq:pm_tensor} correspond to stabilizer ZX-diagrams.  
+We close by proving that the $\pm$-boxes in \eqref{eq:pm_tensor} correspond to stabilizer ZX-diagrams, while the qutrit $X$-box in \eqref{eq:X_tensor} does not.
 
 \begin{proposition}\label{prop:pm_maps_zx_appendix} % \textbf{/\ Propositions~\ref{prop:pm_map_q2_q4}, \ref{prop:pm_map_q3}.}
 	The following equalities hold up to a scalar under the standard interpretation:
@@ -127,5 +127,93 @@ We close by proving that the $\pm$-boxes in \eqref{eq:pm_tensor} correspond to s
 					&= \frac{\sqrt{2}}{8} \left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4}
 				\end{align*}
 		\endgroup
+	\end{proof}
+\end{proposition}
+
+Now we prove the qutrit $X$-box is not a stabilizer diagram. The following lemma is required:
+\begin{lemma}
+	Every stabilizer state is equivalent to one of the following 12 diagrams:
+	\begin{gather*}
+		\qutritXstate{0}{0} ~~,\qquad 
+		\qutritXstate{1}{2} ~~,\qquad 
+		\qutritXstate{1}{2} ~~,\qquad 
+		\qutritZstate{0}{0} ~~,\qquad 
+		\qutritZstate{1}{2} ~~,\qquad 
+		\qutritZstate{1}{2}\\[10pt]
+		\qutritZstate{1}{1} ~~=~~ \qutritXstate{2}{2} ~~,\qquad 
+		\qutritZstate{2}{2} ~~=~~ \qutritXstate{1}{1}\\[10pt]
+		\qutritZstate{0}{1} ~~=~~ \qutritXstate{2}{0} ~~,\qquad 
+		\qutritZstate{0}{2} ~~=~~ \qutritXstate{0}{1} ~~,\qquad 
+		\qutritZstate{1}{0} ~~=~~ \qutritXstate{0}{2} ~~,\qquad 
+		\qutritZstate{2}{0} ~~=~~ \qutritXstate{1}{0}
+	\end{gather*}
+	\begin{proof}
+		We can use our elimination rules to prove this. A stabilizer state is a diagram with no inputs and one output, in which every phase component is a multiple of $\frac{2\pi}{3}$. After putting it in graph-like form (via Proposition \ref{prop:every_diagram_is_graph_like_qutrit}), all but one spider will be interior. We'll call the non-interior one the \emph{boundary} spider. Our elimination rules say we can remove all interior $\mathcal{P}$- and $\mathcal{N}$-spiders, plus all pairs of connected interior $\mathcal{M}$-spiders. So applying these rules until we can do so no more, we have two cases. The easiest case is where end up with just the single boundary spider, which must have no inputs and one output. In the other case we get a single $\mathcal{M}$-spider connected to a boundary spider. The \Mspider\ can have no other legs, and the boundary spider must have exactly one other leg, which is the output of the overall diagram:
+		\begin{equation}
+			\tikzfig{X_box/boundary} \quad \text{ or } \quad \tikzfig{X_box/m/1}
+		\end{equation}
+		In the first case, we're done. In the second case, we need only note:
+		\begin{equation*}
+			\tikzfig{X_box/m/1} \quad \xeq{\qutritRuleColourChange} \quad
+			\tikzfig{X_box/m/2} \quad \xeq{\ref{lem:substantial_m_copy}} \quad
+			\tikzfig{X_box/m/3}
+		\end{equation*}
+		% A stabilizer state is a diagram with no inputs and one output in which every phase component is a multiple of $\frac{2\pi}{3}$. By spider fusion, we can decompose such a diagram into the following components:
+
+		% We then induct on the number of such components. The base case is when there is $1$ component; in order for the diagram to have one input and one output, this component must be of the form:
+
+		% So in this case, we're done. Now for the general case, since the diagram has exactly one output, there is a unique component $C$ whose output leg is the output of the overall diagram. If $C$ is of the form:
+
+		% then the remaining components form a diagram $D$ with no inputs and one output in which every phase component is a multiple of $\frac{2\pi}{3}$. By induction, $D$ is equivalent to:
+
+		% So if $C$ is a Hadamard box or its adjoint, we're done by the colour change rule:
+
+		% Else if $C$ is a phase gate, there's two cases: if $C$ and $D$ are the same colour, we're done by fusion. If not, $D$ must be an \Mspider\, so we're done by Lemma \ref{lem:substantial_m_copy}.
+
+		% If instead $C$ is of the form:
+
+		% Then the two input legs of 
+	\end{proof}
+\end{lemma}	
+
+\begin{proposition}\label{prop:X_box_not_stab}
+	The qutrit $X$-box defined below is not a stabilizer diagram:
+	\begin{equation*}
+		\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket ~~ = ~~  
+		\sum_{i,j=0}^{d-1} (1 -  \delta_{ij} ) \ket{i}\bra{j} ~~ = ~~  
+		\begin{pmatrix}
+			0 & 1 & 1 \\
+			1 & 0 & 1 \\
+			1 & 1 & 0
+		\end{pmatrix}
+	\end{equation*}
+	\begin{proof}
+		Stabilizer diagrams are closed under composition (they form a group). Hence if the $X$-box is stabilizer, it must send the phaseless red spider state to a stabilizer state. This has matrix:
+		\begin{equation*}
+			\left\llbracket~~ \tikzfig{X_box/X_0/X_0} ~~\right\rrbracket ~~=~~
+			\left\llbracket~~ \tikzfig{X_box/X_0/X} ~~\right\rrbracket \left\llbracket~~ \tikzfig{X_box/X_0/0} ~~\right\rrbracket ~~=~~
+			\begin{pmatrix}
+				0 & 1 & 1 \\
+				1 & 0 & 1 \\
+				1 & 1 & 0
+			\end{pmatrix}
+			\begin{pmatrix}
+				1 \\
+				0 \\
+				0 
+			\end{pmatrix} ~~=~~
+			\begin{pmatrix}
+				0 \\
+				1 \\
+				1 
+			\end{pmatrix}
+		\end{equation*}
+		But, up to a scalar, this is not equal to any of the 12 stabilizer states above:
+		\begin{equation*}
+			\left\llbracket~~ \tikzfig{X_box/states/0} ~~\right\rrbracket = \begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}, \quad
+			\left\llbracket~~ \tikzfig{X_box/states/1} ~~\right\rrbracket = \begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}, \quad
+			\left\llbracket~~ \tikzfig{X_box/states/2} ~~\right\rrbracket = \begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix}, \quad
+			\left\llbracket~~ \tikzfig{X_box/states/ab} ~~\right\rrbracket = \begin{pmatrix}1 \\ \omega^a \\ \omega^b\end{pmatrix}
+		\end{equation*}
 	\end{proof}
 \end{proposition}
