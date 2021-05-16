@@ -1,41 +1,54 @@
 % \documentclass[11pt, oneside]{article}      % use "amsart" instead of "article" for AMSLaTeX format
 
 
-\documentclass[submission,copyright,creativecommons]{eptcs}
-\providecommand{\event}{QPL 2021}
+% \documentclass[submission,copyright,creativecommons]{eptcs}
+% \providecommand{\event}{QPL 2021}
+
+% \documentclass[runningheads]{llncs}
+
+\documentclass[submission]{eptcs}
+\providecommand{\event}{FCT 2021}
 
 \input{preamble}
 \input{definitions}
 \input{statements}
 
-\title{Classifying Complexity with the ZX-Calculus:\\
-Jones Polynomials and Potts Partition Functions}
 
-\author{  Alex Townsend-Teague $^{0,1}$ and Konstantinos Meichanetzidis $^{1,2}$
-\institute{$^0$ Mathematical Institute, University of Oxford}
-\institute{$^1$ Department of Computer Science, University of Oxford}
-\institute{$^2$ Cambridge Quantum Computing Ltd.} }
 
-\def\titlerunning{Classifying Complexity with the ZX Calculus}
-\def\authorrunning{Alex Townsend-Teague, Konstantinos Meichanetzidis}
+% \title{Classifying Complexity with the ZX-Calculus:\\
+% Jones Polynomials and Potts Partition Functions}
 
+\title{Simplification strategies for the qutrit ZX-calculus
+}
+
+\author{  Alex Townsend-Teague $^{1}$ and Konstantinos Meichanetzidis $^{1,2}$
+
+\institute{$^1$ University of Oxford\\
+$^2$ Cambridge Quantum Computing Ltd.} }
+
+\def\titlerunning{Simplification strategies for the qutrit ZX-calculus}
+\def\authorrunning{A. Townsend-Teague and K. Meichanetzidis}
+
+% \authorrunning{A. Townsend-Teague and K. Meichanetzidis}
 
 \begin{document}
+
+
 \maketitle
 \begin{abstract}
-The \emph{ZX-calculus} is a graphical language which allows for reasoning about suitably represented tensor networks - namely \emph{ZX-diagrams} - in terms of rewrite rules.
-Here, we focus on problems which amount to exactly computing
-a scalar encoded as a closed tensor network.
-In general, such problems are \#P-hard.
-However, there are families of such problems which are known to be in P
-when the dimension is below a certain value.
-By expressing problem instances from these families as ZX-diagrams,
-we see that the easy instances belong to the stabilizer fragment of the ZX-calculus.
-Building on previous work on efficient simplification of qubit stabilizer diagrams, we present simplifying rewrites for the case of qutrits, which are of independent interest in the field of quantum circuit optimisation.
-Finally, we look at the specific examples of evaluating the Jones polynomial
-and of counting graph-colourings.
-Our exposition further champions the ZX-calculus as a suitable and unifying language for studying the complexity of
-a broad range of classical and quantum problems.
+The ZX-calculus is a graphical language for suitably represented tensor networks - namely ZX-diagrams.
+%, composed of primitive generators whose semantics are tensors over a (semi)ring.
+%By universality,
+%Any tensor network has a corresponding ZX-diagram.
+Calculations are done by transforming ZX-diagrams with rewrite rules, which preserve semantics, and two ZX-diagrams representing the same tensor can be transformed into each other \emph{only} by a sequence of rewrites.
+The ZX-calculus has found applications in reasoning about low-level quantum circuits, high-level proofs of quantum algorithms, and recently in recasting complexity results about counting problems in an intuitive graphical form.
+A key notion of such results is the stabiliser fragment of the ZX-calculus, a subfamily of ZX-diagrams for which rewriting can be done efficiently in terms of derived simplifying rewrites.
+In the context of quantum computation with qubits or of Boolean counting problems, one employs the qubit ZX-calculus.
+However, higher-dimensional cases are of interest, as well. Recently, qudits have become more prominent in quantum computing, and there are counting problem families whose complexity depends on the dimension.
+The main contribution of this work is the derivation of
+\emph{efficient} rewrite strategies for the stabiliser fragment of the qutrit ZX-calculus.
+This constitutes a first non-trivial step towards simplification of qutrit quantum circuits. Finally, we reinterpret known complexity-theoretic results about evaluating the Jones polynomial, an important link-invariant, and counting graph colourings.\\
+{\bf *eligible for the best student paper award*}
 \end{abstract}
 
 \input{main/intro}
@@ -46,10 +59,11 @@ a broad range of classical and quantum problems.
 
 \section{Acknowledgments}
 We wish to thank Niel de Beaudrap, Aleks Kissinger, Stefanos 
-Kourtis, and Quanlong (Harny) Wang for inspiring and helpful discussions.
+Kourtis, and Quanlong Wang for inspiring and helpful discussions.
 KM acknowledges financial support from the Royal Commission for the Exhibition of 1851 through a postdoctoral research fellowship.
 
-\bibliographystyle{eptcs}
+% \bibliographystyle{eptcs}
+\bibliographystyle{splncs04}
 \bibliography{refs-teague,refs}
 
 \appendix

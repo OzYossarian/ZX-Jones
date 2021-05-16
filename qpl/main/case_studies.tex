@@ -1,8 +1,7 @@
 \section{Case studies}
 
 In this section we present two problems which can naturally be cast in tensor network form.
-These problem families are interesting in that they show a transition in complexity when the dimension $d$ carried by the wires of the network is greater than a specific value. The \emph{Jones polynomial} is a prominent \emph{link invariant} in knot theory; here we present the problem of evaluating it at the \emph{lattice roots of unity}.
-Subsequently, we briefly look at graph colouring.
+These problem families are interesting in that they show a transition in complexity from easy to hard when the dimension $d$ carried by the wires is greater than a specific value. We recast known results about evaluating the \emph{Jones polynomial}, and finally we briefly look at graph colouring.
 
 \subsection{Jones Polynomial at Lattice Roots of Unity}
 
@@ -14,7 +13,7 @@ A \emph{knot} $K$ is a circle embedded in $\mathbb{R}^3$.
 A set of knots tangled together make a \emph{link} $L$.
 A link $L$ can be represented by a \emph{link diagram}
 by projecting it on to the plane
-but retaining the information of \emph{over or under crossings}.
+but retaining the information of over or under crossings.
 % For example, the trefoil knot linked with an unknot can be drawn as:
 % \begin{equation}
 % \includegraphics[scale=0.2]{figures/link.jpg}
@@ -37,19 +36,18 @@ where it can be evaluated at cost $O(poly(c))$ \cite{jaeger_vertigan_welsh_1990}
 
 
 In the context of quantum computation,
-additively approximating the Jones polynomial at \emph{non-lattice roots of unity} is the paradigmatic BQP-complete complete problem \cite{Aharonov_2008,kuperberg2014hard}.
-Topological quantum computation \cite{Freedman2002,pachos_2012} is the most natural model for such knot theoretic questions. In this model, quantum states are defined in the fusion space of \emph{non-abelian anyons}, emergent quasiparticles with nontrivial exchange statistics arising in two-dimensional exotic phases of matter.
+additively approximating the Jones polynomial at \emph{non-lattice roots of unity} is a paradigmatic BQP-complete complete problem \cite{Aharonov_2008,kuperberg2014hard}.
+Topological quantum computation \cite{Freedman2002,pachos_2012} is the most natural model for such knot theoretic questions. In this model, quantum states are defined in the fusion space of \emph{anyons}, emergent quasiparticles with nontrivial exchange statistics arising in two-dimensional exotic phases of matter.
 Quantum computation is performed by creating anyons from the vacuum, then braiding them, and finally fusing them back to the vacuum, where braids play the role of unitary gates.
 The world-lines of the anyons define a closed braid, i.e. a link.
 Such a link encodes a quantum amplitude corresponding to its Jones polynomial evaluated at a root of unity depending on the anyon theory at hand \cite{Witten1989}. 
 Specifically, in the case of $\text{SU}(2)_k$ anyons, the Jones polynomial is evaluated at $t(k) = e^{i 2\pi/(2+k)}$ \cite{Rowell_2018}.
 
-Remarkably, the evaluation of the Jones polynomial at certain points can be expressed as an unphysical partition function $Z_{G_L}(d)$ of a $d$-state Potts model with suitable spin-spin interactions \cite{RevModPhys.64.1099}.
+Also, the evaluation of the Jones polynomial at certain points can be expressed, up to an efficiently computable scalar that depends on the link diagram, as the partition function $Z_{G_L}(d)$ of a $d$-state Potts model with suitable spin-spin interactions \cite{RevModPhys.64.1099}.
 This Potts model is defined on a signed graph $G_L$, obtained as follows.
 The link diagram is bicoloured checkerboard-style,
 then every coloured area is mapped to a vertex and every crossing is mapped to a signed edge according
-its orientation relative to the surrounding colours, as in \eqref{eq:link-tn} below.
-The Jones polynomial is then equal to this partition function up to an efficiently computable scalar which depends on the link diagram.  
+its orientation relative to the surrounding colours, as in \eqref{eq:link-tn} below. 
 % $V_L(t(d)) \simeq Z_{G_L}(d)$.
 The relation between the point $t(d)$ at which the Jones polynomial is evaluated and the dimension $d$ of the spins is $d = t + t^{-1} +2$,
 which can be solved for $t(d)$ \cite{PhysRevE.100.033303}.
@@ -108,7 +106,7 @@ Since these generators decompose as stabilizer diagrams,
 $Z_{G_L}(d\in\{2,3,4\})$ can be evaluated \emph{efficiently}
 via stabilizer ZX-diagram simplification.
 Thus, we recover the known result that evaluating the Jones polynomial at $t\in\Lambda$ is in P.
-Computing $Z_{G_L}(d\geq 5)$ is \#P-hard.
+On the other hand, computing $Z_{G_L}(d\geq 5)$ is \#P-hard.
 
 %%%%%%%%%%%%%%%%%$ MAYBE SAVE DISCUSSIONS ABOUT WHAT THE SCALAR IS FOR WHEN WE DO THE SCALAR-EXACT VERSION %%%%%%%%%%%%%%%%%%
 % Since any ZX-diagram derived from a knot in the manner described in Section \ref{sec:passage} will be closed, this algorithm suffices to prove that the calculation of the Jones polynomial of any knot at the lattice roots of unity $\pm 1$ and $\pm i$ is efficient. This is because reading off the scalar at the end is trivial; either we have the empty diagram, which has standard interpretation $1$, or a single legless $Z$-spider with phase $k\pi$:
@@ -152,17 +150,16 @@ Computing $Z_{G_L}(d\geq 5)$ is \#P-hard.
 \subsection{Graph Colouring}
 
 
-Finally, let us briefly look at the \emph{graph colouring problem}. A \emph{$d$-colouring} of a graph $G$ is an assignment of colours $\{1, ..., d\}$ to the vertices of $G$ so that no neighbouring vertices have the same colour. Given a graph $G$ and an integer $d$, we wish to \emph{count} the number of such $d$-colourings. Again, this problem can be interpreted as the zero-temperature
-partition function of an antiferromagnetic Potts model (there is an energy cost for adjacent spins to be in the same state).
+Finally, let us briefly look at the \emph{graph colouring problem}, or evaluating the chromatic polynomial. A \emph{$d$-colouring} of a graph $G$ is an assignment of colours $\{1, ..., d\}$ to the vertices of $G$ so that no neighbouring vertices have the same colour. Given a graph $G$ and an integer $d$, we wish to \emph{count} the number of such $d$-colourings. Again, this problem can be interpreted as the zero-temperature
+partition function of an antiferromagnetic $d$-state Potts model \cite{ChromaticPotts}.
 Through the lens of our graphical exposition we see that counting problems and computing partition functions are essentially the same problem, since both can be straightforwardly encoded as closed tensor networks.
 
-Given a graph $G$, the graph colouring problem can be encoded as a ZX-diagram as follows. Every vertex of the graph is mapped to a $d$-dimensional phaseless (green) $Z$-spider.
-Every edge is mapped to a wire connecting the spiders
-which goes through an $X$-box.
+Given a graph $G$, the graph colouring problem can be encoded as a ZX-diagram as follows. Every vertex of the graph is mapped to a $d$-dimensional phaseless (green) $Z$-spider which copies spin states so that they can enter into the $X$-boxes, each of which in turn enforces that spin states entering it are not the same.
 \begin{equation}\label{eq:G-tn}
 	\includegraphics[scale=0.4, valign=c]{figures/G-tn.pdf}
 \end{equation}
-The $X$-boxes have the following concrete interpretation (as special case of the $\pm$-boxes, where $t=0$):
+The $X$-boxes have the following concrete interpretation (as special case of the $\pm$-boxes, where $t=0$),
+and for $d=2$ they are just the Pauli X:
 \begin{equation}\label{eq:X_tensor}
 	\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket ~~ = ~~  
 	\sum_{i,j=0}^{d-1} (1 -  \delta_{ij} ) \ket{i}\bra{j} ~~ = ~~  
@@ -171,14 +168,14 @@ The $X$-boxes have the following concrete interpretation (as special case of the
 		1 & 0 & \dots & 1 \\
 		\vdots & \vdots & \ddots & \vdots\\
 		1 & 1 & \dots & 0
-	\end{pmatrix}
+	\end{pmatrix} ~~,~~~~
+			\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket_{d=2} \simeq \left\llbracket \ \tikzfig{pm_maps/q2x} \ \right\rrbracket
 \end{equation}
-
-Counting k-colourings for $k\geq 3$ is a canonical \#P-complete problem,
-while for $k=0,1,2$ the problem is in P \cite{jaeger_vertigan_welsh_1990}.
-And indeed, for $d=2$ the $X$-matrix is just the Pauli X, and so the problem reduces to simplifying a stabilizer diagram,
+Counting k-colourings for $k\geq 3$ is a canonical \#P-complete problem.
+For $k=0,1,2$ the problem is in P \cite{jaeger_vertigan_welsh_1990}.
+For $k=2$ this is witnessed by the fact that the problem reduces to simplifying a qubit stabilizer diagram,
 which can be done efficiently.
-	\begin{equation}\label{eq:XmatricesinZX}
-		\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket_{d=2} \simeq \left\llbracket \ \tikzfig{pm_maps/q2x} \ \right\rrbracket
-	\end{equation}
-However, for $d=3$ the $X$-matrix cannot be expressed as a stabilizer qutrit diagram; we prove this using our qutrit elimination theorems in Appendix \ref{prop:X_box_not_stab}. Thus it is not expected that there exists an efficient simplification strategy for the corresponding qutrit ZX-diagram. This is consistent with the fact that counting 3-colourings is \#P-complete.
+	% \begin{equation}\label{eq:XmatricesinZX}
+	% \end{equation}
+However, for $d=3$ the $X$-matrix cannot be expressed as a stabilizer qutrit diagram; we prove this using our qutrit elimination theorems in Appendix \ref{prop:X_box_not_stab}.
+This is consistent with the fact that counting 3-colourings is \#P-complete.
