@@ -20,7 +20,7 @@ circuits can be
 simulated \emph{efficiently} on classical computers \cite{Aaronson2004},
 where by simulation here we mean the \emph{exact} computation of quantum probability amplitudes.
 An alternative - and in fact more general - proof of the Gottesman-Knill theorem for qubits has been obtained graphically in terms of the qubit ZX-calculus.
-stabilizer circuits can be expressed by the \emph{stabilizer}
+Stabilizer circuits can be expressed by the \emph{stabilizer}
 fragment of the ZX-calculus,
 and stabilizer ZX-diagrams can be rewritten efficiently
 in terms of derived rewrite strategies \cite{graph_theoretic_simplification}.
@@ -69,7 +69,7 @@ known to be tractable,
 the corresponding ZX-diagrams representing the problems exactly correspond to qubit stabilizer diagrams.
 Going further, the ZH calculus \cite{backens2018zh}, an extension of the ZX-calculus, can be imported to make graphically obvious
 why 2SAT is in P but \#2SAT is \#P-complete, whereas 3SAT and \#3SAT are both hard.
-The key realisation is in that the decision problem is in fact a counting problem
+The key realisation is that the decision problem is in fact a counting problem
 but where the diagram is interpreted over the Boolean semiring.
 Then the \emph{rewrite rules change accordingly} and quickly imply the above result by allowing efficient simplification strategies.
 
@@ -83,6 +83,6 @@ closed tensor networks and show a transition in complexity
 at a particular dimension, below which the tensor network corresponds to a stabilizer ZX-diagram.
 We underline that throughout this work, all rewrites are valid
 \emph{up to a scalar}
-since we are only concerned about making statements about complexity,
-keeping track of multiplicative scalar factors that arise under diagram rewriting can be done efficiently.
+since we are only concerned about making statements about complexity.
+Keeping track of multiplicative scalar factors that arise under diagram rewriting can be done efficiently.
 %We are thus justified in omitting them for the purposes of this work.We also emphasise that the qutrit `elimination' rewrite rules we derive in Section \ref{sec:qutrits}\ have independent ramifications for circuit optimisation, though these are not explored here.
