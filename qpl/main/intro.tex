@@ -3,15 +3,20 @@
 
 
 The ZX-calculus originates in
-quantum foundations \cite{Coecke2011}.
-It is a graphical language that allows for reasoning about ZX-diagrams, which are composed of primitive generators \cite{vandewetering2020zxcalculus} called `spiders'.
-A ZX-diagram is interpreted as a tensor network over
-a (semi)ring.
+quantum foundations \cite{Coecke2011,vandewetering2020zxcalculus}.
+It is a graphical language that allows for reasoning about ZX-diagrams,
+%which are composed of primitive generators \cite{vandewetering2020zxcalculus} called `spiders'.
+%A ZX-diagram is
+which are interpreted as tensor networks over
+a (semi)ring \cite{wang2020completeness}.
 The calculus
-is defined by a set of rewrite rules involving spiders. Performing a rewrite amounts to a
-subdiagram substitution, thus transforming the diagram.
-Note that the set of rewrite rules \emph{depends} on the semantics, i.e. the (semi)ring over which the spiders are interpreted as tensors.
-Importantly, ZX rewrites are sound and complete for linear maps over the chosen (semi)ring.
+is defined by a set of rewrite rules
+%involving spiders. Performing a rewrite amounts to a
+that transforming the diagrams.
+Note that the set of rewrite rules \emph{depends} on
+the (semi)ring over which they are interpreted.
+Importantly, ZX rewrites are sound and complete.
+%for linear maps over the chosen (semi)ring.
 
 
 In the context of quantum computing,
@@ -19,7 +24,9 @@ the Gottesman-Knill theorem states that stabilizer quantum
 circuits can be
 simulated \emph{efficiently} on classical computers \cite{Aaronson2004},
 where by simulation here we mean the \emph{exact} computation of quantum probability amplitudes.
-An alternative - and in fact more general - proof of the Gottesman-Knill theorem for qubits has been obtained graphically in terms of the qubit ZX-calculus.
+An alternative
+%- and in fact more general -
+proof of the Gottesman-Knill theorem for qubits has been obtained graphically in terms of the qubit ZX-calculus.
 Stabilizer circuits can be expressed by the \emph{stabilizer}
 fragment of the ZX-calculus,
 and stabilizer ZX-diagrams can be rewritten efficiently
@@ -34,8 +41,6 @@ In this work, we recall the \emph{qutrit} version of local complementation \cite
 We then derive simplification strategies
 which allow for the \emph{efficient} rewriting of qutrit stabilizer ZX-diagrams,
 the core result of this work.
-
-
 
 Interestingly, though the motivation for studying ZX diagrams stems from quantum computation, they have broader applicability as they
 can express arbitrary linear maps;
@@ -67,7 +72,7 @@ and this number can be expressed as a closed diagram.
 Specifically, one finds that in the case of XORSAT and \#XORSAT,
 known to be tractable,
 the corresponding ZX-diagrams representing the problems exactly correspond to qubit stabilizer diagrams.
-Going further, the ZH calculus \cite{backens2018zh}, an extension of the ZX-calculus, can be imported to make graphically obvious
+Going further, the ZH calculus \cite{backens2018zh}, an equivalent language to ZX, can be imported to make graphically obvious
 why 2SAT is in P but \#2SAT is \#P-complete, whereas 3SAT and \#3SAT are both hard.
 The key realisation is that the decision problem is in fact a counting problem
 but where the diagram is interpreted over the Boolean semiring.
@@ -76,7 +81,7 @@ Then the \emph{rewrite rules change accordingly} and quickly imply the above res
 %Such observations make apparent the unifying power of diagrammatic reasoning for studying the complexity of problem families.  
 % of universal interest,
 % where the degrees of freedom are two-dimensional.
-Continuing in the spirit of \cite{debeaudrap2020tensor}, we treat the ZX-calculus as a library of rewrite rules, from which we import the appropriate tools for the job depending on the occasion.
+In the spirit of \cite{debeaudrap2020tensor}, we treat the ZX-calculus as a library of rewrite rules, from which we import the appropriate tools for the job depending on the occasion.
 Here we present two case studies: evaluating the Jones polynomial at lattice roots of unity, and graph colouring.
 Both of these problem families reduce to evaluating
 closed tensor networks and show a transition in complexity

@@ -16,7 +16,8 @@
 % \title{Classifying Complexity with the ZX-Calculus:\\
 % Jones Polynomials and Potts Partition Functions}
 
-\title{Simplification strategies for the qutrit ZX-calculus}
+\title{Simplification strategies for the\\
+qutrit ZX-calculus}
 
 \author{Alex Townsend-Teague $^{1}$ and Konstantinos Meichanetzidis $^{1,2}$
 	\institute{$^1$ University of Oxford \\ $^2$ Cambridge Quantum Computing Ltd.}
@@ -34,14 +35,16 @@
 	%, composed of primitive generators whose semantics are tensors over a (semi)ring.
 	%By universality,
 	%Any tensor network has a corresponding ZX-diagram.
-	Calculations are done by transforming ZX-diagrams with rewrite rules, which preserve semantics, and two ZX-diagrams representing the same tensor can be transformed into each other \emph{only} by a sequence of rewrites.
-	The ZX-calculus has found applications in reasoning about low-level quantum circuits, high-level proofs of quantum algorithms, and recently in recasting complexity results about counting problems in an intuitive graphical form.
+	Calculations are done by transforming ZX-diagrams with rewrite rules.
+	%, which preserve semantics, and two ZX-diagrams representing the same tensor can be transformed into each other \emph{only} by a sequence of rewrites.
+	The ZX-calculus has found applications in reasoning about quantum circuits, condensed matter systems, quantum algorithms, surface code surgery, and recently about counting problems.
 	A key notion of such results is the stabiliser fragment of the ZX-calculus, a subfamily of ZX-diagrams for which rewriting can be done efficiently in terms of derived simplifying rewrites.
-	In the context of quantum computation with qubits or of Boolean counting problems, one employs the qubit ZX-calculus.
-	However, higher-dimensional cases are of interest as well. Recently, qudits have become more prominent in quantum computing, and there are counting problem families whose complexity depends on the dimension.
+	In quantum computation with qubits or of Boolean counting problems, one employs the qubit ZX-calculus.
+	%	However, higher-dimensional cases are of interest as well.
+	Recently, higher dimensional qudits have become more prominent in quantum computing, and there are counting problem families whose complexity depends on the dimension.
 	The main contribution of this work is the derivation of
-	\emph{efficient} rewrite strategies for the stabiliser fragment of the qutrit ZX-calculus.
-	This constitutes a first non-trivial step towards simplification of qutrit quantum circuits. Finally, we reinterpret known complexity-theoretic results about evaluating the Jones polynomial, an important link-invariant, and counting graph colourings. 
+	\emph{efficient} rewrite strategies for the stabiliser fragment of the \emph{qutrit} ZX-calculus.
+	This constitutes a first non-trivial step towards simplification of qutrit quantum circuits. Finally, we reinterpret known complexity-theoretic results about evaluating the Jones polynomial, an important link-invariant, and counting graph colourings.\\
 	\textbf{*Eligible for the best student paper award.*}
 \end{abstract}
 
@@ -62,12 +65,12 @@ KM acknowledges financial support from the Royal Commission for the Exhibition o
 
 \appendix
 
-% \input{appendix/zx_calculus}
-% \input{appendix/pivot}
-% \section{Spider Elimination Rules for Qutrit ZX}
-% \input{appendix/eliminate/p_spiders}
-% \input{appendix/eliminate/n_spiders}
-% \input{appendix/eliminate/m_spiders}
-% \input{appendix/pm_boxes}
+\input{appendix/zx_calculus}
+\input{appendix/pivot}
+\section{Spider Elimination Rules for Qutrit ZX}
+\input{appendix/eliminate/p_spiders}
+\input{appendix/eliminate/n_spiders}
+\input{appendix/eliminate/m_spiders}
+\input{appendix/pm_boxes}
 
 \end{document} 

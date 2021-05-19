@@ -35,8 +35,7 @@ Exactly evaluating the Jones polynomial at points $t\in\mathbb{C}$ is \#P-hard,
 where it can be evaluated at cost $O(poly(c))$ \cite{jaeger_vertigan_welsh_1990}.
 
 
-In the context of quantum computation,
-additively approximating the Jones polynomial at \emph{non-lattice roots of unity} is a paradigmatic BQP-complete complete problem \cite{Aharonov_2008,kuperberg2014hard}.
+Additively approximating the Jones polynomial at \emph{non-lattice roots of unity} is a paradigmatic BQP-complete complete problem \cite{Aharonov_2008,kuperberg2014hard}.
 Topological quantum computation \cite{Freedman2002,pachos_2012} is the most natural model for such knot theoretic questions. In this model, quantum states are defined in the fusion space of \emph{anyons}, emergent quasiparticles with nontrivial exchange statistics arising in two-dimensional exotic phases of matter.
 Quantum computation is performed by creating anyons from the vacuum, then braiding them, and finally fusing them back to the vacuum, where braids play the role of unitary gates.
 The world-lines of the anyons define a closed braid, i.e. a link.
@@ -58,7 +57,7 @@ This is consistent with the fact that braiding $\text{SU}(2)_2$ anyons (Ising) o
 
 The partition function $Z_{G_L}(d\in\mathbb{N})$ can be expressed as a closed tensor network in terms of phaseless (green) $d$-dimensional $Z$-spiders connected via wires that go through \emph{$\pm$-boxes} \cite{PhysRevE.100.033303}:
 \begin{equation}
-\includegraphics[scale=0.4, valign=c]{figures/link-tn.pdf}
+\includegraphics[scale=0.3, valign=c]{figures/link-tn.pdf}
 \label{eq:link-tn}
 \end{equation}
 The $\pm$-boxes have the following concrete interpretation as matrices:
@@ -89,16 +88,16 @@ The $\pm$-boxes have the following concrete interpretation as matrices:
 
 
 
-We can now express the $\pm$-boxes in the ZX-calculus.
+% We can now express the $\pm$-boxes in the ZX-calculus.
 The $\pm$-matrices above for $d \in \{2, 4\}$
 are equal up to a scalar to concrete interpretations of \emph{qubit stabilizer} ZX-diagrams, and the $\pm$-matrices for $d=3$ of \emph{qutrit stabilizer} ZX-diagrams (see Appendix \ref{prop:pm_maps_zx_appendix}):
 	\begin{equation}
 		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=2} \simeq 
 		\left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket ~, 
-		\hspace{30pt}
+		~~
 		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=3} \simeq
 		\left\llbracket \ \tikzfig{pm_maps/q3} \ \right\rrbracket ~,
-		\hspace{30pt}
+		~~
 		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4} \simeq 
 		\left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket
 	\end{equation}
@@ -156,7 +155,7 @@ Through the lens of our graphical exposition we see that counting problems and c
 
 Given a graph $G$, the graph colouring problem can be encoded as a ZX-diagram as follows. Every vertex of the graph is mapped to a $d$-dimensional phaseless (green) $Z$-spider which copies spin states so that they can enter into the $X$-boxes, each of which in turn enforces that spin states entering it are not the same.
 \begin{equation}\label{eq:G-tn}
-	\includegraphics[scale=0.4, valign=c]{figures/G-tn.pdf}
+	\includegraphics[scale=0.3, valign=c]{figures/G-tn.pdf}
 \end{equation}
 The $X$-boxes have the following concrete interpretation (as special case of the $\pm$-boxes, where $t=0$),
 and for $d=2$ they are just the Pauli X:

@@ -42,6 +42,55 @@ The well-known rewrite rules of the qubit ZX-calculus are shown in Fig.\ref{fig:
 	\vspace{-1pt}
 \end{figure}
 
+
+\subsection{Stabilizer Qubit ZX Diagrams}
+\label{app:zx_calculus-qubitstabs}
+
+The \emph{stabilizer fragment} of the calculus consists of all diagrams in which all phases are $\alpha=\frac{\pi n}{2}$, $n\in\mathbb{Z}$.
+%We note that both diagrams above fall into this stabilizer fragment. 
+In (Theorem 5.4, \cite{graph_theoretic_simplification}) the authors give an efficient algorithm for simplifying any qubit ZX-diagram to an equivalent diagram with fewer spiders.
+The algorithm consists of consecutive applications of spider-eliminating rewrites.
+
+Every diagram is equivalent to a \emph{graph-like} diagram:
+every spider is green,
+every edge is a Hadamard edge,
+there are no parallel edges or self-loops,
+every input and output wire is connected to a spider
+and every spider has at most one input or output wire.
+The following derivable rules are key to this:
+\begin{equation}\label{eq:maintain_graph_like}
+	\tikzfig{hadamard_lemmas/2_h_edges_vanish/lhs} \ = \  
+	\tikzfig{hadamard_lemmas/2_h_edges_vanish/rhs} \ ,
+	\hspace{50pt}
+	\tikzfig{self_loop/plain/lhs} \ = \  
+	\tikzfig{self_loop/plain/rhs} \ ,
+	\hspace{50pt}
+	\tikzfig{self_loop/hadamard/lhs} \ = \  
+	\tikzfig{self_loop/hadamard/rhs}
+\end{equation}
+Then the following two rewrite rules, derived via
+\emph{local complementation} and \emph{pivoting},
+can be used to eliminate spiders:
+	\begin{equation}\label{eq:eliminate_clifford}
+		\tikzfig{eliminate/clifford}
+	\end{equation}
+	\begin{equation}\label{eq:eliminate_pauli}
+		\tikzfig{eliminate/pauli}
+	\end{equation}
+For more details,
+see (Section 4, \cite{graph_theoretic_simplification}).
+Eq.~\eqref{eq:eliminate_clifford} says that we can remove any spider with phase $\pm\frac{\pi}{2}$ at the cost of performing a local complementation at said spider.
+Furthermore,
+Eq.~\eqref{eq:eliminate_pauli} says we can remove any pair of spiders with phases in $\{0, \pi\}$ connected by a Hadamard edge at the cost of performing a pivot along said edge.
+After each application of \eqref{eq:eliminate_clifford} or \eqref{eq:eliminate_pauli}, we can use \eqref{eq:maintain_graph_like} to remove any parallel Hadamard edges and ensure the diagram remains graph-like.
+
+% In particular, and importantly to this work,
+% this algorithm will \emph{efficiently} simplify any closed stabilizer diagram until it contains at most one spider, at which point the scalar it represents can be easily read off. 
+% If it exists, this spider is green, legless and has phase in $\{0, \pi\}$.
+%We briefly outline the process here, referring the reader to \cite{graph_theoretic_simplification} for a full discussion.
+% The point relevant to this work is that spiders can be \emph{eliminated efficiently}, i.e. with a polynomial number of rewrites in the initial number of spiders. 
+% By `efficiently' we mean via a sequence of spider elimination rewrites whose cost is polynomial in the initial number of spiders. Note each such rewrite updates only a polynomial number of edges in the diagram, which prevents an overwhelming memory cost of the simplification procedure.
+
 \section{Qutrit ZX Calculus}
 
 
