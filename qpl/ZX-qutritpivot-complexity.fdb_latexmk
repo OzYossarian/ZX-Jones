@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex ZX-qutritpivot-complexity"] 1621382178 "ZX-qutritpivot-complexity.aux" "ZX-qutritpivot-complexity.bbl" "ZX-qutritpivot-complexity" 1621382265
+["bibtex ZX-qutritpivot-complexity"] 1621543007 "ZX-qutritpivot-complexity.aux" "ZX-qutritpivot-complexity.bbl" "ZX-qutritpivot-complexity" 1621543214
   "./splncs04.bst" 1621112478 32146 ee21ae2a29028dc8ad842a97200982c7 ""
-  "ZX-qutritpivot-complexity.aux" 1621382265 10481 6577b437402124acc162b4ee0fa264df "pdflatex"
+  "ZX-qutritpivot-complexity.aux" 1621543172 10448 8da46ea5d704ae920ce5e0e9d9a85861 "pdflatex"
   "refs-teague.bib" 1615481721 1265 ccc28e114d95ddc56e6f1bd0a63749c1 ""
   "refs.bib" 1621202111 14012 f60000c70e015215b8b5d190146ded55 ""
   (generated)
   "ZX-qutritpivot-complexity.bbl"
   "ZX-qutritpivot-complexity.blg"
-["pdflatex"] 1621382225 "ZX-qutritpivot-complexity.tex" "ZX-qutritpivot-complexity.pdf" "ZX-qutritpivot-complexity" 1621382265
+["pdflatex"] 1621543138 "ZX-qutritpivot-complexity.tex" "ZX-qutritpivot-complexity.pdf" "ZX-qutritpivot-complexity" 1621543214
   "/etc/texmf/web2c/texmf.cnf" 1604519962 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1136768653 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
@@ -293,10 +293,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1604520132 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1604520162 8258559 4517ba6383e5da19cbd2ab5a60957498 ""
-  "ZX-qutritpivot-complexity.aux" 1621382265 10481 6577b437402124acc162b4ee0fa264df "pdflatex"
-  "ZX-qutritpivot-complexity.bbl" 1621382178 5274 98aa07437d87dcecaed906ca25429503 "bibtex ZX-qutritpivot-complexity"
-  "ZX-qutritpivot-complexity.out" 1621382265 87 f08b2dc3fcffd1a02b5772b62dc69a8f "pdflatex"
-  "ZX-qutritpivot-complexity.tex" 1621381175 3367 e81c002e59d419fe259738f08a7aedb3 ""
+  "ZX-qutritpivot-complexity.aux" 1621543172 10448 8da46ea5d704ae920ce5e0e9d9a85861 "pdflatex"
+  "ZX-qutritpivot-complexity.bbl" 1621543007 5274 98aa07437d87dcecaed906ca25429503 "bibtex ZX-qutritpivot-complexity"
+  "ZX-qutritpivot-complexity.out" 1621543172 87 f08b2dc3fcffd1a02b5772b62dc69a8f "pdflatex"
+  "ZX-qutritpivot-complexity.tex" 1621542051 3346 00ba5b99b22febbb8e15211f6a2f1a54 ""
   "appendix/eliminate/m_spiders.tex" 1615481721 1252 f6a6193cb1cedd2c16fbbfedac913d06 ""
   "appendix/eliminate/n_spiders.tex" 1615488484 4001 d913c5602cb0bfaf4ada3ded5d061c7d ""
   "appendix/eliminate/p_spiders.tex" 1615481721 4268 91dc0a785f22f698719ad07f3b5151e6 ""
@@ -545,9 +545,9 @@
   "figures/self_loop/plain/rhs.tikz" 1615481721 434 0028276f5414eb52f6e7da0d1aa6738b ""
   "llncs.cls" 1621111902 42249 b08ec23e994470d7d8fc268d245cf555 ""
   "main/case_studies.tex" 1621378304 13823 0857e4d7adfc6de153d478d9bd1b3753 ""
-  "main/intro.tex" 1621381426 5740 6beac6587f76e4e462f12afb0166f823 ""
+  "main/intro.tex" 1621543212 5863 f5add731018365c71391f19a9375c0f4 ""
   "main/outlook.tex" 1621378305 1640 da37ec2cc4b64d5cf31f04927d895576 ""
-  "main/qubits.tex" 1621382136 7703 cd804807d657954c54193142a32c4647 ""
+  "main/qubits.tex" 1621514634 7711 f4b25a302889b7ffd6b94060ef6c604a ""
   "main/qutrits.tex" 1621382223 19060 08d35d9126393b78327262f350f2e34e ""
   "preamble.tex" 1621367191 996 d2b3e9dfd193e3b3a61d55bdaa90ff48 ""
   "statements.tex" 1621379547 2990 443b662f23b99547bbff41989e94776e ""
@@ -555,7 +555,7 @@
   "zx.tikzdefs" 1615481721 2422 92c79c2a217abff810e19b9408b63035 ""
   "zx.tikzstyles" 1615481721 3520 1cde497d1407bd77f5c075f26c8d65de ""
   (generated)
-  "ZX-qutritpivot-complexity.aux"
   "ZX-qutritpivot-complexity.out"
   "ZX-qutritpivot-complexity.pdf"
   "ZX-qutritpivot-complexity.log"
+  "ZX-qutritpivot-complexity.aux"

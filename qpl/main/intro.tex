@@ -26,15 +26,16 @@ simulated \emph{efficiently} on classical computers \cite{Aaronson2004},
 where by simulation here we mean the \emph{exact} computation of quantum probability amplitudes.
 An alternative
 %- and in fact more general -
-proof of the Gottesman-Knill theorem for qubits has been obtained graphically in terms of the qubit ZX-calculus.
+proof of the Gottesman-Knill theorem for qubits has been obtained graphically in the qubit ZX-calculus.
 Stabilizer circuits can be expressed by the \emph{stabilizer}
-fragment of the ZX-calculus,
-and stabilizer ZX-diagrams can be rewritten efficiently
-in terms of derived rewrite strategies \cite{graph_theoretic_simplification}.
-Moreover, these simplifying rewrites can be viewed as theorems
+fragment,
+and stabilizer ZX-diagrams can be \emph{rewritten efficiently}
+using derived rewrite strategies \cite{graph_theoretic_simplification}.
+Moreover, these rewrites can be viewed as theorems
 that are useful for simplifying or simulating universal quantum circuits, not just stabilizer circuits.
-The key rewrite rules that enable the efficient rewriting
-of qubit stabilizer ZX-diagrams
+The key simplifying rewrites
+%that enable the efficient rewriting
+for qubit stabilizer ZX-diagrams
 are called \emph{local complementation} and \emph{pivot},
 the latter being a composition of three of the former \cite{graph_theoretic_simplification}.
 In this work, we recall the \emph{qutrit} version of local complementation \cite{harny_completeness} and derive the corresponding pivot rule.
@@ -65,23 +66,24 @@ Note that
 given an arbitrary tensor network, one can attempt to invent rewrite rules by inspecting the contents of the tensors and performing linear-algebra operations \cite{gray2020hyperoptimized}.
 
 
-ZX-diagrams have been leveraged to study the complexity of boolean satisfiability (SAT) and model counting (\#SAT) \cite{debeaudrap2020tensor}.
-Model counting entails computing the number of satisfying assignments to a boolean formula,
-% (given in conjunctive normal form)
-and this number can be expressed as a closed diagram.
-Specifically, one finds that in the case of XORSAT and \#XORSAT,
-known to be tractable,
-the corresponding ZX-diagrams representing the problems exactly correspond to qubit stabilizer diagrams.
-Going further, the ZH calculus \cite{backens2018zh}, an equivalent language to ZX, can be imported to make graphically obvious
-why 2SAT is in P but \#2SAT is \#P-complete, whereas 3SAT and \#3SAT are both hard.
-The key realisation is that the decision problem is in fact a counting problem
-but where the diagram is interpreted over the Boolean semiring.
-Then the \emph{rewrite rules change accordingly} and quickly imply the above result by allowing efficient simplification strategies.
+% ZX-diagrams have been leveraged to study the complexity of boolean satisfiability (SAT) and model counting (\#SAT) \cite{debeaudrap2020tensor}.
+% Model counting entails computing the number of satisfying assignments to a boolean formula,
+% % (given in conjunctive normal form)
+% and this number can be expressed as a closed diagram.
+% Specifically, one finds that in the case of XORSAT and \#XORSAT,
+% known to be tractable,
+% the corresponding ZX-diagrams representing the problems exactly correspond to qubit stabilizer diagrams.
+% Going further, the ZH calculus \cite{backens2018zh}, an equivalent language to ZX, can be imported to make graphically obvious
+% why 2SAT is in P but \#2SAT is \#P-complete, whereas 3SAT and \#3SAT are both hard.
+% The key realisation is that the decision problem is in fact a counting problem
+% but where the diagram is interpreted over the Boolean semiring.
+% Then the \emph{rewrite rules change accordingly} and quickly imply the above result by allowing efficient simplification strategies.
 
 %Such observations make apparent the unifying power of diagrammatic reasoning for studying the complexity of problem families.  
 % of universal interest,
 % where the degrees of freedom are two-dimensional.
-In the spirit of \cite{debeaudrap2020tensor}, we treat the ZX-calculus as a library of rewrite rules, from which we import the appropriate tools for the job depending on the occasion.
+In the spirit of \cite{debeaudrap2020tensor},
+where the ZH calculus\cite{backens2018zh}, a cousin of ZX, was employed to rederive known complexity results about counting problems, we treat the ZX-calculus as a library of rewrite rules, which we import and use to reason about the complexity of problem families of interest.
 Here we present two case studies: evaluating the Jones polynomial at lattice roots of unity, and graph colouring.
 Both of these problem families reduce to evaluating
 closed tensor networks and show a transition in complexity
@@ -89,5 +91,5 @@ at a particular dimension, below which the tensor network corresponds to a stabi
 We underline that throughout this work, all rewrites are valid
 \emph{up to a scalar}
 since we are only concerned about making statements about complexity.
-Keeping track of multiplicative scalar factors that arise under diagram rewriting can be done efficiently.
+Keeping track of multiplicative scalar factors that arise under rewriting can be done efficiently.
 %We are thus justified in omitting them for the purposes of this work.We also emphasise that the qutrit `elimination' rewrite rules we derive in Section \ref{sec:qutrits}\ have independent ramifications for circuit optimisation, though these are not explored here.
