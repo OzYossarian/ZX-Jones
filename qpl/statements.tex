@@ -9,11 +9,12 @@
 \newcommand{\eliminateNSpidersStatement}{
 	Given any graph-like ZX-diagram containing an interior \Nspider\ $x$ with phase \qutritZphase{0}{n} or \qutritZphase{n}{0} for $n \in \{1,2\}$, suppose we perform a $(-n)$-local complementation at $x$. Then, treating the two cases separately, the new ZX-diagrams are related to the old ones by the equalities:
 	\begin{equation*}
-		\tikzfig{eliminate/N_spiders/0_n/bang/general/1}  =  \tikzfig{eliminate/N_spiders/0_n/bang/general/9}~,~~~
+		\scalebox{0.8}{\tikzfig{eliminate/N_spiders/0_n/bang/general/1}} = 
+		\scalebox{0.8}{\tikzfig{eliminate/N_spiders/0_n/bang/general/9}} ~,~~~
 	% \end{equation*}
 	% \begin{equation*}
-		\tikzfig{eliminate/N_spiders/n_0/bang/1} =
-		\tikzfig{eliminate/N_spiders/n_0/bang/9}
+		\scalebox{0.8}{\tikzfig{eliminate/N_spiders/n_0/bang/1}} =
+		\scalebox{0.8}{\tikzfig{eliminate/N_spiders/n_0/bang/9}}
 	\end{equation*}
 }
 
@@ -21,11 +22,11 @@
 \newcommand{\eliminateMSpidersStatement}{
 	Given any graph-like ZX-diagram containing two interior \Mspiders\ $i$ and $j$ connected by edge $ij$ of weight $w_{i,j} \eqdef w \in \{1,2\}$, suppose we perform a proper $\pm w$-pivot along $ij$ (both choices give the same result). For $w=1$, the new ZX-diagram is related to the old one by the following equality:
 	\begin{equation*}
-		\tikzfig{eliminate/M_spiders/bang/w_1/LHS}
+		\scalebox{0.9}{\tikzfig{eliminate/M_spiders/bang/w_1/LHS}}
 	\end{equation*}
 	\vspace{10pt}
 	\begin{equation*}
-	 	= \quad \tikzfig{eliminate/M_spiders/bang/w_1/RHS}
+	 	= \quad \scalebox{0.9}{\tikzfig{eliminate/M_spiders/bang/w_1/RHS}}
 	\end{equation*}
 	The case $w=2$ differs only as follows: in the first diagram (the left hand side of the equation), the edge $ij$ is purple (by definition), while in the lower diagram (the right hand side of the equation), a $\pm 2 = \mp 1$ will replace all occurences of $\pm 1$, and the roles of purple and blue will be swapped throughout.
 }
@@ -36,10 +37,10 @@
 		\tikzfig{hadamard_lemmas/3_h_edges_vanish/blue} \ = \ 
 		\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected} \ = \ 
 		\tikzfig{hadamard_lemmas/3_h_edges_vanish/purple} \ ,
-		\hspace{50pt}
+		\hspace{25pt}
 		\tikzfig{hadamard_lemmas/2_h_edges_flip/2_blue} \ = \ 
 		\tikzfig{hadamard_lemmas/2_h_edges_flip/1_purple} \ ,
-		\hspace{50pt}
+		\hspace{25pt}
 		\tikzfig{hadamard_lemmas/2_h_edges_flip/2_purple} \ = \  
 		\tikzfig{hadamard_lemmas/2_h_edges_flip/1_blue}
 	\end{equation}

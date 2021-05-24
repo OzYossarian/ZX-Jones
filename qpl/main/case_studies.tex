@@ -60,10 +60,10 @@ The partition function $Z_{G_L}(d\in\mathbb{N})$ can be expressed as a closed te
 \includegraphics[scale=0.3, valign=c]{figures/link-tn.pdf}
 \label{eq:link-tn}
 \end{equation}
-The $\pm$-boxes have the following concrete interpretation as matrices:
+The $\pm$-boxes have the following concrete interpretation as $d \times d$ matrices:
 \begin{equation}\label{eq:pm_tensor}
 	\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket ~~ = ~~  
-	\sum_{i,j=0}^{d-1}(1 - (1+t(d)^{\mp 1}) \delta_{ij} ) \ket{i}\bra{j} ~~ = ~~  
+	% \sum_{i,j=0}^{d-1}(1 - (1+t(d)^{\mp 1}) \delta_{ij} ) \ket{i}\bra{j} ~~ = ~~  
 	\begin{pmatrix}
 		-t(d)^{\mp 1} & 1 & \dots & 1 \\
 		1 & -t(d)^{\mp 1} & \dots & 1 \\
@@ -92,13 +92,13 @@ The $\pm$-boxes have the following concrete interpretation as matrices:
 The $\pm$-matrices above for $d \in \{2, 4\}$
 are equal up to a scalar to concrete interpretations of \emph{qubit stabilizer} ZX-diagrams, and the $\pm$-matrices for $d=3$ of \emph{qutrit stabilizer} ZX-diagrams (see Appendix \ref{prop:pm_maps_zx_appendix}):
 	\begin{equation}
-		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=2} \simeq 
+		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=2} \hspace{-10pt}\simeq 
 		\left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket ~, 
 		~~
-		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=3} \simeq
+		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=3} \hspace{-10pt}\simeq
 		\left\llbracket \ \tikzfig{pm_maps/q3} \ \right\rrbracket ~,
 		~~
-		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4} \simeq 
+		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4} \hspace{-10pt}\simeq 
 		\left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket
 	\end{equation}
 Since these generators decompose as stabilizer diagrams,
@@ -157,17 +157,18 @@ Given a graph $G$, the graph colouring problem can be encoded as a ZX-diagram as
 \begin{equation}\label{eq:G-tn}
 	\includegraphics[scale=0.3, valign=c]{figures/G-tn.pdf}
 \end{equation}
-The $X$-boxes have the following concrete interpretation (as special case of the $\pm$-boxes, where $t=0$),
+The $X$-boxes have the following concrete interpretation as $d \times d$ matrices,
+% (as special case of the $\pm$-boxes, where $t=0$),
 and for $d=2$ they are just the Pauli X:
 \begin{equation}\label{eq:X_tensor}
 	\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket ~~ = ~~  
-	\sum_{i,j=0}^{d-1} (1 -  \delta_{ij} ) \ket{i}\bra{j} ~~ = ~~  
+	% \sum_{i,j=0}^{d-1} (1 -  \delta_{ij} ) \ket{i}\bra{j} ~~ = ~~  
 	\begin{pmatrix}
 		0 & 1 & \dots & 1 \\
 		1 & 0 & \dots & 1 \\
 		\vdots & \vdots & \ddots & \vdots\\
 		1 & 1 & \dots & 0
-	\end{pmatrix} ~~,~~~~
+	\end{pmatrix} ~~,\qquad
 			\left\llbracket \ \tikzfig{pm_maps/x} \ \right\rrbracket_{d=2} \simeq \left\llbracket \ \tikzfig{pm_maps/q2x} \ \right\rrbracket
 \end{equation}
 Counting k-colourings for $k\geq 3$ is a canonical \#P-complete problem.

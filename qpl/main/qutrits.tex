@@ -22,7 +22,7 @@ Spiders carry \emph{two} phases $\alpha$ and $\beta$,
 and have the following \emph{standard representation} as linear maps:
 \begingroup
 	\allowdisplaybreaks
-	\setlength{\jot}{10pt}
+	\setlength{\jot}{5pt}
 		\begin{align}
 			&\left\llbracket \quad \tikzfig{qutrit_generators/spiders/Z_a_b_labelled} \quad \right\rrbracket = 
 			\ket{0}^{\otimes m}\bra{0}^{\otimes n} + 
@@ -58,7 +58,6 @@ Hadamard gates are no longer self-adjoint, so we change our notation: we let a y
 		\tikzfig{hadamard_lemmas/parametrised/0} \ = \ 
 		\tikzfig{hadamard_lemmas/parametrised/empty}
 \end{equation}
-
 The last equation above says that in a graph-like diagram (which we will define shortly), a Hadamard edge decorated by a $0$ is in fact not an edge at all, thanks to spider fusion. 
 A very important difference from the qubit case is that in qutrit ZX-calculus there is no \emph{plain} cap or cup:
 %. That is, we have the following two results:
@@ -73,11 +72,11 @@ That said, this rigidity can be loosened; in particular, this distinction is irr
 % That said, this rigidity is loosened by the following two observations.
 % Firstly, this distinction is irrelevant for $H$- and $H^\dagger$-edges \cite{qutrit_euler}:
 	\begin{equation}
-		\tikzfig{hadamard_lemmas/io_irrelevant/h/lhs} \ = \ 
-		\tikzfig{hadamard_lemmas/io_irrelevant/h/rhs} \ ~,
-		~~
-		\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/lhs} \ = \ 
-		\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/rhs}
+		\scalebox{0.8}{\tikzfig{hadamard_lemmas/io_irrelevant/h/lhs}} = 
+		\scalebox{0.8}{\tikzfig{hadamard_lemmas/io_irrelevant/h/rhs}} ~,
+		\qquad
+		\scalebox{0.8}{\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/lhs}} = 
+		\scalebox{0.8}{\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/rhs}}
 	\end{equation}
 % Secondly, the `snake equations' hold for \emph{same-colour} cups and caps.
 % Snakes with differently coloured cups and caps can still be yanked into a straight wire at the cost of adding two Hadamard boxes, shown below for $h \in \{1, 2\}$:
@@ -115,20 +114,18 @@ Note the difference compared to the qubit case: we need not worry about self-loo
 	\tikzfig{hadamard_lemmas/plain_wire/3} \quad = \quad
 	\tikzfig{hadamard_lemmas/plain_wire/4}
 \end{equation}
-
 Indeed, we can show that every qutrit ZX-diagram is equivalent to a graph-like one. The following equations, derived in Appendix \ref{lem:h_edges_are_mod_3_appendix}, are vital to this:
 \begin{equation}\label{eq:h_edges_are_mod_3}
-	\tikzfig{hadamard_lemmas/3_h_edges_vanish/blue} \ = \ 
-	\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected} \ = \ 
-	\tikzfig{hadamard_lemmas/3_h_edges_vanish/purple} \ ~,
-	~~~
-	\tikzfig{hadamard_lemmas/2_h_edges_flip/2_blue} \ = \ 
-	\tikzfig{hadamard_lemmas/2_h_edges_flip/1_purple} \ ~,
-	~~~
-	\tikzfig{hadamard_lemmas/2_h_edges_flip/2_purple} \ = \  
-	\tikzfig{hadamard_lemmas/2_h_edges_flip/1_blue}
+	\scalebox{0.8}{\tikzfig{hadamard_lemmas/3_h_edges_vanish/blue}} \ = \ 
+	\scalebox{0.8}{\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected}} \ = \ 
+	\scalebox{0.8}{\tikzfig{hadamard_lemmas/3_h_edges_vanish/purple}} \ ,
+	\qquad
+	\scalebox{0.8}{\tikzfig{hadamard_lemmas/2_h_edges_flip/2_blue}} \ = \ 
+	\scalebox{0.8}{\tikzfig{hadamard_lemmas/2_h_edges_flip/1_purple}} \ ,
+	\qquad
+	\scalebox{0.8}{\tikzfig{hadamard_lemmas/2_h_edges_flip/2_purple}} \ = \  
+	\scalebox{0.8}{\tikzfig{hadamard_lemmas/2_h_edges_flip/1_blue}}
 \end{equation}
-
 This justifies our notation for Hadamard gates: we can think of Hadamard edges as $1$-weighted edges and their adjoints as $2$-weighted edges, then work modulo $3$, since every triple of parallel edges disappears. Where the previous equations relate single $H$- and $H^\dagger$-boxes across multiple edges, the next three relate multiple $H$- and $H^\dagger$- boxes on single edges. They hold for $h \in \{1, 2\}$, and are proved via simple applications of rules $\qutritRuleId$, $\qutritRuleHadamard$ and $\qutritRuleSnake$.
 \begin{equation}\label{eq:h_boxes_are_mod_4}
 	\tikzfig{hadamard_lemmas/boxes/4_vanish} \quad ,
@@ -137,39 +134,34 @@ This justifies our notation for Hadamard gates: we can think of Hadamard edges a
 	\hspace{50pt}
 	\tikzfig{hadamard_lemmas/boxes/2_separate}
 \end{equation}
-
 \begin{proposition}\label{prop:every_diagram_is_graph_like_qutrit}
 	Every qutrit ZX-diagram is equivalent to one that is graph-like.
 	\begin{proof}
 		First use the colour change rule to turn all $X$-spiders into $Z$-spiders. Then use \eqref{eq:h_boxes_are_mod_4} to remove excess $H$- and $H^\dagger$-boxes, inserting a spider between any remaining consecutive pair of such boxes, so that all spiders are connected only by plain edges, $H$-edges or $H^\dagger$-edges. Fuse together as many as possible, and apply \eqref{eq:spiders_reluctant_to_fuse} where fusion is not possible, so that no plain edge connects two spiders. Apply \eqref{eq:h_edges_are_mod_3} to all connected pairs of spiders until at most one $H$- or $H^\dagger$-edge remains between them. Finally, to ensure every input and output is connected to a spider and every spider is connected to at most one input or output, we can use $\qutritRuleHadamard$ and $\qutritRuleId$ to add a few spiders, $H$- and $H^\dagger$-edges as needed: 
-		\begin{equation}
+		\begin{equation*}
 			\tikzfig{is_graph_like/plain_input_output_wire_coloured} \quad ,
 			\hspace{50pt}
 			\tikzfig{is_graph_like/input_connected_to_hadamard} \quad ,
 			\hspace{50pt}
 			\tikzfig{is_graph_like/multiple_inputs_connected_to_one_spider_coloured}
-		\end{equation}
+		\end{equation*}
 	\end{proof}
 \end{proposition}
 
 A graph state is described fully by its underlying multigraph, or equivalently by an adjacency matrix, where edges take weights in $\mathbb{Z}_3$\ (Lemma 4.2, \cite{harny_completeness}). Nodes correspond to phaseless green spiders, edges of weight $1$ correspond to Hadamard edges, and edges of weight $2$ correspond to $H^\dagger$-edges. As in the qubit case, graph states admit a \emph{local complementation} operation\ (Definition 2.6, \cite{harny_completeness}), though the effect is now slightly more complicated. We'll give the intuition after the formal definition:
-
 \begin{definition}\label{def:local_complementation_qutrit}
 	Given $a \in \mathbb{Z}_3$ and a graph state $G$ with adjacency matrix $W = (w_{i,j})$, the \emph{$a$-local complentation} at node $x$ is the new graph state $G *_a x$, whose adjacency matrix $W' = (w'_{i,j})$ is given by $w'_{i,j} = w_{i,j} + aw_{i,x}w_{j,x}$.
 	% \begin{equation}
 	% 	w'_{i,j} = w_{i,j} + aw_{i,x}w_{j,x}
 	% \end{equation}
 \end{definition}
-
 So only those edges between neighbours of node $x$ are affected. Specifically, for two nodes $i$ and $j$ both connected to $x$ by the \emph{same} colour edge, $a$-local complementation at $x$ \emph{increases} weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $x$ by edges of \emph{different} colours, $a$-local complementation at $x$ \emph{decreases} $w_{i,j}$ by $a$. This is shown graphically below, and holds with the roles of blue and purple interchanged:
 \begin{equation}
 	\tikzfig{a_local_comp/same} \quad ,
-	\hspace{50pt}
+	\hspace{25pt}
 	\tikzfig{a_local_comp/different}
 \end{equation}
-
 % As in the qubit case, local complementation gives an equality up to introducing some single qubit phase gates on the outputs (Theorem 4.4, Corollary 4.5, \cite{harny_completeness}). 
-
 \begin{theorem}\label{thm:local_comp_equality} (Theorem 4.4, Corollary 4.5, \cite{harny_completeness})~
 	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing a node $x$, let $N(x)$ denote the neighbours of $x$; that is, nodes $i$ with weight $w_{i,x} \in \{1, 2\}$. Then the following equality holds:
 	\begin{equation}
@@ -182,9 +174,7 @@ So only those edges between neighbours of node $x$ are affected. Specifically, f
 \begin{definition}\label{def:local_pivot_qutrit}
 	Given $a,b,c \in \mathbb{Z}_3$ and a graph state $G$ containing nodes $i$ and $j$, the \emph{$(a,b,c)$-pivot} along $ij$ is the new graph state $G \wedge_{(a,b,c)} ij \defeq ((G *_a i) *_b j) *_c i$. 
 \end{definition}
-
 This pivot operation again leads to an equality, up to introducing some extra gates on outputs, whose proof is found in Appendix \ref{thm:local_pivot_equality_appendix}. Here we shall only consider an $(a,-a,a)$-pivot along an edge $ij$ of non-zero weight, for $a \in \{1, 2\}$. We will call this a \emph{proper $a$-pivot} along $ij$, and denote it $G \wedge_a ij$.
-
 \begin{theorem}\label{thm:local_pivot_equality}
 	\qutritPivotEqualityStatement
 \end{theorem}
@@ -193,11 +183,11 @@ This pivot operation again leads to an equality, up to introducing some extra ga
 
 We classify spiders into three families exactly as in (Theorem 3.1, \cite{harny_completeness}):
 \begin{equation}
-	\mathcal{M} = \left\{\qutritZspider{0}{0}, \qutritZspider{1}{2}, \qutritZspider{2}{1}\right\},
+	\mathcal{M} = \left\{\scalebox{0.8}{\qutritZspider{0}{0}}, \scalebox{0.8}{\qutritZspider{1}{2}}, \scalebox{0.8}{\qutritZspider{2}{1}}\right\},
 	~
-	\mathcal{N} = \left\{\qutritZspider{0}{1}, \qutritZspider{1}{0}, \qutritZspider{0}{2}, \qutritZspider{2}{0}\right\},
+	\mathcal{N} = \left\{\scalebox{0.8}{\qutritZspider{0}{1}}, \scalebox{0.8}{\qutritZspider{1}{0}}, \scalebox{0.8}{\qutritZspider{0}{2}}, \scalebox{0.8}{\qutritZspider{2}{0}}\right\},
 	~
-	\mathcal{P} = \left\{\qutritZspider{1}{1}, \qutritZspider{2}{2}\right\}
+	\mathcal{P} = \left\{\scalebox{0.8}{\qutritZspider{1}{1}}, \scalebox{0.8}{\qutritZspider{2}{2}}\right\}
 \end{equation}
 We call a spider in a graph-like ZX-diagram \emph{interior} if it isn't connected to an input or output. Given any graph-like ZX-diagram, we will show that we can eliminate standalone interior $\mathcal{P}$- and \Nspiders\ by local complementation, and pairs of connected interior \Mspiders\ by pivoting. 
 
@@ -211,7 +201,7 @@ Following the style of \cite{backens2018zh}, we allow a parameter denoting the m
 We also extend this notation as follows: we decorate the !-box with an edge-type, which denotes that the spiders unfolded are all-to-all connected by an edge of this type. In qutrit ZX-diagrams this notation is well-defined in certain scenarios: in particular, when the denoted edge-type is a $H$- or $H^{\dagger}$-edge (since then the distinction between a spider's input and output wires disappears) and the main contents of the !-box is equivalent to a single spider (since then there is no ambiguity about which spiders are connected). For example:
 %letting $[K] = \{1, ..., K\}$, we have:
 \begin{equation*}
-	\left\{ \tikzfig{bang/connected/K} : K \in \{0, 1, 2, 3, 4, ... \} \right\} =
+	\left\{ \tikzfig{bang/connected/K} : K \in \{0, 1, 2, 3\} \right\} =
 	% \left( \ 
 	% 	\tikzfig{bang/connected/bang_0} \ , \
 	% 	\tikzfig{bang/connected/bang_1} \ , \ 
@@ -222,8 +212,8 @@ We also extend this notation as follows: we decorate the !-box with an edge-type
 		\scalebox{0.8}{\tikzfig{bang/connected/0}} \ , \
 		\scalebox{0.8}{\tikzfig{bang/connected/1}} \ , \
 		\scalebox{0.8}{\tikzfig{bang/connected/2}} \ , \
-		\scalebox{0.8}{\tikzfig{bang/connected/3}} \ , \
-		\scalebox{0.8}{\tikzfig{bang/connected/4}} \ , \ ...
+		\scalebox{0.8}{\tikzfig{bang/connected/3}}
+		% \scalebox{0.8}{\tikzfig{bang/connected/4}} \ , \ ...
 	~ \right\}
 \end{equation*}
 \begin{theorem}\label{thm:eliminate_P_spiders}
