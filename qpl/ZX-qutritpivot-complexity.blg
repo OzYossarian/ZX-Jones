@@ -1,7 +1,7 @@
-This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2020)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: ZX-qutritpivot-complexity.aux
-The style file: splncs04.bst
+The style file: eptcs.bst
 Database file #1: refs-teague.bib
 Database file #2: refs.bib
 Warning--empty journal in graph_theoretic_simplification
@@ -9,44 +9,44 @@ Warning--empty journal in qutrit_euler
 Warning--empty journal in ChromaticPotts
 Warning--empty journal in harny_completeness
 You've used 26 entries,
-            2850 wiz_defined-function locations,
-            777 strings with 9220 characters,
-and the built_in function-call counts, 13486 in all, are:
-= -- 1117
+            2735 wiz_defined-function locations,
+            775 strings with 9884 characters,
+and the built_in function-call counts, 13138 in all, are:
+= -- 986
 > -- 337
-< -- 22
+< -- 10
 + -- 142
 - -- 114
-* -- 861
-:= -- 1684
-add.period$ -- 29
+* -- 1512
+:= -- 1522
+add.period$ -- 61
 call.type$ -- 26
-change.case$ -- 133
+change.case$ -- 109
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 1238
-empty$ -- 1268
+cite$ -- 56
+duplicate$ -- 1063
+empty$ -- 1116
 format.name$ -- 131
-if$ -- 2969
+if$ -- 2654
 int.to.chr$ -- 0
 int.to.str$ -- 26
-missing$ -- 221
-newline$ -- 84
+missing$ -- 201
+newline$ -- 152
 num.names$ -- 52
-pop$ -- 430
+pop$ -- 237
 preamble$ -- 1
 purify$ -- 109
 quote$ -- 0
-skip$ -- 421
+skip$ -- 427
 stack$ -- 0
-substring$ -- 826
-swap$ -- 691
-text.length$ -- 22
+substring$ -- 532
+swap$ -- 1015
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 100
+type$ -- 126
 warning$ -- 4
-while$ -- 102
+while$ -- 76
 width$ -- 28
-write$ -- 268
+write$ -- 303
 (There were 4 warnings)

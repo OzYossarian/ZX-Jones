@@ -2,7 +2,7 @@
 
 
 
-The ZX-calculus originates in
+The ZX-calculus has its origins in
 quantum foundations \cite{Coecke2011,vandewetering2020zxcalculus}.
 It is a graphical language that allows for reasoning about ZX-diagrams,
 %which are composed of primitive generators \cite{vandewetering2020zxcalculus} called `spiders'.
@@ -13,7 +13,7 @@ The calculus
 is defined by a set of rewrite rules
 %involving spiders. Performing a rewrite amounts to a
 that transform the diagrams.
-Note that the set of rewrite rules \emph{depends} on
+Note that the set of rewrite rules depends on
 the (semi)ring over which they are interpreted.
 Importantly, ZX rewrites are sound and complete.
 %for linear maps over the chosen (semi)ring.
@@ -22,14 +22,14 @@ Importantly, ZX rewrites are sound and complete.
 In the context of quantum computing,
 the Gottesman-Knill theorem states that stabilizer quantum
 circuits can be
-simulated \emph{efficiently} on classical computers \cite{Aaronson2004},
-where by simulation here we mean the \emph{exact} computation of quantum probability amplitudes.
+simulated efficiently on classical computers \cite{Aaronson2004},
+where by simulation here we mean the exact computation of quantum probability amplitudes.
 An alternative
 %- and in fact more general -
 proof of the Gottesman-Knill theorem for qubits has been obtained graphically in the qubit ZX-calculus.
-Stabilizer circuits can be expressed by the \emph{stabilizer}
-fragment,
-and stabilizer ZX-diagrams can be \emph{rewritten efficiently}
+Stabilizer circuits can be expressed by the \emph{stabilizer
+fragment},
+and stabilizer ZX-diagrams can be rewritten efficiently
 using derived rewrite strategies \cite{graph_theoretic_simplification}.
 Moreover, these rewrites can be viewed as theorems
 that are useful for simplifying or simulating universal quantum circuits, not just stabilizer circuits.
@@ -38,9 +38,9 @@ The key simplifying rewrites
 for qubit stabilizer ZX-diagrams
 are called \emph{local complementation} and \emph{pivot},
 the latter being a composition of three of the former \cite{graph_theoretic_simplification}.
-In this work, we recall the \emph{qutrit} version of local complementation \cite{harny_completeness} and derive the corresponding pivot rule.
+In this work, we recall the qutrit version of local complementation \cite{harny_completeness} and derive the corresponding pivot rule.
 We then derive simplification strategies
-which allow for the \emph{efficient} rewriting of qutrit stabilizer ZX-diagrams,
+which allow for the efficient rewriting of qutrit stabilizer ZX-diagrams,
 the core result of this work.
 
 Interestingly, though the motivation for studying ZX diagrams stems from quantum computation, they have broader applicability as they
@@ -48,19 +48,19 @@ can express arbitrary linear maps;
 every quantum circuit is a ZX-diagram but not vice versa.
 A plethora of hard problems in physics and computer science
 regard interacting many-body multi-state systems - both classical and quantum -
-and reduce to \emph{exactly} computing a single scalar.
+and reduce to exactly computing a single scalar.
 These range from quantum amplitudes,
 partition functions in classical statistical mechanics,
 counting problems, probabilistic inference, and many more.
 Problem instances can be encoded as closed
 tensor networks over an appropriate (semi)ring.
-The scalar can be evaluated by \emph{full tensor contraction},
+The scalar can be evaluated by full tensor contraction,
 which in general is \#P-hard \cite{Damm2002},
 and finding the optimal contraction path for a general tensor network is NP-hard.
 
 
 If a scalar of interest is expressed as a closed ZX-diagram,
-one can rewrite the diagram by applying rewrite rules; one's goal is then to perform \emph{full diagram simplification} in order to compute the desired scalar.
+one can rewrite the diagram by applying rewrite rules; one's goal is then to perform full diagram simplification in order to compute the desired scalar.
 Again, simplifying arbitrary closed ZX-diagrams is \#P-hard and finding the optimal rewrite strategy is NP-hard.
 Note that
 given an arbitrary tensor network, one can attempt to invent rewrite rules by inspecting the contents of the tensors and performing linear-algebra operations \cite{gray2020hyperoptimized}.
@@ -89,7 +89,5 @@ Both of these problem families reduce to evaluating
 closed tensor networks and show a transition in complexity
 at a particular dimension, below which the tensor network corresponds to a stabilizer ZX-diagram.
 We underline that throughout this work, all rewrites are valid
-\emph{up to a scalar}
-since we are only concerned about making statements about complexity.
-Keeping track of multiplicative scalar factors that arise under rewriting can be done efficiently.
+up to a scalar, but keeping track of multiplicative scalar factors that arise under rewriting can be done efficiently.
 %We are thus justified in omitting them for the purposes of this work.We also emphasise that the qutrit `elimination' rewrite rules we derive in Section \ref{sec:qutrits}\ have independent ramifications for circuit optimisation, though these are not explored here.

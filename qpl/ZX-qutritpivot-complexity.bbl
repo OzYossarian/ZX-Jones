@@ -1,129 +1,253 @@
 \begin{thebibliography}{10}
+\providecommand{\bibitemdeclare}[2]{}
+\providecommand{\surnamestart}{}
+\providecommand{\surnameend}{}
+\providecommand{\urlprefix}{Available at }
 \providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-\providecommand{\doi}[1]{https://doi.org/#1}
+\providecommand{\href}[2]{\texttt{#2}}
+\providecommand{\urlalt}[2]{\href{#1}{#2}}
+\providecommand{\doi}[1]{doi:\urlalt{http://dx.doi.org/#1}{#1}}
+\providecommand{\eprint}[1]{arXiv:\urlalt{https://arxiv.org/abs/#1}{#1}}
+\providecommand{\bibinfo}[2]{#2}
 
+\bibitemdeclare{article}{Aaronson2004}
 \bibitem{Aaronson2004}
-Aaronson, S., Gottesman, D.: Improved simulation of stabilizer circuits.
-  Physical Review A  \textbf{70}(5) (Nov 2004).
-  \doi{10.1103/physreva.70.052328},
-  \url{http://dx.doi.org/10.1103/PhysRevA.70.052328}
+\bibinfo{author}{Scott \surnamestart Aaronson\surnameend} \&
+  \bibinfo{author}{Daniel \surnamestart Gottesman\surnameend}
+  (\bibinfo{year}{2004}): \emph{\bibinfo{title}{Improved simulation of
+  stabilizer circuits}}.
+\newblock {\sl \bibinfo{journal}{Physical Review A}}
+  \bibinfo{volume}{70}(\bibinfo{number}{5}), \doi{10.1103/physreva.70.052328}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevA.70.052328}.
 
+\bibitemdeclare{article}{Aharonov_2008}
 \bibitem{Aharonov_2008}
-Aharonov, D., Jones, V., Landau, Z.: A polynomial quantum algorithm for
-  approximating the jones polynomial. Algorithmica  \textbf{55}(3),
-  395â€“421 (Mar 2008). \doi{10.1007/s00453-008-9168-0},
-  \url{http://dx.doi.org/10.1007/s00453-008-9168-0}
+\bibinfo{author}{Dorit \surnamestart Aharonov\surnameend},
+  \bibinfo{author}{Vaughan \surnamestart Jones\surnameend} \&
+  \bibinfo{author}{Zeph \surnamestart Landau\surnameend}
+  (\bibinfo{year}{2008}): \emph{\bibinfo{title}{A Polynomial Quantum Algorithm
+  for Approximating the Jones Polynomial}}.
+\newblock {\sl \bibinfo{journal}{Algorithmica}}
+  \bibinfo{volume}{55}(\bibinfo{number}{3}), p.
+  \bibinfo{pages}{395â€“421}, \doi{10.1007/s00453-008-9168-0}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1007/s00453-008-9168-0}.
 
+\bibitemdeclare{misc}{backens2018zh}
 \bibitem{backens2018zh}
-Backens, M., Kissinger, A.: Zh: A complete graphical calculus for quantum
-  computations involving classical non-linearity (2018)
+\bibinfo{author}{Miriam \surnamestart Backens\surnameend} \&
+  \bibinfo{author}{Aleks \surnamestart Kissinger\surnameend}
+  (\bibinfo{year}{2018}): \emph{\bibinfo{title}{ZH: A Complete Graphical
+  Calculus for Quantum Computations Involving Classical Non-linearity}}.
+\newblock \eprint{1805.02175}.
 
+\bibitemdeclare{misc}{backens2020again}
 \bibitem{backens2020again}
-Backens, M., Miller-Bakewell, H., de~Felice, G., Lobski, L., van~de Wetering,
-  J.: There and back again: A circuit extraction tale (2020)
+\bibinfo{author}{Miriam \surnamestart Backens\surnameend},
+  \bibinfo{author}{Hector \surnamestart Miller-Bakewell\surnameend},
+  \bibinfo{author}{Giovanni \surnamestart de~Felice\surnameend},
+  \bibinfo{author}{Leo \surnamestart Lobski\surnameend} \&
+  \bibinfo{author}{John \surnamestart van~de Wetering\surnameend}
+  (\bibinfo{year}{2020}): \emph{\bibinfo{title}{There and back again: A circuit
+  extraction tale}}.
+\newblock \eprint{2003.01664}.
 
+\bibitemdeclare{misc}{debeaudrap2020tensor}
 \bibitem{debeaudrap2020tensor}
-de~Beaudrap, N., Kissinger, A., Meichanetzidis, K.: Tensor network rewriting
-  strategies for satisfiability and counting (2020)
+\bibinfo{author}{Niel \surnamestart de~Beaudrap\surnameend},
+  \bibinfo{author}{Aleks \surnamestart Kissinger\surnameend} \&
+  \bibinfo{author}{Konstantinos \surnamestart Meichanetzidis\surnameend}
+  (\bibinfo{year}{2020}): \emph{\bibinfo{title}{Tensor Network Rewriting
+  Strategies for Satisfiability and Counting}}.
+\newblock \eprint{2004.06455}.
 
+\bibitemdeclare{article}{Coecke2011}
 \bibitem{Coecke2011}
-Coecke, B., Duncan, R.: Interacting quantum observables: categorical algebra
-  and diagrammatics. New Journal of Physics  \textbf{13}(4),  043016 (Apr
-  2011). \doi{10.1088/1367-2630/13/4/043016},
-  \url{http://dx.doi.org/10.1088/1367-2630/13/4/043016}
+\bibinfo{author}{Bob \surnamestart Coecke\surnameend} \& \bibinfo{author}{Ross
+  \surnamestart Duncan\surnameend} (\bibinfo{year}{2011}):
+  \emph{\bibinfo{title}{Interacting quantum observables: categorical algebra
+  and diagrammatics}}.
+\newblock {\sl \bibinfo{journal}{New Journal of Physics}}
+  \bibinfo{volume}{13}(\bibinfo{number}{4}), p. \bibinfo{pages}{043016},
+  \doi{10.1088/1367-2630/13/4/043016}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1088/1367-2630/13/4/043016}.
 
+\bibitemdeclare{article}{Damm2002}
 \bibitem{Damm2002}
-Damm, C., Holzer, M., McKenzie, P.: The complexity of tensor calculus.
-  computational complexity  \textbf{11}(1),  54--89 (2002).
-  \doi{10.1007/s00037-000-0170-4},
-  \url{https://doi.org/10.1007/s00037-000-0170-4}
+\bibinfo{author}{Carsten \surnamestart Damm\surnameend},
+  \bibinfo{author}{Markus \surnamestart Holzer\surnameend} \&
+  \bibinfo{author}{Pierre \surnamestart McKenzie\surnameend}
+  (\bibinfo{year}{2002}): \emph{\bibinfo{title}{The complexity of tensor
+  calculus}}.
+\newblock {\sl \bibinfo{journal}{computational complexity}}
+  \bibinfo{volume}{11}(\bibinfo{number}{1}), pp. \bibinfo{pages}{54--89},
+  \doi{10.1007/s00037-000-0170-4}.
+\newblock \urlprefix\url{https://doi.org/10.1007/s00037-000-0170-4}.
 
+\bibitemdeclare{article}{dixon2009graphical}
 \bibitem{dixon2009graphical}
-Dixon, L., Duncan, R.: Graphical reasoning in compact closed categories for
-  quantum computation. Annals of Mathematics and Artificial Intelligence
-  \textbf{56}(1),  23--42 (2009)
+\bibinfo{author}{Lucas \surnamestart Dixon\surnameend} \& \bibinfo{author}{Ross
+  \surnamestart Duncan\surnameend} (\bibinfo{year}{2009}):
+  \emph{\bibinfo{title}{Graphical reasoning in compact closed categories for
+  quantum computation}}.
+\newblock {\sl \bibinfo{journal}{Annals of Mathematics and Artificial
+  Intelligence}} \bibinfo{volume}{56}(\bibinfo{number}{1}), pp.
+  \bibinfo{pages}{23--42}.
 
+\bibitemdeclare{article}{graph_theoretic_simplification}
 \bibitem{graph_theoretic_simplification}
-Duncan, R., Kissinger, A., Perdrix, S., van~de Wetering, J.: Graph-theoretic
-  simplification of quantum circuits with the zx-calculus  (2020)
+\bibinfo{author}{Ross \surnamestart Duncan\surnameend}, \bibinfo{author}{Aleks
+  \surnamestart Kissinger\surnameend}, \bibinfo{author}{Simon \surnamestart
+  Perdrix\surnameend} \& \bibinfo{author}{John \surnamestart van~de
+  Wetering\surnameend} (\bibinfo{year}{2020}):
+  \emph{\bibinfo{title}{Graph-theoretic Simplification of Quantum Circuits with
+  the ZX-calculus}}.
 
+\bibitemdeclare{article}{Freedman2002}
 \bibitem{Freedman2002}
-Freedman, M.H., Kitaev, A., Larsen, M.J., Wang, Z.: Topological quantum
-  computation. Bulletin of the American Mathematical Society  \textbf{40}(01),
-  31--39 (Oct 2002). \doi{10.1090/s0273-0979-02-00964-3},
-  \url{https://doi.org/10.1090/s0273-0979-02-00964-3}
+\bibinfo{author}{Michael~H. \surnamestart Freedman\surnameend},
+  \bibinfo{author}{Alexei \surnamestart Kitaev\surnameend},
+  \bibinfo{author}{Michael~J. \surnamestart Larsen\surnameend} \&
+  \bibinfo{author}{Zhenghan \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2002}): \emph{\bibinfo{title}{Topological quantum
+  computation}}.
+\newblock {\sl \bibinfo{journal}{Bulletin of the American Mathematical
+  Society}} \bibinfo{volume}{40}(\bibinfo{number}{01}), pp.
+  \bibinfo{pages}{31--39}, \doi{10.1090/s0273-0979-02-00964-3}.
+\newblock \urlprefix\url{https://doi.org/10.1090/s0273-0979-02-00964-3}.
 
+\bibitemdeclare{article}{qutrit_euler}
 \bibitem{qutrit_euler}
-Gong, X., Wang, Q.: Equivalence of local complementation and euler
-  decomposition in the qutrit zx-calculus  (2017)
+\bibinfo{author}{Xiaoyan \surnamestart Gong\surnameend} \&
+  \bibinfo{author}{Quanlong \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2017}): \emph{\bibinfo{title}{Equivalence of Local
+  Complementation and Euler Decomposition in the Qutrit ZX-calculus}}.
 
+\bibitemdeclare{article}{gong2017equivalence}
 \bibitem{gong2017equivalence}
-Gong, X., Wang, Q.: Equivalence of local complementation and euler
-  decomposition in the qutrit zx-calculus. arXiv preprint arXiv:1704.05955
-  (2017)
+\bibinfo{author}{Xiaoyan \surnamestart Gong\surnameend} \&
+  \bibinfo{author}{Quanlong \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2017}): \emph{\bibinfo{title}{Equivalence of local
+  complementation and Euler decomposition in the qutrit ZX-calculus}}.
+\newblock {\sl \bibinfo{journal}{arXiv preprint arXiv:1704.05955}}.
 
+\bibitemdeclare{misc}{gray2020hyperoptimized}
 \bibitem{gray2020hyperoptimized}
-Gray, J., Kourtis, S.: Hyper-optimized tensor network contraction (2020)
+\bibinfo{author}{Johnnie \surnamestart Gray\surnameend} \&
+  \bibinfo{author}{Stefanos \surnamestart Kourtis\surnameend}
+  (\bibinfo{year}{2020}): \emph{\bibinfo{title}{Hyper-optimized tensor network
+  contraction}}.
+\newblock \eprint{2002.01935}.
 
+\bibitemdeclare{article}{jaeger_vertigan_welsh_1990}
 \bibitem{jaeger_vertigan_welsh_1990}
-Jaeger, F., Vertigan, D.L., Welsh, D.J.A.: On the computational complexity of
-  the jones and tutte polynomials. Mathematical Proceedings of the Cambridge
-  Philosophical Society  \textbf{108}(1),  35â€“53 (1990).
-  \doi{10.1017/S0305004100068936}
+\bibinfo{author}{F.~\surnamestart Jaeger\surnameend}, \bibinfo{author}{D.~L.
+  \surnamestart Vertigan\surnameend} \& \bibinfo{author}{D.~J.~A. \surnamestart
+  Welsh\surnameend} (\bibinfo{year}{1990}): \emph{\bibinfo{title}{On the
+  computational complexity of the Jones and Tutte polynomials}}.
+\newblock {\sl \bibinfo{journal}{Mathematical Proceedings of the Cambridge
+  Philosophical Society}} \bibinfo{volume}{108}(\bibinfo{number}{1}), p.
+  \bibinfo{pages}{35â€“53}, \doi{10.1017/S0305004100068936}.
 
+\bibitemdeclare{book}{Kauffman2001}
 \bibitem{Kauffman2001}
-Kauffman, L.H.: Knots and Physics. {WORLD} {SCIENTIFIC} (Jul 2001).
-  \doi{10.1142/4256}, \url{https://doi.org/10.1142/4256}
+\bibinfo{author}{Louis~H \surnamestart Kauffman\surnameend}
+  (\bibinfo{year}{2001}): \emph{\bibinfo{title}{Knots and Physics}}.
+\newblock \bibinfo{publisher}{{WORLD} {SCIENTIFIC}}, \doi{10.1142/4256}.
+\newblock \urlprefix\url{https://doi.org/10.1142/4256}.
 
+\bibitemdeclare{misc}{kuperberg2014hard}
 \bibitem{kuperberg2014hard}
-Kuperberg, G.: How hard is it to approximate the jones polynomial? (2014)
+\bibinfo{author}{Greg \surnamestart Kuperberg\surnameend}
+  (\bibinfo{year}{2014}): \emph{\bibinfo{title}{How hard is it to approximate
+  the Jones polynomial?}}
+\newblock \eprint{0908.0512}.
 
+\bibitemdeclare{article}{Levaillant_2015}
 \bibitem{Levaillant_2015}
-Levaillant, C., Bauer, B., Freedman, M., Wang, Z., Bonderson, P.: Universal
-  gates via fusion and measurement operations onsu(2)4anyons. Physical Review A
-   \textbf{92}(1) (Jul 2015). \doi{10.1103/physreva.92.012301},
-  \url{http://dx.doi.org/10.1103/PhysRevA.92.012301}
+\bibinfo{author}{Claire \surnamestart Levaillant\surnameend},
+  \bibinfo{author}{Bela \surnamestart Bauer\surnameend},
+  \bibinfo{author}{Michael \surnamestart Freedman\surnameend},
+  \bibinfo{author}{Zhenghan \surnamestart Wang\surnameend} \&
+  \bibinfo{author}{Parsa \surnamestart Bonderson\surnameend}
+  (\bibinfo{year}{2015}): \emph{\bibinfo{title}{Universal gates via fusion and
+  measurement operations onSU(2)4anyons}}.
+\newblock {\sl \bibinfo{journal}{Physical Review A}}
+  \bibinfo{volume}{92}(\bibinfo{number}{1}), \doi{10.1103/physreva.92.012301}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1103/PhysRevA.92.012301}.
 
+\bibitemdeclare{article}{PhysRevE.100.033303}
 \bibitem{PhysRevE.100.033303}
-Meichanetzidis, K., Kourtis, S.: Evaluating the jones polynomial with tensor
-  networks. Phys. Rev. E  \textbf{100},  033303 (Sep 2019).
-  \doi{10.1103/PhysRevE.100.033303},
-  \url{https://link.aps.org/doi/10.1103/PhysRevE.100.033303}
+\bibinfo{author}{Konstantinos \surnamestart Meichanetzidis\surnameend} \&
+  \bibinfo{author}{Stefanos \surnamestart Kourtis\surnameend}
+  (\bibinfo{year}{2019}): \emph{\bibinfo{title}{Evaluating the Jones polynomial
+  with tensor networks}}.
+\newblock {\sl \bibinfo{journal}{Phys. Rev. E}} \bibinfo{volume}{100}, p.
+  \bibinfo{pages}{033303}, \doi{10.1103/PhysRevE.100.033303}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/PhysRevE.100.033303}.
 
+\bibitemdeclare{book}{pachos_2012}
 \bibitem{pachos_2012}
-Pachos, J.K.: Introduction to Topological Quantum Computation. Cambridge
-  University Press (2012). \doi{10.1017/CBO9780511792908}
+\bibinfo{author}{Jiannis~K. \surnamestart Pachos\surnameend}
+  (\bibinfo{year}{2012}): \emph{\bibinfo{title}{Introduction to Topological
+  Quantum Computation}}.
+\newblock \bibinfo{publisher}{Cambridge University Press},
+  \doi{10.1017/CBO9780511792908}.
 
+\bibitemdeclare{article}{Rowell_2018}
 \bibitem{Rowell_2018}
-Rowell, E.C., Wang, Z.: Mathematics of topological quantum computing. Bulletin
-  of the American Mathematical Society  \textbf{55}(2),  183â€“238 (Jan
-  2018). \doi{10.1090/bull/1605}, \url{http://dx.doi.org/10.1090/BULL/1605}
+\bibinfo{author}{Eric~C. \surnamestart Rowell\surnameend} \&
+  \bibinfo{author}{Zhenghan \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2018}): \emph{\bibinfo{title}{Mathematics of topological
+  quantum computing}}.
+\newblock {\sl \bibinfo{journal}{Bulletin of the American Mathematical
+  Society}} \bibinfo{volume}{55}(\bibinfo{number}{2}), p.
+  \bibinfo{pages}{183â€“238}, \doi{10.1090/bull/1605}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1090/BULL/1605}.
 
+\bibitemdeclare{article}{ChromaticPotts}
 \bibitem{ChromaticPotts}
-Sokal, A.D.: Chromatic polynomials, potts models and all that  (1999).
-  \doi{10.1016/S0378-4371(99)00519-1}
+\bibinfo{author}{Alan~D. \surnamestart Sokal\surnameend}
+  (\bibinfo{year}{1999}): \emph{\bibinfo{title}{Chromatic Polynomials, Potts
+  Models and All That}}.
+\newblock \doi{10.1016/S0378-4371(99)00519-1}.
+\newblock \eprint{arXiv:cond-mat/9910503}.
 
+\bibitemdeclare{article}{harny_completeness}
 \bibitem{harny_completeness}
-Wang, Q.: Qutrit zx-calculus is complete for stabilizer quantum mechanics
-  (2018)
+\bibinfo{author}{Quanlong \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2018}): \emph{\bibinfo{title}{Qutrit ZX-calculus is Complete
+  for Stabilizer Quantum Mechanics}}.
 
+\bibitemdeclare{misc}{wang2020completeness}
 \bibitem{wang2020completeness}
-Wang, Q.: Completeness of algebraic zx-calculus over arbitrary commutative
-  rings and semirings (2020)
+\bibinfo{author}{Quanlong \surnamestart Wang\surnameend}
+  (\bibinfo{year}{2020}): \emph{\bibinfo{title}{Completeness of algebraic
+  ZX-calculus over arbitrary commutative rings and semirings}}.
+\newblock \eprint{1912.01003}.
 
+\bibitemdeclare{misc}{vandewetering2020zxcalculus}
 \bibitem{vandewetering2020zxcalculus}
-van~de Wetering, J.: Zx-calculus for the working quantum computer scientist
-  (2020)
+\bibinfo{author}{John \surnamestart van~de Wetering\surnameend}
+  (\bibinfo{year}{2020}): \emph{\bibinfo{title}{ZX-calculus for the working
+  quantum computer scientist}}.
+\newblock \eprint{2012.13966}.
 
+\bibitemdeclare{article}{Witten1989}
 \bibitem{Witten1989}
-Witten, E.: Quantum field theory and the jones polynomial. Communications in
-  Mathematical Physics  \textbf{121}(3),  351--399 (Sep 1989).
-  \doi{10.1007/bf01217730}, \url{https://doi.org/10.1007/bf01217730}
+\bibinfo{author}{Edward \surnamestart Witten\surnameend}
+  (\bibinfo{year}{1989}): \emph{\bibinfo{title}{Quantum field theory and the
+  Jones polynomial}}.
+\newblock {\sl \bibinfo{journal}{Communications in Mathematical Physics}}
+  \bibinfo{volume}{121}(\bibinfo{number}{3}), pp. \bibinfo{pages}{351--399},
+  \doi{10.1007/bf01217730}.
+\newblock \urlprefix\url{https://doi.org/10.1007/bf01217730}.
 
+\bibitemdeclare{article}{RevModPhys.64.1099}
 \bibitem{RevModPhys.64.1099}
-Wu, F.Y.: Knot theory and statistical mechanics. Rev. Mod. Phys.  \textbf{64},
-  1099--1131 (Oct 1992). \doi{10.1103/RevModPhys.64.1099},
-  \url{https://link.aps.org/doi/10.1103/RevModPhys.64.1099}
+\bibinfo{author}{F.~Y. \surnamestart Wu\surnameend} (\bibinfo{year}{1992}):
+  \emph{\bibinfo{title}{Knot theory and statistical mechanics}}.
+\newblock {\sl \bibinfo{journal}{Rev. Mod. Phys.}} \bibinfo{volume}{64}, pp.
+  \bibinfo{pages}{1099--1131}, \doi{10.1103/RevModPhys.64.1099}.
+\newblock \urlprefix\url{https://link.aps.org/doi/10.1103/RevModPhys.64.1099}.
 
 \end{thebibliography}

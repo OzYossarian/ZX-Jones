@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{eptcs}[2010/11/26 v1.5]
+\ProvidesClass{eptcs}[2020/12/20 v1.6]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%                             options                            %%%%
@@ -123,7 +123,7 @@
 \makebox[0pt][r]{
 \begin{tabular}{l@{}}
 \ifpublicdomain
-  This work is \href{http://creativecommons.org/publicdomain/zero/1.0/}
+  This work is \href{https://creativecommons.org/publicdomain/zero/1.0/}
   {dedicated to the public domain}.
 \else
   \ifcopyright
@@ -132,29 +132,29 @@
   \ifcreativecommons
     This work is licensed under the
     \ifnoncommercial
-      \href{http://creativecommons.org}{Creative Commons}\\
+      \href{https://creativecommons.org}{Creative Commons}\\
       \ifnoderivs
-	\href{http://creativecommons.org/licenses/by-nc-nd/3.0/}
+	\href{https://creativecommons.org/licenses/by-nc-nd/4.0/}
 	{Attribution-Noncommercial-No Derivative Works} License.
       \else\ifsharealike
-	\href{http://creativecommons.org/licenses/by-nc-sa/3.0/}
+	\href{https://creativecommons.org/licenses/by-nc-sa/4.0/}
 	{Attribution-Noncommercial-Share Alike} License.
       \else
-	\href{http://creativecommons.org/licenses/by-nc/3.0/}
+	\href{https://creativecommons.org/licenses/by-nc/4.0/}
 	{Attribution-Noncommercial} License.
       \fi\fi
     \else
       \ifnoderivs
-        \href{http://creativecommons.org}{Creative Commons}\\
-	\href{http://creativecommons.org/licenses/by-nd/3.0/}
+        \href{https://creativecommons.org}{Creative Commons}\\
+	\href{https://creativecommons.org/licenses/by-nd/4.0/}
 	{Attribution-No Derivative Works} License.
       \else\ifsharealike
-        \href{http://creativecommons.org}{Creative Commons}\\
-	\href{http://creativecommons.org/licenses/by-sa/3.0/}
+        \href{https://creativecommons.org}{Creative Commons}\\
+	\href{https://creativecommons.org/licenses/by-sa/4.0/}
 	{Attribution-Share Alike} License.
       \else
-        \\\href{http://creativecommons.org}{Creative Commons}
-	\href{http://creativecommons.org/licenses/by/3.0/}
+        \\\href{https://creativecommons.org}{Creative Commons}
+	\href{https://creativecommons.org/licenses/by/4.0/}
 	{Attribution} License.
       \fi\fi
     \fi

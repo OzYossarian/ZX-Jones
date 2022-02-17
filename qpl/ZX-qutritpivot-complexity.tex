@@ -6,8 +6,12 @@
 
 % \documentclass[runningheads]{llncs}
 
-\documentclass[runningheads]{llncs}
-\providecommand{\event}{FCT 2021}
+\documentclass[submission,copyright,creativecommons]{eptcs}
+\providecommand{\event}{QPL 2022}
+% \documentclass[submission,copyright,creativecommons]{eptcs}
+% \providecommand{\event}{QPL 2021}
+
+% \documentclass[runningheads]{llncs}
 
 \input{preamble}
 \input{definitions}
@@ -16,12 +20,16 @@
 % \title{Classifying Complexity with the ZX-Calculus:\\
 % Jones Polynomials and Potts Partition Functions}
 
-\title{Simplification strategies for the\\
-qutrit ZX-calculus}
+\title{Simplification Strategies for the Qutrit ZX-Calculus}
 
-\author{Alex Townsend-Teague $^{1}$ and Konstantinos Meichanetzidis $^{1,2}$
-	\institute{$^1$ University of Oxford \\ $^2$ Cambridge Quantum Computing Ltd.}
-}
+\author{Alex Townsend-Teague $^{1, 3}$ and Konstantinos Meichanetzidis $^{1,2}$
+	\institute{
+		$^1$ Department of Computer Science, University of Oxford \\ 
+		$^2$ Cambridge Quantum Computing Ltd. \\
+		$^3$ Dahlem Center for Complex Quantum Systems, Freie Universit\"{a}t Berlin, 14195 Berlin, Germany}
+	}
+\def\titlerunning{Simplification Strategies for the Qutrit ZX-Calculus}
+\def\authorrunning{Alex Townsend-Teague and Konstantinos Meichanetzidis}
 
 % \def\titlerunning{Simplification strategies for the qutrit ZX-calculus}
 % \def\authorrunning{A. Townsend-Teague and K. Meichanetzidis}
@@ -31,7 +39,7 @@ qutrit ZX-calculus}
 \begin{document}
 \maketitle
 \begin{abstract}
-	The ZX-calculus is a graphical language for suitably represented tensor networks - namely ZX-diagrams.
+	The ZX-calculus is a graphical language for suitably represented tensor networks, called ZX-diagrams.
 	%, composed of primitive generators whose semantics are tensors over a (semi)ring.
 	%By universality,
 	%Any tensor network has a corresponding ZX-diagram.
@@ -39,13 +47,13 @@ qutrit ZX-calculus}
 	%, which preserve semantics, and two ZX-diagrams representing the same tensor can be transformed into each other \emph{only} by a sequence of rewrites.
 	The ZX-calculus has found applications in reasoning about quantum circuits, condensed matter systems, quantum algorithms, quantum error correcting codes, and counting problems.
 	A key notion is the stabiliser fragment of the ZX-calculus, a subfamily of ZX-diagrams for which rewriting can be done efficiently in terms of derived simplifying rewrites.
-	In quantum computation with qubits or of Boolean counting problems, one employs the qubit ZX-calculus.
+	% In quantum computation with qubits or of Boolean counting problems, one employs the qubit ZX-calculus.
 	%	However, higher-dimensional cases are of interest as well.
-	Recently, higher dimensional qudits have become more prominent in quantum computing, and there are counting problem families whose complexity depends on the dimension.
+	Recently, higher dimensional qudits have become more prominent in quantum computing.
+	% , and there are counting problem families whose complexity depends on the dimension.
 	The main contribution of this work is the derivation of
-	\emph{efficient} rewrite strategies for the stabiliser fragment of the \emph{qutrit} ZX-calculus.
-	This constitutes a first non-trivial step towards simplification of qutrit quantum circuits. Finally, we reinterpret known complexity-theoretic results about evaluating the Jones polynomial, an important link-invariant, and counting graph colourings.\\
-	\textbf{*Eligible for the best student paper award.*}
+	efficient rewrite strategies for the stabiliser fragment of the qutrit ZX-calculus.
+	This constitutes a first non-trivial step towards simplification of qutrit quantum circuits. We then give further interesting applications; we reinterpret known complexity-theoretic results about evaluating the Jones polynomial, an important link invariant in knot theory, and counting graph colourings.
 \end{abstract}
 
 \input{main/intro}
@@ -59,8 +67,8 @@ We wish to thank Niel de Beaudrap, Aleks Kissinger, Stefanos
 Kourtis, and Quanlong Wang for inspiring and helpful discussions.
 KM acknowledges financial support from the Royal Commission for the Exhibition of 1851 through a postdoctoral research fellowship.
 
-% \bibliographystyle{eptcs}
-\bibliographystyle{splncs04}
+\bibliographystyle{eptcs}
+% \bibliographystyle{splncs04}
 \bibliography{refs-teague,refs}
 
 \appendix

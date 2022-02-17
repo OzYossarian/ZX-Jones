@@ -45,6 +45,7 @@ ENTRY
     edition
     editor
     eid
+    eprint
     howpublished
     institution
     journal
@@ -371,6 +372,14 @@ FUNCTION {either.or.check}
     { "can't use both " swap$ * " fields in " * cite$ * warning$ }
   if$
 }
+FUNCTION {format.eprint}
+{ eprint
+  duplicate$ empty$ 'skip$
+    {
+      "\eprint{" swap$ * "}" *
+    }
+  if$
+}
 FUNCTION {format.ee}
 { ee empty$
     { "" }
@@ -378,10 +387,17 @@ FUNCTION {format.ee}
   if$
 }
 FUNCTION {format.url}
-{ url empty$
-    { format.ee }
-    { "\urlprefix\url{" url * "}" *
-      "ee and url" ee either.or.check
+{ eprint empty$
+    { url empty$
+	{ format.ee }
+	{ "\urlprefix\url{" url * "}" *
+	  "ee and url" ee either.or.check
+	}
+      if$
+    }
+    { format.eprint
+      "eprint and url" url either.or.check
+      "eprint and ee" ee either.or.check
     }
   if$
 }
@@ -1408,6 +1424,8 @@ FUNCTION {begin.bib}
   "\providecommand{\urlalt}[2]{\href{#1}{#2}}"
   write$ newline$
   "\providecommand{\doi}[1]{doi:\urlalt{http://dx.doi.org/#1}{#1}}"
+  write$ newline$
+  "\providecommand{\eprint}[1]{arXiv:\urlalt{https://arxiv.org/abs/#1}{#1}}"
   write$ newline$
   "\providecommand{\bibinfo}[2]{#2}"
   write$ newline$

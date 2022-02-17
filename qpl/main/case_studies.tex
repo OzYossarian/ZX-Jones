@@ -13,7 +13,7 @@ A \emph{knot} $K$ is a circle embedded in $\mathbb{R}^3$.
 A set of knots tangled together make a \emph{link} $L$.
 A link $L$ can be represented by a \emph{link diagram}
 by projecting it on to the plane
-but retaining the information of over or under crossings.
+but retaining the information of over- or under-crossings.
 % For example, the trefoil knot linked with an unknot can be drawn as:
 % \begin{equation}
 % \includegraphics[scale=0.2]{figures/link.jpg}
@@ -31,11 +31,11 @@ In general, computing $V_L(t)$
 is exponentially costly in the number of crossings $c$,
 something made explicit when one uses the Kauffman bracket method \cite{Kauffman2001}.
 Exactly evaluating the Jones polynomial at points $t\in\mathbb{C}$ is \#P-hard,
-\emph{except} at the \emph{lattice roots of unity} $\Lambda = \{ \pm 1, \pm i, \pm e^{i 2\pi/3}, \pm e^{i 4\pi/3} \}$,
+except at the \emph{lattice roots of unity} $\Lambda = \{ \pm 1, \pm i, \pm e^{i 2\pi/3}, \pm e^{i 4\pi/3} \}$,
 where it can be evaluated at cost $O(poly(c))$ \cite{jaeger_vertigan_welsh_1990}.
 
 
-Additively approximating the Jones polynomial at \emph{non-lattice roots of unity} is a paradigmatic BQP-complete complete problem \cite{Aharonov_2008,kuperberg2014hard}.
+Additively approximating the Jones polynomial at non-lattice roots of unity is a paradigmatic BQP-complete complete problem \cite{Aharonov_2008,kuperberg2014hard}.
 Topological quantum computation \cite{Freedman2002,pachos_2012} is the most natural model for such knot theoretic questions. In this model, quantum states are defined in the fusion space of \emph{anyons}, emergent quasiparticles with nontrivial exchange statistics arising in two-dimensional exotic phases of matter.
 Quantum computation is performed by creating anyons from the vacuum, then braiding them, and finally fusing them back to the vacuum, where braids play the role of unitary gates.
 The world-lines of the anyons define a closed braid, i.e. a link.
@@ -57,7 +57,7 @@ This is consistent with the fact that braiding $\text{SU}(2)_2$ anyons (Ising) o
 
 The partition function $Z_{G_L}(d\in\mathbb{N})$ can be expressed as a closed tensor network in terms of phaseless (green) $d$-dimensional $Z$-spiders connected via wires that go through \emph{$\pm$-boxes} \cite{PhysRevE.100.033303}:
 \begin{equation}
-\includegraphics[scale=0.3, valign=c]{figures/link-tn.pdf}
+\includegraphics[scale=0.35, valign=c]{figures/link-tn.pdf}
 \label{eq:link-tn}
 \end{equation}
 The $\pm$-boxes have the following concrete interpretation as $d \times d$ matrices:
@@ -90,19 +90,19 @@ The $\pm$-boxes have the following concrete interpretation as $d \times d$ matri
 
 % We can now express the $\pm$-boxes in the ZX-calculus.
 The $\pm$-matrices above for $d \in \{2, 4\}$
-are equal up to a scalar to concrete interpretations of \emph{qubit stabilizer} ZX-diagrams, and the $\pm$-matrices for $d=3$ of \emph{qutrit stabilizer} ZX-diagrams (see Appendix \ref{prop:pm_maps_zx_appendix}):
+are equal up to a scalar to concrete interpretations of qubit stabilizer ZX-diagrams, and the $\pm$-matrices for $d=3$ of qutrit stabilizer ZX-diagrams (see Appendix \ref{prop:pm_maps_zx_appendix}):
 	\begin{equation}
 		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=2} \hspace{-10pt}\simeq 
 		\left\llbracket \ \tikzfig{pm_maps/q2} \ \right\rrbracket ~, 
-		~~
+		\qquad
 		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=3} \hspace{-10pt}\simeq
 		\left\llbracket \ \tikzfig{pm_maps/q3} \ \right\rrbracket ~,
-		~~
+		\qquad
 		\left\llbracket \ \tikzfig{pm_maps/pm} \ \right\rrbracket_{d=4} \hspace{-10pt}\simeq 
 		\left\llbracket \ \tikzfig{pm_maps/q4} \ \right\rrbracket
 	\end{equation}
 Since these generators decompose as stabilizer diagrams,
-$Z_{G_L}(d\in\{2,3,4\})$ can be evaluated \emph{efficiently}
+$Z_{G_L}(d\in\{2,3,4\})$ can be evaluated efficiently
 via stabilizer ZX-diagram simplification.
 Thus, we recover the known result that evaluating the Jones polynomial at $t\in\Lambda$ is in P.
 On the other hand, computing $Z_{G_L}(d\geq 5)$ is \#P-hard.
@@ -149,13 +149,13 @@ On the other hand, computing $Z_{G_L}(d\geq 5)$ is \#P-hard.
 \subsection{Graph Colouring}
 
 
-Finally, let us briefly look at the \emph{graph colouring problem}, or evaluating the chromatic polynomial. A \emph{$d$-colouring} of a graph $G$ is an assignment of colours $\{1, ..., d\}$ to the vertices of $G$ so that no neighbouring vertices have the same colour. Given a graph $G$ and an integer $d$, we wish to \emph{count} the number of such $d$-colourings. Again, this problem can be interpreted as the zero-temperature
+Finally, let us briefly look at the \emph{graph colouring problem}. A \emph{$d$-colouring} of a graph $G$ is an assignment of colours $\{1, ..., d\}$ to the vertices of $G$ so that no neighbouring vertices have the same colour. Given a graph $G$ and an integer $d$, we wish to count the number of such $d$-colourings. Again, this problem can be interpreted as the zero-temperature
 partition function of an antiferromagnetic $d$-state Potts model \cite{ChromaticPotts}.
 Through the lens of our graphical exposition we see that counting problems and computing partition functions are essentially the same problem, since both can be straightforwardly encoded as closed tensor networks.
 
 Given a graph $G$, the graph colouring problem can be encoded as a ZX-diagram as follows. Every vertex of the graph is mapped to a $d$-dimensional phaseless (green) $Z$-spider which copies spin states so that they can enter into the $X$-boxes, each of which in turn enforces that spin states entering it are not the same.
 \begin{equation}\label{eq:G-tn}
-	\includegraphics[scale=0.3, valign=c]{figures/G-tn.pdf}
+	\includegraphics[scale=0.4, valign=c]{figures/G-tn.pdf}
 \end{equation}
 The $X$-boxes have the following concrete interpretation as $d \times d$ matrices,
 % (as special case of the $\pm$-boxes, where $t=0$),

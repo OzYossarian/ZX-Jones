@@ -1,7 +1,7 @@
 \section{Simplifying Qutrit ZX-Diagrams}\label{sec:qutrits}
 
 We now turn to the qutrit ZX-calculus and examine the analogous story to that of the previous subsection,
-but now for the case where the dimension of the vector space carried by the wires is $d=3$.
+but for the case where the dimension of the vector space carried by the wires is $d=3$.
 
 Qutrit spiders again come in two species,
 $Z$ (green) and $X$ (red),
@@ -18,7 +18,7 @@ The qutrit \emph{$X$-basis} is:
 $\{ \ket{+} = \frac{1}{\sqrt{3}} \left(\ket{0} + \ket{1} + \ket{2}\right)$,
 $\ket{\omega} = \frac{1}{\sqrt{3}} \left(\ket{0} + \omega\ket{1} + \bar{\omega}\ket{2}\right)$,
 $\ket{\bar{\omega}} = \frac{1}{\sqrt{3}} \left(\ket{0} + \bar{\omega}\ket{1} + \omega\ket{2}\right) \} $.
-Spiders carry \emph{two} phases $\alpha$ and $\beta$,
+Spiders now carry two phases $\alpha$ and $\beta$,
 and have the following \emph{standard representation} as linear maps:
 \begingroup
 	\allowdisplaybreaks
@@ -45,7 +45,7 @@ and have the following \emph{standard representation} as linear maps:
 When $\alpha = \beta = 0$ we will again omit the angles entirely, and just draw a small green or red dot. Throughout our work, whenever we use an integer $n$ as a spider decoration, this is a shorthand for $\frac{2\pi}{3}n$. Since spider phases hold mod $2\pi$, these integer decorations hold mod $3$. Unless otherwise stated, we will use Greek letters to denote general angles, and Roman letters for these integer shorthands.
 % This shouldn't ever cause confusion.
 
-Hadamard gates are no longer self-adjoint, so we change our notation: we let a yellow box decorated with a $1$ (mod $3$) denote a Hadamard gate, while decorating with a $2$ (mod $3$) denotes its adjoint. We will shortly explain this choice. We also use a dashed blue line for the \emph{Hadamard edge} (\emph{$H$-edge}) and a purple dashed line for its adjoint (\emph{$H^\dagger$-edge}). Those familar with the ZH-calculus should note that this notation is \emph{not} analogous to the H-boxes therein.  
+Hadamard gates are no longer self-adjoint, so we change our notation: we let a yellow box decorated with a $1$ (mod $3$) denote a Hadamard gate, while decorating with a $2$ (mod $3$) denotes its adjoint. We will shortly explain this choice. We also use a dashed blue line for the \emph{Hadamard edge} (\emph{$H$-edge}) and a purple dashed line for its adjoint (\emph{$H^\dagger$-edge}). Those familar with the ZH-calculus should note that this notation is \emph{not} analogous to the $H$-boxes therein.  
 \begin{equation}\label{eq:qutrit_dashed_lines}
 		\tikzfig{hadamard_lemmas/parametrised/1} \ = \ 
 		\tikzfig{hadamard_lemmas/dashed/blue} \ = \ 
@@ -65,7 +65,7 @@ A very important difference from the qubit case is that in qutrit ZX-calculus th
 	\tikzfig{cups_caps/z_cup} \quad \neq \quad \tikzfig{cups_caps/x_cup} \quad , \hspace{50pt}
 	\tikzfig{cups_caps/z_cap} \quad \neq \quad \tikzfig{cups_caps/x_cap}
 \end{equation}
-This has several consequences. Firstly, the maxim that \emph{`only topology matters' no longer applies}. That is, it is now important to make clear the distinction between a spider's input and output wires, unlike in the qubit case where we could freely interchange the two.
+This has several consequences. Firstly, the maxim that `only topology matters' no longer applies. That is, it is now important to make clear the distinction between a spider's input and output wires, unlike in the qubit case where we could freely interchange the two.
 %Diagram components can still be isotoped around the plane but only so long as this input/output distinction is respected.
 This gives the qutrit calculus a slightly more rigid flavour than its qubit counterpart. 
 That said, this rigidity can be loosened; in particular, this distinction is irrelevant for $H$- and $H^\dagger$-edges \cite{qutrit_euler}:
@@ -74,7 +74,7 @@ That said, this rigidity can be loosened; in particular, this distinction is irr
 	\begin{equation}
 		\scalebox{0.8}{\tikzfig{hadamard_lemmas/io_irrelevant/h/lhs}} = 
 		\scalebox{0.8}{\tikzfig{hadamard_lemmas/io_irrelevant/h/rhs}} ~,
-		\qquad
+		\hspace{50pt}
 		\scalebox{0.8}{\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/lhs}} = 
 		\scalebox{0.8}{\tikzfig{hadamard_lemmas/io_irrelevant/h_dagger/rhs}}
 	\end{equation}
@@ -126,7 +126,7 @@ Indeed, we can show that every qutrit ZX-diagram is equivalent to a graph-like o
 	\scalebox{0.8}{\tikzfig{hadamard_lemmas/2_h_edges_flip/2_purple}} \ = \  
 	\scalebox{0.8}{\tikzfig{hadamard_lemmas/2_h_edges_flip/1_blue}}
 \end{equation}
-This justifies our notation for Hadamard gates: we can think of Hadamard edges as $1$-weighted edges and their adjoints as $2$-weighted edges, then work modulo $3$, since every triple of parallel edges disappears. Where the previous equations relate single $H$- and $H^\dagger$-boxes across multiple edges, the next three relate multiple $H$- and $H^\dagger$- boxes on single edges. They hold for $h \in \{1, 2\}$, and are proved via simple applications of rules $\qutritRuleId$, $\qutritRuleHadamard$ and $\qutritRuleSnake$.
+This justifies our notation for Hadamard gates: we can think of Hadamard edges (in blue) as $1$-weighted edges and their adjoints (purple) as $2$-weighted edges, then work modulo $3$, since every triple of parallel edges disappears. Where the previous equations relate single $H$- and $H^\dagger$-boxes across multiple edges, the next three relate multiple $H$- and $H^\dagger$- boxes on single edges. They hold for $h \in \{1, 2\}$, and are proved via simple applications of rules $\qutritRuleId$, $\qutritRuleHadamard$ and $\qutritRuleSnake$.
 \begin{equation}\label{eq:h_boxes_are_mod_4}
 	\tikzfig{hadamard_lemmas/boxes/4_vanish} \quad ,
 	\hspace{50pt}
@@ -148,21 +148,21 @@ This justifies our notation for Hadamard gates: we can think of Hadamard edges a
 	\end{proof}
 \end{proposition}
 
-A graph state is described fully by its underlying multigraph, or equivalently by an adjacency matrix, where edges take weights in $\mathbb{Z}_3$\ (Lemma 4.2, \cite{harny_completeness}). Nodes correspond to phaseless green spiders, edges of weight $1$ correspond to Hadamard edges, and edges of weight $2$ correspond to $H^\dagger$-edges. As in the qubit case, graph states admit a \emph{local complementation} operation\ (Definition 2.6, \cite{harny_completeness}), though the effect is now slightly more complicated. We'll give the intuition after the formal definition:
+A graph state is described fully by its underlying multigraph, or equivalently by an adjacency matrix, where edges take weights in $\mathbb{Z}_3$\ \cite[Lemma 4.2]{harny_completeness}. Nodes correspond to phaseless green spiders, edges of weight $1$ correspond to Hadamard edges, and edges of weight $2$ correspond to $H^\dagger$-edges. As in the qubit case, graph states admit a \emph{local complementation} operation\ \cite[Definition 2.6]{harny_completeness}, though the effect is now slightly more complicated. We'll give the intuition after the formal definition:
 \begin{definition}\label{def:local_complementation_qutrit}
 	Given $a \in \mathbb{Z}_3$ and a graph state $G$ with adjacency matrix $W = (w_{i,j})$, the \emph{$a$-local complentation} at node $x$ is the new graph state $G *_a x$, whose adjacency matrix $W' = (w'_{i,j})$ is given by $w'_{i,j} = w_{i,j} + aw_{i,x}w_{j,x}$.
 	% \begin{equation}
 	% 	w'_{i,j} = w_{i,j} + aw_{i,x}w_{j,x}
 	% \end{equation}
 \end{definition}
-So only those edges between neighbours of node $x$ are affected. Specifically, for two nodes $i$ and $j$ both connected to $x$ by the \emph{same} colour edge, $a$-local complementation at $x$ \emph{increases} weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $x$ by edges of \emph{different} colours, $a$-local complementation at $x$ \emph{decreases} $w_{i,j}$ by $a$. This is shown graphically below, and holds with the roles of blue and purple interchanged:
+So only those edges between neighbours of node $x$ are affected. Specifically, for two nodes $i$ and $j$ both connected to $x$ by the same colour edge, $a$-local complementation at $x$ increases weight $w_{i,j}$ by $a$. If instead $i$ and $j$ are connected to $x$ by edges of different colours, $a$-local complementation at $x$ decreases $w_{i,j}$ by $a$. This is shown graphically below, and holds with the roles of blue and purple interchanged:
 \begin{equation}
 	\tikzfig{a_local_comp/same} \quad ,
 	\hspace{25pt}
 	\tikzfig{a_local_comp/different}
 \end{equation}
 % As in the qubit case, local complementation gives an equality up to introducing some single qubit phase gates on the outputs (Theorem 4.4, Corollary 4.5, \cite{harny_completeness}). 
-\begin{theorem}\label{thm:local_comp_equality} (Theorem 4.4, Corollary 4.5, \cite{harny_completeness})~
+\begin{theorem}\label{thm:local_comp_equality} \cite[Theorem 4.4, Corollary 4.5]{harny_completeness}~
 	Given $a \in \mathbb{Z}_3$ and a graph state $(G, W)$ containing a node $x$, let $N(x)$ denote the neighbours of $x$; that is, nodes $i$ with weight $w_{i,x} \in \{1, 2\}$. Then the following equality holds:
 	\begin{equation}
 		\tikzfig{graph_state/local_comp}
@@ -181,7 +181,7 @@ This pivot operation again leads to an equality, up to introducing some extra ga
 
 \subsection{Qutrit Elimination Theorems}
 
-We classify spiders into three families exactly as in (Theorem 3.1, \cite{harny_completeness}):
+We classify spiders into three families exactly as in \cite[Theorem 3.1]{harny_completeness}:
 \begin{equation}
 	\mathcal{M} = \left\{\scalebox{0.8}{\qutritZspider{0}{0}}, \scalebox{0.8}{\qutritZspider{1}{2}}, \scalebox{0.8}{\qutritZspider{2}{1}}\right\},
 	~
@@ -191,16 +191,16 @@ We classify spiders into three families exactly as in (Theorem 3.1, \cite{harny_
 \end{equation}
 We call a spider in a graph-like ZX-diagram \emph{interior} if it isn't connected to an input or output. Given any graph-like ZX-diagram, we will show that we can eliminate standalone interior $\mathcal{P}$- and \Nspiders\ by local complementation, and pairs of connected interior \Mspiders\ by pivoting. 
 
-First, we define a modification of the \emph{!-box} notation,
-%(pronounced \emph{`bang-box'})
-as introduced in \cite{dixon2009graphical} for general string diagrams. A !-box is a compressed notation for a \emph{family} of diagrams; the contents of the !-box
+First, we define a modification of the \emph{!-box} notation
+(pronounced \emph{`bang-box'}),
+as introduced in \cite{dixon2009graphical} for general string diagrams. A !-box is a compressed notation for a family of diagrams; the contents of the !-box
 % along with any wires into or out of it,
 are 'repeated' or 'unfolded' $n\geq 0$ times.
 Following the style of \cite{backens2018zh}, we allow a parameter denoting the maximum number of copies.
 %that a !-box unfolds over.
 We also extend this notation as follows: we decorate the !-box with an edge-type, which denotes that the spiders unfolded are all-to-all connected by an edge of this type. In qutrit ZX-diagrams this notation is well-defined in certain scenarios: in particular, when the denoted edge-type is a $H$- or $H^{\dagger}$-edge (since then the distinction between a spider's input and output wires disappears) and the main contents of the !-box is equivalent to a single spider (since then there is no ambiguity about which spiders are connected). For example:
 %letting $[K] = \{1, ..., K\}$, we have:
-\begin{equation*}
+\begin{equation}
 	\left\{ \tikzfig{bang/connected/K} : K \in \{0, 1, 2, 3\} \right\} =
 	% \left( \ 
 	% 	\tikzfig{bang/connected/bang_0} \ , \
@@ -215,7 +215,7 @@ We also extend this notation as follows: we decorate the !-box with an edge-type
 		\scalebox{0.8}{\tikzfig{bang/connected/3}}
 		% \scalebox{0.8}{\tikzfig{bang/connected/4}} \ , \ ...
 	~ \right\}
-\end{equation*}
+\end{equation}
 \begin{theorem}\label{thm:eliminate_P_spiders}
 	\eliminatePSpidersStatement
 \end{theorem}
@@ -239,5 +239,5 @@ Proofs of these theorems are found in Appendix \ref{thm:eliminate_P_spiders_appe
 		At every step the total number of spiders decreases by at least one, so since we start with a finite diagram the algorithm terminates after a finite number of steps. By construction, when it does so we are left with an equivalent graph-like ZX-diagram with no \Nspiders, \Pspiders, or adjacent pairs of \Mspiders.
 	\end{proof}
 \end{theorem}
-In particular, if we start with a stabilizer diagram, we can eliminate all but perhaps one spider, depending on whether the initial number of \Mspiders\ was odd or even. This is because no step introduces any non-stabilizer phases. The algorithm above could be extended to a \emph{non-closed} graph-like diagrams as in (Theorem 5.4, \cite{graph_theoretic_simplification}) as part of a qutrit circuit optimisation algorithm, by supplementing with a method for circuit extraction method. We leave this for future work.
+In particular, if we start with a stabilizer diagram, we can eliminate all but perhaps one spider, depending on whether the initial number of \Mspiders\ was odd or even. This is because no step introduces any non-stabilizer phases. The algorithm above could be extended to a \emph{non-closed} graph-like diagrams as in \cite[Theorem 5.4]{graph_theoretic_simplification} as part of a qutrit circuit optimisation algorithm, by supplementing with a method for circuit extraction method. We leave this for future work.
 %However, since this paper focuses on using the ZX-calculus to simplify \emph{closed} tensor networks, we have not done so.
