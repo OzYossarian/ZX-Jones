@@ -55,13 +55,15 @@ counting problems, probabilistic inference, and many more.
 Problem instances can be encoded as closed
 tensor networks over an appropriate (semi)ring.
 The scalar can be evaluated by full tensor contraction,
-which in general is \#P-hard \cite{Damm2002},
-and finding the optimal contraction path for a general tensor network is NP-hard.
+which in general is \#P-hard \cite{Damm2002}.
+% ,
+% and finding the optimal contraction path for a general tensor network is NP-hard.
 
 
 If a scalar of interest is expressed as a closed ZX-diagram,
 one can rewrite the diagram by applying rewrite rules; one's goal is then to perform full diagram simplification in order to compute the desired scalar.
-Again, simplifying arbitrary closed ZX-diagrams is \#P-hard and finding the optimal rewrite strategy is NP-hard.
+Again, simplifying arbitrary closed ZX-diagrams is a hard problem.
+% \#P-hard and finding the optimal rewrite strategy is NP-hard.
 Note that
 given an arbitrary tensor network, one can attempt to invent rewrite rules by inspecting the contents of the tensors and performing linear-algebra operations \cite{gray2020hyperoptimized}.
 
