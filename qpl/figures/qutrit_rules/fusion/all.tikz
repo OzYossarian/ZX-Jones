@@ -59,8 +59,8 @@
 		\draw [bend right=15] (14) to (13.center);
 		\draw [bend right=15] (14) to (11.center);
 		\draw [bend left=15] (14) to (10.center);
-		\draw [bend left, looseness=0.75] (5) to (14);
-		\draw [bend right, looseness=0.75] (5) to (14);
+		\draw [bend left=15, looseness=0.75] (5) to (14);
+		\draw [bend right=15, looseness=0.75] (5) to (14);
 		\draw [bend left=15] (24) to (25.center);
 		\draw [bend right=15] (24) to (23.center);
 		\draw [bend right=15] (24) to (21.center);
@@ -73,7 +73,7 @@
 		\draw [bend right=15] (43) to (42.center);
 		\draw [bend right=15] (43) to (40.center);
 		\draw [bend left=15] (43) to (39.center);
-		\draw [bend left, looseness=0.75] (34) to (43);
-		\draw [bend right, looseness=0.75] (34) to (43);
+		\draw [bend left=15, looseness=0.75] (34) to (43);
+		\draw [bend right=15, looseness=0.75] (34) to (43);
 	\end{pgfonlayer}
 \end{tikzpicture}
