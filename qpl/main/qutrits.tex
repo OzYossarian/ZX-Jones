@@ -1,7 +1,77 @@
 \section{Simplifying Qutrit ZX-Diagrams}\label{sec:qutrits}
 
-We now turn to the qutrit ZX-calculus and examine the analogous story to that of the previous subsection,
+We now turn to the qutrit ZX-calculus and examine the analogous story to that of the previous section,
 but for the case where the dimension of the vector space carried by the wires is $d=3$.
+
+\begin{figure}
+	\begin{tcolorbox}[colback=white]
+		\begin{equation*}
+			% \tikzfig{qutrit_rules/fusion/lhs} \quad = \quad 
+			% \tikzfig{qutrit_rules/fusion/middle} \quad = \quad 
+			% \tikzfig{qutrit_rules/fusion/rhs} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
+			\tikzfig{qutrit_rules/fusion/all} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/identity/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/identity/rhs} \quad \hypertarget{qutrit_rule_id}{\mathbf{(id)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/twisted_cup/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/twisted_cup/rhs} \quad \hypertarget{qutrit_rule_twisted_cup}{\mathbf{(t)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/0_copy/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/0_copy/rhs} \quad \hypertarget{qutrit_rule_0_copy}{\mathbf{(cp_0)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/bialgebra/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/bialgebra/rhs} \quad \hypertarget{qutrit_rule_bialgebra}{\mathbf{(b)}}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/m_copy/1_2_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/m_copy/1_2_rhs} \quad \hypertarget{qutrit_rule_m_copy}{\mathbf{(cp_{\mathcal{M}})}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/m_copy/2_1_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/m_copy/2_1_rhs} \quad \mathbf{(cp_{\mathcal{M}})}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/commute/1_2_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/commute/1_2_rhs} \quad \hypertarget{qutrit_rule_commute}{\mathbf{(cm)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/commute/2_1_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/commute/2_1_rhs} \quad {\mathbf{(cm)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/hadamard/h_hdagger} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/identity} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/hdagger_h} \quad \hypertarget{qutrit_rule_hadamard}{\mathbf{(H)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/hadamard/euler/h} \quad = \quad 
+			\tikzfig{qutrit_rules/hadamard/euler/decomposition} \quad \hypertarget{qutrit_rule_euler}{\mathbf{(E)}}
+		\end{equation*}
+		% \vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/colour_change/lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/colour_change/rhs} \quad \hypertarget{qutrit_rule_colour_change}{\mathbf{(cc)}}
+			\hspace{60pt}
+			\tikzfig{qutrit_rules/colour_change/flip_lhs} \quad = \quad 
+			\tikzfig{qutrit_rules/colour_change/flip_rhs} \quad \mathbf{(cc)}
+		\end{equation*}
+		\vspace{5pt}
+		\begin{equation*}
+			\tikzfig{qutrit_rules/snake/snake} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hopf_ish} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hadamards} \quad = \quad 
+			\tikzfig{qutrit_rules/snake/hadamard_adjoints} \quad \hypertarget{qutrit_rule_snake}{\mathbf{(s)}}
+		\end{equation*}
+	\end{tcolorbox}
+	\vspace{5pt}
+	\caption{Rewrite rules for the qutrit ZX-calculus where spiders are interpreted as tensors over $\mathbb{C}$.}
+	\label{fig:qutrit_ZX_rules}
+\end{figure}
 
 Qutrit spiders again come in two species,
 $Z$ (green) and $X$ (red),
@@ -86,7 +156,8 @@ That said, this rigidity can be loosened; in particular, this distinction is irr
 % 		\tikzfig{qutrit_snake/different_bent} \quad = \quad \tikzfig{qutrit_snake/different_straight}
 % \end{equation}
 % The above equations hold also if we flip the colours, green $\leftrightarrow$ red. 
-The set of rules of the qutrit ZX-calculus is shown in Figure \ref{fig:qutrit_ZX_rules} in Appendix \ref{app:zx_calculus}.
+The full set of rules of the qutrit ZX-calculus is shown in Figure \ref{fig:qutrit_ZX_rules}, and a more rigorous definition of the calculus as a whole is found in Appendix \ref{app:qutrit_zx_calculus}.
+% in Appendix \ref{app:zx_calculus}.
 
 
 \subsection{Graph-Like Qutrit ZX Diagrams}
@@ -195,12 +266,12 @@ First, we define a modification of the \emph{!-box} notation
 (pronounced \emph{`bang-box'}),
 as introduced in \cite{dixon2009graphical} for general string diagrams. A !-box is a compressed notation for a family of diagrams; the contents of the !-box
 % along with any wires into or out of it,
-are 'repeated' or 'unfolded' $n\geq 0$ times.
+are `repeated' or `unfolded' $n\geq 0$ times.
 Following the style of \cite{backens2018zh}, we allow a parameter denoting the maximum number of copies.
 %that a !-box unfolds over.
 We also extend this notation as follows: we decorate the !-box with an edge-type, which denotes that the spiders unfolded are all-to-all connected by an edge of this type. In qutrit ZX-diagrams this notation is well-defined in certain scenarios: in particular, when the denoted edge-type is a $H$- or $H^{\dagger}$-edge (since then the distinction between a spider's input and output wires disappears) and the main contents of the !-box is equivalent to a single spider (since then there is no ambiguity about which spiders are connected). For example:
 %letting $[K] = \{1, ..., K\}$, we have:
-\begin{equation}
+\begin{equation}\label{eq:bang_box}
 	\left\{ \tikzfig{bang/connected/K} : K \in \{0, 1, 2, 3\} \right\} =
 	% \left( \ 
 	% 	\tikzfig{bang/connected/bang_0} \ , \
@@ -216,6 +287,9 @@ We also extend this notation as follows: we decorate the !-box with an edge-type
 		% \scalebox{0.8}{\tikzfig{bang/connected/4}} \ , \ ...
 	~ \right\}
 \end{equation}
+
+If a !-box has no corner decoration, the unfolded spiders within are not connected by any edge, just as in the usual !-box notation.
+
 \begin{theorem}\label{thm:eliminate_P_spiders}
 	\eliminatePSpidersStatement
 \end{theorem}

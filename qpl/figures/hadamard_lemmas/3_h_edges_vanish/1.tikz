@@ -8,9 +8,9 @@
 		\node [style=none] (16) at (0.75, -2.25) {};
 		\node [style=none] (17) at (0, -2) {...};
 		\node [style=qutrit Z phase] (18) at (0, -1) {$\gamma$ \nodepart{lower} $\delta$};
-		\node [style=qutrit hadamard unknown] (19) at (-0.825, 0) {$h$};
-		\node [style=qutrit hadamard unknown] (20) at (0, 0) {$h$};
-		\node [style=qutrit hadamard unknown] (21) at (0.85, 0) {$h$};
+		\node [style=qutrit hadamard unknown] (19) at (-0.825, 0) {$1$};
+		\node [style=qutrit hadamard unknown] (20) at (0, 0) {$1$};
+		\node [style=qutrit hadamard unknown] (21) at (0.85, 0) {$1$};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw [bend right=15] (11.center) to (14);

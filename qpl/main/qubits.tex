@@ -66,8 +66,8 @@ has a corresponding ZX-diagram.
 The rewrite rules of the ZX-calculus (see Fig.\ref{fig:qubit_ZX_rules} in Appendix \ref{app:zx_calculus}) allow manipulation of the diagrams by \emph{rewrites}. Importantly, up to a scalar, the rewrites are \emph{sound}; that is, they preserve the concrete tensor representation over $\mathbb{C}$.
 The ZX-calculus is also \emph{complete} in the sense that any true equation between tensors can be proven only in terms of rewrites.
 %; the diagram on the left hand side of the equation can be transformed to that on the right hand side by applying rewrite rules.
-This gives the formalism the status of a `calculus'. 
-What is important about qubit ZX-diagrams
+% This gives the formalism the status of a `calculus'. 
+An incredibly useful feature of the qubit ZX-diagrams
 is that \emph{only topology matters};
 the concrete tensor semantics of the diagram are invariant under
 deformations of the network as long as the inter-spider connectivity is respected.
@@ -75,7 +75,7 @@ deformations of the network as long as the inter-spider connectivity is respecte
 
 The \emph{stabilizer fragment} of the calculus consists of all diagrams in which all phases are $\alpha=\frac{\pi n}{2}$, $n\in\mathbb{Z}$.
 %We note that both diagrams above fall into this stabilizer fragment. 
-In \cite[Theorem 5.4]{graph_theoretic_simplification} the authors give an efficient algorithm for simplifying any qubit ZX-diagram to an equivalent diagram with fewer spiders (see Appendix \ref{app:zx_calculus-qubitstabs}).
+In \cite[Theorem 5.4]{graph_theoretic_simplification} the authors give an efficient algorithm for simplifying any qubit ZX-diagram (see Appendix \ref{app:qubit_zx_calculus}).
 The algorithm consists of consecutive applications of
 spider-eliminating rewrites.
 % First it is shown that every diagram is equivalent to a \emph{graph-like} diagram:

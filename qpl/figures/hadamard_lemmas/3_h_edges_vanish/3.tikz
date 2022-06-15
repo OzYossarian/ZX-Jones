@@ -8,8 +8,8 @@
 		\node [style=qutrit X phase] (23) at (0, -1) {$\gamma$ \nodepart{lower} $\delta$};
 		\node [style=none] (24) at (-0.75, -2.75) {};
 		\node [style=none] (25) at (0.75, -2.75) {};
-		\node [style=qutrit hadamard unknown] (26) at (-0.75, -2.25) {$h$};
-		\node [style=qutrit hadamard unknown] (27) at (0.75, -2.25) {$h$};
+		\node [style=qutrit hadamard unknown] (26) at (-0.75, -2.25) {$1$};
+		\node [style=qutrit hadamard unknown] (27) at (0.75, -2.25) {$1$};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
 		\draw [bend right=15] (11.center) to (14);

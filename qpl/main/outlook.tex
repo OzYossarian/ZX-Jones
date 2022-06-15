@@ -1,9 +1,9 @@
-\section{Outlook}
+\section{Discussion and Outlook}
 
-In this work, we fleshed out non-trivial simplifications strategies for qutrit ZX diagrams
-and
-we have advocated for the use of the ZX-calculus
-as a unifying graphical framework for treating a broad range of many-body problems on equal footing, and for diagnosing the complexity of interesting families of problems.
+In this work, we leveraged local complementation and pivot operations to flesh out non-trivial simplifications strategies for qutrit ZX diagrams. We expect these results to have immediate uses in qutrit circuit optimisation. 
+
+Somewhat tangentially, we have also used our new simplification strategies to provide complexity-theoretic insight into certain tensor network problems that demonstrate a `step-change' in complexity when the dimension $d$ carried by the wires is greater than a particular value. When such problems are translated into the ZX-calculus, this step-change corresponds to whether a diagram is inside or outside of the efficiently reducible stabilizer fragment of the calculus.
+
 % When the solution to a problem is encoded as a closed ZX-diagram,
 % this solution can be obtained via full diagram simplification by applying the rules of the calculus.
 % The problem can be solved \emph{efficiently} when the diagram encoding its answer is in the stabilizer fragment of the calculus.
@@ -13,9 +13,12 @@ as a unifying graphical framework for treating a broad range of many-body proble
 % We then recovered known complexity results using only the language of the ZX-calculus.
 
 A main path for future work entails the generalisation
-of our stabilizer simplification rules to qudits of prime dimensions.
-This in turn also motivates work in circuit extraction \cite{backens2020again} for qudit circuits; one could hope to find graph-theoretic simplification \cite{graph_theoretic_simplification} strategies analogous to those for the case of qubits.
-Another direction regards defining scalar-exact versions of the rewrite rules, which would be necessary for concrete applications to problems where $d$-state systems are the native degrees of freedom.
+of our stabilizer simplification rules to qudits of higher dimensions. Recent work on the completeness of the stabilizer fragment of the qudit ZX-calculus for odd prime $d$ should provide insight and motivation, as well as some very elegant simplifications to the calculus \cite{Booth_2022}. Among these simplifications are a restoration of the maxim `only topology matters' \cite{Carette_2021}, and a representation of any stabilizer phase as a tuple $(x, y) \in \mathbb{Z}_d \times \mathbb{Z}_d$. If nothing else, it would useful to rederive the qutrit results given here in this language - had we read Carette's work \cite{Carette_2021} before starting this project, we would certainly have used from the outset the `flexsymmetric' version of the ZX-calculus definied therein, and put to good use in other recent work \cite{van_de_Wetering_2022}. 
+We also wonder whether the stabilizer phase representation as tuples $(x, y)$ found in one of our Master's theses \cite[Theorem 5.2]{TeagueMasters}, which is defined for \emph{all} dimensions $d$, not just odd prime ones, can play some part in extending the stabilizer completeness results of \cite{Booth_2022} to all dimensions $d$.
+
+The other primary direction of further research is in circuit extraction \cite{backens2020again} for qudit circuits; one could hope to find graph-theoretic simplification \cite{graph_theoretic_simplification} strategies analogous to those for the case of qubits.
+
+% A final - somewhat trivial - direction regards defining scalar-exact versions of these rewrite rules, which would be necessary for concrete applications to problems where $d$-state systems are the native degrees of freedom.
 % Finally, it would be interesting to investigate
 % the expressive power of generalisations of ZX-calculus
 % in terms of what problems it can encode.

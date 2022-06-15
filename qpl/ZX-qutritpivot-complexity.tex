@@ -43,17 +43,17 @@
 	%, composed of primitive generators whose semantics are tensors over a (semi)ring.
 	%By universality,
 	%Any tensor network has a corresponding ZX-diagram.
-	Calculations are done by transforming ZX-diagrams with rewrite rules.
+	Calculations are performed by transforming ZX-diagrams with rewrite rules.
 	%, which preserve semantics, and two ZX-diagrams representing the same tensor can be transformed into each other \emph{only} by a sequence of rewrites.
 	The ZX-calculus has found applications in reasoning about quantum circuits, condensed matter systems, quantum algorithms, quantum error correcting codes, and counting problems.
 	A key notion is the stabiliser fragment of the ZX-calculus, a subfamily of ZX-diagrams for which rewriting can be done efficiently in terms of derived simplifying rewrites.
 	% In quantum computation with qubits or of Boolean counting problems, one employs the qubit ZX-calculus.
 	%	However, higher-dimensional cases are of interest as well.
-	Recently, higher dimensional qudits have become more prominent in quantum computing.
+	Recently, higher dimensional qudits - in particular, qutrits - have gained prominence within quantum computing research.
 	% , and there are counting problem families whose complexity depends on the dimension.
 	The main contribution of this work is the derivation of
 	efficient rewrite strategies for the stabiliser fragment of the qutrit ZX-calculus.
-	This constitutes a first non-trivial step towards simplification of qutrit quantum circuits. We then give further interesting applications; we reinterpret known complexity-theoretic results about evaluating the Jones polynomial, an important link invariant in knot theory, and counting graph colourings.
+	Notably, this constitutes a first non-trivial step towards the simplification of qutrit quantum circuits. We then give further unexpected areas in which these rewrite strategies provide complexity-theoretic insight; namely, we reinterpret known results about evaluating the Jones polynomial, an important link invariant in knot theory, and counting graph colourings.
 \end{abstract}
 
 \input{main/intro}
@@ -64,7 +64,7 @@
 
 \section{Acknowledgments}
 We wish to thank Niel de Beaudrap, Aleks Kissinger, Stefanos 
-Kourtis, and Quanlong Wang for inspiring and helpful discussions.
+Kourtis and Quanlong Wang for inspiring and helpful discussions, as well as the QPL 2022 reviewers for some excellent suggestions for improvements.
 KM acknowledges financial support from the Royal Commission for the Exhibition of 1851 through a postdoctoral research fellowship.
 
 \bibliographystyle{eptcs}

@@ -1,6 +1,10 @@
-\section{Qubit ZX Calculus}\label{app:zx_calculus}
+\section{Qubit ZX Calculus}\label{app:qubit_zx_calculus}
 
-The well-known rewrite rules of the qubit ZX-calculus are shown in Fig.\ref{fig:qubit_ZX_rules}.
+The well-known rewrite rules of the qubit ZX-calculus are shown in Fig.\ref{fig:qubit_ZX_rules}. 
+The \emph{stabilizer fragment} of the calculus consists of all diagrams in which all phases are $\alpha=\frac{\pi n}{2}$, $n\in\mathbb{Z}$.
+%We note that both diagrams above fall into this stabilizer fragment. 
+In \cite[Theorem 5.4]{graph_theoretic_simplification} the authors give an efficient algorithm for simplifying any qubit ZX-diagram to an equivalent diagram with fewer spiders.
+The algorithm consists of consecutive applications of spider-eliminating rewrites.
 
 \begin{figure}[h]
 	\begin{tcolorbox}[colback=white]
@@ -42,15 +46,6 @@ The well-known rewrite rules of the qubit ZX-calculus are shown in Fig.\ref{fig:
 	\vspace{-1pt}
 \end{figure}
 
-
-\subsection{Stabilizer Qubit ZX Diagrams}
-\label{app:zx_calculus-qubitstabs}
-
-The \emph{stabilizer fragment} of the calculus consists of all diagrams in which all phases are $\alpha=\frac{\pi n}{2}$, $n\in\mathbb{Z}$.
-%We note that both diagrams above fall into this stabilizer fragment. 
-In \cite[Theorem 5.4]{graph_theoretic_simplification} the authors give an efficient algorithm for simplifying any qubit ZX-diagram to an equivalent diagram with fewer spiders.
-The algorithm consists of consecutive applications of spider-eliminating rewrites.
-
 Every diagram is equivalent to a \emph{graph-like} diagram:
 every spider is green,
 every edge is a Hadamard edge,
@@ -91,80 +86,80 @@ After each application of \eqref{eq:eliminate_clifford} or \eqref{eq:eliminate_p
 % The point relevant to this work is that spiders can be \emph{eliminated efficiently}, i.e. with a polynomial number of rewrites in the initial number of spiders. 
 % By `efficiently' we mean via a sequence of spider elimination rewrites whose cost is polynomial in the initial number of spiders. Note each such rewrite updates only a polynomial number of edges in the diagram, which prevents an overwhelming memory cost of the simplification procedure.
 
-\section{Qutrit ZX Calculus}
+\section{Qutrit ZX Calculus}\label{app:qutrit_zx_calculus}
 
 
-We now give a full set of rules defining the qutrit ZX-calculus. Our presentation aims for clarity and accessibility; for a more rigourous description, see \cite{harny_completeness}.
+We now give a fuller definition of the qutrit ZX-calculus. Our presentation aims for clarity and accessibility; for a more rigourous description, see \cite{harny_completeness}.
 
-\begin{figure}
-	\begin{tcolorbox}[colback=white]
-		\begin{equation*}
-			% \tikzfig{qutrit_rules/fusion/lhs} \quad = \quad 
-			% \tikzfig{qutrit_rules/fusion/middle} \quad = \quad 
-			% \tikzfig{qutrit_rules/fusion/rhs} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
-			\tikzfig{qutrit_rules/fusion/all} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
-		\end{equation*}
-		% \vspace{5pt}
-		\begin{equation*}
-			\tikzfig{qutrit_rules/identity/lhs} \quad = \quad 
-			\tikzfig{qutrit_rules/identity/rhs} \quad \hypertarget{qutrit_rule_id}{\mathbf{(id)}}
-			\hspace{60pt}
-			\tikzfig{qutrit_rules/twisted_cup/lhs} \quad = \quad 
-			\tikzfig{qutrit_rules/twisted_cup/rhs} \quad \hypertarget{qutrit_rule_twisted_cup}{\mathbf{(t)}}
-		\end{equation*}
-		\vspace{5pt}
-		\begin{equation*}
-			\tikzfig{qutrit_rules/0_copy/lhs} \quad = \quad 
-			\tikzfig{qutrit_rules/0_copy/rhs} \quad \hypertarget{qutrit_rule_0_copy}{\mathbf{(cp_0)}}
-			\hspace{60pt}
-			\tikzfig{qutrit_rules/bialgebra/lhs} \quad = \quad 
-			\tikzfig{qutrit_rules/bialgebra/rhs} \quad \hypertarget{qutrit_rule_bialgebra}{\mathbf{(b)}}
-		\end{equation*}
-		\vspace{5pt}
-		\begin{equation*}
-			\tikzfig{qutrit_rules/m_copy/1_2_lhs} \quad = \quad 
-			\tikzfig{qutrit_rules/m_copy/1_2_rhs} \quad \hypertarget{qutrit_rule_m_copy}{\mathbf{(cp_{\mathcal{M}})}}
-			\hspace{60pt}
-			\tikzfig{qutrit_rules/m_copy/2_1_lhs} \quad = \quad 
-			\tikzfig{qutrit_rules/m_copy/2_1_rhs} \quad \mathbf{(cp_{\mathcal{M}})}
-		\end{equation*}
-		\vspace{5pt}
-		\begin{equation*}
-			\tikzfig{qutrit_rules/commute/1_2_lhs} \quad = \quad 
-			\tikzfig{qutrit_rules/commute/1_2_rhs} \quad \hypertarget{qutrit_rule_commute}{\mathbf{(cm)}}
-			\hspace{60pt}
-			\tikzfig{qutrit_rules/commute/2_1_lhs} \quad = \quad 
-			\tikzfig{qutrit_rules/commute/2_1_rhs} \quad {\mathbf{(cm)}}
-		\end{equation*}
-		% \vspace{5pt}
-		\begin{equation*}
-			\tikzfig{qutrit_rules/hadamard/h_hdagger} \quad = \quad 
-			\tikzfig{qutrit_rules/hadamard/identity} \quad = \quad 
-			\tikzfig{qutrit_rules/hadamard/hdagger_h} \quad \hypertarget{qutrit_rule_hadamard}{\mathbf{(H)}}
-			\hspace{60pt}
-			\tikzfig{qutrit_rules/hadamard/euler/h} \quad = \quad 
-			\tikzfig{qutrit_rules/hadamard/euler/decomposition} \quad \hypertarget{qutrit_rule_euler}{\mathbf{(E)}}
-		\end{equation*}
-		% \vspace{5pt}
-		\begin{equation*}
-			\tikzfig{qutrit_rules/colour_change/lhs} \quad = \quad 
-			\tikzfig{qutrit_rules/colour_change/rhs} \quad \hypertarget{qutrit_rule_colour_change}{\mathbf{(cc)}}
-			\hspace{60pt}
-			\tikzfig{qutrit_rules/colour_change/flip_lhs} \quad = \quad 
-			\tikzfig{qutrit_rules/colour_change/flip_rhs} \quad \mathbf{(cc)}
-		\end{equation*}
-		\vspace{5pt}
-		\begin{equation*}
-			\tikzfig{qutrit_rules/snake/snake} \quad = \quad 
-			\tikzfig{qutrit_rules/snake/hopf_ish} \quad = \quad 
-			\tikzfig{qutrit_rules/snake/hadamards} \quad = \quad 
-			\tikzfig{qutrit_rules/snake/hadamard_adjoints} \quad \hypertarget{qutrit_rule_snake}{\mathbf{(s)}}
-		\end{equation*}
-	\end{tcolorbox}
-	\vspace{5pt}
-	\caption{Rewrite rules for the qutrit ZX-calculus where spiders are interpreted as tensors over $\mathbb{C}$.}
-	\label{fig:qutrit_ZX_rules}
-\end{figure}
+% \begin{figure}
+% 	\begin{tcolorbox}[colback=white]
+% 		\begin{equation*}
+% 			% \tikzfig{qutrit_rules/fusion/lhs} \quad = \quad 
+% 			% \tikzfig{qutrit_rules/fusion/middle} \quad = \quad 
+% 			% \tikzfig{qutrit_rules/fusion/rhs} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
+% 			\tikzfig{qutrit_rules/fusion/all} \quad \hypertarget{qutrit_rule_fusion}{\mathbf{(f)}}
+% 		\end{equation*}
+% 		% \vspace{5pt}
+% 		\begin{equation*}
+% 			\tikzfig{qutrit_rules/identity/lhs} \quad = \quad 
+% 			\tikzfig{qutrit_rules/identity/rhs} \quad \hypertarget{qutrit_rule_id}{\mathbf{(id)}}
+% 			\hspace{60pt}
+% 			\tikzfig{qutrit_rules/twisted_cup/lhs} \quad = \quad 
+% 			\tikzfig{qutrit_rules/twisted_cup/rhs} \quad \hypertarget{qutrit_rule_twisted_cup}{\mathbf{(t)}}
+% 		\end{equation*}
+% 		\vspace{5pt}
+% 		\begin{equation*}
+% 			\tikzfig{qutrit_rules/0_copy/lhs} \quad = \quad 
+% 			\tikzfig{qutrit_rules/0_copy/rhs} \quad \hypertarget{qutrit_rule_0_copy}{\mathbf{(cp_0)}}
+% 			\hspace{60pt}
+% 			\tikzfig{qutrit_rules/bialgebra/lhs} \quad = \quad 
+% 			\tikzfig{qutrit_rules/bialgebra/rhs} \quad \hypertarget{qutrit_rule_bialgebra}{\mathbf{(b)}}
+% 		\end{equation*}
+% 		\vspace{5pt}
+% 		\begin{equation*}
+% 			\tikzfig{qutrit_rules/m_copy/1_2_lhs} \quad = \quad 
+% 			\tikzfig{qutrit_rules/m_copy/1_2_rhs} \quad \hypertarget{qutrit_rule_m_copy}{\mathbf{(cp_{\mathcal{M}})}}
+% 			\hspace{60pt}
+% 			\tikzfig{qutrit_rules/m_copy/2_1_lhs} \quad = \quad 
+% 			\tikzfig{qutrit_rules/m_copy/2_1_rhs} \quad \mathbf{(cp_{\mathcal{M}})}
+% 		\end{equation*}
+% 		\vspace{5pt}
+% 		\begin{equation*}
+% 			\tikzfig{qutrit_rules/commute/1_2_lhs} \quad = \quad 
+% 			\tikzfig{qutrit_rules/commute/1_2_rhs} \quad \hypertarget{qutrit_rule_commute}{\mathbf{(cm)}}
+% 			\hspace{60pt}
+% 			\tikzfig{qutrit_rules/commute/2_1_lhs} \quad = \quad 
+% 			\tikzfig{qutrit_rules/commute/2_1_rhs} \quad {\mathbf{(cm)}}
+% 		\end{equation*}
+% 		% \vspace{5pt}
+% 		\begin{equation*}
+% 			\tikzfig{qutrit_rules/hadamard/h_hdagger} \quad = \quad 
+% 			\tikzfig{qutrit_rules/hadamard/identity} \quad = \quad 
+% 			\tikzfig{qutrit_rules/hadamard/hdagger_h} \quad \hypertarget{qutrit_rule_hadamard}{\mathbf{(H)}}
+% 			\hspace{60pt}
+% 			\tikzfig{qutrit_rules/hadamard/euler/h} \quad = \quad 
+% 			\tikzfig{qutrit_rules/hadamard/euler/decomposition} \quad \hypertarget{qutrit_rule_euler}{\mathbf{(E)}}
+% 		\end{equation*}
+% 		% \vspace{5pt}
+% 		\begin{equation*}
+% 			\tikzfig{qutrit_rules/colour_change/lhs} \quad = \quad 
+% 			\tikzfig{qutrit_rules/colour_change/rhs} \quad \hypertarget{qutrit_rule_colour_change}{\mathbf{(cc)}}
+% 			\hspace{60pt}
+% 			\tikzfig{qutrit_rules/colour_change/flip_lhs} \quad = \quad 
+% 			\tikzfig{qutrit_rules/colour_change/flip_rhs} \quad \mathbf{(cc)}
+% 		\end{equation*}
+% 		\vspace{5pt}
+% 		\begin{equation*}
+% 			\tikzfig{qutrit_rules/snake/snake} \quad = \quad 
+% 			\tikzfig{qutrit_rules/snake/hopf_ish} \quad = \quad 
+% 			\tikzfig{qutrit_rules/snake/hadamards} \quad = \quad 
+% 			\tikzfig{qutrit_rules/snake/hadamard_adjoints} \quad \hypertarget{qutrit_rule_snake}{\mathbf{(s)}}
+% 		\end{equation*}
+% 	\end{tcolorbox}
+% 	\vspace{5pt}
+% 	\caption{Rewrite rules for the qutrit ZX-calculus where spiders are interpreted as tensors over $\mathbb{C}$.}
+% 	\label{fig:qutrit_ZX_rules}
+% \end{figure}
 
 \begin{definition}\label{def:qutrit_ZX_rules}
 	The \textit{qutrit ZX-calculus} is a graphical calculus generated by the following diagrams, where $\alpha, \beta \in [0, 2 \pi)$:
@@ -220,14 +215,14 @@ We now give a full set of rules defining the qutrit ZX-calculus. Our presentatio
 				\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf/lhs} \quad = \quad 
 				\tikzfig{hadamard_lemmas/3_h_edges_vanish/hopf/rhs}
 			\end{equation}
-		Therefore, to prove the first equation, we can argue as follows, for $h \in \{1, 2\}$:
+		Therefore, to prove the first equality of the first equation, we can argue as follows:
 			\begin{equation}
 				\tikzfig{hadamard_lemmas/3_h_edges_vanish/1} \quad \xeq{\qutritRuleHadamard} \quad
-				\tikzfig{hadamard_lemmas/3_h_edges_vanish/2} \quad \xeq{\qutritRuleColourChange} \quad
+				\tikzfig{hadamard_lemmas/3_h_edges_vanish/2} \quad \xeq{\eqref{eq:derived_colour_change}} \quad
 				\tikzfig{hadamard_lemmas/3_h_edges_vanish/3} \quad \xeq{\eqref{eq:qutrit_hopf}} \quad
-				\tikzfig{hadamard_lemmas/3_h_edges_vanish/4} \quad \xeq{\eqref{eq:derived_colour_change}} \quad
+				\tikzfig{hadamard_lemmas/3_h_edges_vanish/4} \quad \xeq{\qutritRuleColourChange} \quad
 				\tikzfig{hadamard_lemmas/3_h_edges_vanish/disconnected}
 			\end{equation}
-		The other two equations are proved in \cite[Lemma 3.4]{gong2017equivalence}.
+		The second equality of the first equation is proved analogously, and the other two equations are proved in \cite[Lemma 3.4]{gong2017equivalence}.
 		\end{proof}
 \end{lemma}
